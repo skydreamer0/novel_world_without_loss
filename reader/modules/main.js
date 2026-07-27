@@ -38,9 +38,11 @@ export async function init() {
       const fileExists = state.files && state.files.some(f => f.path === file);
       if (fileExists) {
         loadChapter(file);
+      } else if (state.files && state.files.length > 0) {
+        loadChapter(state.files[0].path);
       }
     } else if (state.files && state.files.length > 0) {
-      // Optionally load first chapter if nothing else
+      loadChapter(state.files[0].path);
     }
   } catch (err) {
     console.error('[Main] 關鍵初始化失敗:', err);

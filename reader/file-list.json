@@ -1,0 +1,352 @@
+[
+  {
+    "path": "docs/00_專案導航.md",
+    "title": "00_專案導航",
+    "size": 3909
+  },
+  {
+    "path": "docs/01_總綱與核心命題.md",
+    "title": "01_總綱與核心命題",
+    "size": 2962
+  },
+  {
+    "path": "docs/02_世界鐵律.md",
+    "title": "02_世界鐵律",
+    "size": 5561
+  },
+  {
+    "path": "docs/03_角色與勢力.md",
+    "title": "03_角色與勢力",
+    "size": 10662
+  },
+  {
+    "path": "docs/04_空間與力量系統.md",
+    "title": "04_空間與力量系統",
+    "size": 9294
+  },
+  {
+    "path": "docs/05_分卷路線圖.md",
+    "title": "05_分卷路線圖",
+    "size": 5032
+  },
+  {
+    "path": "docs/07_伏筆與揭密台帳.md",
+    "title": "07_伏筆與揭密台帳",
+    "size": 6854
+  },
+  {
+    "path": "docs/08_連續性與待決事項.md",
+    "title": "08_連續性與待決事項",
+    "size": 14706
+  },
+  {
+    "path": "docs/09_AI寫作流程.md",
+    "title": "09_AI寫作流程",
+    "size": 4729
+  },
+  {
+    "path": "docs/10_章節模板.md",
+    "title": "10_章節模板",
+    "size": 1575
+  },
+  {
+    "path": "docs/11_進度台帳.md",
+    "title": "11_進度台帳",
+    "size": 25480
+  },
+  {
+    "path": "docs/12_第一章開寫包.md",
+    "title": "12_第一章開寫包",
+    "size": 2894
+  },
+  {
+    "path": "manuscript/vol_01/000_楔子.md",
+    "title": "000_楔子",
+    "size": 5462
+  },
+  {
+    "path": "manuscript/vol_01/001_開界大典.md",
+    "title": "001_開界大典",
+    "size": 11747
+  },
+  {
+    "path": "manuscript/vol_01/002_空胎.md",
+    "title": "002_空胎",
+    "size": 7841
+  },
+  {
+    "path": "manuscript/vol_01/003_除名.md",
+    "title": "003_除名",
+    "size": 6377
+  },
+  {
+    "path": "manuscript/vol_01/004_殘核.md",
+    "title": "004_殘核",
+    "size": 6076
+  },
+  {
+    "path": "manuscript/vol_01/005_解析.md",
+    "title": "005_解析",
+    "size": 7235
+  },
+  {
+    "path": "manuscript/vol_01/006_截界.md",
+    "title": "006_截界",
+    "size": 7030
+  },
+  {
+    "path": "manuscript/vol_01/007_天地之內.md",
+    "title": "007_天地之內",
+    "size": 7351
+  },
+  {
+    "path": "manuscript/vol_01/008_第一顆心臟.md",
+    "title": "008_第一顆心臟",
+    "size": 8036
+  },
+  {
+    "path": "manuscript/vol_01/009_萬族囚車.md",
+    "title": "009_萬族囚車",
+    "size": 8622
+  },
+  {
+    "path": "manuscript/vol_01/010_記憶雨.md",
+    "title": "010_記憶雨",
+    "size": 8504
+  },
+  {
+    "path": "manuscript/vol_01/011_名冊之外.md",
+    "title": "011_名冊之外",
+    "size": 5615
+  },
+  {
+    "path": "manuscript/vol_01/012_界病.md",
+    "title": "012_界病",
+    "size": 4526
+  },
+  {
+    "path": "manuscript/vol_01/013_第一份契約.md",
+    "title": "013_第一份契約",
+    "size": 4884
+  },
+  {
+    "path": "manuscript/vol_01/014_追界犬.md",
+    "title": "014_追界犬",
+    "size": 4782
+  },
+  {
+    "path": "manuscript/vol_01/015_借城三息.md",
+    "title": "015_借城三息",
+    "size": 5935
+  },
+  {
+    "path": "manuscript/vol_01/016_殘序市集.md",
+    "title": "016_殘序市集",
+    "size": 3930
+  },
+  {
+    "path": "manuscript/vol_01/017_父親留下的門.md",
+    "title": "017_父親留下的門",
+    "size": 3791
+  },
+  {
+    "path": "manuscript/vol_01/018_活著的葬禮.md",
+    "title": "018_活著的葬禮",
+    "size": 4306
+  },
+  {
+    "path": "manuscript/vol_01/019_空胎名單.md",
+    "title": "019_空胎名單",
+    "size": 3525
+  },
+  {
+    "path": "manuscript/vol_01/020_第一根骨.md",
+    "title": "020_第一根骨",
+    "size": 7104
+  },
+  {
+    "path": "manuscript/vol_01/021_虛舟來客.md",
+    "title": "021_虛舟來客",
+    "size": 5643
+  },
+  {
+    "path": "manuscript/vol_01/022_空胎之價.md",
+    "title": "022_空胎之價",
+    "size": 5644
+  },
+  {
+    "path": "manuscript/vol_01/023_界骨發熱.md",
+    "title": "023_界骨發熱",
+    "size": 5588
+  },
+  {
+    "path": "manuscript/vol_01/024_封界令.md",
+    "title": "024_封界令",
+    "size": 4869
+  },
+  {
+    "path": "manuscript/vol_01/025_秦昭開界.md",
+    "title": "025_秦昭開界",
+    "size": 5056
+  },
+  {
+    "path": "manuscript/vol_01/026_百里初界.md",
+    "title": "026_百里初界",
+    "size": 4141
+  },
+  {
+    "path": "manuscript/vol_01/027_帳冊上的死人.md",
+    "title": "027_帳冊上的死人",
+    "size": 4452
+  },
+  {
+    "path": "manuscript/vol_01/028_旁支庫.md",
+    "title": "028_旁支庫",
+    "size": 5075
+  },
+  {
+    "path": "manuscript/vol_01/029_界歸陷阱.md",
+    "title": "029_界歸陷阱",
+    "size": 4060
+  },
+  {
+    "path": "manuscript/vol_01/030_進入旁支祖界.md",
+    "title": "030_進入旁支祖界",
+    "size": 4816
+  },
+  {
+    "path": "manuscript/vol_01/031_十二城人質.md",
+    "title": "031_十二城人質",
+    "size": 4417
+  },
+  {
+    "path": "manuscript/vol_01/032_掌界人的帳.md",
+    "title": "032_掌界人的帳",
+    "size": 3648
+  },
+  {
+    "path": "manuscript/vol_01/033_灰脊遺民.md",
+    "title": "033_灰脊遺民",
+    "size": 3792
+  },
+  {
+    "path": "manuscript/vol_01/034_抽村.md",
+    "title": "034_抽村",
+    "size": 4235
+  },
+  {
+    "path": "manuscript/vol_01/035_第十三座城.md",
+    "title": "035_第十三座城",
+    "size": 3603
+  },
+  {
+    "path": "manuscript/vol_01/036_一日斷糧.md",
+    "title": "036_一日斷糧",
+    "size": 3442
+  },
+  {
+    "path": "manuscript/vol_01/037_第一次公示.md",
+    "title": "037_第一次公示",
+    "size": 3403
+  },
+  {
+    "path": "manuscript/vol_01/038_雙界初戰.md",
+    "title": "038_雙界初戰",
+    "size": 3606
+  },
+  {
+    "path": "manuscript/vol_01/039_忠脈議場.md",
+    "title": "039_忠脈議場",
+    "size": 3313
+  },
+  {
+    "path": "manuscript/vol_01/040_借一座城.md",
+    "title": "040_借一座城",
+    "size": 3882
+  },
+  {
+    "path": "manuscript/vol_01/041_斷河六日.md",
+    "title": "041_斷河六日",
+    "size": 4848
+  },
+  {
+    "path": "manuscript/vol_01/042_第一個夜晚.md",
+    "title": "042_第一個夜晚",
+    "size": 3971
+  },
+  {
+    "path": "manuscript/vol_01/043_自己的風暴.md",
+    "title": "043_自己的風暴",
+    "size": 4573
+  },
+  {
+    "path": "manuscript/vol_01/044_影子出走.md",
+    "title": "044_影子出走",
+    "size": 4015
+  },
+  {
+    "path": "manuscript/vol_01/045_第九裂帶.md",
+    "title": "045_第九裂帶",
+    "size": 3916
+  },
+  {
+    "path": "manuscript/vol_01/046_秦昭的證據.md",
+    "title": "046_秦昭的證據",
+    "size": 4427
+  },
+  {
+    "path": "manuscript/vol_01/047_石門拒戰.md",
+    "title": "047_石門拒戰",
+    "size": 4195
+  },
+  {
+    "path": "manuscript/vol_01/048_第二座自治城.md",
+    "title": "048_第二座自治城",
+    "size": 3873
+  },
+  {
+    "path": "manuscript/vol_01/049_補天使者.md",
+    "title": "049_補天使者",
+    "size": 4396
+  },
+  {
+    "path": "manuscript/vol_01/050_七息守城.md",
+    "title": "050_七息守城",
+    "size": 5619
+  },
+  {
+    "path": "outlines/06_第一卷前十章章卡.md",
+    "title": "06_第一卷前十章章卡",
+    "size": 6906
+  },
+  {
+    "path": "outlines/13_第一卷第02至10章執行細綱.md",
+    "title": "13_第一卷第02至10章執行細綱",
+    "size": 11072
+  },
+  {
+    "path": "outlines/14_第一卷第11至20章細綱.md",
+    "title": "14_第一卷第11至20章細綱",
+    "size": 4664
+  },
+  {
+    "path": "outlines/15_第一卷第21至30章細綱.md",
+    "title": "15_第一卷第21至30章細綱",
+    "size": 7958
+  },
+  {
+    "path": "outlines/16_第一卷第31至40章細綱.md",
+    "title": "16_第一卷第31至40章細綱",
+    "size": 6707
+  },
+  {
+    "path": "outlines/17_第一卷第41至50章細綱.md",
+    "title": "17_第一卷第41至50章細綱",
+    "size": 5730
+  },
+  {
+    "path": "outlines/18_第一卷第51至60章細綱.md",
+    "title": "18_第一卷第51至60章細綱",
+    "size": 5391
+  }
+]

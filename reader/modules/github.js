@@ -10,7 +10,7 @@ export function getApiUrl(path) {
 export async function fetchChapterText(path) {
   try {
     const relPath = location.pathname.includes('/reader/') ? `../${path}` : `./${path}`;
-    const localResp = await fetch(relPath);
+    const localResp = await fetch(encodeURI(relPath));
     if (localResp.ok) {
       const text = await localResp.text();
       if (!text.trim().startsWith("<!DOCTYPE") && !text.trim().startsWith("<html")) {
@@ -57,10 +57,27 @@ export async function loadFileList() {
   els.status.textContent = "正在同步資料...";
 
   const cached = getCachedTree();
-  if (cached) {
+  if (cached && cached.length > 0) {
     state.files = cached;
     els.status.textContent = `共 ${state.files.length} 章`;
     return;
+  }
+
+  // Local fallback: try loading reader/file-list.json first (great for local dev & offline)
+  try {
+    const listPath = location.pathname.includes('/reader/') ? 'file-list.json' : 'reader/file-list.json';
+    const localResp = await fetch(`./${listPath}?t=${Date.now()}`);
+    if (localResp.ok) {
+      const localFiles = await localResp.json();
+      if (Array.isArray(localFiles) && localFiles.length > 0) {
+        state.files = localFiles.sort((a, b) => naturalSort(a.path, b.path));
+        setCachedTree(state.files);
+        els.status.textContent = `共 ${state.files.length} 章`;
+        return;
+      }
+    }
+  } catch (e) {
+    // Ignore and proceed to GitHub API
   }
 
   const treeUrl = `https://api.github.com/repos/${config.githubOwner}/${config.githubRepo}/git/trees/${config.githubBranch}?recursive=1`;

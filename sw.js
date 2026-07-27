@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mothership-reader-v25';
+const CACHE_NAME = 'mothership-reader-v26';
 const ASSETS = [
     './',
     './index.html',
@@ -10,6 +10,7 @@ const ASSETS = [
     './vendor/marked.min.js',
     './reader/app.js',
     './reader/error-boundary.js',
+    './reader/file-list.json',
     './reader/modules/annotations.js',
     './reader/modules/annotation_render.js',
     './reader/modules/config.js',
