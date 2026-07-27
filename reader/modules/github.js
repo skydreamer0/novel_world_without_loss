@@ -70,10 +70,18 @@ export async function loadFileList() {
     if (localResp.ok) {
       const localFiles = await localResp.json();
       if (Array.isArray(localFiles) && localFiles.length > 0) {
-        state.files = localFiles.sort((a, b) => naturalSort(a.path, b.path));
-        setCachedTree(state.files);
-        els.status.textContent = `共 ${state.files.length} 章`;
-        return;
+        // Respect includeFolders/includeExtensions just like the GitHub API path,
+        // so non-novel folders (docs, outlines, …) never leak into the reader.
+        const filtered = localFiles.filter(f =>
+          config.includeExtensions.some(ext => f.path.endsWith(ext)) &&
+          config.includeFolders.some(folder => f.path.includes(folder))
+        );
+        if (filtered.length > 0) {
+          state.files = filtered.sort((a, b) => naturalSort(a.path, b.path));
+          setCachedTree(state.files);
+          els.status.textContent = `共 ${state.files.length} 章`;
+          return;
+        }
       }
     }
   } catch (e) {
