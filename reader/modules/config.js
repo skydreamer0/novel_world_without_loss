@@ -68,8 +68,9 @@ export function loadState() {
     for (const [key, lsKey] of Object.entries(PERSISTED_KEYS)) {
       const raw = localStorage.getItem(lsKey);
       if (raw === null) continue;
-      if (key === 'fontSize' || key === 'ttsRate') {
-        state[key] = parseFloat(raw);
+      if (key === 'fontSize' || key === 'ttsRate' || key === 'measure' || key === 'lineHeight') {
+        const num = parseFloat(raw);
+        if (!Number.isNaN(num)) state[key] = num;
       } else {
         state[key] = raw;
       }

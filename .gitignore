@@ -18,3 +18,7 @@ Thumbs.db
 *.log
 tmp/
 temp/
+
+# Reader build: cached source fonts (large; only needed to regenerate subsets)
+scripts/.fontsrc/
+.claude/

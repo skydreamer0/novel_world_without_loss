@@ -185,6 +185,157 @@ body[data-theme="dark"] .tts-start-from select {
   text-align: center;
 }
 
+/* --- Generic panel rows (TTS controls) --- */
+.panel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.panel-row label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.panel-row input[type="range"] {
+  flex: 1;
+  min-width: 120px;
+  accent-color: var(--accent);
+}
+
+.panel-row select {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+}
+
+.panel-btn.danger {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --- Reading settings fields --- */
+.panel-field {
+  margin-bottom: 18px;
+}
+
+.panel-field-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-field-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.panel-field-inline .panel-field-label {
+  margin-bottom: 0;
+}
+
+.panel-value {
+  color: var(--accent);
+  font-family: monospace;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.panel-field input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Theme swatches */
+.theme-swatches {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-swatch {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 4px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.theme-swatch:hover {
+  transform: translateY(-2px);
+  color: var(--ink);
+}
+
+.theme-swatch.active {
+  border-color: var(--accent);
+  color: var(--ink);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.swatch-chip {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.theme-swatch[data-theme="light"] .swatch-chip { background: #faf7f0; }
+.theme-swatch[data-theme="sepia"] .swatch-chip { background: #f4ecd8; }
+.theme-swatch[data-theme="dark"]  .swatch-chip { background: #161b22; }
+.theme-swatch[data-theme="oled"]  .swatch-chip { background: #000000; }
+
+/* Segmented toggle (font family) */
+.seg-toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.seg-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.seg-btn[data-font="serif"] { font-family: var(--font-serif); }
+
+.seg-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
 @media (max-width: 480px) {
   .bottom-panel {
     padding-left: 16px;

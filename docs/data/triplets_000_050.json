@@ -1,0 +1,414 @@
+{
+  "metadata": {
+    "novel": "無漏",
+    "vol": 1,
+    "chapters_range": "000-050",
+    "total_chapters": 51,
+    "schema_version": "1.0",
+    "description": "《無漏》第一卷 000-050 章輕量關係圖譜資料庫 (Tier-3 Triplets Graph)"
+  },
+  "chapters": [
+    {
+      "chapter": 0,
+      "title": "楔子：失去座標的人",
+      "triplets": [
+        {"source": "界歸過程", "target": "失控人口", "relation": "散逸損失", "context": "約三成山河與人口失去座標，中樞界吏登記為常數"},
+        {"source": "阿滿", "target": "母親", "relation": "牽引分離", "context": "在界歸過程中因座標撕裂分離"},
+        {"source": "破碎意識", "target": "界歸損耗", "relation": "紀錄", "context": "虛無深處紀錄散逸三成一，未回收"}
+      ]
+    },
+    {
+      "chapter": 1,
+      "title": "開界大典",
+      "triplets": [
+        {"source": "秦無漏", "target": "無相界種", "relation": "召喚失敗", "context": "大典上界種即將凝成界核時遭奪走"},
+        {"source": "秦懷忠", "target": "無相界種", "relation": "預謀轉配", "context": "預埋同源界力將界種轉往秦昭"},
+        {"source": "秦無漏", "target": "無漏界空胎", "relation": "落下", "context": "界胚被撐開，界核與土地皆未形成，落下空胎"}
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "空胎",
+      "triplets": [
+        {"source": "秦氏家族", "target": "秦無漏", "relation": "凍結資源", "context": "判定空胎後全面凍結待遇與權限"},
+        {"source": "蘇晚照", "target": "秦無漏", "relation": "解除婚約", "context": "親自解除婚約並留下照影玉"},
+        {"source": "秦無漏", "target": "照影玉", "relation": "讀取證據", "context": "確認大典被刪除的三息內存在秦懷忠同源界力"}
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "除名",
+      "triplets": [
+        {"source": "秦懷忠", "target": "秦無漏", "relation": "否定證據", "context": "以複測污染為由否定大典波形"},
+        {"source": "秦氏族議", "target": "秦無漏", "relation": "逐出嫡系", "context": "收回父親資產並移往城西廢院"},
+        {"source": "秦無漏", "target": "裂紋銅核", "relation": "帶走", "context": "僅帶走父親遺留的裂紋銅核"}
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "殘核",
+      "triplets": [
+        {"source": "裂紋銅核", "target": "無漏界空胎", "relation": "展開融入", "context": "受到空胎吸引並重新展開，命名為殘核"},
+        {"source": "殘核", "target": "秦無漏", "relation": "共生連結", "context": "替代界核成功率低於萬分之一，共享感知"},
+        {"source": "秦罡", "target": "秦無漏", "relation": "潛入暗殺", "context": "奉命前往城西廢院進行滅口"}
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "解析",
+      "triplets": [
+        {"source": "殘核", "target": "秦罡", "relation": "法則解析", "context": "解析出秦罡擁有三十六里天地與界壁三道裂隙"},
+        {"source": "秦無漏", "target": "秦罡血液", "relation": "取得弱點", "context": "藉廢院鎮壁禁制逼秦罡受傷並取得血液解析弱點"}
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "截界",
+      "triplets": [
+        {"source": "秦無漏", "target": "秦罡", "relation": "越級反殺", "context": "利用鎮壁釘攻破秦罡北側法則空洞"},
+        {"source": "秦無漏", "target": "沉河城", "relation": "截入空胎", "context": "切斷界歸通道，將沉河城、四村、枯河截入空胎"}
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "天地之內",
+      "triplets": [
+        {"source": "沈季年", "target": "秦無漏", "relation": "暫停衝突", "context": "以救城為條件阻止守卒攻擊秦無漏"},
+        {"source": "阮青禾", "target": "沉河城", "relation": "醫療救援", "context": "建立醫者秩序處理傷患"},
+        {"source": "方折", "target": "沉河城", "relation": "城防維護", "context": "率守卒重啟鐘樓與主井固定局部座標"}
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "第一顆心臟",
+      "triplets": [
+        {"source": "沉河城居民", "target": "沉河城心臟", "relation": "秩序凝聚", "context": "透過登記、配糧、救火、醫療形成第一顆心臟與界力"},
+        {"source": "秦無漏", "target": "借城三息", "relation": "代價轉移", "context": "借力固定枯河，代價由居民承擔導致兩人死亡"},
+        {"source": "黑木匣", "target": "待煉化生命", "relation": "線索指向", "context": "秦罡遺物指向一批被鎖定生命"}
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "萬族囚車",
+      "triplets": [
+        {"source": "秦無漏", "target": "裘伍", "relation": "切斷控制", "context": "借城三息切斷裘伍對母根種的控制"},
+        {"source": "棘蘿/青角族", "target": "無漏界空胎", "relation": "自治遷入", "context": "保留武器與母根遷入空胎，與沉河城爭奪地脈"}
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "記憶雨",
+      "triplets": [
+        {"source": "異種法則/截界殘念", "target": "記憶雨", "relation": "聚集成型", "context": "兩族衝突引發記憶雨，展現共同被界主壓迫歷史"},
+        {"source": "秦懷忠", "target": "座標針", "relation": "祕密使用", "context": "秦無漏在雨中看見秦懷忠使用座標針"},
+        {"source": "巡界司", "target": "秦無漏", "relation": "發布通緝", "context": "因截界事件對秦無漏發布通緝令"}
+      ]
+    },
+    {
+      "chapter": 11,
+      "title": "名冊之外",
+      "triplets": [
+        {"source": "沈季年", "target": "新名冊", "relation": "建立設計", "context": "把漏民與青角族寫入不依賴界核的新名冊"},
+        {"source": "梁秋娘", "target": "新座標", "relation": "認可亮起", "context": "獲得共同承認後名字在界圖亮起，證實共同認可可建座標"}
+      ]
+    },
+    {
+      "chapter": 12,
+      "title": "界病",
+      "triplets": [
+        {"source": "人族/青角族法則", "target": "界病", "relation": "互相侵蝕", "context": "人體長葉、樹木長磚石"},
+        {"source": "阮青禾/棘蘿", "target": "緩衝區", "relation": "建立南城活屋", "context": "建立混合法則區，形成吸收污染的肺芽"}
+      ]
+    },
+    {
+      "chapter": 13,
+      "title": "第一份契約",
+      "triplets": [
+        {"source": "五席議事會", "target": "居民契約", "relation": "制定通過", "context": "沈季年、棘蘿、阮青禾、方折、秦無漏制定契約"},
+        {"source": "居民契約", "target": "共議論證", "relation": "法則誕生", "context": "禁止未經同意煉化活人，授權借力與阻斷權限"}
+      ]
+    },
+    {
+      "chapter": 14,
+      "title": "追界犬",
+      "triplets": [
+        {"source": "賀鳴川/巡界司", "target": "秦罡座標", "relation": "追蹤搜索", "context": "率追界犬追查秦罡失去的界歸線"},
+        {"source": "秦無漏", "target": "灰七", "relation": "切斷命令", "context": "切斷犬鏈控制端，灰七進入空胎並留下犬庫線索"}
+      ]
+    },
+    {
+      "chapter": 15,
+      "title": "借城三息",
+      "triplets": [
+        {"source": "秦無漏", "target": "賀鳴川", "relation": "擅借擊退", "context": "違反二息授權擅借第三息擊退巡界司"},
+        {"source": "方折/議事會", "target": "秦無漏", "relation": "執行懲罰", "context": "因居民傷亡與流產，依契約封鎖秦無漏接觸心臟"}
+      ]
+    },
+    {
+      "chapter": 16,
+      "title": "殘序市集",
+      "triplets": [
+        {"source": "殘序晶體", "target": "記市", "relation": "建立管控", "context": "將危險記憶交易納入醫療篩查與登記"},
+        {"source": "殘序記錄", "target": "陸停雲", "relation": "確認存活", "context": "揭露近三十年47名空胎者，陸停雲位於下池黑礦"}
+      ]
+    },
+    {
+      "chapter": 17,
+      "title": "父親留下的門",
+      "triplets": [
+        {"source": "秦無漏", "target": "帳冊界門", "relation": "開啟進入", "context": "在父親秦徹灰白山脊找到封死門痕"},
+        {"source": "秦徹", "target": "祖契釘", "relation": "拆除廢除", "context": "拆除秦無漏祖契釘，致使無相界種被改配給秦昭"}
+      ]
+    },
+    {
+      "chapter": 18,
+      "title": "活著的葬禮",
+      "triplets": [
+        {"source": "秦氏家族", "target": "秦無漏", "relation": "絕籍祭", "context": "為活著的秦無漏舉行絕籍祭"},
+        {"source": "無相界種", "target": "秦昭", "relation": "血脈綁定", "context": "界種已與秦昭七條血脈相連，強取將致其空胎"}
+      ]
+    },
+    {
+      "chapter": 19,
+      "title": "空胎名單",
+      "triplets": [
+        {"source": "陸停雲/礦工", "target": "爆界陣", "relation": "生命綁定", "context": "286名礦工被綁在爆界陣作為生命錨"},
+        {"source": "五席議事會", "target": "下池黑礦救援", "relation": "全票通過", "context": "首次就對外救援行動進行全票表決"}
+      ]
+    },
+    {
+      "chapter": 20,
+      "title": "第一根骨",
+      "triplets": [
+        {"source": "秦無漏/石苦", "target": "黑礦截取", "relation": "救援轉移", "context": "救出283名生還者並截取12里黑礦"},
+        {"source": "黑礦", "target": "無漏界空胎", "relation": "形成界骨", "context": "形成空胎第一根界骨，陸停雲說出虛舟暗號"}
+      ]
+    },
+    {
+      "chapter": 21,
+      "title": "虛舟來客",
+      "triplets": [
+        {"source": "紙鳶/虛舟盟", "target": "空胎者", "relation": "揭露真相", "context": "揭露空胎者長期被當作虛無活錨"},
+        {"source": "紙鳶", "target": "秦徹航誌", "relation": "交易提供", "context": "以航誌交換陸停雲自由選擇去留的權利"}
+      ]
+    },
+    {
+      "chapter": 22,
+      "title": "空胎之價",
+      "triplets": [
+        {"source": "陸停雲/袁細/季小山/余鹿", "target": "無核錨點", "relation": "進駐形成", "context": "進入黑礦骨腔形成無核錨點"}
+      ]
+    },
+    {
+      "chapter": 23,
+      "title": "界骨發熱",
+      "triplets": [
+        {"source": "陸停雲等四人", "target": "柴岳追印", "relation": "拆毀清算", "context": "以自己名字拆毀追印並取得乙七庫編號"},
+        {"source": "余鹿", "target": "殘序黑紋", "relation": "侵蝕殘留", "context": "留下持續侵蝕的殘序黑紋"}
+      ]
+    },
+    {
+      "chapter": 24,
+      "title": "封界令",
+      "triplets": [
+        {"source": "賀鳴川", "target": "沉河城", "relation": "封界封鎖", "context": "以封界令切斷物資與沉肺草供應"},
+        {"source": "紙鳶", "target": "遺界門片", "relation": "立約解析", "context": "以30日藥材交換遺界門片解析"},
+        {"source": "秦徹航誌", "target": "無漏座標", "relation": "記載記錄", "context": "記錄從虛無帶回無界歸線的「無漏」座標"}
+      ]
+    },
+    {
+      "chapter": 25,
+      "title": "秦昭開界",
+      "triplets": [
+        {"source": "秦昭", "target": "無相界種", "relation": "承接開界", "context": "開出103里初界並質問秦懷忠"},
+        {"source": "秦無漏", "target": "祭壇殘血", "relation": "取走殘留", "context": "放棄破壞秦昭開界，僅取走帶有祖契的殘血"}
+      ]
+    },
+    {
+      "chapter": 26,
+      "title": "百里初界",
+      "triplets": [
+        {"source": "秦昭", "target": "採砂工", "relation": "初界救援", "context": "以初界接住312名採砂工並擋風暴"},
+        {"source": "秦無漏/議事會", "target": "奪種計畫", "relation": "公開放棄", "context": "為保居民生命公開放棄現階段強行奪種"}
+      ]
+    },
+    {
+      "chapter": 27,
+      "title": "帳冊上的死人",
+      "triplets": [
+        {"source": "何知遠/錄界官", "target": "帳外土地", "relation": "死名轉運", "context": "死名仍被用來轉運帳外土地與人口"},
+        {"source": "秦無漏", "target": "賀鳴川", "relation": "乙七庫遭遇", "context": "在停屍坊地下乙七庫與賀鳴川相遇"}
+      ]
+    },
+    {
+      "chapter": 28,
+      "title": "旁支庫",
+      "triplets": [
+        {"source": "賀鳴川", "target": "乙七庫證據", "relation": "選擇保存", "context": "焚帳陣啟動時選擇保存押送帳與名牌證據"},
+        {"source": "秦無漏", "target": "秦徹主帳", "relation": "搶出證言", "context": "確認秦懷忠執行轉種，指令來自承界甲字印"}
+      ]
+    },
+    {
+      "chapter": 29,
+      "title": "界歸陷阱",
+      "triplets": [
+        {"source": "秦懷忠", "target": "秦讓天地", "relation": "陷阱設下", "context": "處死秦讓並利用其天地設下界歸陷阱"},
+        {"source": "黑礦界骨/無核錨點", "target": "界歸盲區", "relation": "製造支撐", "context": "製造一息盲區避開牽引，黑礦界骨受損開裂"}
+      ]
+    },
+    {
+      "chapter": 30,
+      "title": "進入旁支祖界",
+      "triplets": [
+        {"source": "秦無漏/方折", "target": "忠脈祖界", "relation": "潛入探索", "context": "看見12城、6,000里土地與12.6萬居民"},
+        {"source": "秦懷忠", "target": "忠脈12城", "relation": "封鎖逼威", "context": "封鎖12城將復仇代價與12萬居民綁定"}
+      ]
+    },
+    {
+      "chapter": 31,
+      "title": "十二城人質",
+      "triplets": [
+        {"source": "保城契", "target": "忠脈居民", "relation": "燃料綁定", "context": "居民12歲被寫入，掌界人死時先煉化2萬居民補缺"}
+      ]
+    },
+    {
+      "chapter": 32,
+      "title": "掌界人的帳",
+      "triplets": [
+        {"source": "秦懷忠", "target": "三槐村", "relation": "下令抽取", "context": "為填補9份定額缺口，下令抽取三槐村"}
+      ]
+    },
+    {
+      "chapter": 33,
+      "title": "灰脊遺民",
+      "triplets": [
+        {"source": "顧寒生", "target": "照影證據", "relation": "保存揭露", "context": "證實清收令來自天衡中樞補天院轉承界院"}
+      ]
+    },
+    {
+      "chapter": 34,
+      "title": "抽村",
+      "triplets": [
+        {"source": "三槐村村民", "target": "無漏界空胎", "relation": "自主投票遷入", "context": "823人自主表決遷入空胎，4人留守"}
+      ]
+    },
+    {
+      "chapter": 35,
+      "title": "第十三座城",
+      "triplets": [
+        {"source": "三槐台", "target": "無漏界空胎", "relation": "居民建城", "context": "多族居民合建三槐台，形成第一個自主城市錨點"}
+      ]
+    },
+    {
+      "chapter": 36,
+      "title": "一日斷糧",
+      "triplets": [
+        {"source": "暗生灰穗", "target": "殘序微光", "relation": "吸收發芽", "context": "舊種結合母根與黑髓，長出吸收殘序微光的新作物"}
+      ]
+    },
+    {
+      "chapter": 37,
+      "title": "第一次公示",
+      "triplets": [
+        {"source": "顧寒生/秦無漏", "target": "照影陣公示", "relation": "公開秘密", "context": "向12城公開保城契、抽村帳與承界甲令"},
+        {"source": "秦昭", "target": "原始界尺殘片", "relation": "取得封存", "context": "看完證據後封存照影陣，暫緩秦懷忠摧毀令"}
+      ]
+    },
+    {
+      "chapter": 38,
+      "title": "雙界初戰",
+      "triplets": [
+        {"source": "秦無漏", "target": "秦昭", "relation": "河灘交鋒", "context": "交手時互相避開要害與空胎入口"},
+        {"source": "秦無漏/秦昭", "target": "提前界歸", "relation": "聯手阻止", "context": "秦懷忠假死啟動保城契，兩人停戰聯手救城"}
+      ]
+    },
+    {
+      "chapter": 39,
+      "title": "忠脈議場",
+      "triplets": [
+        {"source": "秦無漏", "target": "保城契", "relation": "提議解除", "context": "提出解除保城契，柳峽城取得表決機會"}
+      ]
+    },
+    {
+      "chapter": 40,
+      "title": "借一座城",
+      "triplets": [
+        {"source": "柳峽城", "target": "保城契", "relation": "表決解除", "context": "71%住戶同意解除保城契，成為第一座自治城"},
+        {"source": "秦昭", "target": "柳峽城", "relation": "協助禦敵", "context": "放下拘捕令前往協助柳峽抵擋虛無風暴"}
+      ]
+    },
+    {
+      "chapter": 41,
+      "title": "斷河六日",
+      "triplets": [
+        {"source": "桑遲/水工", "target": "地下河", "relation": "重開通水", "context": "重開地下河，成立七席配水議場"}
+      ]
+    },
+    {
+      "chapter": 42,
+      "title": "第一個夜晚",
+      "triplets": [
+        {"source": "柳峽城議會", "target": "自治城律", "relation": "公開治理", "context": "公開倉儲數據，建立臨時城律取代煉化刑"}
+      ]
+    },
+    {
+      "chapter": 43,
+      "title": "自己的風暴",
+      "triplets": [
+        {"source": "柳峽城居民", "target": "虛無風暴", "relation": "城力抗衡", "context": "靠自身界弩地下河禦敵，西外城沉沒41人死亡"}
+      ]
+    },
+    {
+      "chapter": 44,
+      "title": "影子出走",
+      "triplets": [
+        {"source": "空胎居民", "target": "離影異常", "relation": "離體出走", "context": "5,560道影子離體，重演未選擇人生"},
+        {"source": "紙鳶舊影", "target": "無歸座標", "relation": "線索揭露", "context": "揭示無歸座標第二份藏於忠脈中央核心"}
+      ]
+    },
+    {
+      "chapter": 45,
+      "title": "第九裂帶",
+      "triplets": [
+        {"source": "遲影", "target": "異常生命", "relation": "獨立登記", "context": "紙鳶舊影拒絕回歸本體，登記為獨立生命「遲影」"},
+        {"source": "遺界門片", "target": "第九裂帶", "relation": "航路開啟", "context": "第二圈開啟指向第九裂帶，天衡補天院派舟"}
+      ]
+    },
+    {
+      "chapter": 46,
+      "title": "秦昭的證據",
+      "triplets": [
+        {"source": "秦昭", "target": "轉種真相", "relation": "完全確認", "context": "確認無相界種轉自秦無漏，停止擴張並向秦懷忠追責"}
+      ]
+    },
+    {
+      "chapter": 47,
+      "title": "石門拒戰",
+      "triplets": [
+        {"source": "石門守卒", "target": "攻城命令", "relation": "集體拒戰", "context": "三千守卒拒攻柳峽，63%住戶同意解除保城契"}
+      ]
+    },
+    {
+      "chapter": 48,
+      "title": "第二座自治城",
+      "triplets": [
+        {"source": "石門城", "target": "無漏界/柳峽", "relation": "解契自治", "context": "成為第二座自治城，兩城簽署互助契"}
+      ]
+    },
+    {
+      "chapter": 49,
+      "title": "補天使者",
+      "triplets": [
+        {"source": "晏平章/補天院", "target": "忠脈/兩城", "relation": "介入接管", "context": "判定乙七庫違法但支持集中治理，要求封存殘核與門片"}
+      ]
+    },
+    {
+      "chapter": 50,
+      "title": "七息守城",
+      "triplets": [
+        {"source": "七自治節點", "target": "晏平章", "relation": "聯合阻斷", "context": "利用7條獨立授權阻止中樞接管，顧寒生遭捕"},
+        {"source": "遲影", "target": "甲字殘序", "relation": "保存備份", "context": "在照影被奪時成功保存一層甲字殘序"}
+      ]
+    }
+  ]
+}

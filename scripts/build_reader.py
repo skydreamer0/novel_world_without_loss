@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""
+build_reader.py — self-host + subset the reader's CJK fonts.
+
+Scans every file the reader can render text from, collects the exact set of
+characters used, downloads the Noto Serif TC / Noto Sans TC *variable* fonts,
+and subsets them to small woff2 files under reader/fonts/ plus a fonts.css.
+
+Re-run this whenever new chapters add new characters (safe to run anytime;
+it only rewrites reader/fonts/). Designed to also drop into CI later.
+
+Requires: fonttools, brotli  (pip install fonttools brotli)
+"""
+
+from __future__ import annotations
+import io
+import sys
+import subprocess
+from pathlib import Path
+from urllib.request import Request, urlopen
+
+ROOT = Path(__file__).resolve().parent.parent
+READER = ROOT / "reader"
+FONTS_DIR = READER / "fonts"
+CACHE_DIR = ROOT / "scripts" / ".fontsrc"
+
+# Variable-font sources (one file covers every weight we use: 400/500/600/700)
+SOURCES = {
+    "serif": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoseriftc/NotoSerifTC%5Bwght%5D.ttf",
+        "family": "Noto Serif TC",
+        "out": "NotoSerifTC-subset.woff2",
+    },
+    "sans": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf",
+        "family": "Noto Sans TC",
+        "out": "NotoSansTC-subset.woff2",
+    },
+    "ui": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+        "family": "Inter",
+        "out": "Inter-subset.woff2",
+    },
+}
+
+# Files whose non-ASCII characters can end up on screen in the CJK font.
+SCAN_GLOBS = [
+    ("manuscript", "**/*.md"),
+    ("reader", "index.html"),
+    ("reader", "**/*.css"),
+    ("reader", "**/*.js"),
+]
+
+# Punctuation / symbols that appear via CSS `content:` or UI and must not tofu.
+EXTRA_CHARS = (
+    "❖…—–‧・、。，？！；：「」『』（）〈〉《》【】〔〕·〜～"
+    "‘’“”\"'･※◆◇○●■□▲△▼▽★☆→←↑↓⇒✓✕＋－×÷％＃＠＆"
+    "０１２３４５６７８９"
+)
+
+
+def collect_chars() -> set[str]:
+    chars: set[str] = set()
+    # Full printable ASCII — cheap and always needed (digits, latin, punctuation)
+    chars.update(chr(c) for c in range(0x20, 0x7F))
+
+    for sub, pattern in SCAN_GLOBS:
+        base = ROOT / sub
+        for f in base.glob(pattern):
+            if not f.is_file():
+                continue
+            try:
+                text = f.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                continue
+            chars.update(text)
+            chars.update(f.name)  # filenames show up as titles
+
+    chars.update(EXTRA_CHARS)
+    # Drop control chars / whitespace we don't need glyphs for
+    chars = {c for c in chars if c.isprintable() and not c.isspace()}
+    chars.add(" ")  # keep a real space
+    return chars
+
+
+def download(url: str, dest: Path) -> Path:
+    if dest.exists() and dest.stat().st_size > 100_000:
+        print(f"  cached: {dest.name} ({dest.stat().st_size/1e6:.1f} MB)")
+        return dest
+    print(f"  downloading {url}")
+    req = Request(url, headers={"User-Agent": "Mozilla/5.0 build_reader"})
+    with urlopen(req, timeout=120) as r:
+        data = r.read()
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(data)
+    print(f"  saved {dest.name} ({len(data)/1e6:.1f} MB)")
+    return dest
+
+
+def wght_range(ttf: Path) -> tuple[int, int]:
+    from fontTools.ttLib import TTFont
+    f = TTFont(str(ttf))
+    if "fvar" in f:
+        for axis in f["fvar"].axes:
+            if axis.axisTag == "wght":
+                return int(axis.minValue), int(axis.maxValue)
+    return 400, 400
+
+
+def subset(ttf: Path, out: Path, chars: set[str]) -> None:
+    text = "".join(sorted(chars))
+    tmp = CACHE_DIR / "_chars.txt"
+    tmp.write_text(text, encoding="utf-8")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    cmd = [
+        sys.executable, "-m", "fontTools.subset", str(ttf),
+        f"--text-file={tmp}",
+        "--flavor=woff2",
+        f"--output-file={out}",
+        "--layout-features=*",
+        "--name-IDs=",
+        "--no-hinting",
+        "--desubroutinize",
+    ]
+    subprocess.run(cmd, check=True)
+
+
+def main() -> int:
+    print("[1/4] Collecting characters…")
+    chars = collect_chars()
+    cjk = sum(1 for c in chars if ord(c) > 0x2000)
+    print(f"  {len(chars)} unique glyphs (~{cjk} CJK/symbol)")
+
+    faces = []
+    for key, spec in SOURCES.items():
+        print(f"[2/4] {spec['family']} — source font")
+        src = download(spec["url"], CACHE_DIR / Path(spec["url"]).name.replace("%5B", "[").replace("%5D", "]"))
+        lo, hi = wght_range(src)
+        print(f"[3/4] {spec['family']} — subsetting (wght {lo}..{hi})")
+        out = FONTS_DIR / spec["out"]
+        subset(src, out, chars)
+        kb = out.stat().st_size / 1024
+        print(f"  -> reader/fonts/{spec['out']} ({kb:.0f} KB)")
+        faces.append((spec["family"], spec["out"], lo, hi))
+
+    print("[4/4] Writing reader/fonts/fonts.css")
+    css = ["/* Generated by scripts/build_reader.py — do not edit by hand. */\n"]
+    for family, out, lo, hi in faces:
+        css.append(
+            f"@font-face {{\n"
+            f"  font-family: '{family}';\n"
+            f"  font-style: normal;\n"
+            f"  font-weight: {lo} {hi};\n"
+            f"  font-display: swap;\n"
+            f"  src: url('./{out}') format('woff2');\n"
+            f"}}\n"
+        )
+    (FONTS_DIR / "fonts.css").write_text("\n".join(css), encoding="utf-8")
+    print("Done. Primary (serif) woff2 is preloaded in index.html; sans loads on demand.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

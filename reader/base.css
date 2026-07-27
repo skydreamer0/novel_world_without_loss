@@ -21,8 +21,15 @@
   --border-radius: 12px;
 
   --font-ui: 'Inter', system-ui, sans-serif;
-  --font-body: 'Noto Serif TC', serif;
+  --font-serif: 'Noto Serif TC', Georgia, serif;
+  --font-sans: 'Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --font-body: var(--font-serif);
   --content-font-size: 1.125rem;
+
+  /* Reading typography — adjustable via the settings panel */
+  --content-measure: 46rem;      /* max line length of the prose column */
+  --content-line-height: 1.85;
+  --reader-padding-x: 28px;
 
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,6 +48,38 @@ body[data-theme="dark"] {
   --sidebar-bg: rgba(13, 17, 23, 0.85);
   --selection: rgba(232, 168, 76, 0.25);
   --shimmer: rgba(230, 237, 243, 0.04);
+}
+
+/* Sepia — warm paper, easy on the eyes for long reading */
+body[data-theme="sepia"] {
+  --bg: #f4ecd8;
+  --surface: #faf4e4;
+  --surface-trans: rgba(250, 244, 228, 0.78);
+  --ink: #463a29;
+  --muted: #8c7a5c;
+  --accent: #a6572e;
+  --accent-glow: rgba(166, 87, 46, 0.15);
+  --line: #e3d7bd;
+  --shadow: 0 4px 20px rgba(70, 58, 41, 0.08);
+  --sidebar-bg: rgba(244, 236, 216, 0.9);
+  --selection: rgba(166, 87, 46, 0.22);
+  --shimmer: rgba(70, 58, 41, 0.04);
+}
+
+/* OLED — true black for AMOLED screens / night reading */
+body[data-theme="oled"] {
+  --bg: #000000;
+  --surface: #0b0b0d;
+  --surface-trans: rgba(11, 11, 13, 0.78);
+  --ink: #d6dde3;
+  --muted: #7d868f;
+  --accent: #e8a84c;
+  --accent-glow: rgba(232, 168, 76, 0.15);
+  --line: #1e1e22;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --sidebar-bg: rgba(0, 0, 0, 0.9);
+  --selection: rgba(232, 168, 76, 0.25);
+  --shimmer: rgba(214, 221, 227, 0.04);
 }
 
 * {
@@ -107,4 +146,18 @@ body {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect users who prefer reduced motion: neutralise animations & transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }

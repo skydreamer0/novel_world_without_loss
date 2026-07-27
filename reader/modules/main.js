@@ -1,5 +1,5 @@
 import { loadExternalConfig, inferGithubRepo, loadState } from './config.js';
-import { applyTheme, applyFontSize } from './theme.js';
+import { applyTheme, applyFontSize, applyTypography } from './theme.js';
 import { bindEvents } from './events.js';
 import { initTTS } from './tts.js';
 import { loadFileList } from './github.js';
@@ -19,6 +19,7 @@ export async function init() {
     loadAnnotations();
     applyTheme();
     applyFontSize();
+    applyTypography();
     bindEvents();
 
     initTTS();

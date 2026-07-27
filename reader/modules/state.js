@@ -11,6 +11,9 @@ export const config = {
 export const PERSISTED_KEYS = {
   theme: 'reader-theme',
   fontSize: 'reader-font-size',
+  measure: 'reader-measure',
+  lineHeight: 'reader-line-height',
+  fontFamily: 'reader-font-family',
   ttsRate: 'reader-tts-rate',
   ttsStartMode: 'reader-tts-start-mode',
 };
@@ -40,6 +43,9 @@ export const state = {
   annotPanelOpen: false,
   theme: "light",
   fontSize: 1.125,
+  measure: 46,          // reading column width, in rem
+  lineHeight: 1.85,
+  fontFamily: "serif",  // 'serif' | 'sans'
   tts: {
     speaking: false,
     paused: false,
@@ -81,6 +87,7 @@ export const els = {
   menuBtn: document.getElementById("menu-btn"),
   sidebarCloseBtn: document.getElementById("sidebar-close-btn"),
   themeToggle: document.getElementById("theme-toggle"),
+  settingsBtn: document.getElementById("settings-btn"),
   ttsToggle: document.getElementById("tts-toggle"),
   fontSizeInc: document.getElementById("font-size-inc"),
   fontSizeDec: document.getElementById("font-size-dec"),
@@ -102,10 +109,15 @@ export const els = {
   ttsStartSelect: document.getElementById("tts-start-select"),
 
   // Bottom Panel Settings
-  panelThemeToggle: document.getElementById("panel-theme-toggle"),
   panelFontInc: document.getElementById("panel-font-inc"),
   panelFontDec: document.getElementById("panel-font-dec"),
   panelFontLabel: document.getElementById("panel-font-label"),
+  themeSwatches: document.querySelector(".theme-swatches"),
+  fontFamilyToggle: document.getElementById("font-family-toggle"),
+  measureRange: document.getElementById("measure-range"),
+  measureLabel: document.getElementById("measure-label"),
+  lineheightRange: document.getElementById("lineheight-range"),
+  lineheightLabel: document.getElementById("lineheight-label"),
 
   // Annotations UI
   annotToggle: document.getElementById("annot-toggle"),

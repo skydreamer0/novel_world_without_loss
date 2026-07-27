@@ -1,6 +1,6 @@
 import { state, els } from './state.js';
 import { saveState } from './config.js';
-import { applyTheme, applyFontSize } from './theme.js';
+import { applyFontSize, cycleTheme, setTheme, applyTypography } from './theme.js';
 import { toggleTTS, stopTTS, playNextChunk } from './tts.js';
 import { toggleBottomPanel, handleTouchStart, handleTouchEnd } from './gestures.js';
 import { updateBookmarkUI, renderSidebar } from './sidebar.js';
@@ -29,12 +29,13 @@ export function bindEvents() {
   els.sidebarOverlay.onclick = () => els.app.classList.add("sidebar-collapsed");
 
   // Settings
-  els.themeToggle.onclick = () => {
-    state.theme = state.theme === "light" ? "dark" : "light";
-    applyTheme();
-  };
+  els.themeToggle.onclick = () => cycleTheme();
 
   els.ttsToggle.onclick = toggleTTS;
+
+  if (els.settingsBtn) {
+    els.settingsBtn.onclick = () => toggleBottomPanel(!state.bottomPanelOpen);
+  }
 
   els.fontSizeInc.onclick = () => {
     state.fontSize = Math.min(state.fontSize + 0.1, 2.0);
@@ -165,7 +166,6 @@ export function bindEvents() {
   };
 
   // Panel Settings Controls
-  els.panelThemeToggle.onclick = () => els.themeToggle.click();
   els.panelFontInc.onclick = () => {
     els.fontSizeInc.click();
     els.panelFontLabel.textContent = state.fontSize.toFixed(1);
@@ -174,6 +174,44 @@ export function bindEvents() {
     els.fontSizeDec.click();
     els.panelFontLabel.textContent = state.fontSize.toFixed(1);
   };
+
+  // Theme swatches (light / sepia / dark / oled)
+  if (els.themeSwatches) {
+    els.themeSwatches.addEventListener("click", (e) => {
+      const btn = e.target.closest(".theme-swatch");
+      if (!btn) return;
+      setTheme(btn.dataset.theme);
+    });
+  }
+
+  // Font family toggle (serif / sans)
+  if (els.fontFamilyToggle) {
+    els.fontFamilyToggle.addEventListener("click", (e) => {
+      const btn = e.target.closest(".seg-btn");
+      if (!btn) return;
+      state.fontFamily = btn.dataset.font === "sans" ? "sans" : "serif";
+      applyTypography();
+      saveState("fontFamily");
+    });
+  }
+
+  // Reading column width
+  if (els.measureRange) {
+    els.measureRange.oninput = (e) => {
+      state.measure = parseInt(e.target.value, 10);
+      applyTypography();
+      saveState("measure");
+    };
+  }
+
+  // Line height
+  if (els.lineheightRange) {
+    els.lineheightRange.oninput = (e) => {
+      state.lineHeight = parseFloat(e.target.value);
+      applyTypography();
+      saveState("lineHeight");
+    };
+  }
 }
 
 // === Annotation event bindings ===
