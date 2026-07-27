@@ -115,7 +115,8 @@ export function bindEvents() {
   });
 
   // Click behavior
-  document.querySelector(".main-wrapper").addEventListener("click", (e) => {
+  const mainContent = document.querySelector(".main-content");
+  if (mainContent) mainContent.addEventListener("click", (e) => {
     if (e.target.closest("button, a, input, .bottom-nav, .top-nav, .nav-btn, .chapter-divider, .bottom-panel")) return;
 
     const clickY = e.clientY;

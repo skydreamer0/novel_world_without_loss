@@ -45,7 +45,7 @@ export async function loadChapter(path) {
     const statusEl = document.getElementById("content-status");
     if (statusEl) statusEl.textContent = `已載入：${title}`;
     const chapName = state.files[index].path.split('/').pop().replace('.md', '');
-    document.title = `${chapName} - 末日母艦`;
+    document.title = `${chapName} - 《無漏》`;
     updateWordCount(text);
 
     const savedPos = state.scrollPositions[path];
@@ -271,7 +271,7 @@ export function updateVisibleChapterTitle() {
     state.activeIndex = idx;
     els.chapterTitle.textContent = state.files[idx].title;
     const chapName = state.files[idx].path.split('/').pop().replace('.md', '');
-    document.title = `${chapName} - 末日母艦`;
+    document.title = `${chapName} - 《無漏》`;
     updateBookmarkUI();
     updateActiveSidebarItem();
 
