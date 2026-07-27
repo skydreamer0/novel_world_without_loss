@@ -20,26 +20,41 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 def get_chapter_outline(chap_num):
     """Find and extract outline for specific chapter from outlines/"""
+    cn_num = num_to_cn(chap_num)
     for file_name in sorted(os.listdir(OUTLINES_DIR)):
         if file_name.endswith(".md") and "細綱" in file_name:
             file_path = os.path.join(OUTLINES_DIR, file_name)
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
             
-            # Match header for target chapter, e.g., ## 第五十一章：被捕的航者
-            pattern = rf"(## 第[一二三四五六七八九十百0-9]+章[：:][^\n]+(?:\n(?!## 第)[^\n]+)*)"
-            matches = re.findall(pattern, content)
-            
-            # Simple fallback regex by chapter number
-            chap_chinese_num = str(chap_num)
-            for block in content.split("## 第"):
-                if not block.strip():
-                    continue
+            blocks = content.split("\n## 第")
+            for block in blocks[1:]:
                 block_full = "## 第" + block
-                # Check for matching numbers or titles
-                if f"第{chap_num}章" in block_full or f"第{chap_chinese_num}章" in block_full or (chap_num == 51 and "五十一章" in block_full):
+                header_line = block_full.split("\n")[0]
+                if f"第{chap_num}章" in header_line or f"第{cn_num}章" in header_line or f"第{chap_num:03d}章" in header_line:
                     return block_full.strip()
     return f"未能在 outlines/ 找到第 {chap_num} 章細綱。"
+
+def num_to_cn(n):
+    units = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九']
+    if n <= 0: return str(n)
+    if n < 10: return units[n]
+    if n == 10: return '十'
+    if n < 20: return '十' + units[n % 10]
+    if n < 100:
+        return units[n // 10] + '十' + (units[n % 10] if n % 10 != 0 else '')
+    if n < 1000:
+        hundreds = units[n // 100] + '百'
+        rem = n % 100
+        if rem == 0:
+            return hundreds
+        elif rem < 10:
+            return hundreds + '零' + units[rem]
+        elif rem == 10:
+            return hundreds + '一十'
+        else:
+            return hundreds + num_to_cn(rem)
+    return str(n)
 
 def get_last_chapters_summary(chap_num, count=3):
     """Extract summaries for previous N chapters from 11_進度台帳.md"""
@@ -50,24 +65,28 @@ def get_last_chapters_summary(chap_num, count=3):
         content = f.read()
 
     summaries = []
-    start_chap = max(0, chap_num - count)
+    start_chap = max(1, chap_num - count)
     end_chap = chap_num - 1
 
-    for c in range(start_chap, end_chap + 1):
-        pattern = rf"### [^\n]*第[^\n]*{c}[^\n]*章[^\n]*\n+([\s\S]*?)(?=\n### |\n## |$)"
-        match = re.search(pattern, content)
-        if match:
-            summaries.append(f"#### 第 {c} 章摘要\n" + match.group(1).strip())
+    # Split progress file by '### ' section headers
+    blocks = content.split("\n### ")
+    for b in blocks[1:]:
+        header_line = b.split("\n")[0]
+        for c in range(start_chap, end_chap + 1):
+            cn_num = num_to_cn(c)
+            # Match headers like "第四十八章：第二座自治城" or "48章" or "048"
+            if f"第{cn_num}章" in header_line or f"第{c}章" in header_line or f"第{c:03d}章" in header_line:
+                # Remove extra metadata notes at end of block if any
+                clean_block = b.strip()
+                # Strip out trailing instructions or unrelated subheadings
+                if "\n後續摘要需保留" in clean_block:
+                    clean_block = clean_block.split("\n後續摘要需保留")[0].strip()
+                if "\n## " in clean_block:
+                    clean_block = clean_block.split("\n## ")[0].strip()
+                summaries.append("### " + clean_block)
+                break
 
-    if not summaries:
-        # Fallback search by chapter title blocks
-        blocks = content.split("### ")
-        for b in blocks:
-            for c in range(start_chap, end_chap + 1):
-                if f"{c}章" in b or f"第{c}章" in b or (c == 50 and "第五十章" in b):
-                    summaries.append("#### " + b.strip())
-
-    return "\n\n".join(summaries[:count]) if summaries else "未找到前三章摘要。"
+    return "\n\n".join(summaries[-count:]) if summaries else "未找到前三章摘要。"
 
 def get_triplet_history(entities):
     """Query triplets graph for entity connections"""
@@ -102,7 +121,7 @@ def build_writing_pack(chap_num, entities):
     prev_summaries = get_last_chapters_summary(chap_num, count=3)
     triplets = get_triplet_history(entities)
     
-    output_filename = f"14_第{chap_num}章開寫包.md"
+    output_filename = f"15_第{chap_num}章開寫包.md" if chap_num >= 52 else f"14_第{chap_num}章開寫包.md"
     output_filepath = os.path.join(DOCS_DIR, output_filename)
     
     content = f"""# 《無漏》第 {chap_num} 章 AI 開寫包
