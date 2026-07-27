@@ -42,12 +42,15 @@ export function mergeConfig(partialConfig) {
 
 export async function loadExternalConfig() {
   try {
-    const resp = await fetch(`./${config.configFile}?t=${Date.now()}`, { cache: "no-store" });
+    const configPath = location.pathname.endsWith("/config.json")
+      ? "config.json"
+      : (location.pathname.includes("/reader/") ? "config.json" : "reader/config.json");
+    const resp = await fetch(`./${configPath}?t=${Date.now()}`, { cache: "no-store" });
     if (!resp.ok) return;
     const data = await resp.json();
     mergeConfig(data);
   } catch (err) {
-    console.info("No external reader.config.json loaded", err);
+    console.info("No external reader config loaded", err);
   }
 }
 
