@@ -4,7 +4,7 @@ export const config = {
   githubRepo: "novel_world_without_loss",
   githubBranch: "master",
   includeExtensions: [".md", ".MD"],
-  includeFolders: ["manuscript/vol_01", "manuscript", "docs", "outlines"],
+  includeFolders: ["manuscript"],
   configFile: "reader/config.json",
 };
 
