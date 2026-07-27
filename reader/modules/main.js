@@ -7,7 +7,6 @@ import { renderSidebar } from './sidebar.js';
 import { loadChapter } from './reader.js';
 import { state } from './state.js';
 import { loadAnnotations } from './annotations.js';
-import { loadGlossary, bindGlossaryPopover, setGlossaryEnabled } from './glossary.js';
 import { showError, wrapModule } from '../error-boundary.js';
 
 // --- Main ---
@@ -25,20 +24,6 @@ export async function init() {
     initTTS();
     await wrapModule('loadFileList', () => loadFileList());
     renderSidebar();
-
-    // Glossary loads in parallel — doesn't block initial render
-    loadGlossary()
-      .then(() => {
-        bindGlossaryPopover();
-        setGlossaryEnabled(state.glossaryEnabled);
-        // Re-annotate already-loaded chapters
-        document.querySelectorAll('.chapter-section').forEach(sec => {
-          import('./glossary.js').then(({ annotateGlossary }) => annotateGlossary(sec));
-        });
-      })
-      .catch(() => {
-        console.warn('[Main] 詞彙表載入失敗，跳過此功能');
-      });
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js')

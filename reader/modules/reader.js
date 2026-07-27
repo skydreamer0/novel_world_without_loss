@@ -8,7 +8,6 @@ import {
   renderAnnotPanel, applyHighlightsToSection, observeParas, showResumeToastIfAny
 } from './annotation_render.js';
 import { indexParagraphs } from './annotation_render.js';
-import { annotateGlossary } from './glossary.js';
 
 // --- Chapter Loading & Rendering ---
 
@@ -126,7 +125,6 @@ export function createChapterSection(index, title, rawText) {
   const path = state.files[index].path;
   indexParagraphs(section, path);
   applyHighlightsToSection(section, path);
-  annotateGlossary(section);
 
   return section;
 }

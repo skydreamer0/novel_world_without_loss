@@ -70,8 +70,6 @@ export function loadState() {
       if (raw === null) continue;
       if (key === 'fontSize' || key === 'ttsRate') {
         state[key] = parseFloat(raw);
-      } else if (key === 'glossaryEnabled') {
-        state[key] = raw !== 'false';
       } else {
         state[key] = raw;
       }

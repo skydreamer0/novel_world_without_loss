@@ -16,13 +16,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Markdown parser (provides window.marked used by the reader) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="reader.css">
   <link rel="stylesheet" href="sidebar.css">
   <link rel="stylesheet" href="panel.css">
   <link rel="stylesheet" href="annotations.css">
-  <link rel="stylesheet" href="glossary.css">
 </head>
 <body>
   <div class="app sidebar-collapsed">
@@ -39,25 +40,23 @@
       </div>
       <div id="status" class="status">正在加載目錄...</div>
       <nav id="chapter-list" class="chapter-list"></nav>
-      <div class="sidebar-footer">
-        <a href="setting-page.html" class="dossier-link">📖 進入作品設定集</a>
-      </div>
     </aside>
     <div class="sidebar-overlay"></div>
 
     <!-- Main Content Viewer -->
-    <main class="main-content">
+    <main class="main-wrapper">
       <header class="top-nav">
-        <button id="menu-btn" class="icon-btn" aria-label="開啟目錄">☰</button>
-        <h1 id="chapter-title">《無漏》閱讀器</h1>
-        <div class="nav-actions">
+        <div class="nav-left">
+          <button id="menu-btn" class="icon-btn" aria-label="開啟目錄">☰</button>
+          <h1 id="chapter-title" class="chapter-title">《無漏》閱讀器</h1>
+        </div>
+        <div class="nav-controls">
           <button id="bookmark-btn" class="icon-btn" title="書籤">
             <svg viewBox="0 0 24 24" width="20" height="20">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
             </svg>
           </button>
           <button id="annot-toggle" class="icon-btn" title="劃線與批註">✍</button>
-          <button id="glossary-toggle" class="icon-btn" title="設定集詞彙高亮">📖</button>
           <button id="tts-toggle" class="icon-btn" title="語音朗讀">🔊</button>
           <button id="theme-toggle" class="icon-btn" title="切換主題">🌙</button>
           <button id="font-size-dec" class="icon-btn" title="縮小字體">A-</button>
@@ -67,7 +66,7 @@
 
       <article id="content" class="content"></article>
 
-      <footer class="chapter-nav-footer">
+      <footer class="bottom-nav">
         <button id="prev-btn" class="nav-btn" disabled>上一章</button>
         <span id="word-count">字數: 0</span>
         <button id="next-btn" class="nav-btn" disabled>下一章</button>
