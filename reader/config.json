@@ -1,0 +1,7 @@
+{
+  "githubOwner": "skydreamer0",
+  "githubRepo": "novel_world_without_loss",
+  "githubBranch": "master",
+  "includeExtensions": [".md", ".MD"],
+  "includeFolders": ["manuscript/vol_01", "manuscript", "docs", "outlines"]
+}

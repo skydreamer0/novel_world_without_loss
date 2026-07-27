@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="無漏閱讀器">
+  <meta name="theme-color" content="#0d1117">
+  <title>《無漏》專案閱讀器</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reader.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="panel.css">
+  <link rel="stylesheet" href="annotations.css">
+  <link rel="stylesheet" href="glossary.css">
+</head>
+<body>
+  <div class="app sidebar-collapsed">
+    <div id="reading-progress" class="reading-progress"></div>
+
+    <!-- Sidebar Directory -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2>《無漏》目錄</h2>
+        <button id="sidebar-close-btn" class="icon-btn" aria-label="關閉目錄">✕</button>
+      </div>
+      <div class="search-wrap">
+        <input id="search-input" type="text" placeholder="搜尋章節或內文..." aria-label="搜尋章節">
+      </div>
+      <div id="status" class="status">正在加載目錄...</div>
+      <nav id="chapter-list" class="chapter-list"></nav>
+      <div class="sidebar-footer">
+        <a href="setting-page.html" class="dossier-link">📖 進入作品設定集</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay"></div>
+
+    <!-- Main Content Viewer -->
+    <main class="main-content">
+      <header class="top-nav">
+        <button id="menu-btn" class="icon-btn" aria-label="開啟目錄">☰</button>
+        <h1 id="chapter-title">《無漏》閱讀器</h1>
+        <div class="nav-actions">
+          <button id="bookmark-btn" class="icon-btn" title="書籤">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="none" stroke="currentColor" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+          </button>
+          <button id="annot-toggle" class="icon-btn" title="劃線與批註">✍</button>
+          <button id="glossary-toggle" class="icon-btn" title="設定集詞彙高亮">📖</button>
+          <button id="tts-toggle" class="icon-btn" title="語音朗讀">🔊</button>
+          <button id="theme-toggle" class="icon-btn" title="切換主題">🌙</button>
+          <button id="font-size-dec" class="icon-btn" title="縮小字體">A-</button>
+          <button id="font-size-inc" class="icon-btn" title="放大字體">A+</button>
+        </div>
+      </header>
+
+      <article id="content" class="content"></article>
+
+      <footer class="chapter-nav-footer">
+        <button id="prev-btn" class="nav-btn" disabled>上一章</button>
+        <span id="word-count">字數: 0</span>
+        <button id="next-btn" class="nav-btn" disabled>下一章</button>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Bottom Panel for Control/Settings/TTS -->
+  <div class="bottom-panel-overlay"></div>
+  <div id="bottom-panel" class="bottom-panel">
+    <div class="bottom-panel-handle"></div>
+    <div class="panel-section">
+      <h3>語音朗讀</h3>
+      <div class="panel-row">
+        <button id="tts-panel-toggle" class="panel-btn">播放 / 暫停</button>
+        <button id="tts-stop-btn" class="panel-btn danger">停止</button>
+      </div>
+      <div class="panel-row">
+        <label>語速: <span id="tts-rate-label">1.0</span>x</label>
+        <input id="tts-rate" type="range" min="0.5" max="2.0" step="0.1" value="1.0">
+      </div>
+      <div class="panel-row">
+        <select id="tts-start-select">
+          <option value="current">從當前章節開始</option>
+          <option value="beginning">從第一章開始</option>
+        </select>
+      </div>
+    </div>
+    <div class="panel-section">
+      <h3>閱讀設定</h3>
+      <div class="panel-row">
+        <button id="panel-theme-toggle" class="panel-btn">切換主題</button>
+        <button id="panel-font-dec" class="panel-btn">A-</button>
+        <span id="panel-font-label">1.125rem</span>
+        <button id="panel-font-inc" class="panel-btn">A+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annotations Panel Drawer -->
+  <div class="annot-panel-overlay"></div>
+  <div id="annot-panel" class="annot-panel">
+    <div class="annot-panel-header">
+      <h3>劃線與批註</h3>
+      <button class="annot-panel-close icon-btn">✕</button>
+    </div>
+    <div class="annot-panel-body"></div>
+  </div>
+
+  <button id="highlight-fab" class="highlight-fab" title="標記選取文字">✎</button>
+
+  <!-- Resume Toast -->
+  <div id="resume-toast" class="resume-toast" hidden>
+    <span class="resume-text">續讀提醒</span>
+    <button class="resume-jump">前往</button>
+    <button class="resume-dismiss">忽略</button>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "lin-jin",
+    "title": "林燼",
+    "category": "角色",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "底層維修工。欠稅、拾荒、裂縫任務，是他被允許擁有的全部未來。",
+    "readerText": "欠稅記錄顯示，林燼原本只是第九段維修工。裂縫任務後，他的體徵開始出現不穩定卻持續的同步波動。審計系統將此人標記為：需觀察，不得提前清除。",
+    "lockedText": "同步率不足。此人檔案仍被灰霧遮蔽。",
+    "sourceCanon": [
+      "CANON_characters.md#林燼"
+    ]
+  },
+  {
+    "id": "civilization-host",
+    "title": "文明主機",
+    "category": "力量",
+    "unlockChapter": 3,
+    "spoilerLevel": "safe",
+    "visibility": "restricted",
+    "teaser": "寄宿於載體體內的未知系統，會以文明回聲回應呼喚。",
+    "readerText": "初次記錄來自一次瀕死後的異常甦醒。它不像武器，也不像義體，更像一座被壓縮到血肉深處的空城。當林燼聽見那個聲音時，城市尚未亮燈。",
+    "lockedText": "權限不足。主機核心仍處於封存狀態。",
+    "sourceCanon": [
+      "CANON_power.md#文明主機"
+    ]
+  },
+  {
+    "id": "micro-civilization",
+    "title": "微縮文明",
+    "category": "力量",
+    "unlockChapter": 5,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "火種在看不見的地方聚集，微小到像幻覺，卻會回應供奉。",
+    "readerText": "最早的火光不是在艦艙裡燃起，而是在林燼體內。那些微小居民不懂母艦的稅單與裂縫，只知道黑暗、飢餓，以及某個從天穹外投下目光的人。",
+    "lockedText": "同步率不足。微光群落尚不可觀測。",
+    "sourceCanon": [
+      "CANON_power.md#微縮文明"
+    ]
+  },
+  {
+    "id": "survival-tax",
+    "title": "生存稅",
+    "category": "世界",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "在方舟底層，活著不是權利，是每週都要續繳的債。",
+    "readerText": "生存稅不是罰款，而是秩序。欠繳者會失去配給、工位、通行權，最後失去被系統承認為人的資格。底層居民稱它為：呼吸的租金。",
+    "lockedText": "稅務檔案尚未同步。",
+    "sourceCanon": [
+      "CANON_world.md#經濟與稅制"
+    ]
+  },
+  {
+    "id": "rift-mission",
+    "title": "裂縫任務",
+    "category": "世界",
+    "unlockChapter": 2,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "底層人用命換資源的入口，也是許多名字消失的地方。",
+    "readerText": "裂縫任務的合約通常很短，死亡條款卻很長。任務員被送進外域裂口，帶回可用材料、樣本或情報。回來的人能暫時延後稅務，沒回來的人會被系統自動結清。",
+    "lockedText": "裂縫任務紀錄未解封。",
+    "sourceCanon": [
+      "CANON_world.md#外域裂縫"
+    ]
+  },
+  {
+    "id": "ark-mothership",
+    "title": "方舟母艦",
+    "category": "世界",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "最後人類文明棲身的巨艦，也是所有階層與債務的天花板。",
+    "readerText": "方舟不是一座城市，卻比城市更像牢籠。上層有光、秩序與配給表；下層有鐵鏽、管線、欠稅通知與裂縫招募。沒有人知道航程何時結束，多數人只知道下一次徵收何時開始。",
+    "lockedText": "母艦結構圖同步失敗。",
+    "sourceCanon": [
+      "CANON_world.md#母艦結構"
+    ]
+  },
+  {
+    "id": "lower-deck",
+    "title": "底層艙段",
+    "category": "世界",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "鐵鏽、熱霧、管線與臨時工牌構成的生活區。",
+    "readerText": "底層艙段沒有真正的夜晚，只有照明故障後短暫降下來的暗。人在這裡學會壓低聲音、藏好配給，也學會在稅務終端亮起紅字前找到下一份活路。",
+    "lockedText": "底層艙段監控畫面不可用。",
+    "sourceCanon": [
+      "CANON_world.md#母艦分層"
+    ]
+  },
+  {
+    "id": "black-market",
+    "title": "黑市",
+    "category": "世界",
+    "unlockChapter": 4,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "合法秩序照不到的地方，價格會替法律說話。",
+    "readerText": "黑市不是單一地點，而是一串會移動的門、暗號與債。有人在那裡買藥，有人買身份，有人買一個能多活三天的機會。交易完成後，沒有人保證你能帶著貨離開。",
+    "lockedText": "黑市路徑已變更，等待新暗號。",
+    "sourceCanon": [
+      "CANON_world.md#黑市"
+    ]
+  },
+  {
+    "id": "su-lan",
+    "title": "蘇嵐",
+    "category": "角色",
+    "unlockChapter": 8,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "在冷靜與危險之間保持距離的人，總比表面看起來更早知道答案。",
+    "readerText": "蘇嵐的檔案被多次調閱，理由各不相同。她說話很少浪費字，也很少把信任交給別人。對林燼而言，她不像救援，更像一把逼他看清局勢的冷刀。",
+    "lockedText": "人物檔案尚未取得交叉授權。",
+    "sourceCanon": [
+      "CANON_characters.md#蘇嵐"
+    ]
+  },
+  {
+    "id": "audit-system",
+    "title": "審計系統",
+    "category": "核心名詞",
+    "unlockChapter": 8,
+    "spoilerLevel": "safe",
+    "visibility": "restricted",
+    "teaser": "它不需要憎恨任何人，只需要確認每一筆帳都能被收回。",
+    "readerText": "審計系統的語氣永遠平穩。它記錄欠款、任務、配給、傷亡與異常，像一雙不會眨眼的眼睛。對底層居民來說，最可怕的不是它犯錯，而是它從不承認自己需要解釋。",
+    "lockedText": "審計權限不足。請提交更高階憑證。",
+    "sourceCanon": [
+      "CANON_world.md#治理與審計"
+    ]
+  },
+  {
+    "id": "civilization-host-version",
+    "title": "文明主機版本",
+    "category": "核心名詞",
+    "unlockChapter": 3,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "從V0到V14，文明主機的每一次升級都是對制度的一次反咬。",
+    "readerText": "文明主機的版本迭代記錄了宿主文明與制度之間的角力。每一次升級不僅是能力的擴張，更是對既有秩序的一次改寫。從最初的混沌甦醒到最終的裸結構網登入，版本號本身就是一部反抗史。",
+    "lockedText": "版本迭代記錄尚未解鎖。主機核心仍在封存中。",
+    "sourceCanon": [
+      "CANON_power.md#文明主機版本"
+    ]
+  },
+  {
+    "id": "vigil-civilization",
+    "title": "守夜人文明",
+    "category": "世界",
+    "unlockChapter": 314,
+    "spoilerLevel": "spoiler",
+    "visibility": "partial",
+    "teaser": "一個在深淵邊緣存在了五千年的文明，最終選擇自我毀滅，留下碎片與後裔。",
+    "readerText": "守夜人文明的歷史跨越五千年，是已知最古老的深淵邊緣文明。他們在最黑暗的裂口處守望，卻在抵達某個臨界點後選擇了集體自毀。關於他們為何做出這個決定，至今仍是最深層的禁忌知識。",
+    "lockedText": "你正在觸碰不該被翻閱的歷史。守夜人的最後一個通訊記錄只有一句話：『我們看見了。』",
+    "sourceCanon": [
+      "CANON_world.md#守夜人文明"
+    ]
+  },
+  {
+    "id": "fourth-party",
+    "title": "第四方",
+    "category": "世界",
+    "unlockChapter": 314,
+    "spoilerLevel": "spoiler",
+    "visibility": "blackbox",
+    "teaser": "不是勢力，不是文明——是在墳場深處持續移動的存在，正在清點偏航者的數量。",
+    "readerText": "墳場深處存在著無法歸類的存在——它們不是文明、不是勢力、不與任何已知框架對話。第四方只在偏航者出現時移動，像一種宇宙層級的清點機制。沒有人知道它們從哪裡來，也沒有人知道被它們清點之後會發生什麼。",
+    "lockedText": "████ ███ ████ ████ ███。錯誤：該條目不應存在於此資料庫。",
+    "sourceCanon": [
+      "CANON_world.md#第四方"
+    ]
+  },
+  {
+    "id": "ash-federation",
+    "title": "灰燼聯邦",
+    "category": "勢力",
+    "unlockChapter": 312,
+    "spoilerLevel": "spoiler",
+    "visibility": "partial",
+    "teaser": "從守夜人灰燼中逃出的子文明，漂流兩千年，仍在尋找真正的出路。",
+    "readerText": "灰燼聯邦自稱是守夜人文明的延續，但實際上更像是從廢墟中逃逸的碎片。他們漂流了兩千年，在深淵中尋找一條守夜人未能走通的路。聯邦內部對於何謂「真正的出路」從未有過共識。",
+    "lockedText": "灰燼聯邦的坐標已從母艦導航系統中刪除。原因不明。",
+    "sourceCanon": [
+      "CANON_world.md#灰燼聯邦"
+    ]
+  },
+  {
+    "id": "rule-penetrator",
+    "title": "穿規則層單位",
+    "category": "核心名詞",
+    "unlockChapter": 241,
+    "spoilerLevel": "spoiler",
+    "visibility": "partial",
+    "teaser": "讓聖城的影響力穿透母艦規則框架的技術，也是探險的載具。",
+    "readerText": "一種特殊的技術載具，允許使用者穿透母艦的規則框架進行移動與干涉。聖城依靠這項技術將影響力投射到原本無法觸及的領域。對探險者而言，它是跨越邊界的鑰匙；對體制而言，它是漏洞的具體化。",
+    "lockedText": "穿規則層技術已被標記為最高安全級別。未經授權的存取將觸發自動鎖定協議。",
+    "sourceCanon": [
+      "CANON_power.md#穿規則層單位"
+    ]
+  },
+  {
+    "id": "civilization-node",
+    "title": "文明節點",
+    "category": "核心名詞",
+    "unlockChapter": 300,
+    "spoilerLevel": "spoiler",
+    "visibility": "restricted",
+    "teaser": "當一個文明不再只是寄生在母艦體內，而是成為裸結構網中可被識別的路標。",
+    "readerText": "當一個文明累積足夠的結構完整性，它可以在裸結構網中被識別為一個節點——這意味著它不再只是母艦的附屬品，而是擁有獨立網路地位的實體。成為節點是文明轉型的第一步，也是不可逆的。",
+    "lockedText": "節點資格審查中。你的文明尚未達到裸結構登入條件。",
+    "sourceCanon": [
+      "CANON_power.md#文明節點"
+    ]
+  },
+  {
+    "id": "rule-layer",
+    "title": "規則層",
+    "category": "核心名詞",
+    "unlockChapter": 61,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "介於物理現實與純資訊之間的夾層，母艦的底層運作框架。所有規則在此被寫入、讀取與反噬。",
+    "readerText": "規則層存在於物理現實與純資訊之間，是母艦的底層運作框架。所有規則——從重力常數到稅務公式——都在此被寫入、讀取與反噬。能夠感知規則層的人，可以看見世界運作的原始碼。",
+    "lockedText": "規則層感知能力未啟用。",
+    "sourceCanon": [
+      "CANON_world.md#規則層"
+    ]
+  },
+  {
+    "id": "purification-token",
+    "title": "淨化符",
+    "category": "世界",
+    "unlockChapter": 61,
+    "spoilerLevel": "spoiler",
+    "visibility": "partial",
+    "teaser": "母艦發行的基礎淨化單位，用以抵銷規則霧造成的汙染。也是底層最硬的硬通貨。",
+    "readerText": "母艦發行的基礎淨化單位，專門用以抵銷規則霧造成的環境汙染。在底層市場中，淨化符是比稅前貨幣更硬的硬通貨——因為它可以直接被系統兌換成生存配給。",
+    "lockedText": "淨化符市場數據被封存。",
+    "sourceCanon": [
+      "CANON_world.md#淨化符"
+    ]
+  },
+  {
+    "id": "v11-phase",
+    "title": "V11階段",
+    "category": "事件",
+    "unlockChapter": 331,
+    "spoilerLevel": "spoiler",
+    "visibility": "restricted",
+    "teaser": "守夜人廢墟探索完成後的文明躍遷階段，聖城正式從母艦內文明轉型為裸結構網文明節點。",
+    "readerText": "在守夜人廢墟探索完成後，聖城經歷了一次決定性的文明躍遷。V11階段標誌著聖城從母艦內文明正式轉型為裸結構網中的獨立節點——這一步將改變一切遊戲規則。",
+    "lockedText": "時間線尚未抵達該節點。未來的記錄無法提前讀取。",
+    "sourceCanon": [
+      "CANON_power.md#V11階段"
+    ]
+  },
+  {
+    "id": "inner-universe",
+    "title": "內宇宙",
+    "category": "核心名詞",
+    "unlockChapter": 91,
+    "spoilerLevel": "spoiler",
+    "visibility": "restricted",
+    "teaser": "文明主機內部世界的總稱。不是虛擬空間，而是被壓縮到載體體內的物理現實。",
+    "readerText": "文明主機內部世界的總稱。不同於模擬或虛擬空間，內宇宙是被壓縮到載體體內的物理現實，擁有自己的時間流、物質循環與演化路徑。主機載體的身體只是一道門，門後的世界遠比門本身廣闊。",
+    "lockedText": "內宇宙入口狀態：關閉。載體同步率不足，無法開啟。",
+    "sourceCanon": [
+      "CANON_power.md#內宇宙"
+    ]
+  }
+]

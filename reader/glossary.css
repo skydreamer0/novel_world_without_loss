@@ -1,0 +1,143 @@
+/* glossary.css — Glossary Terms, Popover, iOS Switch */
+/* Extracted from styles.css lines 1395-1540 */
+
+.content .term {
+  border-bottom: 1px dashed var(--muted);
+  cursor: help;
+  transition: color 0.15s var(--ease-smooth), border-color 0.15s var(--ease-smooth);
+  padding: 0 1px;
+}
+
+.content .term:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  border-bottom-style: solid;
+}
+
+body.no-glossary .content .term {
+  border-bottom: none;
+  cursor: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+body.no-glossary #glossary-popover {
+  display: none !important;
+}
+
+#glossary-popover {
+  position: absolute;
+  z-index: 9700;
+  width: min(300px, 92vw);
+  padding: 14px 16px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth);
+  font-family: var(--font-ui);
+  pointer-events: auto;
+}
+
+#glossary-popover.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#glossary-popover[data-flip="below"] {
+  transform: translateY(4px);
+}
+
+#glossary-popover[data-flip="below"].show {
+  transform: translateY(0);
+}
+
+#glossary-popover .gp-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+#glossary-popover .gp-term {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+#glossary-popover .gp-source {
+  font-size: 0.72rem;
+  color: var(--accent);
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent-glow);
+}
+
+#glossary-popover .gp-desc {
+  margin: 0 0 10px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+#glossary-popover .gp-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+#glossary-popover .gp-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--line);
+  border-radius: 999px;
+  transition: background 0.2s var(--ease-smooth);
+}
+
+.switch-slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 3px;
+  background: var(--surface);
+  border-radius: 50%;
+  transition: transform 0.22s var(--ease-spring);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .switch-slider {
+  background: var(--accent);
+}
+
+.switch input:checked + .switch-slider::before {
+  transform: translateX(20px);
+}

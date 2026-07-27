@@ -1,0 +1,234 @@
+[
+  {
+    "id": "vol01",
+    "title": "第一卷：艙底種火",
+    "category": "卷",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "底層維修工在欠稅死亡倒數中啟動文明主機，從被收割者變成系統變數。",
+    "readerText": "林燼欠稅十二小時死亡倒數，拒絕收編後在絕境中意外啟動文明主機。從截流洗白到建立灰鏈，他一步步從被收割者變成系統中的變數。夜襲第七節點成功引爆假帳，卻為自己換來一道全城追捕的標記——「未授權文明載體」。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol01.md"
+    ],
+    "volumeMeta": {
+      "number": 1,
+      "chapters": [
+        1,
+        30
+      ],
+      "wordCount": "~110k",
+      "hostVersion": "V0-V2"
+    }
+  },
+  {
+    "id": "vol02",
+    "title": "第二卷：裂縫稅戰",
+    "category": "卷",
+    "unlockChapter": 31,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "從個人逃亡升級為制度對抗，灰鏈與稅戰正式成形。",
+    "readerText": "林燼被全城追捕，灰鏈在追殺壓力下逆向擴張。裂縫配額爭奪戰在神殿軍規落地後升級為正規戰術對抗，抽成同盟索引被一一破解。全證據上鏈的那一刻，十二小時稅流停擺，高層被迫啟動二級收割預案——林燼第一次被定性為系統級威脅。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol02.md"
+    ],
+    "volumeMeta": {
+      "number": 2,
+      "chapters": [
+        31,
+        60
+      ],
+      "wordCount": "~174k",
+      "hostVersion": "V2-V3"
+    }
+  },
+  {
+    "id": "vol03",
+    "title": "第三卷：聖城試煉",
+    "category": "卷",
+    "unlockChapter": 61,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "在灰槽帶站穩，確認母艦不是避難所而是養殖與收割機器。",
+    "readerText": "二級預案啟動後，聖城在灰槽帶初步立足。規則密度戰與死艙黑盒交易揭開了沉默艙與失蹤人口的去向，三通道同步建立後工業化內宇宙原型浮現。同源主機殘骸的信號確認了母艦的真相——它不是避難所，是養殖與收割機器。聖城試煉核驗通過，卻也鎖定了下一場戰役的方向。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol03.md"
+    ],
+    "volumeMeta": {
+      "number": 3,
+      "chapters": [
+        61,
+        90
+      ],
+      "wordCount": "~132k",
+      "hostVersion": "V3-V4"
+    }
+  },
+  {
+    "id": "vol04",
+    "title": "第四卷：投放名冊",
+    "category": "卷",
+    "unlockChapter": 91,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "從搶資源轉為搶制度權限，奪取投放名冊與戰爭需求模型。",
+    "readerText": "聖城試煉通過後取得自治窗口，但真正的戰場在制度層。劫車行動奪取制度抽取機制，反向投放邏輯死鎖後門讓林燼從被名冊決定變成決定名冊。V9升級與非對等不可獻祭法則同時落地，壓住祭司派的狂熱化傾向，也讓林燼正式被列入系統級病毒觀察名單。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol04.md"
+    ],
+    "volumeMeta": {
+      "number": 4,
+      "chapters": [
+        91,
+        120
+      ],
+      "wordCount": "~135k",
+      "hostVersion": "V4-V5"
+    }
+  },
+  {
+    "id": "vol05",
+    "title": "第五卷：黑箱斷流",
+    "category": "卷",
+    "unlockChapter": 121,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "人口爆炸到黑箱斷流，反向寫入底層優先權，規則層震盪揭開第二載體的序幕。",
+    "readerText": "V3解鎖後五萬人首批製造完成，中央母巢淪陷觸發人口爆炸。黑箱節點G7被發現，十二分鐘斷流成功切斷高層核心補給線。反向寫入底層優先權引發全系統規則層震盪，白扣的神經介面汙染逐級加深，最終在裸結構網深處——第二載體從黑暗中走來，發布了第四台文明主機的全規則層廣播。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol05a.md",
+      "VOLUMES/vol05b.md",
+      "VOLUMES/vol05c.md"
+    ],
+    "volumeMeta": {
+      "number": 5,
+      "chapters": [
+        121,
+        160
+      ],
+      "wordCount": "~155k",
+      "hostVersion": "V3-V5"
+    }
+  },
+  {
+    "id": "vol06",
+    "title": "第六卷：母艦全面反制",
+    "category": "卷",
+    "unlockChapter": 161,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "從站穩到反制，規則戰爭全面升級，偏航路線在尾聲啟動。",
+    "readerText": "白扣汙染突破50%，空白位置的「音量」突然放大。權限供養鏈曝光揭露了隱形的代價，V6解鎖將規則改寫從竄改升級為創造。祁闕剖面圖突破75%後獲得跨艙段執行權，審計司全面升級為執行者。聖城在內外交迫中站穩，偏航路線在卷末啟動——林燼與祁闕一起走進了裸結構網通道。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol06.md"
+    ],
+    "volumeMeta": {
+      "number": 6,
+      "chapters": [
+        161,
+        210
+      ],
+      "wordCount": "~?",
+      "hostVersion": "V5-V7"
+    }
+  },
+  {
+    "id": "vol07",
+    "title": "第七卷：察覺與驚醒",
+    "category": "卷",
+    "unlockChapter": 211,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "偏航路上的裸結構網探索，母巢覺醒的做夢階段全面展開。",
+    "readerText": "林燼與祁闕在裸結構網偏航通道中遭遇規則碎屑帶，V7在生存壓力下現場解鎖。孵化腔蟲族基底與文明記憶在偏航路上逐步展開，中繼站的金屬片校準揭露了設計者預留的逃生通道。母巢從夢中驚醒，免疫機制第一波啟動，權限被封、效率腰斬——白扣在82%汙染層中看到母巢的意圖：不是消滅，是回收。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol07.md"
+    ],
+    "volumeMeta": {
+      "number": 7,
+      "chapters": [
+        211,
+        240
+      ],
+      "wordCount": "~?",
+      "hostVersion": "V7-V9"
+    }
+  },
+  {
+    "id": "vol08",
+    "title": "第八卷：邊界突破與文明節點",
+    "category": "卷",
+    "unlockChapter": 241,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "內世界爆兵重建，邊界突破，外部勢力整合，聖城轉型為文明節點。",
+    "readerText": "權限被封後產能腰斬至八萬週產，工匠派無權限爆兵理論落地。裸結構網邊界的發現讓世界觀第一次擴張到母艦之外——外圍艦隊、灰燼聯邦、設計者外部備份點陸續接觸。祁闕在卷末做出最終選擇，留守中繼站成為守護者。V10解鎖後聖城從殖民地轉型為裸結構網中的文明節點，產能恢復二十萬，偏航者墳場的座標浮現。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol08.md"
+    ],
+    "volumeMeta": {
+      "number": 8,
+      "chapters": [
+        241,
+        300
+      ],
+      "wordCount": "~?",
+      "hostVersion": "V8-V10"
+    }
+  },
+  {
+    "id": "vol09",
+    "title": "第九卷：偏航者墳場與第四方",
+    "category": "卷",
+    "unlockChapter": 301,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "邊界外的規則戰爭——回收程序執行者正式現身，空白位置實體歸來。",
+    "readerText": "偏航者墳場座標確認後，聖城艦隊推進至所有偏航路線的收束點。先遣艦記錄解密揭露了第四方的規則簽名，回收程序執行者從墳場深處升起——牠是設計者原始協議的終端執行者，被時間偏離了原始設定。空白位置在邊界外以實體投影現身，四百一十年的等待真相揭露。白扣在90%汙染中將幽靈網絡管理權移交，忠航派集體叛離，黑箱完全沉默。V11前夜的文明共振啟動。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol09.md"
+    ],
+    "volumeMeta": {
+      "number": 9,
+      "chapters": [
+        301,
+        330
+      ],
+      "wordCount": "~?",
+      "hostVersion": "V10-V11"
+    }
+  },
+  {
+    "id": "vol10",
+    "title": "第十卷：守夜人廢墟",
+    "category": "卷",
+    "unlockChapter": 331,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "守夜人廢墟探索，後裔對接，V11正式解鎖。",
+    "readerText": "第四方撤退休眠後，聖城沿著設計者真正出路的方向推進。守夜人廢墟——四百一十年前設計者留下的最後中繼站——在規則層深處被發現。廢墟中的後裔群體保存了設計者原始協議的最終片段。V11在壓力下正式解鎖，因果反轉感知與內世界反饋強化完全版同時啟動，聖城站在了通往終局的門檻前。",
+    "lockedText": "權限不足。該卷檔案仍在封存中。",
+    "sourceCanon": [
+      "VOLUMES/vol10.md"
+    ],
+    "volumeMeta": {
+      "number": 10,
+      "chapters": [
+        331,
+        360
+      ],
+      "wordCount": "~?",
+      "hostVersion": "V11"
+    }
+  }
+]

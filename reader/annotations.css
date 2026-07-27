@@ -1,0 +1,283 @@
+/* annotations.css — Bookmarks, Highlights, Resume Toast, Annot Panel */
+/* Extracted from styles.css lines 1101-1393 */
+
+.content .para-block {
+  position: relative;
+}
+
+.para-bookmark-dot {
+  position: absolute;
+  left: -28px;
+  top: 0.7em;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-smooth), background 0.2s, border-color 0.2s, transform 0.15s;
+  z-index: 2;
+}
+
+.para-bookmark-dot::before {
+  content: "🔖";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.content .para-block:hover .para-bookmark-dot,
+.para-bookmark-dot:focus-visible {
+  opacity: 0.55;
+}
+
+.para-bookmark-dot:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  border-color: var(--accent);
+}
+
+.content .para-block.is-bookmarked .para-bookmark-dot {
+  opacity: 1;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.content .para-block.is-bookmarked .para-bookmark-dot::before {
+  filter: grayscale(1) brightness(2.5);
+}
+
+@media (max-width: 768px) {
+  .para-bookmark-dot {
+    left: -22px;
+    width: 16px;
+    height: 16px;
+    top: 0.55em;
+  }
+  .para-bookmark-dot::before { font-size: 9px; }
+}
+
+.content mark.annot-highlight {
+  background: linear-gradient(180deg, transparent 55%, var(--accent-glow) 55%);
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 1px;
+  box-decoration-break: clone;
+  transition: background 0.2s;
+}
+
+.content mark.annot-highlight:hover {
+  background: var(--accent-glow);
+}
+
+#highlight-fab {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.18s ease-out;
+}
+
+#highlight-fab:hover {
+  filter: brightness(1.08);
+}
+
+.resume-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%) translateY(80px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px 12px 18px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s var(--ease-spring), opacity 0.28s var(--ease-smooth);
+}
+
+.resume-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.resume-toast .resume-text {
+  white-space: nowrap;
+}
+
+.resume-toast .resume-jump {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.resume-toast .resume-jump:hover {
+  filter: brightness(1.1);
+}
+
+.resume-toast .resume-dismiss {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
+.resume-toast .resume-dismiss:hover {
+  color: var(--ink);
+  background: var(--line);
+}
+
+.annot-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: min(380px, 92vw);
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  z-index: 9500;
+  transform: translateX(100%);
+  transition: transform 0.36s var(--ease-spring);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.12);
+}
+
+.annot-panel.open {
+  transform: translateX(0);
+}
+
+.annot-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  z-index: 9400;
+  transition: opacity 0.32s var(--ease-smooth);
+}
+
+.annot-panel-overlay.open {
+  opacity: 1;
+}
+
+.annot-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.annot-panel-header h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.annot-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.annot-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 2em 0;
+  line-height: 1.7;
+}
+
+.annot-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: var(--bg);
+  transition: border-color 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.annot-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.annot-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.annot-kind {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.annot-para {
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.annot-del {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.annot-del:hover {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.annot-snippet {
+  margin: 8px 0 0;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.55;
+  font-style: italic;
+}

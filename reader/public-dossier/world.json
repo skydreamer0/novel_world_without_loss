@@ -1,0 +1,312 @@
+[
+  {
+    "id": "permission-gates",
+    "title": "權限閘門",
+    "category": "世界",
+    "unlockChapter": 7,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "門不只擋住通道，也擋住底層人對上層的想像。",
+    "readerText": "方舟的閘門會讀身份、債務、工種與風控分。它們開啟時像恩賜，關閉時像判決。底層居民很早就明白：真正的牆不一定有形，有時只是一行『權限不足』。",
+    "lockedText": "通行紀錄未解封。請提高同步率。",
+    "sourceCanon": [
+      "CANON_world.md#通行制度與層級移動"
+    ]
+  },
+  {
+    "id": "cooling-layer",
+    "title": "冷凝層",
+    "category": "地點",
+    "unlockChapter": 13,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "潮濕、低溫、管線聲不斷的夾層，許多路線在這裡變得不合法。",
+    "readerText": "冷凝層不像居住區，也不像工業區。它是方舟用來散熱、輸送與藏污的夾縫。水氣掛在管壁上，腳步聲會被金屬放大；想穿過這裡的人，最好知道哪一盞燈代表巡檢剛離開。",
+    "lockedText": "冷凝層路徑圖仍在同步。",
+    "sourceCanon": [
+      "CANON_world.md#冷凝層通行細則"
+    ]
+  },
+  {
+    "id": "deep-abyss",
+    "title": "深淵環境",
+    "category": "世界",
+    "unlockChapter": 61,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "母艦之外不是空白，而是一片連規則都會被磨損的黑。",
+    "readerText": "深淵沒有穩定的方向感。距離會失真，時間會變薄，儀器回傳的數字像在自我懷疑。從方舟望出去，它是航路；對進入者而言，它更像一場沒有岸的低語。",
+    "lockedText": "深淵環境資料需要更高同步率。",
+    "sourceCanon": [
+      "CANON_world.md#深淵環境"
+    ]
+  },
+  {
+    "id": "navigation-center",
+    "title": "航路調度中心",
+    "category": "地點",
+    "unlockChapter": 61,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "所有航路都要被批准，所有偏航都會被記錄。",
+    "readerText": "航路調度中心的螢幕從不真正熄滅。它計算方舟如何在深淵邊緣移動，也計算哪一段艙區的燃料、配額與人命可以被壓到最低。那裡的人很少談遠方，只談誤差。",
+    "lockedText": "航路調度資料封存中。",
+    "sourceCanon": [
+      "CANON_world.md#躍遷引擎與導航"
+    ]
+  },
+  {
+    "id": "rule-fog",
+    "title": "規則霧",
+    "category": "世界",
+    "unlockChapter": 62,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "partial",
+    "teaser": "看不見的污染，會讓工具、身體與判斷一起長出偏差。",
+    "readerText": "規則霧不是普通濕氣。它會附在接口、符片、皮膚與記憶邊緣，讓原本可靠的東西慢慢不可靠。老維修工說，霧重的地方不要相信第一眼，也不要相信第二次讀數。",
+    "lockedText": "霧場濃度資料未完成同步。",
+    "sourceCanon": [
+      "CANON_world.md#規則霧與清霧技術"
+    ]
+  },
+  {
+    "id": "dead-cabin",
+    "title": "死艙",
+    "category": "地點",
+    "unlockChapter": 63,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "blackbox",
+    "teaser": "被判定失去維持價值的艙段，仍可能留下還沒被系統承認的聲音。",
+    "readerText": "死艙不是立刻死亡的地方，而是被宣布不再值得拯救的地方。燈會一盞盞暗下去，配給會停止，通道會被重寫。最可怕的是，艙內的人往往比外面更晚知道自己已被放棄。",
+    "lockedText": "死艙判定流程已封存。請勿越權讀取。",
+    "sourceCanon": [
+      "CANON_world.md#死艙與熵行者"
+    ]
+  },
+  {
+    "id": "henghang-church",
+    "title": "恆航教",
+    "category": "勢力",
+    "unlockChapter": 91,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "partial",
+    "teaser": "它教人把航行稱為信仰，也教人把服從誤認為被保護。",
+    "readerText": "恆航教的祈禱詞裡，母艦永遠正確，航路永遠神聖。對害怕明天的人來說，這種信仰能讓恐懼變得有形；對掌權者來說，有形的恐懼比較容易被安排。",
+    "lockedText": "宗教檔案尚未取得授權。",
+    "sourceCanon": [
+      "CANON_world.md#恆航教與地下信仰"
+    ]
+  },
+  {
+    "id": "audit-bureau",
+    "title": "母艦審計司",
+    "category": "勢力",
+    "unlockChapter": 7,
+    "spoilerLevel": "safe",
+    "visibility": "restricted",
+    "teaser": "掛在每個人頭頂的帳本，也是方舟最冷的刀。",
+    "readerText": "審計司不需要親自出現在底層，也能讓底層安靜。它的通知會抵達終端、工牌、配給口與醫療窗口。當一個名字被標紅，周圍的人會先退半步，因為沒有人想被一起記進帳裡。",
+    "lockedText": "審計司內部資料不可讀。",
+    "sourceCanon": [
+      "CANON_world.md#母艦審計司"
+    ]
+  },
+  {
+    "id": "iron-rust-gang",
+    "title": "鐵鏽幫",
+    "category": "勢力",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "艙底幫派，靠暴力、債務與恐懼在破管線間生根。",
+    "readerText": "鐵鏽幫不是方舟最強的勢力，卻是很多底層人最先遇見的惡意。他們熟悉每條漏水管、每個監控死角，也熟悉如何把一個人的欠款變成跪下的理由。",
+    "lockedText": "幫派地盤資料尚未同步。",
+    "sourceCanon": [
+      "CANON_world.md#鐵鏽幫"
+    ]
+  },
+  {
+    "id": "gray-chain",
+    "title": "灰鏈",
+    "category": "勢力",
+    "unlockChapter": 70,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "把不能見光的物資、身份與消息洗到能上桌的暗線。",
+    "readerText": "灰鏈不承認自己是組織，只說自己是通道。有人用它洗白配給，有人用它換路線，有人用它把一段不該存在的情報送到該聽見的人手裡。通道不問善惡，只問代價。",
+    "lockedText": "灰鏈節點資料仍被遮蔽。",
+    "sourceCanon": [
+      "CANON_world.md#灰鏈"
+    ]
+  },
+  {
+    "id": "cabin-bottom",
+    "title": "艙底區",
+    "category": "地點",
+    "unlockChapter": 1,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "方舟的最底層。不是地獄，只是離地獄最近的維修通道。",
+    "readerText": "艙底區佔了方舟近六成的空間，也是規則密度最低、生存最困難的地方。管線在頭頂交錯，氧壓永遠偏低，燈光從未足額供應。這裡住了最多的人，分到最少的資源——但也是故事開始的地方。",
+    "lockedText": "艙底基本結構圖仍在同步中。",
+    "sourceCanon": [
+      "CANON_world.md#母艦物理結構"
+    ]
+  },
+  {
+    "id": "gray-trough",
+    "title": "灰槽帶",
+    "category": "地點",
+    "unlockChapter": 61,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "法律與秩序在這裡逐漸稀薄，像被反覆稀釋的氧氣。",
+    "readerText": "灰槽帶不是一個正式地名，而是中層與底層之間那片供能不到四成、大面積斷電的灰色地帶。灰議會曾經在此留下未被帶走的設備殘骸，而現在它是鋼鐵、灰塵與沉默共同統治的邊界。",
+    "lockedText": "灰槽帶地理資料將在後續章節同步。",
+    "sourceCanon": [
+      "CANON_world.md#母艦物理結構"
+    ]
+  },
+  {
+    "id": "holy-city",
+    "title": "聖城",
+    "category": "地點",
+    "unlockChapter": 91,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "在一個人的體內長出的文明——從幾粒種火到一座城市。",
+    "readerText": "聖城不是從方舟的土地上建造的。它在別處——一個與母艦物理隔絕的空間——從數十人的聚落逐步演化為制度、階層、信仰與技術並存的獨立文明。它的存在本身就是對母艦壟斷邏輯的否定。",
+    "lockedText": "該條目涉及後期重大揭露，請完成同步後再查看。",
+    "sourceCanon": [
+      "CANON_world.md#內部文明時間線",
+      "CANON_power.md"
+    ]
+  },
+  {
+    "id": "incubation-chamber",
+    "title": "孵化腔",
+    "category": "地點",
+    "unlockChapter": 161,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "文明不只是被建造的——它也是被孵化出來的。",
+    "readerText": "孵化腔是文明主機內部用於製造人口的區域，也是載體意識與文明主機的交匯點。在這裡，信念回流可以被轉化為新的生命，每一批次的投放都承載著文明策略的選擇。",
+    "lockedText": "孵化腔資料需要更高的同步率才能解鎖。",
+    "sourceCanon": [
+      "CANON_world.md#內部文明時間線",
+      "CANON_power.md"
+    ]
+  },
+  {
+    "id": "bare-structure-net",
+    "title": "裸結構網",
+    "category": "世界",
+    "unlockChapter": 211,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "在規則的夾層中，存在一片沒有修飾過的資訊荒原。",
+    "readerText": "裸結構網是方舟底層的運算框架——一個介於現實與規則之間的夾層。穿過規則層的單位可以進入這片資訊空間。在這裡，距離由邏輯鏈路而非物理座標決定，訊息以最原始的形式流動。深層信標的訊號只能透過裸結構網接收。",
+    "lockedText": "裸結構網連接受限。請繼續推進主線。",
+    "sourceCanon": [
+      "CANON_world.md#規則霧與清霧技術"
+    ]
+  },
+  {
+    "id": "deep-space-recovery",
+    "title": "深空資源回收",
+    "category": "勢力",
+    "unlockChapter": 31,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "名義上是回收廢棄物，實際上是清除不被系統承認的東西——包括人。",
+    "readerText": "深空資源回收是母艦授權的武裝回收組織，持有正規外域裂縫開採權與高階裝備供應。他們以清理廢棄艙段為名，實則清除不被系統承認的殘餘人口。一份終身奴隸合約，比任何武器都更快讓人聽話。",
+    "lockedText": "回收公司營運資料尚未同步。",
+    "sourceCanon": [
+      "CANON_world.md#深空資源回收公司"
+    ]
+  },
+  {
+    "id": "kickback-alliance",
+    "title": "抽成同盟",
+    "category": "勢力",
+    "unlockChapter": 31,
+    "spoilerLevel": "safe",
+    "visibility": "partial",
+    "teaser": "中層的秩序建立在一個簡單規則上——抽取、分配、閉嘴。",
+    "readerText": "抽成同盟不是一個組織，而是中層管理者之間心照不宣的利益聯盟。他們透過層層抽取底層產出來維持地位與配給，與審計司維持著默契：不越線就不被追究。對底層人來說，他們是看不見的稅。",
+    "lockedText": "同盟成員名單仍在遮蔽中。",
+    "sourceCanon": [
+      "CANON_world.md#社會階級與意識形態"
+    ]
+  },
+  {
+    "id": "purity-clearance",
+    "title": "清譜會",
+    "category": "勢力",
+    "unlockChapter": 61,
+    "spoilerLevel": "safe",
+    "visibility": "restricted",
+    "teaser": "污染是他們定義的，淨化是他們壟斷的，代價是他們決定的。",
+    "readerText": "清譜會負責審查規則污染與意識偏移，名義上是淨化，實際上掌握著污染評級、清艙估值與淨化排序的絕對權力。一支讀數槍就能把高價樣本打成一文不值，一張清艙證明就能決定一個艙段的生死。",
+    "lockedText": "清譜會內部評級模型未授權存取。",
+    "sourceCanon": [
+      "CANON_world.md#清譜會"
+    ]
+  },
+  {
+    "id": "flame-continuation",
+    "title": "續焰團",
+    "category": "勢力",
+    "unlockChapter": 91,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "partial",
+    "teaser": "他們分發氧氣與經文，也分發通往深淵的契約。",
+    "readerText": "續焰團是聖城內部的保守派勢力，主張文明應以信仰與儀式為核心，而非工業化與技術擴張。他們認為內心的火光比外部的齒輪更重要——但這種虔誠，有時也是對改變最深的抗拒。",
+    "lockedText": "續焰團教義文獻將於後續同步。",
+    "sourceCanon": [
+      "CANON_world.md#續焰團"
+    ]
+  },
+  {
+    "id": "artisan-faction",
+    "title": "工匠派",
+    "category": "勢力",
+    "unlockChapter": 91,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "partial",
+    "teaser": "他們相信文明的第一步不是祈禱，是製造。",
+    "readerText": "工匠派是聖城內部的技術派，主張以製造與科技推動文明成長。方岩所屬的這一派別，認為技術才是文明存續的真正支柱。在續焰團的信仰路線與工匠派的製造路線之間，聖城的未來方向仍懸而未決。",
+    "lockedText": "工匠派技術資料需更高授權。",
+    "sourceCanon": [
+      "CANON_world.md#工匠派"
+    ]
+  },
+  {
+    "id": "chain-breakers",
+    "title": "斷鏈派",
+    "category": "勢力",
+    "unlockChapter": 161,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "有些人不是為了談判而離開——他們是為了再也不回來。",
+    "readerText": "斷鏈派從灰鏈中分離出來，是認為只有徹底切斷與母艦的連結才能真正自由的激進派系。他們的工作讓他們接觸到母艦不想被人看到的東西——清障艦的污染倖存者、先遣艦的殘存資訊。他們是最接近真相的一群人。",
+    "lockedText": "斷鏈派聯絡頻道已加密。",
+    "sourceCanon": [
+      "CANON_world.md#艦隊體系"
+    ]
+  },
+  {
+    "id": "outer-fleet",
+    "title": "外圍艦隊",
+    "category": "勢力",
+    "unlockChapter": 211,
+    "spoilerLevel": "spoiler-gated",
+    "visibility": "restricted",
+    "teaser": "母艦之外還有船——有些是護航者，有些是逃亡者，有些已經忘了自己是誰。",
+    "readerText": "外圍艦隊是母艦外殼之外的武裝力量，包含近衛艦、採集艦與清障艦。它們是母艦的外部消耗器官，在深淵中執行採集、清障與護航任務。內部已分化為忠航派、生存派、黑市派與斷鏈派——每一派都對母艦有不同的忠誠與懷疑。",
+    "lockedText": "外圍艦隊編制表尚未解鎖。",
+    "sourceCanon": [
+      "CANON_world.md#艦隊體系"
+    ]
+  }
+]
