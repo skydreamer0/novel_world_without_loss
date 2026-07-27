@@ -1,0 +1,8 @@
+{
+  "name": "《無漏》閱讀器",
+  "short_name": "無漏",
+  "start_url": "./reader/index.html",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117"
+}
