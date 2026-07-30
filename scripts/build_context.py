@@ -1,4 +1,5 @@
 import json
+import glob
 import os
 import re
 import sys
@@ -6,7 +7,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS_DIR = os.path.join(BASE_DIR, "docs")
 OUTLINES_DIR = os.path.join(BASE_DIR, "outlines")
-TRIPLETS_FILE = os.path.join(DOCS_DIR, "data", "triplets_000_050.json")
+TRIPLETS_DIR = os.path.join(DOCS_DIR, "data")
 PROGRESS_FILE = os.path.join(DOCS_DIR, "11_進度台帳.md")
 HOOKS_FILE = os.path.join(DOCS_DIR, "07_伏筆與揭密台帳.md")
 CHARACTERS_FILE = os.path.join(DOCS_DIR, "03_角色與勢力.md")
@@ -88,29 +89,31 @@ def get_last_chapters_summary(chap_num, count=3):
 
     return "\n\n".join(summaries[-count:]) if summaries else "未找到前三章摘要。"
 
-def get_triplet_history(entities):
+def get_triplet_history(entities, before_chapter=None):
     """Query triplets graph for entity connections"""
-    if not os.path.exists(TRIPLETS_FILE) or not entities:
+    graph_files = sorted(glob.glob(os.path.join(TRIPLETS_DIR, "triplets_*.json")))
+    if not graph_files or not entities:
         return "無輕量圖譜資料。"
-
-    with open(TRIPLETS_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
 
     history = []
     for ent in entities:
         ent_matches = []
-        for item in data.get("chapters", []):
-            chap = item.get("chapter")
-            title = item.get("title")
-            for t in item.get("triplets", []):
-                if (ent.lower() in t["source"].lower() or 
-                    ent.lower() in t["target"].lower() or 
-                    ent.lower() in t["relation"].lower() or 
-                    ent.lower() in t["context"].lower()):
-                    ent_matches.append(f"  • [第{chap}章] ({t['source']}) ──[{t['relation']}]──> ({t['target']}): {t['context']}")
+        for graph_file in graph_files:
+            with open(graph_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for item in data.get("chapters", []):
+                chap = item.get("chapter")
+                if before_chapter is not None and chap is not None and chap >= before_chapter:
+                    continue
+                for t in item.get("triplets", []):
+                    if (ent.lower() in t["source"].lower() or
+                        ent.lower() in t["target"].lower() or
+                        ent.lower() in t["relation"].lower() or
+                        ent.lower() in t["context"].lower()):
+                        ent_matches.append(f"  • [第{chap}章] ({t['source']}) ──[{t['relation']}]──> ({t['target']}): {t['context']}")
         
         if ent_matches:
-            history.append(f"### 實體 [{ent}] 歷史脈絡鏈（前50章）:\n" + "\n".join(ent_matches[-5:])) # last 5 key events
+            history.append(f"### 實體 [{ent}] 歷史脈絡鏈:\n" + "\n".join(ent_matches[-5:])) # last 5 key events
 
     return "\n\n".join(history) if history else "圖譜中無相關實體脈絡。"
 
@@ -119,7 +122,7 @@ def build_writing_pack(chap_num, entities):
     
     outline = get_chapter_outline(chap_num)
     prev_summaries = get_last_chapters_summary(chap_num, count=3)
-    triplets = get_triplet_history(entities)
+    triplets = get_triplet_history(entities, before_chapter=chap_num)
     
     output_filename = f"15_第{chap_num}章開寫包.md" if chap_num >= 52 else f"14_第{chap_num}章開寫包.md"
     output_filepath = os.path.join(DOCS_DIR, output_filename)
@@ -177,6 +180,6 @@ if __name__ == "__main__":
         except ValueError:
             pass
     if len(sys.argv) > 2:
-        ents = [e.strip() for e in sys.argv[2].split(",") if e.strip()]
+        ents = [e for e in re.split(r"[,\s]+", sys.argv[2].strip()) if e]
 
     build_writing_pack(chap, ents)

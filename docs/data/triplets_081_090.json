@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "novel": "無漏",
+    "vol": 2,
+    "chapters_range": "081-090",
+    "total_chapters": 10,
+    "schema_version": "1.0",
+    "description": "《無漏》第二卷081-090章輕量關係圖譜資料庫"
+  },
+  "chapters": [
+    {
+      "chapter": 81,
+      "title": "純律之山",
+      "triplets": [
+        {
+          "source": "第三鎮居民",
+          "target": "白田生活用途",
+          "relation": "隔界撤回",
+          "context": "三百一十二戶使斬岳樓押物失格"
+        },
+        {
+          "source": "秦無漏",
+          "target": "百戶撤權缺口",
+          "relation": "轉為劍路",
+          "context": "引洗劍峰斬斷所有權鎖"
+        },
+        {
+          "source": "鬥界第二勝",
+          "target": "萬界城老人",
+          "relation": "造成死亡",
+          "context": "十二戶屋影亦被斬斷"
+        }
+      ]
+    },
+    {
+      "chapter": 82,
+      "title": "第二場",
+      "triplets": [
+        {
+          "source": "折劍九鎮",
+          "target": "萬界城戰界",
+          "relation": "限定授權",
+          "context": "只借井渠滅火不准截地"
+        },
+        {
+          "source": "秦無漏",
+          "target": "百年火界",
+          "relation": "切角崩解",
+          "context": "犧牲五戶屋影使火失去燃料"
+        },
+        {
+          "source": "鬥界第三勝",
+          "target": "芒角青芽鄭泉",
+          "relation": "造成死亡",
+          "context": "跨界火線導致首批戰死者"
+        }
+      ]
+    },
+    {
+      "chapter": 83,
+      "title": "九鎮之票",
+      "triplets": [
+        {
+          "source": "青崖城",
+          "target": "九鎮表決",
+          "relation": "限時六時辰",
+          "context": "全戶過半才承認權源爭議"
+        },
+        {
+          "source": "九鎮居民",
+          "target": "宗主總印",
+          "relation": "共同抵抗",
+          "context": "支持與反對出售者都保護票匣"
+        },
+        {
+          "source": "劍祭第一輪",
+          "target": "第四鎮信路",
+          "relation": "切斷",
+          "context": "四百零七戶未及送票"
+        }
+      ]
+    },
+    {
+      "chapter": 84,
+      "title": "劍祭提前",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "未落地劍雨",
+          "relation": "選擇性截取",
+          "context": "不截折劍土地與居民"
+        },
+        {
+          "source": "九鎮居民",
+          "target": "立即出售",
+          "relation": "過半反對",
+          "context": "第四鎮票使三十日緩拆成立"
+        },
+        {
+          "source": "劍雨",
+          "target": "三槐灰穗田",
+          "relation": "污染劍化",
+          "context": "銀穗開始割傷耕作者"
+        }
+      ]
+    },
+    {
+      "chapter": 85,
+      "title": "截一場雨",
+      "triplets": [
+        {
+          "source": "耕戶席與劍席",
+          "target": "劍穗田",
+          "relation": "雙重否決",
+          "context": "任何一席反對即停止收割"
+        },
+        {
+          "source": "劍化灰穗",
+          "target": "抽壽記憶",
+          "relation": "攜帶釋放",
+          "context": "可食但須記憶糧契告知"
+        },
+        {
+          "source": "灰穗田三成",
+          "target": "純劍律",
+          "relation": "永久劍化",
+          "context": "形成危險新資源"
+        }
+      ]
+    },
+    {
+      "chapter": 86,
+      "title": "會割人的麥",
+      "triplets": [
+        {
+          "source": "三槐農戶與外門劍修",
+          "target": "劍穗收割",
+          "relation": "協作成形",
+          "context": "田壟限制劍路使傷者下降"
+        },
+        {
+          "source": "陸青禾",
+          "target": "抽壽名冊",
+          "relation": "承認押送",
+          "context": "白日教學夜間逐案受審"
+        },
+        {
+          "source": "宗門密信",
+          "target": "三百內門",
+          "relation": "虛假交換",
+          "context": "僅二百九十九道活息"
+        }
+      ]
+    },
+    {
+      "chapter": 87,
+      "title": "耕者與劍修",
+      "triplets": [
+        {
+          "source": "空名劍承",
+          "target": "折劍九鎮",
+          "relation": "預備煉化",
+          "context": "第三百名實為純律界核槽"
+        },
+        {
+          "source": "水渠耕作",
+          "target": "折劍劍陣",
+          "relation": "改寫",
+          "context": "新穗沿灌溉渠而非宗門彎曲"
+        },
+        {
+          "source": "陸青禾",
+          "target": "折劍主峰",
+          "relation": "赴約公開",
+          "context": "只要求萬界城維持信路"
+        }
+      ]
+    },
+    {
+      "chapter": 88,
+      "title": "第三場授權",
+      "triplets": [
+        {
+          "source": "折劍外門與內門",
+          "target": "劍祭陣",
+          "relation": "撤離供力",
+          "context": "四十七外門九內門拒絕犧牲九鎮"
+        },
+        {
+          "source": "劍祭主印",
+          "target": "九鎮票所",
+          "relation": "拆分輪持",
+          "context": "任何一鎮不能單獨啟動"
+        },
+        {
+          "source": "九鎮限定授權",
+          "target": "陸青禾",
+          "relation": "移出救援",
+          "context": "不授權秦無漏借城作戰"
+        }
+      ]
+    },
+    {
+      "chapter": 89,
+      "title": "斬岳",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "洗劍峰純律",
+          "relation": "耕作改寫",
+          "context": "使斬擊成為收割研磨開渠用途"
+        },
+        {
+          "source": "青崖裁決",
+          "target": "折劍界",
+          "relation": "緩拆三十日",
+          "context": "確認萬界城鬥界三勝"
+        },
+        {
+          "source": "秦無漏",
+          "target": "折劍界所有權",
+          "relation": "拒絕接收",
+          "context": "只承擔定額債與限期合作"
+        }
+      ]
+    },
+    {
+      "chapter": 90,
+      "title": "三十日",
+      "triplets": [
+        {
+          "source": "折劍九鎮與萬界城",
+          "target": "三十日契",
+          "relation": "分鎮合作",
+          "context": "任一鎮可補清資源後退出"
+        },
+        {
+          "source": "耕劍學宮",
+          "target": "耕席與劍席",
+          "relation": "雙否決治理",
+          "context": "教學審責與劍田管理並行"
+        },
+        {
+          "source": "補天院追索舟",
+          "target": "萬界城",
+          "relation": "封鎖查驗",
+          "context": "準確點名人口並要求開艙驗核"
+        }
+      ]
+    }
+  ]
+}
