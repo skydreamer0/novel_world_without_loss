@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "novel": "無漏",
+    "vol": 2,
+    "chapters_range": "101-110",
+    "total_chapters": 10,
+    "schema_version": "1.0"
+  },
+  "chapters": [
+    {
+      "chapter": 101,
+      "title": "兩份通緝",
+      "triplets": [
+        {
+          "source": "雙重追令",
+          "target": "萬界城",
+          "relation": "互相阻擋",
+          "context": "焚除與完整回收命令衝突"
+        }
+      ]
+    },
+    {
+      "chapter": 102,
+      "title": "求吞噬者",
+      "triplets": [
+        {
+          "source": "青藥界十二鎮",
+          "target": "遷移表決",
+          "relation": "分裂",
+          "context": "六鎮同意四鎮留守兩鎮失聯"
+        }
+      ]
+    },
+    {
+      "chapter": 103,
+      "title": "九日糧",
+      "triplets": [
+        {
+          "source": "透明劍穗",
+          "target": "神魂裂傷",
+          "relation": "修補並抽痛",
+          "context": "醫坊封存等待同意"
+        }
+      ]
+    },
+    {
+      "chapter": 104,
+      "title": "藥也是債",
+      "triplets": [
+        {
+          "source": "痛覺記憶",
+          "target": "墓地",
+          "relation": "轉存",
+          "context": "形成濕痕而未消失"
+        }
+      ]
+    },
+    {
+      "chapter": 105,
+      "title": "醫坊的票",
+      "triplets": [
+        {
+          "source": "杜衡",
+          "target": "青銀藥粥",
+          "relation": "自願試用",
+          "context": "裂傷改善但忘記受傷"
+        }
+      ]
+    },
+    {
+      "chapter": 106,
+      "title": "沒有痛的人",
+      "triplets": [
+        {
+          "source": "痛泉",
+          "target": "墓地器官",
+          "relation": "形成雛形",
+          "context": "需三席共同治理"
+        }
+      ]
+    },
+    {
+      "chapter": 107,
+      "title": "半座藥界",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "半座藥谷",
+          "relation": "選擇性截取",
+          "context": "泉效兩側下降四成"
+        }
+      ]
+    },
+    {
+      "chapter": 108,
+      "title": "獵舟圍谷",
+      "triplets": [
+        {
+          "source": "劍無咎",
+          "target": "萬界城外門",
+          "relation": "個人申請守衛",
+          "context": "不以宗主身分調兵"
+        }
+      ]
+    },
+    {
+      "chapter": 109,
+      "title": "宗主守城",
+      "triplets": [
+        {
+          "source": "折劍內門",
+          "target": "劍無咎",
+          "relation": "集體撤權",
+          "context": "限制多守一息"
+        }
+      ]
+    },
+    {
+      "chapter": 110,
+      "title": "痛泉",
+      "triplets": [
+        {
+          "source": "萬族牧場求援",
+          "target": "痛泉",
+          "relation": "跨界抵達",
+          "context": "指向被圈養異族"
+        }
+      ]
+    }
+  ]
+}

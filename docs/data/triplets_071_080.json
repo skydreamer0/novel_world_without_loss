@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "novel": "無漏",
+    "vol": 2,
+    "chapters_range": "071-080",
+    "total_chapters": 10,
+    "schema_version": "1.0",
+    "description": "《無漏》第二卷071-080章輕量關係圖譜資料庫"
+  },
+  "chapters": [
+    {
+      "chapter": 71,
+      "title": "裂帶飢城",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "沿途活界",
+          "relation": "拒絕掠奪",
+          "context": "未經居民表決不截取千戶活界"
+        },
+        {
+          "source": "第九裂帶風暴",
+          "target": "萬界城新土",
+          "relation": "削去三步",
+          "context": "航行撞擊使城市心臟停跳半息"
+        },
+        {
+          "source": "青崖訊標",
+          "target": "萬界城",
+          "relation": "提出入城條件",
+          "context": "要求提交可拆天地作押物"
+        }
+      ]
+    },
+    {
+      "chapter": 72,
+      "title": "無籍之舟",
+      "triplets": [
+        {
+          "source": "萬界城",
+          "target": "虛舟盟失籍分舟",
+          "relation": "限期偽裝",
+          "context": "議場授權七日後撤印"
+        },
+        {
+          "source": "遲影",
+          "target": "青崖巡舟",
+          "relation": "條件留錨",
+          "context": "以不得抹除複製及名冊回應作條件"
+        },
+        {
+          "source": "青崖巡舟",
+          "target": "萬界城",
+          "relation": "判為活界貨艙",
+          "context": "驗出四萬二千餘活口"
+        }
+      ]
+    },
+    {
+      "chapter": 73,
+      "title": "青崖城下",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "居民貨契",
+          "relation": "拒絕交易",
+          "context": "不以一千居民換取入城糧"
+        },
+        {
+          "source": "祝衡",
+          "target": "萬界城",
+          "relation": "賒售兩日糧",
+          "context": "以灰穗種穗種植指導和三倍界債成交"
+        },
+        {
+          "source": "祝衡",
+          "target": "灰穗",
+          "relation": "辨識價值",
+          "context": "確認灰穗可吞殘序結實糧"
+        }
+      ]
+    },
+    {
+      "chapter": 74,
+      "title": "定額也能賣",
+      "triplets": [
+        {
+          "source": "青崖城",
+          "target": "弱界定額",
+          "relation": "代繳拆售",
+          "context": "替中樞填數後取得山河人口處置權"
+        },
+        {
+          "source": "秦無漏",
+          "target": "折劍界",
+          "relation": "取得勘驗權",
+          "context": "以新增土地收益擔保拍得"
+        },
+        {
+          "source": "折劍界",
+          "target": "萬界城",
+          "relation": "轉移拒拆定額",
+          "context": "拒絕拆界即承擔七十一份定額"
+        }
+      ]
+    },
+    {
+      "chapter": 75,
+      "title": "一碗粥的債",
+      "triplets": [
+        {
+          "source": "萬界城議場",
+          "target": "糧食配給",
+          "relation": "分區自治",
+          "context": "以一成六效率換取各區決定權"
+        },
+        {
+          "source": "許百川",
+          "target": "陌生孩童",
+          "relation": "讓出粥後死亡",
+          "context": "飢餓壓力下的自願被寫入公帳"
+        },
+        {
+          "source": "折劍界殘序",
+          "target": "萬界城墓地",
+          "relation": "契約串聯",
+          "context": "墓碑映出劍雨與劍祭倒數"
+        }
+      ]
+    },
+    {
+      "chapter": 76,
+      "title": "折劍來客",
+      "triplets": [
+        {
+          "source": "陸青禾",
+          "target": "劍祭主印",
+          "relation": "偷出延緩",
+          "context": "使一萬九千人劍祭延後十二時辰"
+        },
+        {
+          "source": "劍無咎",
+          "target": "折劍界居民",
+          "relation": "準備劍祭",
+          "context": "欲犧牲九鎮保三百內門"
+        },
+        {
+          "source": "秦無漏",
+          "target": "陸青禾",
+          "relation": "要求公開選擇",
+          "context": "不奪主印並要求帶回九鎮表決"
+        }
+      ]
+    },
+    {
+      "chapter": 77,
+      "title": "不能拔的劍",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "百戶戰界",
+          "relation": "逐項徵得授權",
+          "context": "井根屋影灰穗皆設撤回條件"
+        },
+        {
+          "source": "萬界城",
+          "target": "鬥界台",
+          "relation": "以副艙報名",
+          "context": "避免無核空胎身分進總帳"
+        },
+        {
+          "source": "鹽沼界主",
+          "target": "六千居民",
+          "relation": "抽取口渴",
+          "context": "凝成鹽矛攻擊授權水井"
+        }
+      ]
+    },
+    {
+      "chapter": 78,
+      "title": "百戶之界",
+      "triplets": [
+        {
+          "source": "灰穗",
+          "target": "鹽沼居民乾渴",
+          "relation": "吸收映照",
+          "context": "將供力代價公開於鬥界台"
+        },
+        {
+          "source": "鹽沼三十四戶",
+          "target": "鹽沼界主",
+          "relation": "撤回供力",
+          "context": "看見偽造契約後切斷鹽矛"
+        },
+        {
+          "source": "秦無漏",
+          "target": "鬥界台首戰",
+          "relation": "獲勝",
+          "context": "付出九戶撤權與七條支根死亡代價"
+        }
+      ]
+    },
+    {
+      "chapter": 79,
+      "title": "鬥界台",
+      "triplets": [
+        {
+          "source": "斬岳樓",
+          "target": "折劍界",
+          "relation": "持全界出售契",
+          "context": "以宗主印要求直接交割"
+        },
+        {
+          "source": "秦無漏",
+          "target": "折劍界",
+          "relation": "提出三十日緩拆",
+          "context": "承認利益但保留居民表決"
+        },
+        {
+          "source": "萬界城議場",
+          "target": "七十一份定額",
+          "relation": "同意承擔",
+          "context": "以連勝三場為前提"
+        }
+      ]
+    },
+    {
+      "chapter": 80,
+      "title": "獵物有名字",
+      "triplets": [
+        {
+          "source": "洗劍峰",
+          "target": "四千七百二十二人",
+          "relation": "歷史剝離",
+          "context": "純律仍留村路井與田埂痕跡"
+        },
+        {
+          "source": "秦無漏",
+          "target": "洗劍峰殘序",
+          "relation": "促使復位",
+          "context": "以灰穗釋放生活記憶引發重驗"
+        },
+        {
+          "source": "秦無漏",
+          "target": "獵界原則",
+          "relation": "確立底線",
+          "context": "需要山河仍承認居民有名且可拒絕"
+        }
+      ]
+    }
+  ]
+}

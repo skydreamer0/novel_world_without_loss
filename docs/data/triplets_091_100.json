@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "novel": "無漏",
+    "vol": 2,
+    "chapters_range": "091-100",
+    "total_chapters": 10,
+    "schema_version": "1.0"
+  },
+  "chapters": [
+    {
+      "chapter": 91,
+      "title": "開艙驗核",
+      "triplets": [
+        {
+          "source": "補天院查驗",
+          "target": "城市心臟",
+          "relation": "強制停跳",
+          "context": "十九人死亡且未驗出單一界核"
+        }
+      ]
+    },
+    {
+      "chapter": 92,
+      "title": "誰的污染",
+      "triplets": [
+        {
+          "source": "劍穗田",
+          "target": "文明合成污染",
+          "relation": "遭判定",
+          "context": "三方新律無唯一責任者"
+        }
+      ]
+    },
+    {
+      "chapter": 93,
+      "title": "十二日糧",
+      "triplets": [
+        {
+          "source": "萬界城居民",
+          "target": "劍穗田",
+          "relation": "微弱過半保留",
+          "context": "停止擴種並三十日重投"
+        }
+      ]
+    },
+    {
+      "chapter": 94,
+      "title": "宗主的價格",
+      "triplets": [
+        {
+          "source": "折劍內門",
+          "target": "劍無咎代表權",
+          "relation": "過半拒絕",
+          "context": "個人劍印拼合保田"
+        }
+      ]
+    },
+    {
+      "chapter": 95,
+      "title": "地下沒有中立",
+      "triplets": [
+        {
+          "source": "青崖斷帳議",
+          "target": "待拆界",
+          "relation": "短期合作",
+          "context": "只共享查驗與空洞情報"
+        }
+      ]
+    },
+    {
+      "chapter": 96,
+      "title": "待拆者同盟",
+      "triplets": [
+        {
+          "source": "鹽沼三十四戶",
+          "target": "換水孔",
+          "relation": "共同撤權開啟",
+          "context": "逐戶決定遷移內容"
+        }
+      ]
+    },
+    {
+      "chapter": 97,
+      "title": "只帶三十四戶",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "淡井與一百零二人",
+          "relation": "零散逸截取",
+          "context": "未擴及未同意居民"
+        }
+      ]
+    },
+    {
+      "chapter": 98,
+      "title": "無損的證據",
+      "triplets": [
+        {
+          "source": "補天院",
+          "target": "秦無漏",
+          "relation": "升列戰略資源",
+          "context": "確認無損能力拒絕合作"
+        }
+      ]
+    },
+    {
+      "chapter": 99,
+      "title": "欠條背面",
+      "triplets": [
+        {
+          "source": "空白名冊",
+          "target": "陌生座標",
+          "relation": "自行浮現",
+          "context": "格式同被剝離居民"
+        }
+      ]
+    },
+    {
+      "chapter": 100,
+      "title": "獵界者被獵",
+      "triplets": [
+        {
+          "source": "萬界城",
+          "target": "雙重通緝",
+          "relation": "成為獵物",
+          "context": "污染源與戰略資源同時追捕"
+        }
+      ]
+    }
+  ]
+}
