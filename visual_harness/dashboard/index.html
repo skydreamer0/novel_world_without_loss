@@ -739,14 +739,230 @@
       transform: scale(1.1);
     }
 
+    /* 📱 全面手機端 UI/UX 深度響應式適配 (Mobile Responsive Layout & UX) */
     @media (max-width: 768px) {
+      header {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+      }
+
+      .logo {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-title-cn {
+        font-size: 1.2rem;
+      }
+
+      .logo-title-en {
+        font-size: 0.82rem;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-install-pwa {
+        padding: 0.3rem 0.65rem;
+        font-size: 0.72rem;
+      }
+
+      .badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.55rem;
+      }
+
+      /* 📱 手機步進導覽 (Mobile Scrollable Stepper) */
+      .stepper-container {
+        padding: 0.6rem 0.8rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .stepper-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .stepper {
+        justify-content: flex-start;
+        gap: 0.5rem;
+        min-width: max-content;
+        padding-bottom: 0.2rem;
+      }
+
+      .step-btn {
+        flex: 0 0 auto;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        font-size: 0.78rem;
+        gap: 0.45rem;
+      }
+
+      .step-num {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        font-size: 0.72rem;
+      }
+
+      .step-text-sub {
+        display: none; /* 隱藏手機端過長英文副標 */
+      }
+
+      /* 📱 主板塊與卡片 (Main & Responsive Cards) */
+      main {
+        padding: 0.8rem 0.6rem;
+      }
+
+      .card {
+        padding: 1rem 0.85rem;
+        border-radius: 12px;
+      }
+
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .card-title {
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+
+      /* 📱 響應式網格 (Responsive Grids) */
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+      }
+
+      .metric-card {
+        padding: 0.75rem 0.5rem;
+      }
+
+      .metric-val {
+        font-size: 1.2rem;
+      }
+
+      .anchor-box {
+        padding: 0.75rem;
+      }
+
+      .anchor-label {
+        font-size: 0.72rem;
+      }
+
+      .anchor-value {
+        font-size: 0.85rem;
+      }
+
+      .prompt-preview {
+        padding: 0.8rem;
+        font-size: 0.78rem;
+        line-height: 1.45;
+      }
+
+      /* 📱 無限畫布 (Mobile Infinite Canvas - Scrollable) */
+      .canvas-workspace {
+        height: 480px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y;
+      }
+
+      .canvas-toolbar {
+        top: 10px;
+        left: 10px;
+        padding: 0.4rem 0.6rem;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        max-width: calc(100% - 20px);
+      }
+
+      .canvas-btn {
+        padding: 0.3rem 0.55rem;
+        font-size: 0.7rem;
+      }
+
+      .canvas-node {
+        width: 220px;
+        padding: 0.6rem;
+      }
+
+      /* 📱 手機 Modal 燈箱適配 */
+      .modal-overlay {
+        padding: 0;
+      }
+
+      .modal-content {
+        max-width: 96vw;
+        max-height: 92vh;
+      }
+
+      .modal-img-container {
+        max-width: 96vw;
+        max-height: 68vh;
+        border-radius: 10px;
+      }
+
+      .modal-img {
+        max-width: 96vw;
+        max-height: 68vh;
+      }
+
+      .modal-counter {
+        top: 14px;
+        left: 14px;
+        padding: 0.25rem 0.65rem;
+        font-size: 0.75rem;
+      }
+
+      .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+      }
+
       .modal-nav {
         width: 38px;
         height: 38px;
         font-size: 1.1rem;
       }
-      .modal-prev { left: 8px; }
-      .modal-next { right: 8px; }
+
+      .modal-prev { left: 6px; }
+      .modal-next { right: 6px; }
+
+      .modal-caption {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.85rem;
+        margin-top: 0.6rem;
+        max-width: 90vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
       .swipe-hint { display: none; }
     }
   </style>

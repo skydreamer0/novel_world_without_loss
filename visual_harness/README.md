@@ -2,6 +2,8 @@
 
 本子專案為長篇小說《無漏》(World Without Loss) 提供結構化的 **AI 圖像生成 Prompt 構建**、**視覺聖經 (Visual Bible) 管理**、與**前後一致性測試 Harness (Consistency Test Harness)**。
 
+> 產品與技術演進規劃請見 [`ROADMAP.md`](ROADMAP.md)。
+
 ## 🎯 核心功能
 
 1. **視覺聖經數據庫 (`visual_bible/`)**：
