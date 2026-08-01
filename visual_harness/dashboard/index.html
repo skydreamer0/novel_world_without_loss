@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <title>《無漏》AI 圖像生成與 Visual Harness 面板</title>
   
   <!-- PWA Meta & Icons -->
@@ -37,11 +37,19 @@
       padding: 0;
     }
 
+    html, body {
+      /* 任何一處子元素溢出都不會讓整頁橫向破版 */
+      max-width: 100%;
+      overflow-x: hidden;
+      overscroll-behavior-x: none;
+    }
+
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
       font-family: var(--font-body);
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
@@ -269,6 +277,13 @@
       gap: 1.2rem;
     }
 
+    /* grid item 預設 min-width:auto，長路徑會把欄位撐爆版面 */
+    .grid-2 > *,
+    .grid-3 > *,
+    .metrics-grid > * {
+      min-width: 0;
+    }
+
     .image-preview-box {
       border: 1px solid var(--border-color);
       border-radius: 12px;
@@ -352,6 +367,7 @@
       font-size: 0.92rem;
       font-weight: 500;
       line-height: 1.45;
+      overflow-wrap: anywhere; /* 長檔案路徑必須能折行 */
     }
 
     .prompt-preview {
@@ -742,30 +758,41 @@
     /* 📱 全面手機端 UI/UX 深度響應式適配 (Mobile Responsive Layout & UX) */
     @media (max-width: 768px) {
       header {
-        padding: 0.75rem 1rem;
+        padding: 0.7rem 0.9rem;
+        padding-left: max(0.9rem, env(safe-area-inset-left));
+        padding-right: max(0.9rem, env(safe-area-inset-right));
         flex-direction: column;
         align-items: stretch;
-        gap: 0.6rem;
+        gap: 0.45rem;
       }
 
+      /* 中文書名與英文副標分兩行，避免長標題撐爆 header */
       .logo {
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
         width: 100%;
+        min-width: 0;
       }
 
       .logo-title-cn {
-        font-size: 1.2rem;
+        font-size: 1.18rem;
+        letter-spacing: 0.02em;
       }
 
       .logo-title-en {
-        font-size: 0.82rem;
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        line-height: 1.3;
       }
 
       .header-actions {
         width: 100%;
-        justify-content: space-between;
-        gap: 0.4rem;
+        justify-content: flex-start;
+        gap: 0.35rem;
         flex-wrap: wrap;
+        min-width: 0;
       }
 
       .btn-install-pwa {
@@ -780,9 +807,13 @@
 
       /* 📱 手機步進導覽 (Mobile Scrollable Stepper) */
       .stepper-container {
-        padding: 0.6rem 0.8rem;
+        padding: 0.55rem 0.7rem;
+        padding-left: max(0.7rem, env(safe-area-inset-left));
+        padding-right: max(0.7rem, env(safe-area-inset-right));
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        scroll-snap-type: x proximity;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
@@ -792,17 +823,21 @@
 
       .stepper {
         justify-content: flex-start;
-        gap: 0.5rem;
+        gap: 0.45rem;
         min-width: max-content;
-        padding-bottom: 0.2rem;
+        padding-bottom: 0.15rem;
       }
 
       .step-btn {
         flex: 0 0 auto;
-        padding: 0.5rem 0.75rem;
-        border-radius: 8px;
-        font-size: 0.78rem;
+        max-width: none;
+        min-height: 40px;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
         gap: 0.45rem;
+        scroll-snap-align: center;
+        white-space: nowrap;
       }
 
       .step-num {
@@ -819,12 +854,59 @@
 
       /* 📱 主板塊與卡片 (Main & Responsive Cards) */
       main {
-        padding: 0.8rem 0.6rem;
+        padding: 0.9rem 0.75rem calc(1.4rem + env(safe-area-inset-bottom));
+        padding-left: max(0.75rem, env(safe-area-inset-left));
+        padding-right: max(0.75rem, env(safe-area-inset-right));
+      }
+
+      .tab-content {
+        gap: 1rem;
       }
 
       .card {
-        padding: 1rem 0.85rem;
-        border-radius: 12px;
+        padding: 1.1rem 0.95rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+      }
+
+      .card p {
+        font-size: 0.85rem !important;
+        line-height: 1.65;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+
+      /* 手機用 contain：三視圖立繪是寬幅拼圖，cover 會把「後視圖」整個裁掉 */
+      .image-preview-box {
+        aspect-ratio: 16 / 9;
+      }
+
+      .image-preview-box img {
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .img-tag {
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        font-size: 0.68rem;
+        padding: 0.22rem 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .zoom-hint {
+        opacity: 1; /* 手機沒有 hover，直接顯示提示 */
+        bottom: 6px;
+        right: 6px;
+        font-size: 0.64rem;
+        padding: 0.2rem 0.45rem;
       }
 
       .card-header {
@@ -881,31 +963,84 @@
         line-height: 1.45;
       }
 
-      /* 📱 無限畫布 (Mobile Infinite Canvas - Scrollable) */
+      /* 📱 無限畫布降級為「垂直節點流」— 手機沒有橫向空間跑 880px 的絕對定位畫布 */
       .canvas-workspace {
-        height: 480px;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-x pan-y;
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        padding: 0.85rem;
+        background-size: 22px 22px;
+      }
+
+      .canvas-svg {
+        display: none; /* 連線座標是桌機寫死的，手機改用節點下方的流向標示 */
       }
 
       .canvas-toolbar {
-        top: 10px;
-        left: 10px;
-        padding: 0.4rem 0.6rem;
-        gap: 0.4rem;
-        flex-wrap: wrap;
-        max-width: calc(100% - 20px);
+        position: static;
+        flex-direction: column;
+        padding: 0.6rem;
+        gap: 0.45rem;
+        max-width: 100%;
+        background: rgba(13, 17, 23, 0.75);
       }
 
       .canvas-btn {
-        padding: 0.3rem 0.55rem;
-        font-size: 0.7rem;
+        width: 100%;
+        min-height: 40px;
+        padding: 0.5rem 0.6rem;
+        font-size: 0.78rem;
       }
 
+      /* inline 的 top/left/width 必須以 !important 覆蓋 */
       .canvas-node {
-        width: 220px;
-        padding: 0.6rem;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        padding: 0.75rem;
+        cursor: default;
+      }
+
+      .canvas-node + .canvas-node {
+        margin-top: 0.2rem;
+      }
+
+      .port-dot {
+        display: none;
+      }
+
+      .canvas-node-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+        font-size: 0.78rem;
+      }
+
+      .canvas-node-img {
+        height: 150px !important;
+      }
+
+      .canvas-node-desc {
+        font-size: 0.76rem;
+        line-height: 1.5;
+      }
+
+      /* 以向下箭頭取代桌機的左右連線，維持「特徵注入」的閱讀動線 */
+      .canvas-node:not(:last-child)::after {
+        content: "⬇ 特徵向下注入場面構圖框";
+        display: block;
+        margin: 0.6rem -0.75rem -0.75rem;
+        padding: 0.4rem;
+        text-align: center;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--accent-cyan);
+        background: rgba(0, 242, 254, 0.08);
+        border-top: 1px dashed rgba(0, 242, 254, 0.35);
+        border-radius: 0 0 9px 9px;
       }
 
       /* 📱 手機 Modal 燈箱適配 */
@@ -930,23 +1065,23 @@
       }
 
       .modal-counter {
-        top: 14px;
-        left: 14px;
+        top: calc(14px + env(safe-area-inset-top));
+        left: max(14px, env(safe-area-inset-left));
         padding: 0.25rem 0.65rem;
         font-size: 0.75rem;
       }
 
       .modal-close {
-        top: 12px;
-        right: 12px;
-        width: 36px;
-        height: 36px;
-        font-size: 1.1rem;
+        top: calc(12px + env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
       }
 
       .modal-nav {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
         font-size: 1.1rem;
       }
 
@@ -1212,7 +1347,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
             <img src="../storage/generated/qin_woulou_turnaround.jpg" class="canvas-node-img" alt="秦無漏">
             <div class="canvas-node-desc">
               少年修仙者 | 黑髮銀束帶 | 墨藍武袍<br>
-              <span style="color: var(--accent-cyan);">➔ 特徵向右輸出注入</span>
+              <span style="color: var(--accent-cyan);">➔ 角色特徵輸出注入</span>
             </div>
           </div>
 
@@ -1226,7 +1361,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
             <img src="../storage/generated/chapter_004_residual_core.jpg" class="canvas-node-img" alt="殘核">
             <div class="canvas-node-desc">
               八面體晶核 | 幾何金屬薄片 | 青藍符文<br>
-              <span style="color: var(--accent-gold);">➔ 道具特徵向右輸出注入</span>
+              <span style="color: var(--accent-gold);">➔ 道具特徵輸出注入</span>
             </div>
           </div>
 
@@ -1242,7 +1377,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
             <div class="canvas-node-desc">
               <b>第050章《七息守城》</b><br>
               秦無漏在青崖城牆上調用空胎界域屏障<br>
-              <span style="color: var(--accent-cyan);">✨ 已接收左側 2 個節點特徵 (Character Injected)</span>
+              <span style="color: var(--accent-cyan);">✨ 已接收 2 個上游節點特徵 (Character Injected)</span>
             </div>
           </div>
 
