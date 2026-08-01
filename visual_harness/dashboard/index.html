@@ -2,8 +2,18 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>《無漏》AI 圖像生成與 Visual Harness 面板</title>
+  
+  <!-- PWA Meta & Icons -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00f2fe">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -52,6 +62,45 @@
       position: sticky;
       top: 0;
       z-index: 100;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .btn-install-pwa {
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #090d14;
+      border: none;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-install-pwa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.5);
+    }
+
+    .pwa-online {
+      background: rgba(63, 185, 80, 0.15) !important;
+      color: #3fb950 !important;
+      border-color: rgba(63, 185, 80, 0.4) !important;
+    }
+
+    .pwa-offline {
+      background: rgba(243, 156, 18, 0.15) !important;
+      color: #f39c12 !important;
+      border-color: rgba(243, 156, 18, 0.4) !important;
     }
 
     .logo {
@@ -493,14 +542,14 @@
       z-index: 2;
     }
 
-    /* Modal Fullscreen Lightbox */
+    /* Modal Fullscreen Lightbox & Touch Swipe Carousel */
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(4, 7, 12, 0.93);
+      background: rgba(4, 7, 12, 0.94);
       backdrop-filter: blur(20px);
       z-index: 9999;
       display: none;
@@ -508,6 +557,8 @@
       align-items: center;
       opacity: 0;
       transition: opacity 0.3s ease;
+      touch-action: pan-y;
+      user-select: none;
     }
 
     .modal-overlay.active {
@@ -517,26 +568,142 @@
 
     .modal-content {
       position: relative;
-      max-width: 90vw;
-      max-height: 88vh;
+      max-width: 92vw;
+      max-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+    }
+
+    .modal-img-container {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 88vw;
+      max-height: 74vh;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0, 242, 254, 0.25);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      background: #06090e;
+      cursor: grab;
+      touch-action: pan-y;
+    }
+
+    .modal-img-container:active {
+      cursor: grabbing;
     }
 
     .modal-img {
       max-width: 88vw;
-      max-height: 80vh;
+      max-height: 74vh;
       width: auto;
       height: auto;
       object-fit: contain;
       border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 242, 254, 0.3);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      will-change: transform;
+      pointer-events: none;
+    }
+
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(13, 17, 23, 0.85);
       border: 1px solid rgba(0, 242, 254, 0.4);
+      color: var(--accent-cyan);
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10005;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-nav:hover {
+      background: var(--accent-cyan);
+      color: #090d14;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+    }
+
+    .modal-prev {
+      left: 20px;
+    }
+
+    .modal-next {
+      right: 20px;
+    }
+
+    .modal-counter {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      background: rgba(9, 13, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-main);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+      z-index: 10005;
+    }
+
+    .swipe-hint {
+      position: absolute;
+      top: 20px;
+      right: 75px;
+      background: rgba(0, 242, 254, 0.12);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      color: var(--accent-cyan);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+      z-index: 10005;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .modal-dots {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+      z-index: 10005;
+    }
+
+    .modal-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .modal-dot.active {
+      width: 26px;
+      border-radius: 10px;
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
     }
 
     .modal-caption {
-      margin-top: 1rem;
+      margin-top: 0.8rem;
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--accent-cyan);
@@ -544,14 +711,15 @@
       padding: 0.4rem 1.2rem;
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
     }
 
     .modal-close {
       position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 40px;
-      height: 40px;
+      top: 20px;
+      right: 20px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -562,12 +730,24 @@
       align-items: center;
       justify-content: center;
       transition: all 0.2s ease;
+      z-index: 10010;
     }
 
     .modal-close:hover {
       background: var(--accent-cyan);
       color: #000;
       transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .modal-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+      }
+      .modal-prev { left: 8px; }
+      .modal-next { right: 8px; }
+      .swipe-hint { display: none; }
     }
   </style>
 </head>
@@ -578,7 +758,11 @@
       <span class="logo-title-cn">《無漏》</span>
       <span class="logo-title-en">Visual Harness & Novel Image Studio</span>
     </div>
-    <div class="badge">5-Step Canvas & Harness Engine</div>
+    <div class="header-actions">
+      <span id="pwaStatusBadge" class="badge pwa-online">🌐 在線離線雙備份</span>
+      <button id="pwaInstallBtn" class="btn-install-pwa" style="display: none;" onclick="triggerPwaInstall()">📱 安裝生圖 App</button>
+      <span class="badge">5-Step Canvas & Harness Engine</span>
+    </div>
   </header>
 
   <div class="stepper-container">
@@ -852,16 +1036,50 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
 
   </main>
 
-  <!-- Fullscreen Modal Lightbox -->
+  <!-- Fullscreen Modal Lightbox & Touch Swipe Carousel -->
   <div class="modal-overlay" id="imageModal" onclick="closeModal(event)">
+    <span class="modal-counter" id="modalCounter">1 / 3</span>
+    <div class="swipe-hint">👈 向左右滑動切換圖片 👉</div>
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+
+    <button class="modal-nav modal-prev" onclick="navigateGallery(-1, event)">❮</button>
+    <button class="modal-nav modal-next" onclick="navigateGallery(1, event)">❯</button>
+
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModalDirect()">✕</button>
-      <img class="modal-img" id="modalImg" src="" alt="Full Preview">
+      <div class="modal-img-container" id="modalImgContainer">
+        <img class="modal-img" id="modalImg" src="" alt="Full Preview">
+      </div>
       <div class="modal-caption" id="modalCaption"></div>
+      <div class="modal-dots" id="modalDots"></div>
     </div>
   </div>
 
   <script>
+    // 🎨 生成圖片資料庫藝廊 (Image Gallery Dataset)
+    const imageGallery = [
+      {
+        src: '../storage/generated/qin_woulou_turnaround.jpg',
+        title: '步驟 1: 秦無漏三視圖立繪 (Turnaround Reference Sheet)',
+        tag: '步驟 1: 主角立繪基準'
+      },
+      {
+        src: '../storage/generated/chapter_004_residual_core.jpg',
+        title: '第 004 章《殘核》: 秦無漏在空胎感應幾何晶核 (Awakening Core)',
+        tag: '第 004 章插圖'
+      },
+      {
+        src: '../storage/generated/chapter_050_scene.jpg',
+        title: '第 050 章《七息守城》: 秦無漏在青崖城牆守城 (City Defense)',
+        tag: '第 050 章插圖'
+      }
+    ];
+
+    let currentGalleryIndex = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isDragging = false;
+
+    // --- Tab Step Switcher ---
     function switchStep(stepNum) {
       document.querySelectorAll('.step-btn').forEach((btn, idx) => {
         if (idx + 1 === stepNum) {
@@ -880,6 +1098,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
       });
     }
 
+    // --- Prompt Generator Dummy ---
     function generatePrompt() {
       const pText = document.getElementById('promptText');
       pText.style.opacity = '0.5';
@@ -889,14 +1108,35 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
       }, 300);
     }
 
-    function openModal(imageSrc, captionText) {
+    // --- Lightbox Swipe Gallery System ---
+    function openModalByIndex(index) {
+      if (index < 0) index = imageGallery.length - 1;
+      if (index >= imageGallery.length) index = 0;
+
+      currentGalleryIndex = index;
+      const item = imageGallery[currentGalleryIndex];
+
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImg');
       const modalCaption = document.getElementById('modalCaption');
+      const modalCounter = document.getElementById('modalCounter');
 
-      modalImg.src = imageSrc;
-      modalCaption.innerText = captionText || '';
+      modalImg.style.transform = 'translateX(0px)';
+      modalImg.src = item.src;
+      modalCaption.innerText = item.title || '';
+      modalCounter.innerText = `${currentGalleryIndex + 1} / ${imageGallery.length}`;
+
+      renderModalDots();
       modal.classList.add('active');
+    }
+
+    function openModal(imageSrc, captionText) {
+      let idx = imageGallery.findIndex(item => item.src === imageSrc);
+      if (idx === -1) {
+        imageGallery.push({ src: imageSrc, title: captionText || '圖片預覽', tag: '生圖預覽' });
+        idx = imageGallery.length - 1;
+      }
+      openModalByIndex(idx);
     }
 
     function closeModalDirect() {
@@ -910,15 +1150,148 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
       }
     }
 
+    function navigateGallery(direction, event) {
+      if (event) event.stopPropagation();
+      openModalByIndex(currentGalleryIndex + direction);
+    }
+
+    function renderModalDots() {
+      const dotsContainer = document.getElementById('modalDots');
+      dotsContainer.innerHTML = imageGallery.map((_, i) => `
+        <div class="modal-dot ${i === currentGalleryIndex ? 'active' : ''}" onclick="openModalByIndex(${i}); event.stopPropagation();"></div>
+      `).join('');
+    }
+
+    // --- Touch Swipe & Pointer Drag Gesture Handlers ---
+    const modalImgContainer = document.getElementById('modalImgContainer');
+
+    modalImgContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchEndX = touchStartX;
+      isDragging = true;
+    }, { passive: true });
+
+    modalImgContainer.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      touchEndX = e.touches[0].clientX;
+      const diffX = touchEndX - touchStartX;
+      const modalImg = document.getElementById('modalImg');
+      modalImg.style.transform = `translateX(${diffX}px) scale(0.98)`;
+    }, { passive: true });
+
+    modalImgContainer.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      handleSwipeGesture();
+    });
+
+    modalImgContainer.addEventListener('mousedown', (e) => {
+      touchStartX = e.clientX;
+      touchEndX = touchStartX;
+      isDragging = true;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      touchEndX = e.clientX;
+      const diffX = touchEndX - touchStartX;
+      const modalImg = document.getElementById('modalImg');
+      modalImg.style.transform = `translateX(${diffX}px) scale(0.98)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      handleSwipeGesture();
+    });
+
+    function handleSwipeGesture() {
+      const diffX = touchEndX - touchStartX;
+      const modalImg = document.getElementById('modalImg');
+      const swipeThreshold = 40;
+
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX < 0) {
+          modalImg.style.transform = 'translateX(-80px)';
+          setTimeout(() => navigateGallery(1), 100);
+        } else {
+          modalImg.style.transform = 'translateX(80px)';
+          setTimeout(() => navigateGallery(-1), 100);
+        }
+      } else {
+        modalImg.style.transform = 'translateX(0px)';
+      }
+      touchStartX = 0;
+      touchEndX = 0;
+    }
+
+    // --- Keyboard Navigation ---
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('imageModal');
+      if (modal && modal.classList.contains('active')) {
+        if (e.key === 'ArrowRight') {
+          navigateGallery(1);
+        } else if (e.key === 'ArrowLeft') {
+          navigateGallery(-1);
+        } else if (e.key === 'Escape') {
+          closeModalDirect();
+        }
+      }
+    });
+
+    // --- Infinite Canvas Dummy Add Node ---
     function addNode(type) {
       alert(`✨ 已在畫布上新增 ${type === 'character' ? '角色立繪' : '場面構圖'} 節點！`);
     }
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeModalDirect();
-      }
+    // --- PWA Service Worker & Install Prompt Integration ---
+    let deferredPrompt = null;
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => {
+            console.log('[PWA] Service Worker registered in Visual Studio scope:', reg.scope);
+            updateOnlineStatus();
+          })
+          .catch(err => console.error('[PWA] Service Worker registration failed:', err));
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.getElementById('pwaInstallBtn');
+      if (installBtn) installBtn.style.display = 'inline-flex';
     });
+
+    function triggerPwaInstall() {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(choiceResult => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('[PWA] User installed the app');
+        }
+        deferredPrompt = null;
+        const installBtn = document.getElementById('pwaInstallBtn');
+        if (installBtn) installBtn.style.display = 'none';
+      });
+    }
+
+    function updateOnlineStatus() {
+      const badge = document.getElementById('pwaStatusBadge');
+      if (!badge) return;
+      if (navigator.onLine) {
+        badge.className = 'badge pwa-online';
+        badge.innerText = '🌐 在線離線雙備份';
+      } else {
+        badge.className = 'badge pwa-offline';
+        badge.innerText = '⚡ 離線模式 (Cache Ready)';
+      }
+    }
+
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
   </script>
 </body>
 </html>

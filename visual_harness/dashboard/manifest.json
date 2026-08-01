@@ -1,0 +1,46 @@
+{
+  "name": "《無漏》AI 生圖面板 / Visual Harness Studio",
+  "short_name": "無漏 AI 生圖",
+  "description": "《無漏》小說角色一致性與 AI 章節插圖生成 Visual Studio",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090d14",
+  "theme_color": "#00f2fe",
+  "categories": ["graphics", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "角色立繪基準",
+      "short_name": "立繪",
+      "url": "./index.html#step1",
+      "description": "查看秦無漏黃金立繪"
+    },
+    {
+      "name": "AI 實時生圖對比",
+      "short_name": "生圖對比",
+      "url": "./index.html#step3",
+      "description": "查看實時插圖與對比藝廊"
+    },
+    {
+      "name": "無限 AI 畫布",
+      "short_name": "無限畫布",
+      "url": "./index.html#step5",
+      "description": "互動式角色與場面視覺畫布"
+    }
+  ]
+}
