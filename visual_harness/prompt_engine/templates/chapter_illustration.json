@@ -1,0 +1,10 @@
+{
+  "template_name": "chapter_illustration_default",
+  "description": "Standard high-impact scene illustration for World Without Loss novel chapters",
+  "camera_presets": {
+    "climax_battle": "wide dynamic low-angle action shot, cinematic motion blur, volumetric lighting",
+    "character_portrait": "close-up portrait shot, sharp focal point on eyes, soft background bokeh",
+    "domain_expansion": "extreme wide panorama shot, cosmic scale visual depth, glowing boundary array"
+  },
+  "default_aspect_ratio": "16:9"
+}

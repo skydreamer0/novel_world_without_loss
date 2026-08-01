@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ItemVisualProfile",
+  "type": "object",
+  "properties": {
+    "item_id": { "type": "string" },
+    "canonical_name": { "type": "string" },
+    "type": { "type": "string" },
+    "visual_anchors": {
+      "type": "object",
+      "properties": {
+        "material": { "type": "string" },
+        "color_and_aura": { "type": "string" },
+        "shape_and_carvings": { "type": "string" },
+        "active_effect": { "type": "string" }
+      },
+      "required": ["material", "color_and_aura"]
+    },
+    "prompt_tokens": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["item_id", "canonical_name", "visual_anchors", "prompt_tokens"]
+}

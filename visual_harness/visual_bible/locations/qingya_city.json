@@ -1,0 +1,20 @@
+{
+  "location_id": "qingya_city",
+  "canonical_name": "青崖城 (Qingya Citadel City)",
+  "type": "Border Mountain Citadel City",
+  "visual_anchors": {
+    "architecture_style": "Ancient Xianxia mountain fortress, massive dark basalt stone walls built into dramatic cliffside steeps, ornate multi-tiered dark wood roofs",
+    "atmosphere_and_sky": "misty mountain air, dark stormy twilight clouds, faint blue protective barrier light sweeping the high sky",
+    "lighting_setup": "dramatic rim lighting from distant setting sun, warm lantern lights on watchtowers contrasting with cool misty shadows",
+    "color_theme": "dark teal, slate grey, obsidian stone, warm lantern amber"
+  },
+  "prompt_tokens": [
+    "qingya_city_citadel",
+    "ancient Xianxia mountain fortress city built on steep basalt cliffs",
+    "massive dark stone defensive walls",
+    "ornate dark wood multi-tiered pagoda towers",
+    "misty mountain air at twilight",
+    "faint blue protective array barrier in high sky",
+    "warm amber lantern lights along battlements"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "novel-world-without-loss-visual-harness",
+  "version": "1.0.0",
+  "description": "Visual Bible and Consistency Test Harness for novel image generation in World Without Loss",
+  "main": "prompt_engine/prompt_builder.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node harness/test_runner.js",
+    "build-prompt": "node prompt_engine/prompt_builder.js"
+  },
+  "keywords": [
+    "ai-image-generation",
+    "character-consistency",
+    "visual-bible",
+    "prompt-engine",
+    "harness"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT"
+}

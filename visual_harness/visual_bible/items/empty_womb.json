@@ -1,0 +1,18 @@
+{
+  "item_id": "empty_womb",
+  "canonical_name": "空胎界核 (Void Womb Domain Seed)",
+  "type": "Inner World Domain Seed",
+  "visual_anchors": {
+    "material": "translucent dark obsidian sphere with infinite deep cosmic starry void inside",
+    "color_and_aura": "deep dark background with delicate glowing cyan thread veins of domain boundaries",
+    "shape_and_carvings": "spherical void core without fixed surface, constantly expanding and absorbing ambient energy",
+    "active_effect": "surrounding atmosphere bends and warps slightly with subtle spatial distortion waves"
+  },
+  "prompt_tokens": [
+    "empty_womb_domain_seed",
+    "translucent dark obsidian spherical domain core",
+    "infinite starry cosmic void interior",
+    "glowing cyan thread veins of spatial boundaries",
+    "subtle spatial distortion aura around the core"
+  ]
+}

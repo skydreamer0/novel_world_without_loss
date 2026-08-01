@@ -1,0 +1,26 @@
+{
+  "character_id": "residual_core",
+  "canonical_name": "殘核 (Residual Core)",
+  "role": "Ancient Epoch Artifact Intelligence / Adviser",
+  "visual_anchors": {
+    "apparent_age": "ageless incorporeal entity",
+    "face_structure": "no physical human face, projects as a floating geometric crystal core surrounded by ancient data runes",
+    "eyes": "single centered pulsing cyan light sphere",
+    "hair": "none",
+    "physique": "floating octahedron crystal fragment with floating golden and blue algorithmic glyph rings",
+    "signature_clothing": "surrounded by ethereal translucent energy distortion",
+    "distinguishing_marks": [
+      "floating ancient epoch mathematical runes orbiting the core",
+      "emits faint hum and translucent blue wireframe grid"
+    ]
+  },
+  "prompt_tokens": [
+    "residual_core_entity",
+    "floating ancient geometrical octahedron crystal core",
+    "glowing cyan center light",
+    "orbiting golden and ethereal blue mathematical rune rings",
+    "translucent data wireframe aura",
+    "incorporeal magical artifact entity"
+  ],
+  "anchor_image": "harness/anchor_registry/residual_core_anchor.png"
+}

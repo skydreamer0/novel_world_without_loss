@@ -1,0 +1,28 @@
+{
+  "character_id": "qin_woulou",
+  "canonical_name": "秦無漏 (Qin Wulou)",
+  "role": "Protagonist / Master of Void Domain Womb",
+  "visual_anchors": {
+    "apparent_age": "early 20s young cultivator",
+    "face_structure": "sharp angular jawline, calm cold analytical gaze, pale fair skin",
+    "eyes": "obsidian dark eyes with a subtle restrained cyan glow when channeling void boundary",
+    "hair": "long raven black hair bound neatly in a simple dark silver ribbon",
+    "physique": "lean athletic build, upright stance",
+    "signature_clothing": "simple dark navy or obsidian blue martial robe with subtle dark silver lining, minimal ornament, no heavy armor",
+    "distinguishing_marks": [
+      "subtle translucent faint void rune shadow over his left palm/wrist",
+      "calm, calculated expression, never panicked"
+    ]
+  },
+  "prompt_tokens": [
+    "qin_woulou_char",
+    "young handsome Xianxia cultivator",
+    "sharp angular jawline",
+    "calm cold obsidian eyes",
+    "long black hair in dark silver ribbon",
+    "simple dark navy martial robe with silver lining",
+    "lean athletic posture",
+    "restrained cyan spirit energy flow"
+  ],
+  "anchor_image": "harness/anchor_registry/qin_woulou_anchor.png"
+}

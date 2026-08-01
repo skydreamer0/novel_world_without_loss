@@ -1,0 +1,23 @@
+{
+  "preset_name": "WorldWithoutLoss_DarkXianxia",
+  "genre": "Eastern Xianxia Fantasy / Dark Domain Realm",
+  "base_style_prompt": "Cinematic dark Xianxia concept art, atmospheric volume lighting, deep navy and obsidian shadow palette, intricate glowing spirit cyan and gold rune accents, ultra-detailed digital painting, octane render lighting, artistic depth of field, high-contrast chiaroscuro",
+  "forbidden_tokens": [
+    "western medieval armor",
+    "gothic knight",
+    "anime big eyes",
+    "chibi",
+    "modern city",
+    "neon light",
+    "cyberpunk",
+    "cartoonish"
+  ],
+  "default_negative_prompt": "photograph, western armor, medieval knight, modern clothing, cartoon, low resolution, deformed anatomy, extra fingers, blurry, oversaturated colors, cheap fantasy UI",
+  "color_palette_hex": [
+    "#0d1117",
+    "#161b22",
+    "#00f2fe",
+    "#4facfe",
+    "#f39c12"
+  ]
+}

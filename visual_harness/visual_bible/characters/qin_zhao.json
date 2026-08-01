@@ -1,0 +1,28 @@
+{
+  "character_id": "qin_zhao",
+  "canonical_name": "秦昭 (Qin Zhao)",
+  "role": "Chosen Prodigy of Qin Clan / Bearer of Supreme Seed",
+  "visual_anchors": {
+    "apparent_age": "early 20s noble cultivator",
+    "face_structure": "upright heroic face features, honorable but subtly strained brow",
+    "eyes": "bright gold-tinted eyes with glowing inner spirit pulse",
+    "hair": "neatly styled black hair adorned with golden jade hair crown",
+    "physique": "tall sturdy warrior build, dignified posture",
+    "signature_clothing": "luxurious white and gold embroidered Qin Clan elder robes, golden shoulder armor pauldrons, glowing jade waist pendant",
+    "distinguishing_marks": [
+      "glowing golden domain aura surrounding him",
+      "conflicted honorable expression"
+    ]
+  },
+  "prompt_tokens": [
+    "qin_zhao_char",
+    "noble heroic Xianxia prodigy",
+    "bright golden eyes with inner spirit glow",
+    "golden jade hair crown",
+    "luxurious white and gold embroidered robes",
+    "golden shoulder armor pauldrons",
+    "dignified stance",
+    "radiant gold spirit aura"
+  ],
+  "anchor_image": "harness/anchor_registry/qin_zhao_anchor.png"
+}

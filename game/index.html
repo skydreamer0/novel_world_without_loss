@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>《無漏之地》敘事型城市經營 Demo</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="app-header">
+    <h1>無漏之地</h1>
+    <span class="subtitle">敘事型城市經營 · 第一卷「空胎」原型</span>
+  </header>
+
+  <!-- 開場 -->
+  <section id="intro-screen" class="screen intro-screen">
+    <div class="intro-card">
+      <h2 id="intro-title"></h2>
+      <div id="intro-text" class="intro-text"></div>
+      <button id="intro-start-btn" class="primary-btn"></button>
+    </div>
+  </section>
+
+  <!-- 遊戲主畫面 -->
+  <section id="game-screen" class="screen game-screen" hidden>
+    <div id="turn-counter" class="turn-counter"></div>
+
+    <div id="scene-viewport" class="scene-viewport"></div>
+
+    <div class="game-layout">
+      <aside class="state-panel">
+        <div class="panel-block">
+          <h3>界域狀態</h3>
+          <div id="meters" class="meters"></div>
+        </div>
+        <div class="panel-block">
+          <h3>天地器官</h3>
+          <div id="organs" class="organs"></div>
+        </div>
+        <div class="panel-block">
+          <h3>界力借債</h3>
+          <div id="debts" class="debts"></div>
+        </div>
+        <div class="panel-block panel-block-log">
+          <h3>事件記錄</h3>
+          <ul id="log-list" class="log-list"></ul>
+        </div>
+      </aside>
+
+      <main class="event-panel">
+        <div class="event-card">
+          <div id="event-chapter" class="event-chapter"></div>
+          <h2 id="event-title" class="event-title"></h2>
+          <p id="event-text" class="event-text"></p>
+          <div id="event-choices" class="event-choices"></div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- 結局畫面 -->
+  <section id="end-screen" class="screen end-screen" hidden>
+    <div class="end-card">
+      <span id="end-badge" class="end-badge"></span>
+      <h2 id="end-title"></h2>
+      <p id="end-summary" class="end-summary"></p>
+      <div id="end-stats" class="end-stats"></div>
+      <button id="restart-btn" class="primary-btn">重新開始</button>
+    </div>
+  </section>
+
+</div>
+<script type="module" src="game.js"></script>
+</body>
+</html>

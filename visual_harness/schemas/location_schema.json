@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LocationVisualProfile",
+  "type": "object",
+  "properties": {
+    "location_id": { "type": "string" },
+    "canonical_name": { "type": "string" },
+    "type": { "type": "string" },
+    "visual_anchors": {
+      "type": "object",
+      "properties": {
+        "architecture_style": { "type": "string" },
+        "atmosphere_and_sky": { "type": "string" },
+        "lighting_setup": { "type": "string" },
+        "color_theme": { "type": "string" }
+      },
+      "required": ["architecture_style", "atmosphere_and_sky", "lighting_setup"]
+    },
+    "prompt_tokens": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["location_id", "canonical_name", "visual_anchors", "prompt_tokens"]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CharacterVisualProfile",
+  "type": "object",
+  "properties": {
+    "character_id": { "type": "string" },
+    "canonical_name": { "type": "string" },
+    "role": { "type": "string" },
+    "visual_anchors": {
+      "type": "object",
+      "properties": {
+        "apparent_age": { "type": "string" },
+        "face_structure": { "type": "string" },
+        "eyes": { "type": "string" },
+        "hair": { "type": "string" },
+        "physique": { "type": "string" },
+        "signature_clothing": { "type": "string" },
+        "distinguishing_marks": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["face_structure", "eyes", "hair", "signature_clothing"]
+    },
+    "prompt_tokens": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "anchor_image": { "type": "string" }
+  },
+  "required": ["character_id", "canonical_name", "visual_anchors", "prompt_tokens"]
+}

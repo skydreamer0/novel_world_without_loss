@@ -1,0 +1,25 @@
+{
+  "default_engine": "flux",
+  "available_engines": ["flux", "midjourney", "stable_diffusion_xl", "dalle3"],
+  "engine_settings": {
+    "flux": {
+      "aspect_ratio": "16:9",
+      "guidance_scale": 3.5,
+      "steps": 30,
+      "pulid_weight": 0.8,
+      "lora_weight": 0.75
+    },
+    "midjourney": {
+      "version": "6.0",
+      "aspect_ratio": "--ar 16:9",
+      "stylize": "--s 250",
+      "cref_weight": "--cw 80"
+    },
+    "stable_diffusion_xl": {
+      "cfg_scale": 7.0,
+      "steps": 35,
+      "sampler": "Euler a",
+      "face_id_weight": 0.85
+    }
+  }
+}

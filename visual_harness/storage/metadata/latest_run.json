@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-08-01T04:17:50.116Z",
+  "total_scenes_tested": 2,
+  "passed_count": 2,
+  "turnarounds_built": 3,
+  "reports": [
+    {
+      "chapter": "第 050 章《七息守城》",
+      "anchor_score": 100,
+      "passed": true,
+      "matched_tokens": 4,
+      "total_tokens": 4,
+      "forbidden_violations": 0
+    },
+    {
+      "chapter": "第 025 章《百里開界》",
+      "anchor_score": 100,
+      "passed": true,
+      "matched_tokens": 3,
+      "total_tokens": 3,
+      "forbidden_violations": 0
+    }
+  ]
+}
