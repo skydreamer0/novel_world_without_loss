@@ -15,7 +15,11 @@ function runFullPipeline() {
   // STEP 1: Verify Visual Bibles & Build Character Turnaround Prompts
   console.log("📌 【STEP 1】載入視覺聖經與生成角色全方位立繪 (Character Turnaround Prompts)");
   console.log("------------------------------------------------------------------");
-  const characters = ['qin_woulou', 'qin_zhao', 'residual_core'];
+  const characters = [
+    'qin_woulou', 'qin_zhao', 'residual_core',
+    'lu_qinghe', 'ruan_qinghe', 'su_wanzhao',
+    'zhiyuan', 'chiying', 'jiluo'
+  ];
   const turnaroundResults = [];
 
   characters.forEach(charId => {

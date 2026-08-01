@@ -1,0 +1,26 @@
+{
+  "character_id": "zhiyuan",
+  "canonical_name": "紙鳶 (Zhiyuan)",
+  "role": "Void Alliance Envoy / Ruin Navigator",
+  "visual_anchors": {
+    "apparent_age": "mid 20s female void navigator",
+    "face_structure": "sharp mysterious face structure, cool aloof expression",
+    "eyes": "deep dark grey eyes with subtle void starlight shimmer",
+    "hair": "black hair bound in a tight traveler braid under a hooded cloak",
+    "physique": "slender, agile, weathered build",
+    "signature_clothing": "dark charcoal and starlight grey hooded void cloak, traveler gear, rift compass",
+    "signature_item": "ancient remnant realm door fragment (遺界門片)",
+    "distinguishing_marks": [
+      "shadow slightly translucent due to ancient rift severance",
+      "hooded void navigator outfit"
+    ]
+  },
+  "prompt_tokens": [
+    "zhiyuan_char",
+    "female void alliance envoy",
+    "dark charcoal hooded cloak",
+    "rift compass and remnant realm door fragment",
+    "mysterious aloof gaze"
+  ],
+  "anchor_image": ""
+}

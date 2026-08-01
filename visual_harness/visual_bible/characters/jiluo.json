@@ -1,0 +1,25 @@
+{
+  "character_id": "jiluo",
+  "canonical_name": "棘蘿 (Jiluo)",
+  "role": "Qingjiao Tribe Leader / Forest Guardian",
+  "visual_anchors": {
+    "apparent_age": "20s female tribal leader",
+    "face_structure": "sharp regal face, cautious protective expression",
+    "eyes": "emerald green eyes with plant-nature aura glow",
+    "hair": "dark forest green braided hair woven with small thorn vines and leaves",
+    "physique": "tall athletic woodland warrior physique",
+    "signature_clothing": "green bark-cloth and thorn-woven armor, leaf-draped cloak",
+    "distinguishing_marks": [
+      "subtle wooden horn-like vines crowned on head (Qingjiao tribe feature)",
+      "emerald glowing nature runes on forearms"
+    ]
+  },
+  "prompt_tokens": [
+    "jiluo_char",
+    "female Qingjiao tribe leader",
+    "emerald green eyes",
+    "thorn-vine braided hair and bark armor",
+    "regal forest guardian posture"
+  ],
+  "anchor_image": ""
+}

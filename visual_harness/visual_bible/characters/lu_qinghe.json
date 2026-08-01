@@ -1,0 +1,33 @@
+{
+  "character_id": "lu_qinghe",
+  "canonical_name": "陸青禾 (Lu Qinghe)",
+  "role": "Zhejian Sect Outer Proxy / Key Ally",
+  "visual_anchors": {
+    "apparent_age": "18-20 years old young female cultivator",
+    "face_structure": "high sculpted cheekbones, defined angular jawline, compact structured chin, mature dignified high-fashion eastern facial bone structure",
+    "eyes": "deep-set elongated almond dark eyes under subtle brow ridge, calm sharp focus",
+    "nose": "tall straight slender nose bridge with refined cartilage structure",
+    "hair": "dark raven black hair, high top knot updo with windblown hair strands",
+    "physique": "slender upright posture with resilient outer-sect cultivator build",
+    "signature_clothing": "indigo blue and natural hemp outer-sect martial robes, leather wrist guards, cord waist belt",
+    "signature_item": "bundle of golden wheat stalks (麥稈/劍穗) tied securely on her back instead of a sword",
+    "distinguishing_marks": [
+      "resolute, noble and strong-willed gaze",
+      "sculpted high cheekbones and clean angular jawline",
+      "carries Wheat Stalks (劍穗) representing agricultural realm law reform",
+      "permanent subtle respiratory strain mark on right chest/lung from Vol 2 battlefield wound"
+    ]
+  },
+  "prompt_tokens": [
+    "lu_qinghe_char",
+    "young female Xianxia cultivator",
+    "high sculpted cheekbones",
+    "defined angular jawline",
+    "tall straight slender nose bridge",
+    "deep-set elongated dark almond eyes",
+    "indigo blue and hemp outer-sect martial robe",
+    "bundle of golden wheat stalks on her back",
+    "golden wheat field and misty mountain sunset"
+  ],
+  "anchor_image": ""
+}

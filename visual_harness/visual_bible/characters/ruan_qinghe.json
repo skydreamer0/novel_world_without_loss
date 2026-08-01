@@ -1,0 +1,27 @@
+{
+  "character_id": "ruan_qinghe",
+  "canonical_name": "阮青禾 (Ruan Qinghe)",
+  "role": "Sink River City Physician / Resident Council Member",
+  "visual_anchors": {
+    "apparent_age": "early 20s young female physician",
+    "face_structure": "gentle oval face with calm compassionate demeanor, slender jawline",
+    "eyes": "warm, perceptive dark brown eyes, observant and empathetic",
+    "nose": "soft straight slender nose",
+    "hair": "long black hair tied back in a neat practical physician braid",
+    "physique": "slender, nimble, focused posture",
+    "signature_clothing": "clean sage green and white medical robes with silver needle pouch at waist and herbal medicine pouch",
+    "distinguishing_marks": [
+      "silver acupuncture needle pouch at waist",
+      "calm, attentive medical examiner expression"
+    ]
+  },
+  "prompt_tokens": [
+    "ruan_qinghe_char",
+    "young female Xianxia physician",
+    "gentle perceptive dark eyes",
+    "long black hair in practical braid",
+    "sage green and white medical robes with silver needle pouch",
+    "calm compassionate expression"
+  ],
+  "anchor_image": ""
+}

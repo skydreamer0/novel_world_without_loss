@@ -1,0 +1,26 @@
+{
+  "character_id": "chiying",
+  "canonical_name": "遲影 (Chiying)",
+  "role": "Independent Shadow Lifeform / Truth Keeper",
+  "visual_anchors": {
+    "apparent_age": "around 17-18 female shadow entity given independent life",
+    "face_structure": "delicate ethereal face, pale skin with subtle dark shadow trailing edges",
+    "eyes": "luminous void silver eyes, quiet independent gaze",
+    "hair": "flowing obsidian dark hair that gently dissolves into faint mist at tips",
+    "physique": "translucent ethereal shadow physique",
+    "signature_clothing": "dark shadow-woven robes with pale silver luminous script patterns",
+    "signature_item": "First Order Seal remnant fragment (甲字令殘序)",
+    "distinguishing_marks": [
+      "shadow trails behind her with independent motion",
+      "luminous silver script over left hand holding truth remnant"
+    ]
+  },
+  "prompt_tokens": [
+    "chiying_char",
+    "ethereal female shadow lifeform",
+    "luminous silver eyes",
+    "dark shadow-woven robes with silver script",
+    "holding First Order Seal remnant"
+  ],
+  "anchor_image": ""
+}

@@ -1,0 +1,27 @@
+{
+  "character_id": "su_wanzhao",
+  "canonical_name": "蘇晚照 (Su Wanzhao)",
+  "role": "Noble Daughter of Su Family / Former Fiancee",
+  "visual_anchors": {
+    "apparent_age": "18-20 years old young noble lady",
+    "face_structure": "refined aristocratic oval face, clear graceful contours",
+    "eyes": "clear intelligent dark obsidian eyes, dignified and unbiased",
+    "hair": "elegant long black hair with jade hairpins and subtle silk ribbons",
+    "physique": "tall, elegant, poised stance",
+    "signature_clothing": "luxurious white and pale violet silk robes with delicate embroidery, jade pendant at belt",
+    "signature_item": "Illumination Jade (照影玉) holding deleted ritual wave evidence",
+    "distinguishing_marks": [
+      "dignified aristocratic composure",
+      "holds luminous Illumination Jade"
+    ]
+  },
+  "prompt_tokens": [
+    "su_wanzhao_char",
+    "young noble Xianxia lady",
+    "refined aristocratic face",
+    "luxurious white and pale violet silk robes",
+    "jade hairpins and illumination jade in hand",
+    "poised dignified expression"
+  ],
+  "anchor_image": ""
+}
