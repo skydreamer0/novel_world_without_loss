@@ -1,6 +1,6 @@
 // Bump whenever the app shell or the precached catalog projection changes — the projection is
 // served cache-first, so installed clients keep the old character data until this name changes.
-const CACHE_NAME = 'woulou-visual-harness-v3';
+const CACHE_NAME = 'woulou-visual-harness-v4';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -54,6 +54,14 @@ self.addEventListener('fetch', (event) => {
           return caches.match('./index.html') || caches.match(request);
         })
     );
+    return;
+  }
+
+  // Harness run results change on every `npm test`. Cache-first would freeze the Quality Gate on
+  // a stale report, and the page's cache-busting query would make every reload a new cache key —
+  // so never cache these at all.
+  if (url.pathname.includes('/storage/metadata/')) {
+    event.respondWith(fetch(request).catch(() => caches.match(request)));
     return;
   }
 

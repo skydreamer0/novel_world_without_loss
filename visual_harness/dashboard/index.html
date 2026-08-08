@@ -22,9 +22,14 @@
       --bg-dark: #090d14;
       --panel-bg: rgba(22, 27, 34, 0.9);
       --border-color: rgba(255, 255, 255, 0.12);
+      /* One accent carries interaction and emphasis; the rest are reserved for meaning, so a
+         colour on screen always answers "why is this highlighted?". Cyan = primary/active,
+         gold = warning or the prop/entity channel on the canvas, green = pass, red = fail. */
       --accent-cyan: #00f2fe;
       --accent-blue: #4facfe;
       --accent-gold: #f39c12;
+      --status-ok: #3fb950;
+      --status-fail: #f85149;
       --text-main: #e6edf3;
       --text-muted: #8b949e;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -54,9 +59,9 @@
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.06) 0%, transparent 45%),
-        radial-gradient(circle at 85% 85%, rgba(243, 156, 18, 0.05) 0%, transparent 45%);
+      /* Single ambient wash: the old second gold glow read as an accent with no meaning. */
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.06) 0%, transparent 45%);
     }
 
     header {
@@ -101,7 +106,7 @@
 
     .pwa-online {
       background: rgba(63, 185, 80, 0.15) !important;
-      color: #3fb950 !important;
+      color: var(--status-ok) !important;
       border-color: rgba(63, 185, 80, 0.4) !important;
     }
 
@@ -127,7 +132,7 @@
 
     .logo-title-en {
       font-family: var(--font-body);
-      background: linear-gradient(135deg, #00f2fe, #4facfe, #f39c12);
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 600;
@@ -439,6 +444,44 @@
       overflow-wrap: anywhere; /* 長檔案路徑必須能折行 */
     }
 
+    .anchor-dl {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: 0.45rem 1rem;
+      margin: 0;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .anchor-dl dt {
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .anchor-dl dd {
+      margin: 0;
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+
+    @media (max-width: 768px) {
+      /* Two columns leave no room for the value on a phone; stack term over description. */
+      .anchor-dl {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.15rem 0;
+      }
+
+      .anchor-dl dt {
+        margin-top: 0.55rem;
+      }
+
+      .anchor-dl dt:first-child {
+        margin-top: 0;
+      }
+    }
+
     .character-selector {
       display: flex;
       align-items: center;
@@ -491,7 +534,7 @@
       color: var(--text-muted);
       text-align: center;
       background:
-        linear-gradient(135deg, rgba(0, 242, 254, 0.06), rgba(243, 156, 18, 0.04)),
+        linear-gradient(135deg, rgba(0, 242, 254, 0.06), transparent),
         #080c14;
     }
 
@@ -547,7 +590,7 @@
     }
 
     .status-pass {
-      color: #3fb950;
+      color: var(--status-ok);
       font-weight: 600;
     }
 
@@ -571,6 +614,98 @@
       font-weight: 700;
       color: var(--accent-cyan);
       margin-top: 0.3rem;
+    }
+
+    /* A headline number alone can't say whether it is fresh or what it counted. */
+    .metric-note {
+      margin-top: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+
+    .metric-val.is-idle {
+      color: var(--text-muted);
+    }
+
+    .metric-val.is-fail {
+      color: var(--status-fail);
+    }
+
+    .qa-block {
+      margin-top: 1.5rem;
+    }
+
+    /* Six columns of run data will not fit a phone; let the table scroll inside its own box
+       rather than pushing the page sideways. */
+    .qa-table-wrap {
+      margin-top: 0.6rem;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .qa-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .qa-table th,
+    .qa-table td {
+      padding: 0.65rem 0.9rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .qa-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .qa-table th {
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .qa-table td.qa-chapter {
+      white-space: normal;
+      min-width: 12rem;
+    }
+
+    .qa-table td.qa-lineage {
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      white-space: normal;
+      min-width: 14rem;
+    }
+
+    .qa-verdict-pass {
+      color: var(--status-ok);
+      font-weight: 600;
+    }
+
+    .qa-verdict-fail {
+      color: var(--status-fail);
+      font-weight: 600;
+    }
+
+    .qa-empty {
+      padding: 1.1rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    /* The character being viewed is highlighted where it appears in a scene's lineage. */
+    .qa-lineage mark {
+      background: rgba(0, 242, 254, 0.16);
+      color: var(--accent-cyan);
+      border-radius: 3px;
+      padding: 0 0.2rem;
     }
 
     /* 🎨 無限畫布 (Infinite Canvas) 專用樣式 */
@@ -652,6 +787,8 @@
       width: 100%;
       height: 120px;
       object-fit: cover;
+      /* Portrait art in a 120px-tall node: without this the crop lands on the waist. */
+      object-position: 50% 12%;
       border-radius: 6px;
       border: 1px solid var(--border-color);
       margin-bottom: 0.5rem;
@@ -1263,7 +1400,7 @@
     <div class="header-actions">
       <span id="pwaStatusBadge" class="badge pwa-online">🌐 在線離線雙備份</span>
       <button id="pwaInstallBtn" class="btn-install-pwa" style="display: none;" onclick="triggerPwaInstall()">📱 安裝生圖 App</button>
-      <span class="badge">5-Step Canvas & Harness Engine</span>
+      <span class="badge">五步驟畫布與 Harness 引擎</span>
     </div>
   </header>
 
@@ -1343,23 +1480,23 @@
 
           <div style="display: flex; flex-direction: column; gap: 1rem;">
             <div class="anchor-box">
-              <div class="anchor-label">角色名稱與定位 (Name & Role)</div>
+              <div class="anchor-label">角色名稱與定位</div>
               <div class="anchor-value" id="characterIdentity">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">視覺錨點 (Visual Anchors)</div>
+              <div class="anchor-label">視覺錨點</div>
               <div class="anchor-value" id="characterAnchors">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">Prompt Tokens</div>
+              <div class="anchor-label">Prompt 關鍵字</div>
               <div class="anchor-value" id="characterPromptTokens">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">禁止特徵 (Forbidden Traits)</div>
+              <div class="anchor-label">禁止特徵</div>
               <div class="anchor-value" id="characterForbiddenTraits">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">目前基準圖 (Preferred Reference)</div>
+              <div class="anchor-label">目前基準圖</div>
               <div class="anchor-value" id="characterReferenceMeta">—</div>
             </div>
           </div>
@@ -1392,7 +1529,7 @@
           </div>
         </div>
 
-        <div class="card-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Prompt 構建產出 (Prompt Output)</div>
+        <div class="card-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Prompt 構建產出</div>
         <div class="prompt-preview" id="promptText">正在從 Character Catalog 構建角色 Prompt…</div>
       </div>
     </div>
@@ -1448,24 +1585,58 @@
 
         <div class="metrics-grid">
           <div class="metric-card">
-            <div class="anchor-label">Catalog Contract</div>
-            <div class="metric-val" id="catalogMetric">Passed</div>
+            <div class="anchor-label">Catalog 契約</div>
+            <div class="metric-val" id="catalogMetric">—</div>
+            <div class="metric-note" id="catalogMetricNote">—</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">Reference Set</div>
+            <div class="anchor-label">目前角色參考集</div>
             <div class="metric-val" id="referenceSetMetric">—</div>
+            <div class="metric-note" id="referenceSetMetricNote">—</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">Image Palette</div>
-            <div class="metric-val">N/A</div>
+            <div class="anchor-label">場景驗收</div>
+            <div class="metric-val" id="sceneGateMetric">—</div>
+            <div class="metric-note" id="sceneGateMetricNote">—</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">Face Consistency</div>
-            <div class="metric-val">N/A</div>
+            <div class="anchor-label">錨點命中</div>
+            <div class="metric-val" id="anchorScoreMetric">—</div>
+            <div class="metric-note" id="anchorScoreMetricNote">—</div>
           </div>
         </div>
 
-        <div style="margin-top: 1.5rem;" class="anchor-box">
+        <div class="qa-block">
+          <div class="anchor-label">場景驗收明細</div>
+          <div class="qa-table-wrap">
+            <table class="qa-table">
+              <thead>
+                <tr>
+                  <th scope="col">章節</th>
+                  <th scope="col">錨點</th>
+                  <th scope="col">命中</th>
+                  <th scope="col">禁止特徵</th>
+                  <th scope="col">參考集血緣</th>
+                  <th scope="col">結果</th>
+                </tr>
+              </thead>
+              <tbody id="qaSceneRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid-2 qa-block">
+          <div class="anchor-box">
+            <div class="anchor-label">四面總覽建置</div>
+            <div class="anchor-value" id="turnaroundSummary">—</div>
+          </div>
+          <div class="anchor-box">
+            <div class="anchor-label">尚未執行的項目</div>
+            <div class="anchor-value" id="pendingChecks">—</div>
+          </div>
+        </div>
+
+        <div class="anchor-box qa-block">
           <div class="anchor-label">測試總評說明</div>
           <div class="anchor-value" id="qualitySummary">
             請先選擇角色，以檢視 Catalog 錨點與章節插圖的一致性結果。
@@ -1481,11 +1652,11 @@
           <div class="card-title">
             🎨 步驟 5：互動式小說 AI 無限畫布 (Infinite Character & Scene Canvas)
           </div>
-          <span class="badge">Spatial Visual Node Workspace</span>
+          <span class="badge">空間視覺節點工作區</span>
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-          <b>正向節點流動</b>：左側目前角色（<span id="canvasIntroCharacter">尚未選擇</span>）與法寶 (`residual_core`) 節點將特徵向外連線輸出 (Output Ports ➔ Input Ports)，投影至右側場面構圖框。
+          <b>正向節點流動</b>：左側目前角色（<span id="canvasIntroCharacter">尚未選擇</span>）與法寶 (`residual_core`) 節點將特徵由輸出埠連線至輸入埠，投影至右側場面構圖框。
         </p>
 
         <!-- Canvas Workspace -->
@@ -1502,14 +1673,14 @@
             <path d="M 290 205 C 410 205, 420 230, 540 230" stroke="#00f2fe" stroke-width="2.5" fill="none" stroke-dasharray="6,6" />
             
             <!-- Path 2: Residual Core (Node 2 Output Port @ x:290, y:475) -> Scene Frame (Node 3 Input Port 2 @ x:540, y:310) -->
-            <path d="M 290 475 C 410 475, 420 310, 540 310" stroke="#f39c12" stroke-width="2.5" fill="none" stroke-dasharray="6,6" />
+            <path d="M 290 475 C 410 475, 420 310, 540 310" stroke="var(--accent-gold)" stroke-width="2.5" fill="none" stroke-dasharray="6,6" />
           </svg>
 
           <!-- Node 1: Character Reference Source Node (Left) -->
           <div class="canvas-node" style="top: 80px; left: 40px;">
             <div class="port-dot output-right" title="Character Feature Output Port"></div>
             <div class="canvas-node-header">
-              <span>👤 角色基準 (Output Source)</span>
+              <span>👤 角色基準</span>
               <span id="canvasCharacterId">`—`</span>
             </div>
             <div class="image-placeholder" id="canvasCharacterPlaceholder" style="height: 120px; min-height: 120px; margin-bottom: 0.5rem; border-radius: 6px;">
@@ -1525,9 +1696,9 @@
 
           <!-- Node 2: Entity Reference Source Node (Left) -->
           <div class="canvas-node" style="top: 350px; left: 40px;">
-            <div class="port-dot output-right" style="background:#f39c12; box-shadow:0 0 8px #f39c12;" title="Entity Feature Output Port"></div>
+            <div class="port-dot output-right" style="background:var(--accent-gold); box-shadow:0 0 8px var(--accent-gold);" title="Entity Feature Output Port"></div>
             <div class="canvas-node-header">
-              <span>🔮 古代遺物 (Output Source)</span>
+              <span>🔮 古代遺物</span>
               <span>`residual_core`</span>
             </div>
             <img src="../storage/generated/chapter_004_residual_core.jpg" class="canvas-node-img" alt="殘核">
@@ -1540,16 +1711,16 @@
           <!-- Node 3: Target Scene Render Canvas Node (Right) -->
           <div class="canvas-node" style="top: 130px; left: 540px; width: 340px;">
             <div class="port-dot input-left-1" title="Character Feature Input Port"></div>
-            <div class="port-dot input-left-2" style="background:#f39c12; box-shadow:0 0 8px #f39c12;" title="Entity Feature Input Port"></div>
+            <div class="port-dot input-left-2" style="background:var(--accent-gold); box-shadow:0 0 8px var(--accent-gold);" title="Entity Feature Input Port"></div>
             <div class="canvas-node-header">
-              <span>🎬 場面構圖框 (Target Render Canvas)</span>
-              <span style="color:var(--accent-gold);">Awaiting Desktop</span>
+              <span>🎬 場面構圖框</span>
+              <span style="color:var(--accent-gold);">等待桌面渲染</span>
             </div>
             <img src="../storage/generated/chapter_050_scene.jpg" style="height: 180px;" class="canvas-node-img" alt="章節場面">
             <div class="canvas-node-desc">
               <b>第050章《七息守城》</b><br>
               <span id="canvasSceneCharacter">目前角色</span>在青崖城牆上調用空胎界域屏障<br>
-              <span style="color: var(--accent-cyan);">✨ 已接收 2 個上游節點特徵 (Character Injected)</span>
+              <span style="color: var(--accent-cyan);">✨ 已接收 2 個上游節點特徵</span>
             </div>
           </div>
 
@@ -1595,6 +1766,10 @@
 
     let imageGallery = sceneGallery.slice();
     let selectedCharacter = null;
+    // Last `npm test` harness run, loaded from storage/metadata/latest_run.json. Null until the
+    // fetch resolves, and stays null when the dashboard is opened straight off the filesystem.
+    let latestRun = null;
+    let latestRunError = null;
 
     let currentGalleryIndex = 0;
     let touchStartX = 0;
@@ -1679,6 +1854,38 @@
       if (!character) return [];
       const zh = character.display && character.display.forbidden_traits;
       return (Array.isArray(zh) && zh.length) ? zh : character.forbidden_traits;
+    }
+
+    // Ten anchors joined by "·" is a wall of text you have to read linearly to find one field.
+    // A definition list makes it scannable — same treatment the Reader sidebar already uses.
+    function renderAnchorList(elementId, anchors) {
+      const host = document.getElementById(elementId);
+      if (!host) return;
+      host.replaceChildren();
+
+      if (!anchors || typeof anchors !== 'object' || Array.isArray(anchors)) {
+        host.textContent = formatCatalogValue(anchors);
+        return;
+      }
+
+      const keys = [
+        ...Object.keys(ANCHOR_LABELS).filter(key => anchors[key] !== undefined),
+        ...Object.keys(anchors).filter(key => !ANCHOR_LABELS[key])
+      ];
+
+      const list = document.createElement('dl');
+      list.className = 'anchor-dl';
+      keys.forEach(key => {
+        const value = formatCatalogValue(anchors[key]);
+        if (value === '—') return;
+        const term = document.createElement('dt');
+        term.textContent = ANCHOR_LABELS[key] || key;
+        const description = document.createElement('dd');
+        description.textContent = value;
+        list.append(term, description);
+      });
+
+      host.appendChild(list.childElementCount ? list : document.createTextNode('—'));
     }
 
     function formatAnchors(anchors) {
@@ -1808,10 +2015,223 @@
       promptText.textContent = [...characterParts, ...scenePromptParts].filter(Boolean).join(', ');
     }
 
+    function setMetric(id, value, note, state = '') {
+      const valueEl = document.getElementById(id);
+      if (valueEl) {
+        valueEl.textContent = value;
+        valueEl.classList.toggle('is-idle', state === 'idle');
+        valueEl.classList.toggle('is-fail', state === 'fail');
+      }
+      setText(`${id}Note`, note);
+    }
+
+    function formatRunTimestamp(iso) {
+      const when = new Date(iso);
+      if (Number.isNaN(when.getTime())) return { absolute: '執行時間不明', relative: '' };
+      const minutes = Math.round((Date.now() - when.getTime()) / 60000);
+      let relative;
+      if (minutes < 1) relative = '剛剛';
+      else if (minutes < 60) relative = `${minutes} 分鐘前`;
+      else if (minutes < 1440) relative = `${Math.round(minutes / 60)} 小時前`;
+      else relative = `${Math.round(minutes / 1440)} 天前`;
+      return { absolute: when.toLocaleString('zh-TW', { hour12: false }), relative };
+    }
+
+    function appendCell(row, text, className = '') {
+      const cell = document.createElement('td');
+      if (className) cell.className = className;
+      cell.textContent = text;
+      row.appendChild(cell);
+      return cell;
+    }
+
+    function renderSceneRows(reports, characterId) {
+      const body = document.getElementById('qaSceneRows');
+      if (!body) return;
+      body.replaceChildren();
+
+      if (!reports.length) {
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.className = 'qa-empty';
+        cell.colSpan = 6;
+        cell.textContent = latestRun
+          ? '這次執行沒有產生任何場景報告。'
+          : '尚未讀取到 Harness 執行紀錄。';
+        row.appendChild(cell);
+        body.appendChild(row);
+        return;
+      }
+
+      reports.forEach(report => {
+        const row = document.createElement('tr');
+        appendCell(row, report.chapter || '未命名場景', 'qa-chapter');
+        appendCell(row, `${report.anchor_score}`);
+        appendCell(row, `${report.matched_tokens} / ${report.total_tokens}`);
+        appendCell(row, `${report.forbidden_violations}`);
+
+        const lineage = Array.isArray(report.character_lineage) ? report.character_lineage : [];
+        const lineageCell = appendCell(row, '', 'qa-lineage');
+        if (!lineage.length) {
+          lineageCell.textContent = '—';
+        } else {
+          lineage.forEach((entry, index) => {
+            if (index > 0) lineageCell.appendChild(document.createTextNode('　·　'));
+            const label = `${entry.reference_set_id} (${entry.reference_status})`;
+            // Make it obvious at a glance whether the character on screen was part of this scene.
+            if (entry.character_id === characterId) {
+              const hit = document.createElement('mark');
+              hit.textContent = label;
+              lineageCell.appendChild(hit);
+            } else {
+              lineageCell.appendChild(document.createTextNode(label));
+            }
+          });
+        }
+
+        const verdict = appendCell(row, report.passed ? '通過' : '未通過');
+        verdict.className = report.passed ? 'qa-verdict-pass' : 'qa-verdict-fail';
+        body.appendChild(row);
+      });
+    }
+
+    function renderQualityGate(character) {
+      const characterCount = (window.WWL_CHARACTER_CATALOG && Array.isArray(window.WWL_CHARACTER_CATALOG.characters))
+        ? window.WWL_CHARACTER_CATALOG.characters.length
+        : 0;
+      const reference = character ? (character.display_reference || character.preferred_reference) : null;
+      const badge = document.getElementById('qualityStatus');
+
+      setMetric(
+        'catalogMetric',
+        characterCount ? 'Passed' : 'Missing',
+        characterCount ? `${characterCount} 位角色投影載入正常` : '找不到 Catalog 投影',
+        characterCount ? '' : 'fail'
+      );
+
+      setMetric(
+        'referenceSetMetric',
+        reference ? 'Approved' : 'Missing',
+        reference
+          ? `${reference.reference_set_id}　·　${reference.role}`
+          : (character ? '此角色尚無已核准的參考集' : '尚未選擇角色'),
+        reference ? '' : 'idle'
+      );
+
+      const reports = latestRun && Array.isArray(latestRun.reports) ? latestRun.reports : [];
+      renderSceneRows(reports, character ? character.character_id : null);
+
+      if (!latestRun) {
+        const reason = latestRunError || '讀取中…';
+        if (badge) badge.textContent = '⏳ 尚未讀取執行紀錄';
+        setMetric('sceneGateMetric', '—', reason, 'idle');
+        setMetric('anchorScoreMetric', '—', reason, 'idle');
+        setText('turnaroundSummary', reason);
+        setText('pendingChecks', reason);
+        setText('qualitySummary', character
+          ? `已載入 ${character.canonical_name}（${character.character_id}）的 Catalog 資料。${reason}`
+          : `請先選擇角色。${reason}`);
+        return;
+      }
+
+      const stamp = formatRunTimestamp(latestRun.timestamp);
+      const passed = latestRun.passed_count || 0;
+      const total = latestRun.total_scenes_tested || 0;
+      const allPassed = total > 0 && passed === total;
+      if (badge) badge.textContent = `🧪 上次執行 ${stamp.relative}`;
+
+      setMetric(
+        'sceneGateMetric',
+        total ? `${passed} / ${total}` : '—',
+        total ? `${stamp.absolute} 執行` : '這次執行沒有測試任何場景',
+        total && !allPassed ? 'fail' : (total ? '' : 'idle')
+      );
+
+      const scored = reports.filter(report => typeof report.anchor_score === 'number');
+      const averageScore = scored.length
+        ? Math.round(scored.reduce((sum, report) => sum + report.anchor_score, 0) / scored.length)
+        : null;
+      const matched = reports.reduce((sum, report) => sum + (report.matched_tokens || 0), 0);
+      const totalTokens = reports.reduce((sum, report) => sum + (report.total_tokens || 0), 0);
+      const violations = reports.reduce((sum, report) => sum + (report.forbidden_violations || 0), 0);
+
+      setMetric(
+        'anchorScoreMetric',
+        averageScore === null ? '—' : `${averageScore}`,
+        averageScore === null
+          ? '沒有可計分的場景'
+          : `${matched} / ${totalTokens} 個錨點命中　·　${violations} 項禁止特徵違規`,
+        violations > 0 ? 'fail' : (averageScore === null ? 'idle' : '')
+      );
+
+      const built = latestRun.turnarounds_built || 0;
+      const failures = Array.isArray(latestRun.turnaround_failures) ? latestRun.turnaround_failures : [];
+      setText('turnaroundSummary', failures.length
+        ? `${built} 個角色已建置四面總覽，${failures.length} 個失敗：${failures.join('、')}`
+        : `${built} 個角色已建置四面總覽，無失敗。`);
+
+      // Distinguish "the evaluator ran but had nothing to score" from "no evaluator exists yet" —
+      // the old UI showed both as a bare N/A, which read like a broken readout.
+      const paletteNote = reports
+        .map(report => report.image_palette_assessment)
+        .find(assessment => assessment && assessment.assessable === false);
+      const pending = [];
+      if (paletteNote) {
+        pending.push('圖片色盤：評測器已就緒，但這次執行沒有提供候選圖，因此未計分。');
+      }
+      pending.push('臉部一致性：harness/evaluators 目前只有色盤與 Prompt Lock 兩個評測器，臉部一致性尚未實作。');
+      const pendingEl = document.getElementById('pendingChecks');
+      if (pendingEl) {
+        pendingEl.replaceChildren();
+        const list = document.createElement('ul');
+        list.style.margin = '0';
+        list.style.paddingLeft = '1.1rem';
+        pending.forEach(text => {
+          const item = document.createElement('li');
+          item.textContent = text;
+          list.appendChild(item);
+        });
+        pendingEl.appendChild(list);
+      }
+
+      const inThisRun = character && reports.some(report =>
+        (report.character_lineage || []).some(entry => entry.character_id === character.character_id));
+      const summary = [
+        character
+          ? `目前檢視：${character.canonical_name}（${character.character_id}）。`
+          : '尚未選擇角色。',
+        total
+          ? `上次 Harness 執行於 ${stamp.absolute}（${stamp.relative}），${passed}/${total} 個場景通過 Prompt Lock。`
+          : '上次執行沒有測試任何場景。',
+        character
+          ? (inThisRun
+            ? '此角色有出現在上述場景的參考集血緣中，錨點已被實際驗證。'
+            : '此角色未出現在上述任何場景中，因此這次執行沒有驗證到它的錨點。')
+          : ''
+      ].filter(Boolean).join(' ');
+      setText('qualitySummary', summary);
+    }
+
+    async function loadLatestRun() {
+      try {
+        // Cache-busting: the run file changes every `npm test`, and the service worker serves
+        // static assets cache-first.
+        const response = await fetch(`../storage/metadata/latest_run.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        latestRun = await response.json();
+        latestRunError = null;
+      } catch (error) {
+        latestRun = null;
+        latestRunError = `無法讀取 Harness 執行紀錄（${error.message}）。執行 npm test 後會產生 storage/metadata/latest_run.json。`;
+      }
+      renderQualityGate(selectedCharacter);
+    }
+
     function renderCharacter(character) {
       selectedCharacter = character || null;
       if (!character) {
         buildPrompt(null);
+        renderQualityGate(null);
         return;
       }
 
@@ -1829,22 +2249,27 @@
         : '尚未指定 preferred reference；參考圖藝廊仍會列出 Catalog 中的其他版本。';
 
       setText('characterIdentity', identity);
-      setText('characterAnchors', formatAnchors(displayAnchors(character)));
+      renderAnchorList('characterAnchors', displayAnchors(character));
       setText('characterPromptTokens', formatCatalogValue(character.prompt_tokens));
       setText('characterForbiddenTraits', formatCatalogValue(displayForbidden(character)));
       setText('characterReferenceMeta', referenceMeta);
-      setText('referenceSetMetric', preferred ? 'Approved' : 'Missing');
       setText('characterImageTag', referenceTitle);
       setText('comparisonCharacterTag', `步驟 1: ${character.canonical_name}角色立繪基準`);
       setText('promptCharacterIdentity', `${character.canonical_name} (${character.character_id})`);
-      setText('qualitySummary', `Catalog preflight 已完成：${character.canonical_name}（${character.character_id}）。圖片色盤與臉部一致性尚未執行，匯入實際候選圖後才能產生 QA Report。`);
       setText('canvasIntroCharacter', character.character_id);
       setText('canvasCharacterId', `\`${character.character_id}\``);
       setText('canvasSceneCharacter', character.canonical_name);
 
-      const canvasSummary = [role, formatAnchors(displayAnchors(character))]
-        .filter(value => value && value !== '—')
-        .join(' | ');
+      // A canvas node is a thumbnail-sized card — dumping all ten anchors into it overflowed the
+      // box. Show the role plus the three anchors that actually identify a character on sight.
+      const canvasAnchors = displayAnchors(character) || {};
+      const canvasSummary = [
+        role,
+        ...['eyes', 'hair', 'signature_clothing']
+          .map(key => canvasAnchors[key])
+          .filter(Boolean)
+          .map(value => String(value).split(/[，,]/)[0].trim())
+      ].filter(value => value && value !== '—').join(' | ');
       const canvasDescription = document.getElementById('canvasCharacterDesc');
       if (canvasDescription) {
         canvasDescription.replaceChildren(
@@ -1886,6 +2311,7 @@
 
       rebuildCharacterGallery(character);
       buildPrompt(character);
+      renderQualityGate(character);
     }
 
     function initializeCharacterCatalog() {
@@ -2121,6 +2547,7 @@
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
     initializeCharacterCatalog();
+    loadLatestRun();
   </script>
 </body>
 </html>
