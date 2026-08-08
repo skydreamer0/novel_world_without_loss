@@ -1,25 +1,44 @@
 {
+  "schema_version": 1,
   "character_id": "jiluo",
   "canonical_name": "棘蘿 (Jiluo)",
+  "aliases": ["棘蘿", "Jiluo"],
   "role": "Qingjiao Tribe Leader / Forest Guardian",
   "visual_anchors": {
     "apparent_age": "20s female tribal leader",
     "face_structure": "sharp regal face, cautious protective expression",
-    "eyes": "emerald green eyes with plant-nature aura glow",
-    "hair": "dark forest green braided hair woven with small thorn vines and leaves",
-    "physique": "tall athletic woodland warrior physique",
-    "signature_clothing": "green bark-cloth and thorn-woven armor, leaf-draped cloak",
+    "eyes": "natural emerald-green irises without emitted glow",
+    "hair": "near-black forest-green hair in several functional braids",
+    "physique": "tall athletic woodland community-leader build",
+    "signature_clothing": "layered bark-cloth, woven reed fibre, softened root leather and thorn-cord with an asymmetrical leaf-fibre mantle",
     "distinguishing_marks": [
-      "subtle wooden horn-like vines crowned on head (Qingjiao tribe feature)",
-      "emerald glowing nature runes on forearms"
+      "a pair of living dark wooden horn-vines grows modestly backward from the crown",
+      "subtle non-glowing plant-rune scars on forearms"
     ]
   },
+  "forbidden_traits": ["Western metal plate armour", "barbarian spikes", "animal skulls", "glowing green smoke"],
   "prompt_tokens": [
     "jiluo_char",
     "female Qingjiao tribe leader",
-    "emerald green eyes",
-    "thorn-vine braided hair and bark armor",
-    "regal forest guardian posture"
+    "natural emerald-green irises without glow",
+    "living dark wooden horn-vines",
+    "layered bark-cloth reed fibre and root leather",
+    "protective community-leader posture"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "青蛟部落首領 / 森林守護者",
+    "visual_anchors": {
+      "apparent_age": "二十多歲的女性部落首領",
+      "face_structure": "銳利而威儀的臉龐，帶著戒備護衛的神情",
+      "eyes": "自然翠綠的虹膜，不自行發光",
+      "hair": "近黑的深林綠長髮，編成數股實用髮辮",
+      "physique": "高挑精悍的林地族群領袖體格",
+      "signature_clothing": "樹皮布、蘆纖維、軟化根革與荊棘繩層疊成的實用衣裝，單肩覆葉纖披片",
+      "distinguishing_marks": [
+        "一對深色活木角藤自頭頂向後生長，枝杈克制",
+        "前臂留有不發光的植物符紋疤痕"
+      ]
+    },
+    "forbidden_traits": ["西式金屬板甲", "蠻族尖刺", "獸骨裝飾", "翠綠發光煙霧"]
+  }
 }

@@ -13,23 +13,22 @@ function runFullPipeline() {
   const builder = new PromptBuilder(baseDir);
 
   // STEP 1: Verify Visual Bibles & Build Character Turnaround Prompts
-  console.log("📌 【STEP 1】載入視覺聖經與生成角色全方位立繪 (Character Turnaround Prompts)");
+  console.log("📌 【STEP 1】載入視覺聖經與驗證角色四面圖 (Character Four-view Turnarounds)");
   console.log("------------------------------------------------------------------");
-  const characters = [
-    'qin_woulou', 'qin_zhao', 'residual_core',
-    'lu_qinghe', 'ruan_qinghe', 'su_wanzhao',
-    'zhiyuan', 'chiying', 'jiluo'
-  ];
+  const characters = builder.catalog.listCharacters();
   const turnaroundResults = [];
+  const turnaroundFailures = [];
 
-  characters.forEach(charId => {
+  characters.forEach(character => {
+    const charId = character.character_id;
     try {
       const turnaroundPayload = builder.buildCharacterSheetPrompt(charId, 'flux');
-      console.log(`✅ [角色三視圖 Prompt] ${charId}:`);
+      console.log(`✅ [角色四面圖 Prompt] ${charId}:`);
       console.log(`   "${turnaroundPayload.positive_prompt.slice(0, 120)}..."`);
       turnaroundResults.push(turnaroundPayload);
     } catch (err) {
       console.error(`❌ Error building turnaround for ${charId}: ${err.message}`);
+      turnaroundFailures.push({ character_id: charId, error: err.message });
     }
   });
 
@@ -42,26 +41,27 @@ function runFullPipeline() {
     {
       chapter: "第 050 章《七息守城》",
       shotSpec: {
-        character_ids: ['qin_woulou', 'residual_core'],
+        character_refs: [
+          { character_id: 'qin_woulou', reference_set_id: 'qin_woulou-core-v2' },
+          { character_id: 'residual_core' }
+        ],
         item_ids: ['empty_womb'],
         location_id: 'qingya_city',
         camera: 'wide cinematic dramatic low-angle shot',
         action_description: 'Qin Wulou standing atop Qingya Citadel wall, channeling void domain barrier to protect the city against boundary wave',
         mood: 'intense cold determination'
-      },
-      requiredAnchors: ['qin_woulou_char', 'sharp angular jawline', 'qingya_city_citadel', 'residual_core_entity']
+      }
     },
     {
       chapter: "第 025 章《百里開界》",
       shotSpec: {
-        character_ids: ['qin_zhao'],
+        character_refs: [{ character_id: 'qin_zhao' }],
         item_ids: ['empty_womb'],
         location_id: 'qingya_city',
         camera: 'medium low-angle heroic shot',
         action_description: 'Qin Zhao standing inside golden spirit array, holding supreme domain seed glowing with radiant light',
         mood: 'dignified yet troubled resolution'
-      },
-      requiredAnchors: ['qin_zhao_char', 'bright golden eyes', 'luxurious white and gold embroidered robes']
+      }
     }
   ];
 
@@ -73,8 +73,7 @@ function runFullPipeline() {
     console.log(`   Positive Prompt:\n   "${payload.positive_prompt}"\n`);
     sceneResults.push({
       chapter: scene.chapter,
-      payload: payload,
-      requiredAnchors: scene.requiredAnchors
+      payload: payload
     });
   });
 
@@ -89,12 +88,12 @@ function runFullPipeline() {
   sceneResults.forEach((res, idx) => {
     const lockEval = PromptLockChecker.evaluatePrompt(
       res.payload.positive_prompt,
-      res.requiredAnchors,
+      res.payload.required_anchor_tokens,
       builder.stylePreset.forbidden_tokens
     );
     const paletteEval = ColorPaletteEvaluator.evaluatePalette();
 
-    const isPassed = lockEval.passed && paletteEval.passed;
+    const isPassed = lockEval.passed && paletteEval.passed !== false;
     if (isPassed) totalPassed++;
 
     const report = {
@@ -103,7 +102,10 @@ function runFullPipeline() {
       passed: isPassed,
       matched_tokens: lockEval.matched_count,
       total_tokens: lockEval.total_required,
-      forbidden_violations: lockEval.detected_forbidden.length
+      forbidden_violations: lockEval.detected_forbidden.length,
+      character_lineage: res.payload.character_lineage,
+      catalog_warnings: res.payload.catalog_warnings,
+      image_palette_assessment: paletteEval
     };
 
     evaluationReports.push(report);
@@ -112,6 +114,7 @@ function runFullPipeline() {
     console.log(`   - Anchor Match Score: ${report.anchor_score}/100`);
     console.log(`   - Matched Anchors: ${report.matched_tokens}/${report.total_tokens}`);
     console.log(`   - Forbidden Violations: ${report.forbidden_violations}`);
+    console.log(`   - Image Palette: ${paletteEval.assessable ? paletteEval.score : 'NOT ASSESSABLE (no image supplied)'}`);
     console.log(`   - Quality Gate Result: ${isPassed ? '✅ PASSED' : '❌ FAILED'}\n`);
   });
 
@@ -126,15 +129,23 @@ function runFullPipeline() {
     total_scenes_tested: chapterScenes.length,
     passed_count: totalPassed,
     turnarounds_built: turnaroundResults.length,
+    turnaround_character_ids: turnaroundResults.map(result => result.character_id),
+    turnaround_failures: turnaroundFailures,
     reports: evaluationReports
   };
 
-  fs.writeFileSync(path.join(metadataDir, 'latest_run.json'), JSON.stringify(runLog, null, 2));
+  fs.writeFileSync(path.join(metadataDir, 'latest_run.json'), `${JSON.stringify(runLog, null, 2)}\n`);
 
   console.log("==================================================================");
-  console.log(`🏁 完整流程執行完畢！測試通過率: ${totalPassed}/${chapterScenes.length} (100%)`);
+  const passRate = chapterScenes.length > 0 ? Math.round((totalPassed / chapterScenes.length) * 100) : 100;
+  console.log(`🏁 完整流程執行完畢！測試通過率: ${totalPassed}/${chapterScenes.length} (${passRate}%)`);
   console.log(`📄 運行紀錄已存至: visual_harness/storage/metadata/latest_run.json`);
   console.log("==================================================================");
+
+  if (turnaroundFailures.length > 0 || totalPassed !== chapterScenes.length) {
+    throw new Error('Visual Harness failed; inspect latest_run.json for details');
+  }
+  return runLog;
 }
 
 if (require.main === module) {

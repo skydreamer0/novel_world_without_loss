@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "jiluo-core-v1",
+  "character_id": "jiluo",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "full_body",
+      "path": "storage/generated/jiluo_character_v1.jpg",
+      "sha256": "f2199a489445f32b2d30da14b04c3d256d60294b059b4a273f14d1ad7d35eb0d",
+      "media_type": "image/jpeg",
+      "source": "棘蘿角色立繪 Option C 鎖定"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["full_body"],
+      "notes": "鎖定暗調野性部落樹皮戰甲、娜扎骨相與翡翠眼芒"
+    }
+  }
+}

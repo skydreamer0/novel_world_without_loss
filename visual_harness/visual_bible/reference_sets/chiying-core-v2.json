@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "chiying-core-v2",
+  "character_id": "chiying",
+  "version": 2,
+  "label": "標準四面核心造型",
+  "status": "approved",
+  "is_primary": true,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "storage/generated/turnarounds/chiying_turnaround_v2.png",
+      "sha256": "4d18ed8b854195449a48d79951aa54566e4f95a2a75912b29ee6d2a386183efa",
+      "media_type": "image/png",
+      "source": "imagegen 標準四面總覽，2026-08-07 核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "storage/generated/turnarounds/chiying_v2_front.png",
+      "sha256": "437d56f05d49b2a69023f2411ff48f894ea979edb939880920ea9e5a166719b4",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "storage/generated/turnarounds/chiying_v2_three_quarter.png",
+      "sha256": "9b4a383ce4e40b3154aafdb0ed3275b99be6a3054d8d716dc60fd492343884e7",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "storage/generated/turnarounds/chiying_v2_profile.png",
+      "sha256": "02c8a47568ae108b2a5cee0d5c221e09708e035af13578b1599bfcf7bd383249",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：完整側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "storage/generated/turnarounds/chiying_v2_back.png",
+      "sha256": "f8920a186d91713307eb5e1096b58cca747ccd657072b7aaa1f12f89dff23165",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}

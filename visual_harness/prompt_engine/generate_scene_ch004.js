@@ -10,15 +10,19 @@ const shotSpec = {
   item_ids: ['empty_womb'],
   location_id: null,
   camera: 'cinematic macro medium shot, atmospheric lighting',
-  action_description: 'Qin Wulou reaching his hand towards the floating unfolded bronze core expanding into ancient golden geometric plates with a glowing cyan octahedron crystal center in dark void space',
+  action_description: 'Qin Wulou reaching toward the Residual Core: a luminous cyan faceted octahedral crystal held inside intersecting aged-gold astrolabe frames and a cyan ring of non-readable ancient glyphs',
   mood: 'mysterious ancient revelation'
 };
 
 const payload = builder.buildScenePrompt(shotSpec, 'flux');
 
-const requiredAnchors = ['qin_woulou_char', 'sharp angular jawline', 'residual_core_entity', 'empty_womb_domain_seed'];
-const evalResult = PromptLockChecker.evaluatePrompt(payload.positive_prompt, requiredAnchors, builder.stylePreset.forbidden_tokens);
+const evalResult = PromptLockChecker.evaluatePrompt(
+  payload.positive_prompt,
+  payload.required_anchor_tokens,
+  builder.stylePreset.forbidden_tokens
+);
 
 console.log("=== Chapter 004 Scene Prompt Compiled ===");
 console.log(`Positive Prompt:\n"${payload.positive_prompt}"\n`);
+console.log(`Character Lineage:\n${JSON.stringify(payload.character_lineage, null, 2)}\n`);
 console.log(`Anchor Coverage Score: ${evalResult.score}/100 | Passed: ${evalResult.passed ? '✅ YES' : '❌ FAILED'}`);

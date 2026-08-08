@@ -1,27 +1,47 @@
 {
+  "schema_version": 1,
   "character_id": "su_wanzhao",
   "canonical_name": "蘇晚照 (Su Wanzhao)",
+  "aliases": ["蘇晚照", "Su Wanzhao"],
   "role": "Noble Daughter of Su Family / Former Fiancee",
   "visual_anchors": {
     "apparent_age": "18-20 years old young noble lady",
     "face_structure": "refined aristocratic oval face, clear graceful contours",
     "eyes": "clear intelligent dark obsidian eyes, dignified and unbiased",
-    "hair": "elegant long black hair with jade hairpins and subtle silk ribbons",
+    "hair": "long black hair in a restrained formal half-up arrangement with one small dark-jade pin and narrow muted ties",
     "physique": "tall, elegant, poised stance",
-    "signature_clothing": "luxurious white and pale violet silk robes with delicate embroidery, jade pendant at belt",
-    "signature_item": "Illumination Jade (照影玉) holding deleted ritual wave evidence",
+    "signature_clothing": "plain but finely cut desaturated celadon-green long robe with pale grey-green inner layers and narrow woven borders",
+    "signature_item": "round Illumination Jade (照影玉) secured at the belt, carrying the deleted ritual-wave evidence",
     "distinguishing_marks": [
-      "dignified aristocratic composure",
-      "holds luminous Illumination Jade"
+      "dignified aristocratic composure without a performative smile",
+      "the former paired-pendant mounting at her belt is intentionally empty"
     ]
   },
+  "forbidden_traits": ["white bridal dress", "pale violet princess gown", "large crown", "glowing jade", "romantic fan pose"],
   "prompt_tokens": [
     "su_wanzhao_char",
     "young noble Xianxia lady",
     "refined aristocratic face",
-    "luxurious white and pale violet silk robes",
-    "jade hairpins and illumination jade in hand",
-    "poised dignified expression"
+    "desaturated celadon-green finely cut long robe",
+    "restrained half-up black hair with one dark-jade pin",
+    "round illumination jade secured at belt without glow",
+    "poised direct and unsentimental expression"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "蘇家嫡女 / 前未婚妻",
+    "visual_anchors": {
+      "apparent_age": "十八至二十歲的年輕世家小姐",
+      "face_structure": "精緻的世家鵝蛋臉，輪廓清雅",
+      "eyes": "清澈聰慧的曜黑眼眸，端莊而不偏私",
+      "hair": "黑色長髮作克制的正式半束髮，只用一枚小型暗玉簪與窄幅素帶固定",
+      "physique": "高挑、優雅、儀態端凝",
+      "signature_clothing": "剪裁精準但不炫耀的灰青長袍，內層淡灰綠，衣緣只有細窄織紋",
+      "signature_item": "固定在腰間的圓形照影玉，保存被刪除的儀軌波形證據",
+      "distinguishing_marks": [
+        "端凝的世家儀態，不向觀看者擺出討好笑容",
+        "腰間原本承載成對婚珮的位置刻意留空"
+      ]
+    },
+    "forbidden_traits": ["白色嫁衣", "淺紫公主裝", "大型髮冠", "發光玉珮", "持扇戀愛姿勢"]
+  }
 }

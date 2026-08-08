@@ -1,24 +1,195 @@
 {
-  "timestamp": "2026-08-01T09:21:06.649Z",
+  "timestamp": "2026-08-08T03:03:47.038Z",
   "total_scenes_tested": 2,
   "passed_count": 2,
   "turnarounds_built": 9,
+  "turnaround_character_ids": [
+    "chiying",
+    "jiluo",
+    "lu_qinghe",
+    "qin_woulou",
+    "qin_zhao",
+    "residual_core",
+    "ruan_qinghe",
+    "su_wanzhao",
+    "zhiyuan"
+  ],
+  "turnaround_failures": [],
   "reports": [
     {
       "chapter": "第 050 章《七息守城》",
       "anchor_score": 100,
       "passed": true,
-      "matched_tokens": 4,
-      "total_tokens": 4,
-      "forbidden_violations": 0
+      "matched_tokens": 27,
+      "total_tokens": 27,
+      "forbidden_violations": 0,
+      "character_lineage": [
+        {
+          "character_id": "qin_woulou",
+          "reference_set_id": "qin_woulou-core-v2",
+          "reference_set_version": 2,
+          "reference_status": "approved",
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "storage/generated/turnarounds/qin_woulou_turnaround_v2.png",
+              "sha256": "e7bd740e81b56499105cea200cc2d89a6ce552df1d15caa363b86a7ead275ac1",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-07 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "storage/generated/turnarounds/qin_woulou_v2_front.png",
+              "sha256": "5a433f8a6d624c208b6b9b46010d14237b0e55d55e773b7a7a652dc6bcfa816b",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "storage/generated/turnarounds/qin_woulou_v2_three_quarter.png",
+              "sha256": "8dd3f79be51d0ab4264494da9e7ea0da3882b0532ffd5e7d1edf82e873240252",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "storage/generated/turnarounds/qin_woulou_v2_profile.png",
+              "sha256": "ffa23104059af072e1ba90bc8c350956358bc60f10f500998338e385780fc804",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "storage/generated/turnarounds/qin_woulou_v2_back.png",
+              "sha256": "674acf005d2b69de93e82005e7263ba8ae8b35c8c830e6606c1bbe048e4564c1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ]
+        },
+        {
+          "character_id": "residual_core",
+          "reference_set_id": "residual_core-core-v2",
+          "reference_set_version": 2,
+          "reference_status": "approved",
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "storage/generated/turnarounds/residual_core_turnaround_v2.png",
+              "sha256": "2b0d3b83bb5c6e23402866640a52ee0f070d0721882d473e76820b0ab53a9c6a",
+              "media_type": "image/png",
+              "source": "依 chapter_004_residual_core.jpg 既有造型延伸的 imagegen 標準四面總覽，2026-08-08 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "storage/generated/turnarounds/residual_core_v2_front.png",
+              "sha256": "63357269c3ad66e9ebdbfc1d458e703cbafa58c94693870499b13ac486b0dc36",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "storage/generated/turnarounds/residual_core_v2_three_quarter.png",
+              "sha256": "056b9a531d6e04f40b039db411f51311a85088f666bf2e45001548c6647ff5ab",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "storage/generated/turnarounds/residual_core_v2_profile.png",
+              "sha256": "fe9ac10b3caa49d7131f2eec43776795984210b924994471330b64b9fdd2794c",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整右側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "storage/generated/turnarounds/residual_core_v2_back.png",
+              "sha256": "52e5595442f71308fc3cd61549a8adaa8f6cd4f6424b3ce49380b361d9fd4dc7",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ]
+        }
+      ],
+      "catalog_warnings": [],
+      "image_palette_assessment": {
+        "score": null,
+        "passed": null,
+        "assessable": false,
+        "target_palette": [
+          "#0d1117",
+          "#161b22",
+          "#00f2fe",
+          "#4facfe"
+        ],
+        "notes": "No image palette supplied; image-level assessment was not run."
+      }
     },
     {
       "chapter": "第 025 章《百里開界》",
       "anchor_score": 100,
       "passed": true,
-      "matched_tokens": 3,
-      "total_tokens": 3,
-      "forbidden_violations": 0
+      "matched_tokens": 19,
+      "total_tokens": 19,
+      "forbidden_violations": 0,
+      "character_lineage": [
+        {
+          "character_id": "qin_zhao",
+          "reference_set_id": "qin_zhao-core-v2",
+          "reference_set_version": 2,
+          "reference_status": "approved",
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "storage/generated/turnarounds/qin_zhao_turnaround_v2.png",
+              "sha256": "aeb98807ba3bb8428bbc5478037fe751e2bc7b6023845b2b8504cda1244d08f3",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-07 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "storage/generated/turnarounds/qin_zhao_v2_front.png",
+              "sha256": "e7e2ac11e6fa43844da04e871c4c8db61296af533817d7371f3e3fb0465d519f",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "storage/generated/turnarounds/qin_zhao_v2_three_quarter.png",
+              "sha256": "c8bdb12c6ce685fd19604d608b52e20ec10db48ee4c2e2a72a45ab83e14394ac",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "storage/generated/turnarounds/qin_zhao_v2_profile.png",
+              "sha256": "921df5beb3fd3d29ddcd7520aa18470f823b804488e8fa7dfca071b0535bbc92",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "storage/generated/turnarounds/qin_zhao_v2_back.png",
+              "sha256": "1af2de018c0154a888b8eb02239ac88b5696f979e98325fc671f97da5b9e68bd",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ]
+        }
+      ],
+      "catalog_warnings": [],
+      "image_palette_assessment": {
+        "score": null,
+        "passed": null,
+        "assessable": false,
+        "target_palette": [
+          "#0d1117",
+          "#161b22",
+          "#00f2fe",
+          "#4facfe"
+        ],
+        "notes": "No image palette supplied; image-level assessment was not run."
+      }
     }
   ]
 }

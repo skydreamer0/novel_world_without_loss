@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "chiying-core-v1",
+  "character_id": "chiying",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "full_body",
+      "path": "storage/generated/chiying_character_v1.jpg",
+      "sha256": "030ce3c70fcdbc913c91dd6f21710aaf3932c3a892976a4248e629632b95546c",
+      "media_type": "image/jpeg",
+      "source": "遲影角色立繪 Option A 鎖定"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["full_body"],
+      "notes": "鎖定半透明影體、面部文淇骨相與銀色令片"
+    }
+  }
+}

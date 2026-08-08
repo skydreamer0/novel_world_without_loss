@@ -8,6 +8,7 @@ import { loadChapter } from './reader.js';
 import { state } from './state.js';
 import { loadAnnotations } from './annotations.js';
 import { showError, wrapModule } from '../error-boundary.js';
+import { initCharacters } from './characters.js';
 
 // --- Main ---
 
@@ -21,6 +22,7 @@ export async function init() {
     applyFontSize();
     applyTypography();
     bindEvents();
+    initCharacters();
 
     initTTS();
     await wrapModule('loadFileList', () => loadFileList());

@@ -1,0 +1,459 @@
+/* characters.css — Catalog-backed character projection for the Reader sidebar */
+
+/* The annotation scrim exists in the DOM while closed; keep it from covering Reader controls. */
+.annot-panel-overlay {
+  pointer-events: none;
+}
+
+.annot-panel-overlay.open {
+  pointer-events: auto;
+}
+
+.sidebar-panel {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.sidebar-panel[hidden] {
+  display: none;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-header .sidebar-title-row {
+  margin-bottom: 0;
+}
+
+.sidebar-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: -2px 0 20px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface) 56%, transparent);
+}
+
+.sidebar-tab {
+  min-height: 34px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font: 600 0.82rem/1 var(--font-ui);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: color 180ms var(--ease-smooth), background-color 180ms var(--ease-smooth), box-shadow 180ms var(--ease-smooth);
+}
+
+.sidebar-tab:hover {
+  color: var(--ink);
+}
+
+.sidebar-tab.active {
+  color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 1px 5px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.sidebar-tab:focus-visible,
+.character-list-item:focus-visible,
+.character-detail-back:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.status {
+  min-height: 1.35em;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+.character-search-wrap input {
+  padding-right: 14px;
+}
+
+.character-list,
+.character-detail {
+  flex: 1;
+  min-height: 0;
+  margin-top: 8px;
+  padding: 8px 4px 28px 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  mask-image: linear-gradient(to bottom, transparent, black 10px, black calc(100% - 18px), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10px, black calc(100% - 18px), transparent);
+}
+
+.character-list[hidden],
+.character-detail[hidden] {
+  display: none;
+}
+
+.character-list-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 14px;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  padding: 10px 12px 10px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  opacity: 0;
+  animation: character-enter 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(min(var(--character-index), 8) * 35ms);
+  transition: border-color 180ms var(--ease-smooth), background-color 180ms var(--ease-smooth);
+}
+
+.character-list-item:hover {
+  border-color: color-mix(in srgb, var(--accent) 32%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+.character-list-item:hover .character-list-arrow {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+.character-list-portrait,
+.character-detail-portrait {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 22%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 62%),
+    color-mix(in srgb, var(--surface) 88%, var(--accent));
+  border: 1px solid color-mix(in srgb, var(--line) 80%, var(--accent));
+}
+
+.character-list-portrait {
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+
+.character-detail-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 12px 0 20px;
+  border-radius: 14px;
+}
+
+.character-list-portrait img,
+.character-detail-portrait img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Full-body art is head-at-top, so bias the crop upward to keep the face in a square thumbnail. */
+  object-position: 50% 12%;
+  opacity: 0;
+  transition: opacity 280ms var(--ease-smooth);
+}
+
+/* Turnaround sheets: a white plate with printed FRONT/SIDE labels. In a thumbnail we zoom to the
+   front view's head; at detail size we letterbox the whole sheet rather than slicing views off.
+   The focus point is expressed in the plate's own coordinates — on a standard turnaround the front
+   view sits leftmost with the head near the top — so the maths holds for any plate aspect ratio:
+   pin the image's top-left to the box centre, then pull it back by the focus offset. */
+.character-list-portrait.is-sheet {
+  --sheet-face-x: 16%;
+  --sheet-face-y: 17%;
+  --sheet-zoom: 5.5;
+}
+
+.character-list-portrait.is-sheet img {
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: calc(100% * var(--sheet-zoom));
+  max-width: none;
+  transform: translate(calc(-1 * var(--sheet-face-x)), calc(-1 * var(--sheet-face-y)));
+}
+
+.character-detail-portrait.is-sheet {
+  aspect-ratio: 16 / 10;
+  /* The plate carries its own light background; a matching muted paper tone keeps it from
+     glaring against the dark themes instead of ending as a hard white rectangle. */
+  background: #e9e5dd;
+  padding: 6px;
+}
+
+.character-detail-portrait.is-sheet img {
+  inset: 6px;
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 12px);
+  max-height: calc(100% - 12px);
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.character-list-portrait.has-image img,
+.character-detail-portrait.has-image img {
+  opacity: 1;
+}
+
+.character-list-portrait.has-image .character-portrait-placeholder,
+.character-detail-portrait.has-image .character-portrait-placeholder {
+  opacity: 0;
+}
+
+.character-portrait-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  opacity: 0.75;
+}
+
+.character-detail-portrait .character-portrait-placeholder {
+  font-size: clamp(3rem, 20vw, 5.5rem);
+}
+
+.character-list-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.character-list-copy strong {
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.character-list-copy small {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.character-list-arrow {
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  transition: color 180ms var(--ease-smooth), transform 180ms var(--ease-smooth);
+}
+
+.character-detail-back {
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 600 0.78rem/1.4 var(--font-ui);
+  cursor: pointer;
+}
+
+.character-detail-back:hover {
+  color: var(--accent);
+}
+
+.character-detail-identity {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.character-detail-identity h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 6vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.character-detail-latin {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.character-detail-identity p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.character-detail-section {
+  margin-top: 24px;
+}
+
+.character-detail-section h4 {
+  margin: 0 0 11px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.character-anchor-list {
+  display: grid;
+  /* Labels are now short Chinese terms, so a fixed narrow column beats a fractional one — and
+     nothing needs `overflow-wrap: anywhere`, which used to hyphen-break English mid-word. */
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 10px 14px;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.character-anchor-list dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.character-anchor-list dd {
+  margin: 0;
+  min-width: 0;
+  color: var(--ink);
+  overflow-wrap: break-word;
+}
+
+.character-anchor-multi {
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.character-anchor-multi li + li {
+  margin-top: 5px;
+}
+
+.character-token-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.character-token-cloud span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.character-feature-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
+.character-feature-list li + li {
+  margin-top: 6px;
+}
+
+.character-reference-note {
+  margin: 28px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  overflow-wrap: anywhere;
+}
+
+.character-reference-note.is-missing {
+  color: var(--accent);
+}
+
+.character-empty {
+  min-height: 230px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.character-empty span {
+  width: 58px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--accent);
+  font: 500 1.35rem/1 var(--font-serif);
+}
+
+.character-empty p {
+  max-width: 14rem;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+@keyframes character-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .sidebar-tabs {
+    margin-bottom: 14px;
+  }
+
+  .character-list-item {
+    grid-template-columns: 60px minmax(0, 1fr) 14px;
+    padding-block: 11px;
+  }
+
+  .character-list-portrait {
+    width: 60px;
+  }
+
+  .character-anchor-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px 0;
+  }
+
+  .character-anchor-list dt {
+    margin-top: 8px;
+  }
+}

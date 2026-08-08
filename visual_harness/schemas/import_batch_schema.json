@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-without-loss.local/schemas/import_batch_schema.json",
+  "title": "CharacterImportBatch",
+  "description": "Portable manifest for validating and atomically publishing character records, reference sets, and their binary assets.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "batch_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,127}$"
+    },
+    "collision_policy": {
+      "type": "string",
+      "enum": ["error", "skip-identical"],
+      "default": "skip-identical"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/jsonSource"
+      }
+    },
+    "reference_sets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/jsonSource"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assetSource"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "batch_id",
+    "characters",
+    "reference_sets",
+    "assets"
+  ],
+  "anyOf": [
+    {
+      "properties": {
+        "characters": { "minItems": 1 }
+      }
+    },
+    {
+      "properties": {
+        "reference_sets": { "minItems": 1 }
+      }
+    },
+    {
+      "properties": {
+        "assets": { "minItems": 1 }
+      }
+    }
+  ],
+  "$defs": {
+    "portableSourcePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:[\\\\/]).+$",
+      "description": "Path relative to the directory containing the import manifest. Runtime validation also rejects traversal and symbolic links."
+    },
+    "jsonSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/portableSourcePath"
+        }
+      },
+      "required": ["source"]
+    },
+    "assetSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/portableSourcePath"
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Canonical path relative to the Visual Harness directory."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": ["source", "destination"]
+    }
+  }
+}

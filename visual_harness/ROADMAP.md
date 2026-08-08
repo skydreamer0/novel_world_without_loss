@@ -1,6 +1,6 @@
 # 《無漏》Visual Harness 產品與技術 ROADMAP
 
-版本：0.1（討論草案）  
+版本：0.2（Character Catalog 基線）
 更新日期：2026-08-01  
 範圍：`visual_harness/` 圖像資產、節點畫布、批次任務與品質驗收  
 
@@ -76,8 +76,8 @@ Prompt Token Coverage 只屬於生成前檢查。生成後的品質結論必須�
 ```json
 {
   "character_id": "qin_woulou",
-  "reference_set_id": "qin_woulou-core-v1",
-  "version": 1,
+  "reference_set_id": "qin_woulou-core-v2",
+  "version": 2,
   "status": "approved",
   "identity": {
     "canonical_name": "秦無漏",
@@ -85,11 +85,11 @@ Prompt Token Coverage 只屬於生成前檢查。生成後的品質結論必須�
     "forbidden_traits": []
   },
   "references": [
-    { "role": "face_front", "path": "...", "sha256": "..." },
-    { "role": "face_three_quarter", "path": "...", "sha256": "..." },
-    { "role": "profile", "path": "...", "sha256": "..." },
-    { "role": "full_body", "path": "...", "sha256": "..." },
-    { "role": "outfit", "path": "...", "sha256": "..." }
+    { "role": "turnaround", "path": "...", "sha256": "..." },
+    { "role": "full_body_front", "path": "...", "sha256": "..." },
+    { "role": "full_body_three_quarter", "path": "...", "sha256": "..." },
+    { "role": "full_body_profile", "path": "...", "sha256": "..." },
+    { "role": "full_body_back", "path": "...", "sha256": "..." }
   ],
   "engine_bindings": {
     "gemini": { "reference_roles": [], "notes": "" },
@@ -103,7 +103,8 @@ Prompt Token Coverage 只屬於生成前檢查。生成後的品質結論必須�
 
 - 一個角色可有多個 Reference Set，例如日常服、戰鬥服、受傷狀態與年齡階段。
 - 每個 Reference Set 必須有唯一版本、檔案雜湊與核准狀態。
-- 合成三視圖可以保留，但應另外提供乾淨的臉部、側面與全身裁切圖。
+- 核准主 Reference Set 必須先完成標準四面組：總覽、正面、四分之三、完整側面與背面，五個角色各自對應不同檔案。
+- 四面組核准前，不得建立該角色的表情、服裝、傷勢、姿勢或章節場景變體。
 - 角色、服裝、姿勢和風格是不同參考用途，畫布不得將它們混成單一無型別圖片輸入。
 - 已被場景任務引用的版本不得原地覆蓋，只能建立新版本。
 
@@ -210,22 +211,30 @@ exports/batches/<batch_id>/
 
 ### Phase 0：基線與資料契約
 
-狀態：下一步  
+狀態：進行中；Character Catalog、Reference Set Schema、Catalog Projection、批次匯入與九名角色標準四面基線已完成
 目標：移除目前資料路徑與展示資料不一致的問題，先確立後續不會反覆重做的契約。
 
 交付物：
 
 - 角色 Reference Set、工作流、任務、批次 Manifest 與 QA Report 的 JSON Schema。
 - 修正不存在的 `anchor_registry` 路徑，統一資產目錄。
-- 將現有秦無漏三視圖登記為 `qin_woulou-core-v1`。
+- 保留秦無漏舊三視圖為退役 `qin_woulou-core-v1`，正式四面組登記為 `qin_woulou-core-v2`。
+- 九名現有角色都建立核准四面總覽與四個獨立視角；缺一即由 Catalog 拒絕發布。
 - 引擎能力表，區分 Codex、Gemini、Midjourney 與 Flux／SDXL。
 - 將固定測試數字標記為 demo 或移除。
+- Character Catalog 自動列舉角色，不再維護固定角色 ID 陣列。
+- 建立小說名稱／別名到穩定 `character_id` 的對照規則。
+- 產生 Node 與瀏覽器共用的 canonical asset path 與 Catalog Projection。
+- Prompt Package 保留 Character Identity 與 Reference Set lineage。
 
 完成條件：
 
 - 所有現有角色與圖片通過 Schema 驗證。
+- 每名現有角色恰有一個核准主 Reference Set，且五項四面資產完整、路徑互異。
 - 任一圖片都能追溯角色、版本、來源與雜湊。
 - Dashboard 不再引用不存在的檔案。
+- Dashboard、Reader、Prompt 與 Harness 都由 Character Catalog Interface 取得角色。
+- 缺少必要 Character Identity 時，Prompt Package 必須失敗而非略過。
 
 ### Phase 1：可重用角色資產庫
 
@@ -238,12 +247,15 @@ exports/batches/<batch_id>/
 - 多張參考圖的用途標記與裁切預覽。
 - 角色、服裝、姿勢、物品與風格資產分類。
 - 引擎相容性警告與參考圖數量限制。
+- Character metadata／Reference Set Import Batch：dry run、逐筆錯誤、碰撞政策、原子發布與冪等重跑。
+- 新增 Reference Set 時不需改寫 Character Identity；Catalog 依 `character_id` 自動彙整版本。
 
 完成條件：
 
 - 同一角色 Reference Set 可被至少三個場景任務引用。
 - 更新角色時不會改寫既有任務使用的版本。
 - 匯出的任務包包含正確的參考圖與用途說明。
+- 匯入任一筆失敗時，正式 Catalog 保持原狀。
 
 ### Phase 2：真實節點畫布
 
@@ -363,7 +375,7 @@ exports/batches/<batch_id>/
 
 不要先完成所有節點再整合。第一個切片只處理秦無漏與三個場景：
 
-1. 建立 `qin_woulou-core-v1` Reference Set。
+1. 使用已核准的 `qin_woulou-core-v2` 標準四面 Reference Set。
 2. 建立第 004、025、050 章三個 Scene Spec。
 3. 在真實畫布連接角色、場景、Gemini Desktop Gate 與 Quality Gate。
 4. 匯出一個三任務批次包。
@@ -396,4 +408,3 @@ exports/batches/<batch_id>/
 - 品質分數來自實際圖片，沒有固定假資料。
 - 人工核准、退回、重試與成品追溯形成完整閉環。
 - 任一成品可重現其角色版本、Prompt、引擎、候選圖與 QA 報告。
-

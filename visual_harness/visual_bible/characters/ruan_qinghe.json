@@ -1,6 +1,8 @@
 {
+  "schema_version": 1,
   "character_id": "ruan_qinghe",
   "canonical_name": "阮青禾 (Ruan Qinghe)",
+  "aliases": ["阮青禾", "Ruan Qinghe"],
   "role": "Sink River City Physician / Resident Council Member",
   "visual_anchors": {
     "apparent_age": "early 20s young female physician",
@@ -9,19 +11,37 @@
     "nose": "soft straight slender nose",
     "hair": "long black hair tied back in a neat practical physician braid",
     "physique": "slender, nimble, focused posture",
-    "signature_clothing": "clean sage green and white medical robes with silver needle pouch at waist and herbal medicine pouch",
+    "signature_clothing": "sage-green, grey-green and unbleached-white working medical robes with secured sleeves, silver-needle roll and compact herb pouches",
     "distinguishing_marks": [
       "silver acupuncture needle pouch at waist",
       "calm, attentive medical examiner expression"
     ]
   },
+  "forbidden_traits": ["staff or wand", "large handheld medicine chest", "floral silk embroidery", "glamour makeup"],
   "prompt_tokens": [
     "ruan_qinghe_char",
     "young female Xianxia physician",
     "gentle perceptive dark eyes",
     "long black hair in practical braid",
-    "sage green and white medical robes with silver needle pouch",
-    "calm compassionate expression"
+    "plain worn sage-green and unbleached-white working medical robes",
+    "secured sleeves with silver-needle roll and herb pouches",
+    "calm attentive clinical expression"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "沉河城醫者 / 居民議會成員",
+    "visual_anchors": {
+      "apparent_age": "二十出頭的年輕女醫者",
+      "face_structure": "柔和的鵝蛋臉，沉靜悲憫的氣質，下顎線纖細",
+      "eyes": "溫暖而敏銳的深褐色眼眸，觀察入微且富同理",
+      "nose": "柔和纖直的鼻樑",
+      "hair": "黑色長髮在腦後綰成俐落實用的醫者辮",
+      "physique": "纖細、靈巧、專注的身姿",
+      "signature_clothing": "鼠尾草綠、灰綠與本白色工作醫袍，袖口固定，腰間繫銀針卷與小型藥草袋",
+      "distinguishing_marks": [
+        "腰間的銀色針灸針囊",
+        "沉靜、專注的診察神情"
+      ]
+    },
+    "forbidden_traits": ["手杖或法杖", "大型手提藥箱", "花卉絲繡", "濃重美妝"]
+  }
 }

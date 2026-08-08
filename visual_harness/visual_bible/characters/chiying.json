@@ -1,26 +1,46 @@
 {
+  "schema_version": 1,
   "character_id": "chiying",
   "canonical_name": "遲影 (Chiying)",
+  "aliases": ["遲影", "Chiying"],
   "role": "Independent Shadow Lifeform / Truth Keeper",
   "visual_anchors": {
-    "apparent_age": "around 17-18 female shadow entity given independent life",
-    "face_structure": "delicate ethereal face, pale skin with subtle dark shadow trailing edges",
-    "eyes": "luminous void silver eyes, quiet independent gaze",
-    "hair": "flowing obsidian dark hair that gently dissolves into faint mist at tips",
-    "physique": "translucent ethereal shadow physique",
-    "signature_clothing": "dark shadow-woven robes with pale silver luminous script patterns",
-    "signature_item": "First Order Seal remnant fragment (甲字令殘序)",
+    "apparent_age": "age-ambiguous late-adolescent feminine shadow lifeform, slight and nonsexualized",
+    "face_structure": "quiet self-possessed face with matte pale-grey skin and subtly softened shadow edges",
+    "eyes": "reflective silver-grey eyes with no emitted glow",
+    "hair": "long obsidian hair whose final strands flatten into soft shadow filaments",
+    "physique": "slight semi-material shadow body with reduced colour and detail toward the extremities",
+    "signature_clothing": "simple charcoal travel layers remembered from a young void voyager, half woven cloth and half flattened shadow",
+    "signature_item": "small broken First Order Seal mark embedded in the left palm (甲字令殘序)",
     "distinguishing_marks": [
-      "shadow trails behind her with independent motion",
-      "luminous silver script over left hand holding truth remnant"
+      "a small darker-grey independent shadow lies beneath her after self-naming",
+      "hair and forearm edges loosen into thin non-luminous shadow strands"
     ]
   },
+  "forbidden_traits": ["rosy human skin", "glamorous ghost robes", "luminous robe calligraphy", "adult sexualization"],
   "prompt_tokens": [
     "chiying_char",
-    "ethereal female shadow lifeform",
-    "luminous silver eyes",
-    "dark shadow-woven robes with silver script",
-    "holding First Order Seal remnant"
+    "independent late-adolescent shadow lifeform",
+    "reflective silver-grey eyes without glow",
+    "simple charcoal travel layers half cloth half shadow",
+    "small independent darker-grey shadow beneath her",
+    "broken First Order Seal mark embedded in left palm"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "獨立影生命 / 真相守護者",
+    "visual_anchors": {
+      "apparent_age": "年齡難辨、接近少女末期的女性影生命，身形纖細且不作成人化塑造",
+      "face_structure": "沉靜自主的臉龐，霧灰膚色，輪廓邊緣略微化入暗影",
+      "eyes": "只反射光線、不自行發光的銀灰雙眸",
+      "hair": "曜黑長髮，末端幾縷壓平為柔薄影絲",
+      "physique": "半實體影身，越接近四肢末端，色彩與細節越少",
+      "signature_clothing": "從年少虛舟旅人記憶留下的炭灰旅裝，質地介於織布與平面暗影之間",
+      "signature_item": "嵌在左掌的小型破損甲字令殘序",
+      "distinguishing_marks": [
+        "完成自我命名後，腳下有一小片更深的獨立灰影",
+        "髮尾與前臂邊緣散成不發光的細薄影絲"
+      ]
+    },
+    "forbidden_traits": ["紅潤人類膚色", "華麗女鬼長袍", "發光袍身文字", "成人化性感造型"]
+  }
 }

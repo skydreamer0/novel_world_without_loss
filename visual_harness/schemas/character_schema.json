@@ -1,32 +1,94 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "CharacterVisualProfile",
+  "$id": "https://world-without-loss.local/schemas/character_schema.json",
+  "title": "CharacterIdentity",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
-    "character_id": { "type": "string" },
-    "canonical_name": { "type": "string" },
-    "role": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "character_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "canonical_name": { "type": "string", "minLength": 1 },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "role": { "type": "string", "minLength": 1 },
     "visual_anchors": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
-        "apparent_age": { "type": "string" },
-        "face_structure": { "type": "string" },
-        "eyes": { "type": "string" },
-        "hair": { "type": "string" },
-        "physique": { "type": "string" },
-        "signature_clothing": { "type": "string" },
+        "apparent_age": { "type": "string", "minLength": 1 },
+        "face_structure": { "type": "string", "minLength": 1 },
+        "eyes": { "type": "string", "minLength": 1 },
+        "nose": { "type": "string", "minLength": 1 },
+        "hair": { "type": "string", "minLength": 1 },
+        "physique": { "type": "string", "minLength": 1 },
+        "signature_clothing": { "type": "string", "minLength": 1 },
+        "signature_item": { "type": "string", "minLength": 1 },
         "distinguishing_marks": {
           "type": "array",
-          "items": { "type": "string" }
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
         }
       },
-      "required": ["face_structure", "eyes", "hair", "signature_clothing"]
+      "required": ["face_structure", "eyes", "hair", "signature_clothing", "distinguishing_marks"]
+    },
+    "forbidden_traits": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
     },
     "prompt_tokens": {
       "type": "array",
-      "items": { "type": "string" }
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
     },
-    "anchor_image": { "type": "string" }
+    "display": {
+      "description": "Traditional Chinese projection used by the Reader and Dashboard. Never fed to the prompt engine; the English fields above stay authoritative for generation.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": { "type": "string", "minLength": 1 },
+        "visual_anchors": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "apparent_age": { "type": "string", "minLength": 1 },
+            "face_structure": { "type": "string", "minLength": 1 },
+            "eyes": { "type": "string", "minLength": 1 },
+            "nose": { "type": "string", "minLength": 1 },
+            "hair": { "type": "string", "minLength": 1 },
+            "physique": { "type": "string", "minLength": 1 },
+            "signature_clothing": { "type": "string", "minLength": 1 },
+            "signature_item": { "type": "string", "minLength": 1 },
+            "distinguishing_marks": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "forbidden_traits": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
   },
-  "required": ["character_id", "canonical_name", "visual_anchors", "prompt_tokens"]
+  "required": [
+    "schema_version",
+    "character_id",
+    "canonical_name",
+    "aliases",
+    "role",
+    "visual_anchors",
+    "forbidden_traits",
+    "prompt_tokens"
+  ]
 }

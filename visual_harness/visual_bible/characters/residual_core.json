@@ -1,26 +1,66 @@
 {
+  "schema_version": 1,
   "character_id": "residual_core",
   "canonical_name": "殘核 (Residual Core)",
+  "aliases": ["殘核", "Residual Core"],
   "role": "Ancient Epoch Artifact Intelligence / Adviser",
   "visual_anchors": {
-    "apparent_age": "ageless incorporeal entity",
-    "face_structure": "no physical human face, projects as a floating geometric crystal core surrounded by ancient data runes",
-    "eyes": "single centered pulsing cyan light sphere",
+    "apparent_age": "ageless incorporeal artifact intelligence",
+    "face_structure": "no physical face; one luminous cyan faceted octahedral crystal forms the central core",
+    "eyes": "none; the cyan crystal itself emits a steady inner glow",
     "hair": "none",
-    "physique": "floating octahedron crystal fragment with floating golden and blue algorithmic glyph rings",
-    "signature_clothing": "surrounded by ethereal translucent energy distortion",
+    "physique": "a floating cyan octahedral crystal enclosed by intersecting aged-gold astrolabe-like geometric rings and braces",
+    "signature_clothing": "a luminous cyan circular band carrying small non-readable ancient rune-like marks passes through the gold ring assembly",
     "distinguishing_marks": [
-      "floating ancient epoch mathematical runes orbiting the core",
-      "emits faint hum and translucent blue wireframe grid"
+      "the cyan faceted crystal remains the unmistakable centre of the silhouette",
+      "aged-gold orbit frames cross around the crystal in a precise ancient astrolabe construction",
+      "the cyan rune band glows independently of the central crystal"
     ]
   },
+  "forbidden_traits": [
+    "human face",
+    "human body",
+    "organic anatomy",
+    "bronze calculation plates",
+    "empty central gap",
+    "different crystal colour",
+    "modern sci-fi machinery",
+    "cables",
+    "readable writing"
+  ],
   "prompt_tokens": [
     "residual_core_entity",
-    "floating ancient geometrical octahedron crystal core",
-    "glowing cyan center light",
-    "orbiting golden and ethereal blue mathematical rune rings",
-    "translucent data wireframe aura",
-    "incorporeal magical artifact entity"
+    "luminous cyan faceted octahedral crystal",
+    "intersecting aged-gold astrolabe frames",
+    "cyan circular rune band with non-readable ancient marks",
+    "floating incorporeal artifact intelligence",
+    "ancient mystical geometric construction"
   ],
-  "anchor_image": "harness/anchor_registry/residual_core_anchor.png"
+  "display": {
+    "role": "上古紀元器物智能 / 顧問",
+    "visual_anchors": {
+      "apparent_age": "無齡的非實體器物智能",
+      "face_structure": "沒有人類面孔；一枚發出青色光芒的切面八面晶體構成中央核心",
+      "eyes": "無；青色晶核本身持續散發穩定內光",
+      "hair": "無",
+      "physique": "懸浮的青色八面晶核，外部由交錯的舊金色星盤式幾何環架與支架包覆",
+      "signature_clothing": "一圈帶有不可讀上古符紋的青色發光環帶穿過金色環架結構",
+      "distinguishing_marks": [
+        "青色切面晶核始終是輪廓中最明確的視覺中心",
+        "舊金色軌環以精密的上古星盤結構交錯包圍晶核",
+        "青色符紋環帶與中央晶核分別發光"
+      ]
+    },
+    "forbidden_traits": [
+      "人類臉孔",
+      "人類軀體",
+      "有機解剖結構",
+      "青銅演算薄片",
+      "中空核心",
+      "改變晶體顏色",
+      "現代科幻機械",
+      "纜線",
+      "可讀文字"
+    ]
+  }
 }

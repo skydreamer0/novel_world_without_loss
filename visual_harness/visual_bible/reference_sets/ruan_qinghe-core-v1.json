@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "ruan_qinghe-core-v1",
+  "character_id": "ruan_qinghe",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "full_body",
+      "path": "storage/generated/ruan_qinghe_character_v1.jpg",
+      "sha256": "f8a36a581d3cf9b596ec5864f00c29d2b40da6f3bdba4521887993a4d2264d39",
+      "media_type": "image/jpeg",
+      "source": "阮青禾角色立繪 Option C 鎖定"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["full_body"],
+      "notes": "鎖定毛曉彤骨相、竹青素雅醫袍、藥箱與沉江城議會果敢氣質"
+    }
+  }
+}

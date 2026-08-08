@@ -1,19 +1,21 @@
-const CACHE_NAME = 'woulou-visual-harness-v1';
+// Bump whenever the app shell or the precached catalog projection changes — the projection is
+// served cache-first, so installed clients keep the old character data until this name changes.
+const CACHE_NAME = 'woulou-visual-harness-v3';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './manifest.json',
-  '../storage/generated/qin_woulou_turnaround.jpg',
+  '../catalog/generated/character_catalog.browser.js',
   '../storage/generated/chapter_004_residual_core.jpg',
   '../storage/generated/chapter_050_scene.jpg'
 ];
 
-// Install Event - Precache App Shell & Core Images
+// Install Event - Precache App Shell, Catalog Projection & Static Scene Images
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Visual Harness SW] Precaching app shell and generated images');
+      console.log('[Visual Harness SW] Precaching app shell, catalog projection and scene images');
       return cache.addAll(PRECACHE_ASSETS).catch((err) => {
         console.warn('[Visual Harness SW] Precache warning:', err);
       });

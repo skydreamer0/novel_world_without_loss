@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "qin_woulou-core-v1",
+  "character_id": "qin_woulou",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "storage/generated/qin_woulou_turnaround.jpg",
+      "sha256": "63f7212ec770acbdf9d84dbd6df778cb5eadcbcc0f2bec460b6225d21c732467",
+      "media_type": "image/jpeg",
+      "source": "既有秦無漏三視圖黃金基準圖"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["turnaround"],
+      "notes": "以整張三視圖作為角色一致性參考"
+    },
+    "midjourney": {
+      "mode": "character_reference",
+      "weight": null
+    },
+    "flux": {
+      "adapter": null,
+      "weight": null
+    }
+  }
+}

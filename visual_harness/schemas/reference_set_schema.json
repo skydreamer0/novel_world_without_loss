@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-without-loss.local/schemas/reference_set_schema.json",
+  "title": "CharacterReferenceSet",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "reference_set_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*-[a-z0-9]+(?:_[a-z0-9]+)*-v[1-9][0-9]*$"
+    },
+    "character_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "version": { "type": "integer", "minimum": 1 },
+    "label": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["draft", "approved", "retired"] },
+    "is_primary": { "type": "boolean" },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "enum": [
+              "turnaround",
+              "full_body_front",
+              "full_body_three_quarter",
+              "full_body_profile",
+              "full_body_back",
+              "face_front",
+              "face_three_quarter",
+              "profile",
+              "full_body",
+              "outfit",
+              "pose",
+              "other"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^storage/(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+          },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "media_type": { "enum": ["image/png", "image/jpeg", "image/webp"] },
+          "source": { "type": "string", "minLength": 1 }
+        },
+        "required": ["role", "path", "sha256", "media_type"]
+      }
+    },
+    "engine_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "reference_set_id",
+    "character_id",
+    "version",
+    "label",
+    "status",
+    "is_primary",
+    "references",
+    "engine_bindings"
+  ]
+}

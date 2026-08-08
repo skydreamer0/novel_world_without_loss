@@ -5,8 +5,12 @@
   "main": "prompt_engine/prompt_builder.js",
   "type": "commonjs",
   "scripts": {
-    "test": "node harness/test_runner.js",
-    "build-prompt": "node prompt_engine/prompt_builder.js"
+    "pretest": "npm run catalog:build",
+    "test": "node --test tests/*.test.js && node harness/test_runner.js",
+    "test:contracts": "node --test tests/*.test.js",
+    "catalog:build": "node scripts/build_character_catalog.js",
+    "characters:import": "node scripts/import_characters.js",
+    "build-prompt": "node prompt_engine/generate_scene_ch004.js"
   },
   "keywords": [
     "ai-image-generation",

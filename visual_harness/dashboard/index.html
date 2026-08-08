@@ -313,6 +313,75 @@
       filter: brightness(1.08);
     }
 
+    /* Turnaround plates are wide multi-view sheets: `cover` slices the back view off entirely. */
+    .image-preview-box.is-sheet {
+      background: #e9e5dd;
+    }
+
+    .image-preview-box.is-sheet img {
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .image-preview-box.is-sheet:hover img {
+      filter: brightness(1.02);
+    }
+
+    /* The canvas node uses the <img> itself as its box, so it carries `is-sheet` directly. */
+    .canvas-node-img.is-sheet {
+      object-fit: contain;
+      background: #e9e5dd;
+    }
+
+    /* Single-view character art is portrait (roughly 3:8); `cover` in a 16:9 box cuts the figure
+       off at the waist. Show it whole instead — the comparison strip keeps its 16:9 footprint so
+       the three panels stay the same height. */
+    .image-preview-box.is-portrait img {
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .image-preview-box.is-portrait:hover img {
+      transform: scale(1.01);
+      filter: brightness(1.04);
+    }
+
+    /* Step 1's hero frame has no neighbours to line up with, so it shrink-wraps the artwork
+       instead of leaving the figure marooned in a wide letterbox. */
+    #characterReferenceBox.is-portrait {
+      aspect-ratio: auto;
+      height: min(640px, 62vh);
+      width: fit-content;
+      min-width: 200px;
+      max-width: 100%;
+      margin-inline: auto;
+    }
+
+    #characterReferenceBox.is-portrait img {
+      width: auto;
+      height: 100%;
+    }
+
+    /* Portrait art puts the face near the top of the frame, exactly where the tag sits (and in the
+       narrow step-1 frame the tag also wraps to two lines). Park it at the foot, on one line. */
+    .image-preview-box.is-portrait .img-tag {
+      top: auto;
+      right: 8px;
+      bottom: 8px;
+      left: 8px;
+      overflow: hidden;
+      font-size: 0.64rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* …which is where the zoom hint already lives, so send that one to the top corner. */
+    .image-preview-box.is-portrait .zoom-hint {
+      top: 8px;
+      right: 8px;
+      bottom: auto;
+    }
+
     .img-tag {
       position: absolute;
       top: 10px;
@@ -368,6 +437,81 @@
       font-weight: 500;
       line-height: 1.45;
       overflow-wrap: anywhere; /* 長檔案路徑必須能折行 */
+    }
+
+    .character-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      min-width: min(100%, 320px);
+    }
+
+    .character-selector label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .character-selector select {
+      width: 100%;
+      min-width: 0;
+      padding: 0.6rem 2.1rem 0.6rem 0.8rem;
+      border: 1px solid rgba(0, 242, 254, 0.35);
+      border-radius: 8px;
+      background: #0d1117;
+      color: var(--text-main);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .character-selector select:focus-visible {
+      outline: 2px solid var(--accent-cyan);
+      outline-offset: 2px;
+    }
+
+    /* `display` rules below out-specify the UA's `[hidden] { display: none }`, so toggling the
+       `hidden` property left the placeholder stacked next to the loaded image. Restore it. */
+    .image-preview-box img[hidden],
+    .image-placeholder[hidden],
+    .zoom-hint[hidden] {
+      display: none;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 1.2rem;
+      color: var(--text-muted);
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(0, 242, 254, 0.06), rgba(243, 156, 18, 0.04)),
+        #080c14;
+    }
+
+    .image-placeholder-icon {
+      font-size: 2rem;
+      filter: grayscale(0.3);
+    }
+
+    .reference-meta {
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .catalog-empty {
+      padding: 1rem;
+      border: 1px dashed rgba(243, 156, 18, 0.5);
+      border-radius: 10px;
+      color: var(--accent-gold);
+      background: rgba(243, 156, 18, 0.06);
     }
 
     .prompt-preview {
@@ -880,7 +1024,7 @@
         min-height: 44px;
       }
 
-      /* 手機用 contain：三視圖立繪是寬幅拼圖，cover 會把「後視圖」整個裁掉 */
+      /* 手機用 contain：四面圖總覽是寬幅拼圖，cover 會把背面整個裁掉 */
       .image-preview-box {
         aspect-ratio: 16 / 9;
       }
@@ -919,6 +1063,13 @@
       .card-title {
         font-size: 0.98rem;
         line-height: 1.35;
+      }
+
+      .character-selector {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.35rem;
       }
 
       /* 📱 響應式網格 (Responsive Grids) */
@@ -1163,38 +1314,53 @@
       <div class="card">
         <div class="card-header">
           <div class="card-title">
-            👤 步驟 1：定案主角全方位立繪與基準圖 (Character Sheet / Turnaround Anchor)
+            👤 步驟 1：角色全方位立繪與基準圖 (Character Sheet / Turnaround Anchor)
           </div>
-          <span class="badge">Master Reference Sheet</span>
+          <div class="character-selector">
+            <label for="characterSelect">目前角色</label>
+            <select id="characterSelect" aria-label="選擇角色">
+              <option>正在載入角色目錄…</option>
+            </select>
+          </div>
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
-          在為小說生圖前，必須先生成主角的<b>「前視圖、側視圖、後視圖」三視圖/全方位立繪</b>，並定案為黃金基準圖 (Gold Standard Reference Image)，供後續生成時作 `--cref` 或 IP-Adapter 物理特徵鎖定。<i>(💡 點擊圖片可開啟高清原比例大圖)</i>
+          角色資料與參考圖由 Character Catalog 統一載入；切換角色後，詳情、Prompt、比較圖與畫布節點會同步更新。<i>(💡 點擊圖片可開啟高清原比例大圖)</i>
         </p>
 
-        <div class="grid-2">
-          <div class="image-preview-box" onclick="openModal('../storage/generated/qin_woulou_turnaround.jpg', '秦無漏 (Qin Wulou) 3-View Turnaround Sheet')">
-            <div class="img-tag">秦無漏 (Qin Wulou) 3-View Turnaround Sheet</div>
-            <img src="../storage/generated/qin_woulou_turnaround.jpg" alt="秦無漏三視圖立繪">
-            <div class="zoom-hint">🔍 點擊看高清大圖</div>
+        <div id="catalogStatus" class="catalog-empty" hidden></div>
+
+        <div class="grid-2" id="characterDetails">
+          <div class="image-preview-box" id="characterReferenceBox">
+            <div class="img-tag" id="characterImageTag">角色參考圖</div>
+            <div class="image-placeholder" id="characterImagePlaceholder">
+              <span class="image-placeholder-icon">🖼️</span>
+              <span>此角色尚未提供可用參考圖</span>
+            </div>
+            <img id="characterReferenceImage" src="" alt="" hidden>
+            <div class="zoom-hint" id="characterZoomHint" hidden>🔍 點擊看高清大圖</div>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 1rem;">
             <div class="anchor-box">
-              <div class="anchor-label">角色標識 (Character ID)</div>
-              <div class="anchor-value">`qin_woulou`</div>
+              <div class="anchor-label">角色名稱與定位 (Name & Role)</div>
+              <div class="anchor-value" id="characterIdentity">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">五官與髮型鎖定 (Face & Hair Lock)</div>
-              <div class="anchor-value">20 歲初少年修仙者，立體輪廓、漆黑冷眸、長黑髮以暗銀束帶收攏</div>
+              <div class="anchor-label">視覺錨點 (Visual Anchors)</div>
+              <div class="anchor-value" id="characterAnchors">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">服飾與姿勢鎖定 (Outfit & Pose Lock)</div>
-              <div class="anchor-value">簡樸墨藍/漆黑武袍帶暗銀滾邊，中性站姿，無歐式鎧甲或過度裝飾</div>
+              <div class="anchor-label">Prompt Tokens</div>
+              <div class="anchor-value" id="characterPromptTokens">—</div>
             </div>
             <div class="anchor-box">
-              <div class="anchor-label">特徵錨點檔 (Feature Reference Matrix)</div>
-              <div class="anchor-value">`visual_harness/harness/anchor_registry/qin_woulou_anchor.png`</div>
+              <div class="anchor-label">禁止特徵 (Forbidden Traits)</div>
+              <div class="anchor-value" id="characterForbiddenTraits">—</div>
+            </div>
+            <div class="anchor-box">
+              <div class="anchor-label">目前基準圖 (Preferred Reference)</div>
+              <div class="anchor-value" id="characterReferenceMeta">—</div>
             </div>
           </div>
         </div>
@@ -1212,24 +1378,22 @@
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
-          自動讀取《無漏》小說分鏡結構，融合成保留主角錨點與全書修仙暗調風格的 Prompt。
+          自動讀取《無漏》小說分鏡結構，融合目前角色的 Catalog 錨點與全書修仙暗調風格，產生 Prompt 預覽。
         </p>
 
         <div class="grid-2" style="margin-bottom: 1.5rem;">
           <div class="anchor-box">
             <div class="anchor-label">當前選擇章節</div>
-            <div class="anchor-value">第一卷 第004章《殘核》 (Qin Wulou Awakens Core)</div>
+            <div class="anchor-value">第一卷 第004章《殘核》 (Core Awakening)</div>
           </div>
           <div class="anchor-box">
             <div class="anchor-label">登場人物 & 道具</div>
-            <div class="anchor-value">秦無漏 (`qin_woulou`) + 殘核 (`residual_core`) @ 空胎虛無空間</div>
+            <div class="anchor-value"><span id="promptCharacterIdentity">目前角色</span> + 殘核 (`residual_core`) @ 空胎虛無空間</div>
           </div>
         </div>
 
         <div class="card-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Prompt 構建產出 (Prompt Output)</div>
-        <div class="prompt-preview" id="promptText">
-cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handsome Xianxia cultivator, sharp angular jawline, calm cold obsidian eyes, long black hair in dark silver ribbon, simple dark navy martial robe with silver lining, residual_core_entity, floating ancient geometrical octahedron crystal core, glowing cyan center light, orbiting golden and ethereal blue mathematical rune rings, empty_womb_domain_seed, Qin Wulou reaching his hand towards floating unfolded bronze core expanding into ancient golden geometric plates in dark void space, Cinematic dark Xianxia concept art, deep navy shadow palette, octane render lighting, high-contrast chiaroscuro
-        </div>
+        <div class="prompt-preview" id="promptText">正在從 Character Catalog 構建角色 Prompt…</div>
       </div>
     </div>
 
@@ -1243,23 +1407,27 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
-          對比「步驟 1 主角黃金立繪」與「不同章節的實景圖」，驗證人物臉部、髮型與服飾是否前後一致。<i>(💡 點擊可開啟原比例大圖)</i>
+          對比「步驟 1 目前角色基準圖」與「不同章節的實景圖」，驗證角色視覺錨點是否前後一致。<i>(💡 點擊可開啟原比例大圖)</i>
         </p>
 
         <div class="grid-3">
-          <div class="image-preview-box" onclick="openModal('../storage/generated/qin_woulou_turnaround.jpg', '步驟 1: 秦無漏三視圖立繪 (Turnaround Reference)')">
-            <div class="img-tag">步驟 1: 主角立繪基準</div>
-            <img src="../storage/generated/qin_woulou_turnaround.jpg" alt="主角立繪">
-            <div class="zoom-hint">🔍 點擊看大圖</div>
+          <div class="image-preview-box" id="comparisonCharacterBox">
+            <div class="img-tag" id="comparisonCharacterTag">步驟 1: 角色立繪基準</div>
+            <div class="image-placeholder" id="comparisonCharacterPlaceholder">
+              <span class="image-placeholder-icon">🖼️</span>
+              <span>此角色尚未提供可用參考圖</span>
+            </div>
+            <img id="comparisonCharacterImage" src="" alt="" hidden>
+            <div class="zoom-hint" id="comparisonCharacterZoomHint" hidden>🔍 點擊看大圖</div>
           </div>
 
-          <div class="image-preview-box" onclick="openModal('../storage/generated/chapter_004_residual_core.jpg', '第 004 章《殘核》: 秦無漏在空胎感應幾何晶核')">
+          <div class="image-preview-box" onclick="openModal('../storage/generated/chapter_004_residual_core.jpg', '第 004 章《殘核》(Awakening Core)')">
             <div class="img-tag">第 004 章《殘核》 (Awakening Core)</div>
             <img src="../storage/generated/chapter_004_residual_core.jpg" alt="第4章插圖">
             <div class="zoom-hint">🔍 點擊看大圖</div>
           </div>
 
-          <div class="image-preview-box" onclick="openModal('../storage/generated/chapter_050_scene.jpg', '第 050 章《七息守城》: 秦無漏在青崖城牆守城')">
+          <div class="image-preview-box" onclick="openModal('../storage/generated/chapter_050_scene.jpg', '第 050 章《七息守城》(City Defense)')">
             <div class="img-tag">第 050 章《七息守城》 (City Defense)</div>
             <img src="../storage/generated/chapter_050_scene.jpg" alt="第50章插圖">
             <div class="zoom-hint">🔍 點擊看大圖</div>
@@ -1275,32 +1443,32 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
           <div class="card-title">
             🧪 步驟 4：自動化 Consistent Quality Gate (Harness 評測與存庫)
           </div>
-          <span class="status-pass">✅ Quality Gate Passed (100%)</span>
+          <span id="qualityStatus" class="badge">⏳ 尚未執行圖片 QA</span>
         </div>
 
         <div class="metrics-grid">
           <div class="metric-card">
-            <div class="anchor-label">Anchor Token Coverage</div>
-            <div class="metric-val">100%</div>
+            <div class="anchor-label">Catalog Contract</div>
+            <div class="metric-val" id="catalogMetric">Passed</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">CLIP Prompt Score</div>
-            <div class="metric-val">35.8</div>
+            <div class="anchor-label">Reference Set</div>
+            <div class="metric-val" id="referenceSetMetric">—</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">Face Cosine Distance</div>
-            <div class="metric-val">0.82</div>
+            <div class="anchor-label">Image Palette</div>
+            <div class="metric-val">N/A</div>
           </div>
           <div class="metric-card">
-            <div class="anchor-label">Forbidden Violations</div>
-            <div class="metric-val" style="color: #3fb950;">0</div>
+            <div class="anchor-label">Face Consistency</div>
+            <div class="metric-val">N/A</div>
           </div>
         </div>
 
         <div style="margin-top: 1.5rem;" class="anchor-box">
           <div class="anchor-label">測試總評說明</div>
-          <div class="anchor-value">
-            全流程驗證通過！第 004 章《殘核》與第 050 章《七息守城》插圖之秦無漏面部特徵、長黑髮銀束帶與墨藍武袍完全一致。
+          <div class="anchor-value" id="qualitySummary">
+            請先選擇角色，以檢視 Catalog 錨點與章節插圖的一致性結果。
           </div>
         </div>
       </div>
@@ -1317,7 +1485,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
         </div>
 
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-          <b>正向節點流動</b>：左側角色 (`qin_woulou`) 與法寶 (`residual_core`) 節點將特徵向外連線輸出 (Output Ports ➔ Input Ports)，實時注入右側的場面構圖框！
+          <b>正向節點流動</b>：左側目前角色（<span id="canvasIntroCharacter">尚未選擇</span>）與法寶 (`residual_core`) 節點將特徵向外連線輸出 (Output Ports ➔ Input Ports)，投影至右側場面構圖框。
         </p>
 
         <!-- Canvas Workspace -->
@@ -1330,7 +1498,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
 
           <!-- Laser SVG Connection Lines: Outwards from Character/Entity Nodes into Scene Frame -->
           <svg class="canvas-svg">
-            <!-- Path 1: Qin Wulou (Node 1 Output Port @ x:290, y:205) -> Scene Frame (Node 3 Input Port 1 @ x:540, y:230) -->
+            <!-- Path 1: Selected Character (Node 1 Output Port @ x:290, y:205) -> Scene Frame (Node 3 Input Port 1 @ x:540, y:230) -->
             <path d="M 290 205 C 410 205, 420 230, 540 230" stroke="#00f2fe" stroke-width="2.5" fill="none" stroke-dasharray="6,6" />
             
             <!-- Path 2: Residual Core (Node 2 Output Port @ x:290, y:475) -> Scene Frame (Node 3 Input Port 2 @ x:540, y:310) -->
@@ -1342,11 +1510,15 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
             <div class="port-dot output-right" title="Character Feature Output Port"></div>
             <div class="canvas-node-header">
               <span>👤 角色基準 (Output Source)</span>
-              <span>`qin_woulou`</span>
+              <span id="canvasCharacterId">`—`</span>
             </div>
-            <img src="../storage/generated/qin_woulou_turnaround.jpg" class="canvas-node-img" alt="秦無漏">
-            <div class="canvas-node-desc">
-              少年修仙者 | 黑髮銀束帶 | 墨藍武袍<br>
+            <div class="image-placeholder" id="canvasCharacterPlaceholder" style="height: 120px; min-height: 120px; margin-bottom: 0.5rem; border-radius: 6px;">
+              <span class="image-placeholder-icon">🖼️</span>
+              <span>尚無角色參考圖</span>
+            </div>
+            <img id="canvasCharacterImage" src="" class="canvas-node-img" alt="" hidden>
+            <div class="canvas-node-desc" id="canvasCharacterDesc">
+              請從步驟 1 選擇角色<br>
               <span style="color: var(--accent-cyan);">➔ 角色特徵輸出注入</span>
             </div>
           </div>
@@ -1371,12 +1543,12 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
             <div class="port-dot input-left-2" style="background:#f39c12; box-shadow:0 0 8px #f39c12;" title="Entity Feature Input Port"></div>
             <div class="canvas-node-header">
               <span>🎬 場面構圖框 (Target Render Canvas)</span>
-              <span style="color:#3fb950;">Live Render</span>
+              <span style="color:var(--accent-gold);">Awaiting Desktop</span>
             </div>
             <img src="../storage/generated/chapter_050_scene.jpg" style="height: 180px;" class="canvas-node-img" alt="章節場面">
             <div class="canvas-node-desc">
               <b>第050章《七息守城》</b><br>
-              秦無漏在青崖城牆上調用空胎界域屏障<br>
+              <span id="canvasSceneCharacter">目前角色</span>在青崖城牆上調用空胎界域屏障<br>
               <span style="color: var(--accent-cyan);">✨ 已接收 2 個上游節點特徵 (Character Injected)</span>
             </div>
           </div>
@@ -1405,25 +1577,24 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
     </div>
   </div>
 
+  <script src="../catalog/generated/character_catalog.browser.js"></script>
   <script>
-    // 🎨 生成圖片資料庫藝廊 (Image Gallery Dataset)
-    const imageGallery = [
-      {
-        src: '../storage/generated/qin_woulou_turnaround.jpg',
-        title: '步驟 1: 秦無漏三視圖立繪 (Turnaround Reference Sheet)',
-        tag: '步驟 1: 主角立繪基準'
-      },
+    // 🎨 場景圖維持靜態；角色參考圖由 Character Catalog Projection 產生。
+    const sceneGallery = [
       {
         src: '../storage/generated/chapter_004_residual_core.jpg',
-        title: '第 004 章《殘核》: 秦無漏在空胎感應幾何晶核 (Awakening Core)',
+        title: '第 004 章《殘核》(Awakening Core)',
         tag: '第 004 章插圖'
       },
       {
         src: '../storage/generated/chapter_050_scene.jpg',
-        title: '第 050 章《七息守城》: 秦無漏在青崖城牆守城 (City Defense)',
+        title: '第 050 章《七息守城》(City Defense)',
         tag: '第 050 章插圖'
       }
     ];
+
+    let imageGallery = sceneGallery.slice();
+    let selectedCharacter = null;
 
     let currentGalleryIndex = 0;
     let touchStartX = 0;
@@ -1449,13 +1620,319 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
       });
     }
 
-    // --- Prompt Generator Dummy ---
+    const scenePromptParts = [
+      'cinematic macro medium shot',
+      'atmospheric lighting',
+      'residual_core_entity',
+      'floating ancient geometrical crystal core',
+      'glowing cyan center light',
+      'orbiting golden and ethereal blue mathematical rune rings',
+      'empty_womb_domain_seed',
+      'reaching toward an unfolded bronze core expanding into ancient golden geometric plates in dark void space',
+      'Cinematic dark Xianxia concept art',
+      'deep navy shadow palette',
+      'high-contrast chiaroscuro'
+    ];
+
+    function toDashboardPath(path) {
+      if (!path) return '';
+      if (/^(?:https?:|data:|blob:|\/)/i.test(path)) return path;
+      return `../${String(path).replace(/^\.\//, '')}`;
+    }
+
+    // The Visual Bible is authored in English for the prompt engine; the dashboard is a Chinese
+    // surface, so it reads the catalog's `display` projection and translates the anchor labels.
+    const ANCHOR_LABELS = {
+      apparent_age: '外貌年齡',
+      face_structure: '臉部結構',
+      eyes: '眼睛',
+      nose: '鼻子',
+      hair: '髮型',
+      physique: '體態',
+      signature_clothing: '標誌服裝',
+      signature_item: '標誌物件',
+      distinguishing_marks: '辨識特徵'
+    };
+    const UNCROPPED_REFERENCE_ROLES = new Set(['turnaround', 'outfit', 'pose']);
+    // Single-view character art: tall framing that must never be cover-cropped.
+    const PORTRAIT_REFERENCE_ROLES = new Set([
+      'full_body',
+      'full_body_front',
+      'full_body_three_quarter',
+      'full_body_profile',
+      'full_body_back',
+      'face_front',
+      'face_three_quarter',
+      'profile'
+    ]);
+
+    function displayRole(character) {
+      return (character && (character.display && character.display.role || character.role)) || '';
+    }
+
+    function displayAnchors(character) {
+      if (!character) return null;
+      return (character.display && character.display.visual_anchors) || character.visual_anchors;
+    }
+
+    function displayForbidden(character) {
+      if (!character) return [];
+      const zh = character.display && character.display.forbidden_traits;
+      return (Array.isArray(zh) && zh.length) ? zh : character.forbidden_traits;
+    }
+
+    function formatAnchors(anchors) {
+      if (!anchors || typeof anchors !== 'object' || Array.isArray(anchors)) {
+        return formatCatalogValue(anchors);
+      }
+      const keys = [
+        ...Object.keys(ANCHOR_LABELS).filter(key => anchors[key] !== undefined),
+        ...Object.keys(anchors).filter(key => !ANCHOR_LABELS[key])
+      ];
+      const parts = keys
+        .map(key => `${ANCHOR_LABELS[key] || key}：${formatCatalogValue(anchors[key])}`)
+        .filter(part => !part.endsWith('：—'));
+      return parts.length ? parts.join('　·　') : '—';
+    }
+
+    function formatCatalogValue(value) {
+      if (value === null || value === undefined || value === '') return '—';
+      if (Array.isArray(value)) {
+        return value.length ? value.map(formatCatalogValue).join(' · ') : '—';
+      }
+      if (typeof value === 'object') {
+        const entries = Object.entries(value);
+        return entries.length
+          ? entries.map(([key, item]) => `${key}: ${formatCatalogValue(item)}`).join(' · ')
+          : '—';
+      }
+      return String(value);
+    }
+
+    function promptTokenList(character) {
+      const tokens = character && character.prompt_tokens;
+      if (Array.isArray(tokens)) return tokens.flatMap(item => String(item).split(',')).map(item => item.trim()).filter(Boolean);
+      if (tokens && typeof tokens === 'object') {
+        return Object.values(tokens).flatMap(value => Array.isArray(value) ? value : [value]).map(String).filter(Boolean);
+      }
+      return tokens ? String(tokens).split(',').map(item => item.trim()).filter(Boolean) : [];
+    }
+
+    function characterReferences(character) {
+      const refs = [];
+      const seen = new Set();
+      const sets = Array.isArray(character && character.reference_sets) ? character.reference_sets : [];
+
+      sets.forEach(referenceSet => {
+        const references = Array.isArray(referenceSet.references) ? referenceSet.references : [];
+        references.forEach(reference => {
+          if (!reference || !reference.path) return;
+          const key = `${referenceSet.reference_set_id || ''}:${reference.path}`;
+          if (seen.has(key)) return;
+          seen.add(key);
+          refs.push({
+            ...reference,
+            reference_set_id: referenceSet.reference_set_id || '',
+            reference_set_version: referenceSet.version,
+            reference_set_status: referenceSet.status || ''
+          });
+        });
+      });
+
+      return refs;
+    }
+
+    function setText(id, value) {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    }
+
+    function setCatalogImage({ boxId, imageId, placeholderId, zoomId, reference, title, alt }) {
+      const box = document.getElementById(boxId);
+      const image = document.getElementById(imageId);
+      const placeholder = document.getElementById(placeholderId);
+      const zoom = zoomId ? document.getElementById(zoomId) : null;
+      if (!box || !image || !placeholder) return;
+
+      box.onclick = null;
+      image.onload = null;
+      image.onerror = null;
+      image.hidden = true;
+      image.removeAttribute('src');
+      placeholder.hidden = false;
+      if (zoom) zoom.hidden = true;
+      box.classList.toggle('is-sheet', Boolean(reference) && UNCROPPED_REFERENCE_ROLES.has(reference.role));
+      box.classList.toggle('is-portrait', Boolean(reference) && PORTRAIT_REFERENCE_ROLES.has(reference.role));
+
+      if (!reference || !reference.path) {
+        placeholder.querySelector('span:last-child').textContent = '此角色尚未指定基準參考圖';
+        return;
+      }
+
+      const src = toDashboardPath(reference.path);
+      image.alt = alt;
+      image.onload = () => {
+        image.hidden = false;
+        placeholder.hidden = true;
+        if (zoom) zoom.hidden = false;
+        box.onclick = () => openModal(src, title);
+      };
+      image.onerror = () => {
+        image.hidden = true;
+        placeholder.hidden = false;
+        placeholder.querySelector('span:last-child').textContent = `參考圖無法載入：${reference.path}`;
+        if (zoom) zoom.hidden = true;
+        box.onclick = null;
+      };
+      image.src = src;
+    }
+
+    function rebuildCharacterGallery(character) {
+      const characterItems = characterReferences(character).map(reference => ({
+        src: toDashboardPath(reference.path),
+        title: `${character.canonical_name} · ${reference.role || '角色參考圖'}${reference.reference_set_id ? ` (${reference.reference_set_id})` : ''}`,
+        tag: reference.role || '角色參考圖'
+      }));
+      imageGallery = [...characterItems, ...sceneGallery];
+      currentGalleryIndex = 0;
+    }
+
+    function buildPrompt(character) {
+      const promptText = document.getElementById('promptText');
+      if (!promptText) return;
+      if (!character) {
+        promptText.textContent = 'Character Catalog 中目前沒有可供構建 Prompt 的角色。';
+        return;
+      }
+      const characterParts = [character.character_id, ...promptTokenList(character)];
+      promptText.textContent = [...characterParts, ...scenePromptParts].filter(Boolean).join(', ');
+    }
+
+    function renderCharacter(character) {
+      selectedCharacter = character || null;
+      if (!character) {
+        buildPrompt(null);
+        return;
+      }
+
+      const role = displayRole(character);
+      const identity = `${character.canonical_name} (${character.character_id})${role ? ` · ${role}` : ''}`;
+      const preferred = character.display_reference || character.preferred_reference || null;
+      const referenceTitle = `${character.canonical_name} · ${preferred && preferred.role ? preferred.role : '基準參考圖'}`;
+      const referenceMeta = preferred
+        ? [
+            preferred.role || 'reference',
+            preferred.path,
+            preferred.reference_set_id ? `set: ${preferred.reference_set_id}` : '',
+            preferred.sha256 ? `sha256: ${preferred.sha256.slice(0, 12)}…` : ''
+          ].filter(Boolean).join(' · ')
+        : '尚未指定 preferred reference；參考圖藝廊仍會列出 Catalog 中的其他版本。';
+
+      setText('characterIdentity', identity);
+      setText('characterAnchors', formatAnchors(displayAnchors(character)));
+      setText('characterPromptTokens', formatCatalogValue(character.prompt_tokens));
+      setText('characterForbiddenTraits', formatCatalogValue(displayForbidden(character)));
+      setText('characterReferenceMeta', referenceMeta);
+      setText('referenceSetMetric', preferred ? 'Approved' : 'Missing');
+      setText('characterImageTag', referenceTitle);
+      setText('comparisonCharacterTag', `步驟 1: ${character.canonical_name}角色立繪基準`);
+      setText('promptCharacterIdentity', `${character.canonical_name} (${character.character_id})`);
+      setText('qualitySummary', `Catalog preflight 已完成：${character.canonical_name}（${character.character_id}）。圖片色盤與臉部一致性尚未執行，匯入實際候選圖後才能產生 QA Report。`);
+      setText('canvasIntroCharacter', character.character_id);
+      setText('canvasCharacterId', `\`${character.character_id}\``);
+      setText('canvasSceneCharacter', character.canonical_name);
+
+      const canvasSummary = [role, formatAnchors(displayAnchors(character))]
+        .filter(value => value && value !== '—')
+        .join(' | ');
+      const canvasDescription = document.getElementById('canvasCharacterDesc');
+      if (canvasDescription) {
+        canvasDescription.replaceChildren(
+          document.createTextNode(canvasSummary || character.canonical_name),
+          document.createElement('br'),
+          Object.assign(document.createElement('span'), {
+            textContent: '➔ 角色特徵輸出注入'
+          })
+        );
+        canvasDescription.lastElementChild.style.color = 'var(--accent-cyan)';
+      }
+
+      setCatalogImage({
+        boxId: 'characterReferenceBox',
+        imageId: 'characterReferenceImage',
+        placeholderId: 'characterImagePlaceholder',
+        zoomId: 'characterZoomHint',
+        reference: preferred,
+        title: referenceTitle,
+        alt: `${character.canonical_name}角色參考圖`
+      });
+      setCatalogImage({
+        boxId: 'comparisonCharacterBox',
+        imageId: 'comparisonCharacterImage',
+        placeholderId: 'comparisonCharacterPlaceholder',
+        zoomId: 'comparisonCharacterZoomHint',
+        reference: preferred,
+        title: referenceTitle,
+        alt: `${character.canonical_name}角色比較基準圖`
+      });
+      setCatalogImage({
+        boxId: 'canvasCharacterImage',
+        imageId: 'canvasCharacterImage',
+        placeholderId: 'canvasCharacterPlaceholder',
+        reference: preferred,
+        title: referenceTitle,
+        alt: `${character.canonical_name}畫布角色參考圖`
+      });
+
+      rebuildCharacterGallery(character);
+      buildPrompt(character);
+    }
+
+    function initializeCharacterCatalog() {
+      const selector = document.getElementById('characterSelect');
+      const status = document.getElementById('catalogStatus');
+      const catalog = window.WWL_CHARACTER_CATALOG;
+      const characters = catalog && Array.isArray(catalog.characters)
+        ? catalog.characters.filter(character => character && character.character_id && character.canonical_name)
+        : [];
+
+      selector.replaceChildren();
+      if (!characters.length) {
+        selector.disabled = true;
+        const option = document.createElement('option');
+        option.textContent = '沒有可用角色';
+        selector.appendChild(option);
+        status.hidden = false;
+        status.textContent = catalog
+          ? 'Character Catalog 目前沒有有效角色，請先執行 Catalog 產生流程。'
+          : '無法載入 Character Catalog Projection，請確認 catalog/generated/character_catalog.browser.js 已產生。';
+        renderCharacter(null);
+        return;
+      }
+
+      status.hidden = true;
+      characters.forEach(character => {
+        const option = document.createElement('option');
+        option.value = character.character_id;
+        option.textContent = `${character.canonical_name} · ${character.character_id}`;
+        selector.appendChild(option);
+      });
+      selector.addEventListener('change', () => {
+        renderCharacter(characters.find(character => character.character_id === selector.value) || characters[0]);
+      });
+      renderCharacter(characters[0]);
+    }
+
+    // --- Prompt Generator Preview ---
     function generatePrompt() {
       const pText = document.getElementById('promptText');
       pText.style.opacity = '0.5';
       setTimeout(() => {
+        buildPrompt(selectedCharacter);
         pText.style.opacity = '1';
-        alert('✨ 成功構建第 004 章《殘核》一致性 Prompt！');
+        alert(selectedCharacter
+          ? `✨ 已為 ${selectedCharacter.canonical_name} 構建第 004 章《殘核》一致性 Prompt！`
+          : '⚠️ Character Catalog 中沒有可用角色。');
       }, 300);
     }
 
@@ -1643,6 +2120,7 @@ cinematic macro medium shot, atmospheric lighting, qin_woulou_char, young handso
 
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
+    initializeCharacterCatalog();
   </script>
 </body>
 </html>

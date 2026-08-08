@@ -1,26 +1,46 @@
 {
+  "schema_version": 1,
   "character_id": "zhiyuan",
   "canonical_name": "紙鳶 (Zhiyuan)",
+  "aliases": ["紙鳶", "Zhiyuan"],
   "role": "Void Alliance Envoy / Ruin Navigator",
   "visual_anchors": {
-    "apparent_age": "mid 20s female void navigator",
-    "face_structure": "sharp mysterious face structure, cool aloof expression",
-    "eyes": "deep dark grey eyes with subtle void starlight shimmer",
-    "hair": "black hair bound in a tight traveler braid under a hooded cloak",
+    "apparent_age": "29-year-old female void navigator",
+    "face_structure": "sharp observant face with a tired, accountable expression rather than cultivated mystery",
+    "eyes": "deep dark-grey eyes marked by fatigue, without supernatural starlight",
+    "hair": "black hair secured in a tight practical traveller braid; cloak hood normally worn down",
     "physique": "slender, agile, weathered build",
-    "signature_clothing": "dark charcoal and starlight grey hooded void cloak, traveler gear, rift compass",
-    "signature_item": "ancient remnant realm door fragment (遺界門片)",
+    "signature_clothing": "charcoal and grey travel layers beneath a hood-down short cloak pieced from hundreds of old torn boundary talismans",
+    "signature_item": "secured remnant-door fragment, black ship token and tiny transparent vial of directionless grey light",
     "distinguishing_marks": [
-      "shadow slightly translucent due to ancient rift severance",
-      "hooded void navigator outfit"
+      "cast shadow is incomplete along one edge and displaced by a fraction of a step",
+      "repaired talisman-cloak and fully sheathed shadow-cutting utility blade"
     ]
   },
+  "forbidden_traits": ["raised hood", "mysterious seductress styling", "starfield cloak", "European rogue armour", "drawn weapon"],
   "prompt_tokens": [
     "zhiyuan_char",
-    "female void alliance envoy",
-    "dark charcoal hooded cloak",
-    "rift compass and remnant realm door fragment",
-    "mysterious aloof gaze"
+    "29-year-old female void alliance navigator",
+    "hood-down cloak pieced from torn boundary talismans",
+    "secured remnant-door fragment ship token and directionless-light vial",
+    "incomplete displaced shadow",
+    "tired observant accountable gaze"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "虛盟使者 / 遺界領路人",
+    "visual_anchors": {
+      "apparent_age": "二十九歲的女性虛界領路人",
+      "face_structure": "銳利而善於觀察的臉，神情帶著疲憊與承責，而非刻意神秘",
+      "eyes": "留下長途疲勞的深灰眼瞳，沒有超自然星光",
+      "hair": "黑髮束成緊實實用的旅人辮，斗篷兜帽平時放下",
+      "physique": "纖瘦、敏捷、飽經風霜的體格",
+      "signature_clothing": "炭黑與灰色旅裝，外罩由數百張破舊界符縫補成的短斗篷，兜帽放下",
+      "signature_item": "固定收納的遺界門片、黑色船牌與盛著無定向灰光的小型透明瓶",
+      "distinguishing_marks": [
+        "投影一側殘缺，並比身體錯開極短的一步",
+        "反覆修補的界符斗篷與完全收鞘的斬影短刀"
+      ]
+    },
+    "forbidden_traits": ["戴起兜帽", "神秘魅惑造型", "星空斗篷", "歐式盜賊甲", "拔刀姿勢"]
+  }
 }

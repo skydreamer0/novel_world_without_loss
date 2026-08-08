@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "lu_qinghe-core-v1",
+  "character_id": "lu_qinghe",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "full_body",
+      "path": "storage/generated/lu_qinghe_character_v2.png",
+      "sha256": "19a5bfbd23aac5e7c44e325fb5038514c760b93a3f8a3addafffd98c710e8665",
+      "media_type": "image/png",
+      "source": "既有陸青禾角色立繪 v2"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["full_body"],
+      "notes": "鎖定臉部、靛藍外門服與麥束"
+    }
+  }
+}

@@ -1,6 +1,8 @@
 {
+  "schema_version": 1,
   "character_id": "qin_woulou",
   "canonical_name": "秦無漏 (Qin Wulou)",
+  "aliases": ["秦無漏", "Qin Wulou"],
   "role": "Protagonist / Master of Void Domain Womb",
   "visual_anchors": {
     "apparent_age": "early 20s young cultivator",
@@ -14,15 +16,32 @@
       "calm, calculated expression, never panicked"
     ]
   },
+  "forbidden_traits": ["weapon or sword", "jade waist pendant", "heavy European armor", "ornate royal jewelry", "large magic aura"],
   "prompt_tokens": [
     "qin_woulou_char",
-    "young handsome Xianxia cultivator",
+    "restrained early-20s Chinese cultivator",
     "sharp angular jawline",
     "calm cold obsidian eyes",
     "long black hair in dark silver ribbon",
     "simple dark navy martial robe with silver lining",
     "lean athletic posture",
-    "restrained cyan spirit energy flow"
+    "faint translucent void-rune discoloration over left palm and wrist",
+    "no weapon"
   ],
-  "anchor_image": "harness/anchor_registry/qin_woulou_anchor.png"
+  "display": {
+    "role": "主角 / 虛界胎之主",
+    "visual_anchors": {
+      "apparent_age": "二十出頭的年輕修士",
+      "face_structure": "銳利分明的下顎線，冷靜析理的目光，白皙膚色",
+      "eyes": "曜石般的深色眼瞳，引動虛界邊界時泛起內斂的青藍微光",
+      "hair": "鴉黑長髮，以素樸的暗銀髮帶整齊束起",
+      "physique": "精瘦勻稱的體格，站姿挺直",
+      "signature_clothing": "素樸的深藏青或曜藍武袍，暗銀滾邊，紋飾極簡，不著重甲",
+      "distinguishing_marks": [
+        "左掌與腕上浮現半透明的淡薄虛界符影",
+        "沉靜、計算過的神情，從不慌亂"
+      ]
+    },
+    "forbidden_traits": ["武器或佩劍", "腰間玉珮", "厚重的歐式盔甲", "繁複的皇室珠寶", "大型法術光環"]
+  }
 }

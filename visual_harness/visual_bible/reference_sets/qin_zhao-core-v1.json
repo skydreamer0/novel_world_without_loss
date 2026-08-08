@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "qin_zhao-core-v1",
+  "character_id": "qin_zhao",
+  "version": 1,
+  "label": "核心造型",
+  "status": "retired",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "full_body",
+      "path": "storage/generated/qin_zhao_character_v1.jpg",
+      "sha256": "5f521da700f8cb7951e7416f1c1f88f0a4fe883931a077c0ca37117594ca11f8",
+      "media_type": "image/jpeg",
+      "source": "秦昭角色立繪 Option C 鎖定"
+    }
+  ],
+  "engine_bindings": {
+    "gemini": {
+      "reference_roles": ["full_body"],
+      "notes": "鎖定肖戰骨相、白金戰袍、金屬肩甲與金光陣法爆發姿態"
+    }
+  }
+}

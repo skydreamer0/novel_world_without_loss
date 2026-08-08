@@ -1,28 +1,45 @@
 {
+  "schema_version": 1,
   "character_id": "qin_zhao",
   "canonical_name": "秦昭 (Qin Zhao)",
+  "aliases": ["秦昭", "Qin Zhao"],
   "role": "Chosen Prodigy of Qin Clan / Bearer of Supreme Seed",
   "visual_anchors": {
     "apparent_age": "early 20s noble cultivator",
     "face_structure": "upright heroic face features, honorable but subtly strained brow",
-    "eyes": "bright gold-tinted eyes with glowing inner spirit pulse",
-    "hair": "neatly styled black hair adorned with golden jade hair crown",
+    "eyes": "dark brown eyes with a nearly imperceptible warm-gold inner tint",
+    "hair": "neatly styled black hair under a restrained gold-and-dark-jade hair crown",
     "physique": "tall sturdy warrior build, dignified posture",
-    "signature_clothing": "luxurious white and gold embroidered Qin Clan elder robes, golden shoulder armor pauldrons, glowing jade waist pendant",
+    "signature_clothing": "formal white and muted antique-gold Qin Clan robes with narrow practical shoulder guards and a dark structured belt",
     "distinguishing_marks": [
-      "glowing golden domain aura surrounding him",
-      "conflicted honorable expression"
+      "inherited rank is visible through excellent cloth and disciplined construction rather than excess ornament",
+      "honourable expression held under a subtly strained brow"
     ]
   },
+  "forbidden_traits": ["glowing eyes", "golden spell circle", "oversized dragon pauldrons", "floating rocks", "superhero action pose"],
   "prompt_tokens": [
     "qin_zhao_char",
     "noble heroic Xianxia prodigy",
-    "bright golden eyes with inner spirit glow",
-    "golden jade hair crown",
-    "luxurious white and gold embroidered robes",
-    "golden shoulder armor pauldrons",
-    "dignified stance",
-    "radiant gold spirit aura"
+    "dark brown eyes with restrained warm-gold inner tint",
+    "restrained gold-and-dark-jade hair crown",
+    "formal white and muted antique-gold Qin Clan robes",
+    "narrow practical shoulder guards",
+    "dignified stance with subtly strained brow"
   ],
-  "anchor_image": "harness/anchor_registry/qin_zhao_anchor.png"
+  "display": {
+    "role": "秦氏欽定天驕 / 至上種子承載者",
+    "visual_anchors": {
+      "apparent_age": "二十出頭的世家修士",
+      "face_structure": "端正英挺的五官，正氣之中眉宇微帶壓抑",
+      "eyes": "深褐眼瞳，內裡只有幾乎不可察的暖金色澤",
+      "hair": "梳理整齊的黑髮，戴著克制的暗玉金冠",
+      "physique": "高大厚實的戰士體格，姿態端嚴",
+      "signature_clothing": "正式的白色與舊金色秦氏長袍，窄幅實用肩護與深色結構腰帶",
+      "distinguishing_marks": [
+        "世家地位透過布料與嚴謹剪裁呈現，而非堆疊裝飾",
+        "端正神情之上，眉宇藏著受壓的緊繃"
+      ]
+    },
+    "forbidden_traits": ["發光金瞳", "金色法陣", "巨型龍紋肩甲", "浮石", "超級英雄式戰鬥姿勢"]
+  }
 }

@@ -1,15 +1,17 @@
 {
+  "schema_version": 1,
   "character_id": "lu_qinghe",
   "canonical_name": "陸青禾 (Lu Qinghe)",
+  "aliases": ["陸青禾", "Lu Qinghe"],
   "role": "Zhejian Sect Outer Proxy / Key Ally",
   "visual_anchors": {
     "apparent_age": "18-20 years old young female cultivator",
-    "face_structure": "high sculpted cheekbones, defined angular jawline, compact structured chin, mature dignified high-fashion eastern facial bone structure",
+    "face_structure": "high sculpted cheekbones, defined angular jawline and compact structured chin with a mature dignified eastern facial structure",
     "eyes": "deep-set elongated almond dark eyes under subtle brow ridge, calm sharp focus",
     "nose": "tall straight slender nose bridge with refined cartilage structure",
     "hair": "dark raven black hair, high top knot updo with windblown hair strands",
     "physique": "slender upright posture with resilient outer-sect cultivator build",
-    "signature_clothing": "indigo blue and natural hemp outer-sect martial robes, leather wrist guards, cord waist belt",
+    "signature_clothing": "handwoven indigo and natural-hemp outer-sect working robes, leather wrist wraps and cord waist belt",
     "signature_item": "bundle of golden wheat stalks (麥稈/劍穗) tied securely on her back instead of a sword",
     "distinguishing_marks": [
       "resolute, noble and strong-willed gaze",
@@ -18,6 +20,7 @@
       "permanent subtle respiratory strain mark on right chest/lung from Vol 2 battlefield wound"
     ]
   },
+  "forbidden_traits": ["sword", "silk court robe", "ornate jewellery", "wheat used as decorative wings"],
   "prompt_tokens": [
     "lu_qinghe_char",
     "young female Xianxia cultivator",
@@ -27,7 +30,27 @@
     "deep-set elongated dark almond eyes",
     "indigo blue and hemp outer-sect martial robe",
     "bundle of golden wheat stalks on her back",
-    "golden wheat field and misty mountain sunset"
+    "practical dry wheat bundle tied across upper back",
+    "handwoven indigo and natural-hemp fabric"
   ],
-  "anchor_image": ""
+  "display": {
+    "role": "折劍宗外門代理 / 關鍵盟友",
+    "visual_anchors": {
+      "apparent_age": "十八至二十歲的年輕女修士",
+      "face_structure": "高挺立體的顴骨、線條分明的下顎與緊實下巴，成熟端凝的東方骨相",
+      "eyes": "深邃狹長的杏眼，眉骨微凸，目光沉靜銳利",
+      "nose": "高挺纖直的鼻樑，鼻軟骨結構細緻",
+      "hair": "曜黑長髮，高束髮髻，幾縷髮絲隨風揚起",
+      "physique": "修長挺拔的身姿，帶著外門修士的韌性",
+      "signature_clothing": "手織靛藍與本色麻布外門工作袍，皮製腕纏與束繩腰帶",
+      "signature_item": "背後穩穩繫著一束金黃麥稈（麥稈／劍穗），而非佩劍",
+      "distinguishing_marks": [
+        "堅毅、高潔而剛強的目光",
+        "立體的高顴骨與俐落分明的下顎線",
+        "背負象徵農政律法改革的麥稈（劍穗）",
+        "右胸與肺部留有第二卷戰場舊傷造成的細微呼吸損傷痕跡"
+      ]
+    },
+    "forbidden_traits": ["佩劍", "絲質宮裝", "繁複珠寶", "把麥束做成裝飾翅膀"]
+  }
 }

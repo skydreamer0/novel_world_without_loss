@@ -68,6 +68,9 @@ export const state = {
   searchContentCache: {},
   searchAbortController: null,
   isSearching: false,
+  sidebarView: 'chapters',
+  characterFilter: '',
+  activeCharacterId: null,
 };
 
 // --- DOM Elements ---
@@ -82,6 +85,13 @@ export const els = {
   searchInput: document.getElementById("search-input"),
   searchWrap: document.querySelector(".search-wrap"),
   readingProgress: document.getElementById("reading-progress"),
+  sidebarTabs: document.querySelector(".sidebar-tabs"),
+  chaptersPanel: document.getElementById("chapters-panel"),
+  charactersPanel: document.getElementById("characters-panel"),
+  characterSearchInput: document.getElementById("character-search-input"),
+  characterCatalogStatus: document.getElementById("character-catalog-status"),
+  characterList: document.getElementById("character-list"),
+  characterDetail: document.getElementById("character-detail"),
 
   // Buttons
   menuBtn: document.getElementById("menu-btn"),
