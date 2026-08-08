@@ -98,9 +98,85 @@ function portraitReference(character) {
   return character.display_reference || character.preferred_reference || null;
 }
 
-function makePortrait(character, className) {
-  const portrait = document.createElement('div');
+// The sidebar is only ~340px wide, so the detail portrait stays a head-and-torso crop — a full
+// standing figure would be 800px tall and push the visual anchors far below the fold. The whole
+// artwork is one click away instead.
+let lightbox = null;
+let lightboxReturnFocus = null;
+
+function closeLightbox() {
+  if (!lightbox || lightbox.root.hidden) return;
+  lightbox.root.hidden = true;
+  lightbox.img.removeAttribute('src');
+  document.body.classList.remove('character-lightbox-open');
+  lightboxReturnFocus?.focus({ preventScroll: true });
+  lightboxReturnFocus = null;
+}
+
+function ensureLightbox() {
+  if (lightbox) return lightbox;
+
+  const root = document.createElement('div');
+  root.className = 'character-lightbox';
+  root.hidden = true;
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-modal', 'true');
+  root.setAttribute('aria-label', '角色完整立繪');
+
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'character-lightbox-close';
+  close.setAttribute('aria-label', '關閉完整立繪');
+  close.textContent = '✕';
+
+  const figure = document.createElement('figure');
+  figure.className = 'character-lightbox-figure';
+  const img = document.createElement('img');
+  const caption = document.createElement('figcaption');
+  figure.append(img, caption);
+
+  root.append(close, figure);
+  document.body.appendChild(root);
+
+  root.addEventListener('click', (event) => {
+    // Backdrop dismisses; clicks that land on the artwork must not.
+    if (event.target === root) closeLightbox();
+  });
+  close.addEventListener('click', closeLightbox);
+
+  lightbox = { root, img, caption, close };
+  return lightbox;
+}
+
+function openLightbox(character, reference, imageUrl, trigger) {
+  const box = ensureLightbox();
+  box.img.src = imageUrl;
+  box.img.alt = `${character.canonical_name}完整角色立繪`;
+  box.caption.textContent = [
+    character.canonical_name,
+    reference?.role,
+    reference?.reference_set_id,
+  ].filter(Boolean).join('　·　');
+
+  lightboxReturnFocus = trigger || null;
+  box.root.hidden = false;
+  document.body.classList.add('character-lightbox-open');
+  box.close.focus({ preventScroll: true });
+}
+
+function makePortrait(character, className, { zoomable = false } = {}) {
+  const reference = portraitReference(character);
+  const imageUrl = safeAssetUrl(reference?.path);
+  const interactive = zoomable && Boolean(imageUrl);
+
+  const portrait = document.createElement(interactive ? 'button' : 'div');
   portrait.className = className;
+  if (interactive) {
+    portrait.type = 'button';
+    portrait.classList.add('is-zoomable');
+    portrait.setAttribute('aria-label', `檢視${character.canonical_name}的完整立繪`);
+    portrait.addEventListener('click', () => openLightbox(character, reference, imageUrl, portrait));
+  }
 
   const placeholder = document.createElement('span');
   placeholder.className = 'character-portrait-placeholder';
@@ -108,10 +184,8 @@ function makePortrait(character, className) {
   placeholder.setAttribute('aria-hidden', 'true');
   portrait.appendChild(placeholder);
 
-  const reference = portraitReference(character);
-  const imageUrl = safeAssetUrl(reference?.path);
   if (imageUrl) {
-    // Unccroppable sheets get letterboxed on a light plate instead of being cover-cropped.
+    // Uncroppable sheets get letterboxed on a light plate instead of being cover-cropped.
     if (UNCROPPED_REFERENCE_ROLES.has(reference.role)) portrait.classList.add('is-sheet');
     const img = document.createElement('img');
     img.src = imageUrl;
@@ -121,6 +195,14 @@ function makePortrait(character, className) {
     img.addEventListener('load', () => portrait.classList.add('has-image'), { once: true });
     img.addEventListener('error', () => img.remove(), { once: true });
     portrait.appendChild(img);
+
+    if (interactive) {
+      const hint = document.createElement('span');
+      hint.className = 'character-portrait-zoom-hint';
+      hint.textContent = '檢視完整立繪';
+      hint.setAttribute('aria-hidden', 'true');
+      portrait.appendChild(hint);
+    }
   }
 
   return portrait;
@@ -194,6 +276,7 @@ function makeSection(title, contentBuilder) {
 let listStatusText = '';
 
 function showCharacterList() {
+  closeLightbox();
   state.activeCharacterId = null;
   els.characterCatalogStatus.textContent = listStatusText;
   els.characterDetail.hidden = true;
@@ -216,7 +299,7 @@ function showCharacterDetail(character) {
   back.addEventListener('click', showCharacterList);
   detail.appendChild(back);
 
-  detail.appendChild(makePortrait(character, 'character-detail-portrait'));
+  detail.appendChild(makePortrait(character, 'character-detail-portrait', { zoomable: true }));
 
   const identity = document.createElement('header');
   identity.className = 'character-detail-identity';
@@ -370,6 +453,21 @@ function setSidebarView(view, { focus = false } = {}) {
 
 export function initCharacters() {
   if (!els.sidebarTabs || !els.charactersPanel || !els.characterList || !els.characterDetail) return;
+
+  document.addEventListener('keydown', (event) => {
+    if (!lightbox || lightbox.root.hidden) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeLightbox();
+      return;
+    }
+    // The dialog holds exactly one focusable control, so Tab simply stays on it rather than
+    // wandering into the page behind the backdrop.
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      lightbox.close.focus({ preventScroll: true });
+    }
+  });
 
   els.sidebarTabs.addEventListener('click', (event) => {
     const tab = event.target.closest('[data-sidebar-view]');
