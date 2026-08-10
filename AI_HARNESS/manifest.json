@@ -1,0 +1,29 @@
+{
+  "project_id": "world-without-loss",
+  "project_title": "《無漏》",
+  "version": "0.8",
+  "canon_baseline": "CH050",
+  "current_chapter": "CH050",
+  "current_arc": "ARC006",
+  "default_request": "example_request.json",
+  "token_budget": {
+    "min": 3000,
+    "target": 4200,
+    "max": 7000
+  },
+  "truth_levels": {
+    "minimum": 0,
+    "maximum": 5,
+    "default_chapter_maximum": 2
+  },
+  "statistics": {
+    "retrieval_module_count": 17
+  },
+  "authoritative_files": [
+    "core.json",
+    "current_state.json",
+    "arc_051_060.json",
+    "retrieval_index.json",
+    "../docs/19_科幻文明與星際擴張.md"
+  ]
+}

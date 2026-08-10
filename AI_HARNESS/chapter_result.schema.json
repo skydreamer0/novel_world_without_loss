@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-without-loss.local/schemas/chapter_result.schema.json",
+  "title": "《無漏》單章結果差量",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chapter_id", "mode", "summary", "objectives", "state_delta", "new_facts", "foreshadows", "continuity_risks", "next_modules"],
+  "properties": {
+    "chapter_id": {"type": "string", "pattern": "^CH[0-9]{3,}$"},
+    "mode": {"type": "string", "enum": ["PLAN", "DRAFT", "REVIEW"]},
+    "summary": {"type": "string", "minLength": 1},
+    "objectives": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["achieved", "unmet"],
+      "properties": {
+        "achieved": {"type": "array", "items": {"type": "string"}},
+        "unmet": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "state_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["characters", "locations", "resources", "relationships", "technology", "truth_reveals"],
+      "properties": {
+        "characters": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+        "locations": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+        "resources": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+        "relationships": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+        "technology": {"type": "array", "items": {"$ref": "#/$defs/delta"}},
+        "truth_reveals": {"type": "array", "items": {"$ref": "#/$defs/delta"}}
+      }
+    },
+    "new_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "fact", "status", "suggested_authority"],
+        "properties": {
+          "id": {"type": "string"},
+          "fact": {"type": "string"},
+          "status": {"type": "string", "enum": ["candidate", "confirmed", "rejected"]},
+          "suggested_authority": {"type": "string"}
+        }
+      }
+    },
+    "foreshadows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["triggered", "added", "resolved"],
+      "properties": {
+        "triggered": {"type": "array", "items": {"type": "string"}},
+        "added": {"type": "array", "items": {"type": "string"}},
+        "resolved": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "continuity_risks": {"type": "array", "items": {"type": "string"}},
+    "next_modules": {"type": "array", "items": {"type": "string", "pattern": "^MOD-[A-Z0-9-]+$"}, "uniqueItems": true},
+    "draft": {"type": "string"}
+  },
+  "$defs": {
+    "delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "before", "after", "evidence"],
+      "properties": {
+        "id": {"type": "string"},
+        "before": {},
+        "after": {},
+        "evidence": {"type": "string"}
+      }
+    }
+  }
+}

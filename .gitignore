@@ -16,6 +16,9 @@ Thumbs.db
 
 # Temporary & Log files
 *.log
+__pycache__/
+*.py[cod]
+AI_HARNESS/context_CH*.md
 tmp/
 temp/
 

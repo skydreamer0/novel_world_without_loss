@@ -1,6 +1,6 @@
 # 《無漏》長篇知識庫與 GraphRAG 檢索架構
 
-本文件記錄《無漏》長篇小說（預定 500 章）知識庫維護與 AI RAG 檢索架構策略。
+本文件記錄《無漏》開放式長篇小說（可延伸至 1,200 章以上）的知識庫維護與 AI RAG 檢索架構策略。v0.8 起由 `AI_HARNESS/` 提供真相分層、章群狀態、檢索索引、Schema、Prompt、上下文組裝與驗證；三層 RAG 仍是其底層資料來源。
 
 ---
 
@@ -42,10 +42,10 @@
 ### 第一層：明確設定資料庫 (Structured Bible DB)
 - **維護方式**：由作者與 AI 共同手動/增量維護。
 - **涵蓋檔案**：
-  - [02_世界鐵律.md](file:///c:/Users/User/Documents/Project/novel_world_without_loss/docs/02_%E4%B8%96%E7%95%8C%E9%90%B5%E5%BE%8B.md)（規則、代價）
-  - [03_角色與勢力.md](file:///c:/Users/User/Documents/Project/novel_world_without_loss/docs/03_%E8%A7%92%E8%89%B2%E8%88%87%E5%8B%A2%E5%8A%9B.md)（人物、關係、弧線）
-  - [04_空間與力量系統.md](file:///c:/Users/User/Documents/Project/novel_world_without_loss/docs/04_%E7%A9%BA%E9%96%93%E8%88%87%E5%8A%9B%E9%87%8F%E7%B3%BB%E7%B5%B1.md)（殘核、無漏界）
-  - [07_伏筆與揭密台帳.md](file:///c:/Users/User/Documents/Project/novel_world_without_loss/docs/07_%E4%BC%8F%E7%AD%86%E8%88%87%E6%8F%AD%E5%AF%86%E5%8F%B0%E5%B8%B3.md)（埋設與回收）
+  - `docs/02_世界鐵律.md`（規則、代價）
+  - `docs/03_角色與勢力.md`（人物、關係、弧線）
+  - `docs/04_空間與力量系統.md`（殘核、無漏界）
+  - `docs/07_伏筆與揭密台帳.md`（埋設與回收）
 - **優勢**：可信度最高，作為正文生成與審稿的唯一真理來源。
 
 ### 第二層：一般向量 RAG (Vector Search)

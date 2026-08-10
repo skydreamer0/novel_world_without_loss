@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-without-loss.local/schemas/chapter_request.schema.json",
+  "title": "《無漏》單章請求",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chapter_id", "arc_id", "mode", "viewpoint", "target_words", "max_truth_level", "required_modules", "include_recent_chapters", "objectives", "prohibitions", "output_language"],
+  "properties": {
+    "chapter_id": {"type": "string", "pattern": "^CH[0-9]{3,}$"},
+    "arc_id": {"type": "string", "pattern": "^ARC[0-9]{3,}$"},
+    "mode": {"type": "string", "enum": ["PLAN", "DRAFT", "REVIEW"]},
+    "viewpoint": {"type": "string", "pattern": "^C[0-9]{3,}$"},
+    "target_words": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": {"type": "integer", "minimum": 500},
+        "max": {"type": "integer", "minimum": 500}
+      }
+    },
+    "max_truth_level": {"type": "integer", "minimum": 0, "maximum": 5},
+    "required_modules": {"type": "array", "items": {"type": "string", "pattern": "^MOD-[A-Z0-9-]+$"}, "uniqueItems": true},
+    "include_recent_chapters": {"type": "integer", "minimum": 0, "maximum": 3},
+    "objectives": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "prohibitions": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "output_language": {"type": "string", "enum": ["zh-Hant"]},
+    "notes": {"type": "string"}
+  }
+}

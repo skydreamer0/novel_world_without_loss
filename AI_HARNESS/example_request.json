@@ -1,0 +1,33 @@
+{
+  "chapter_id": "CH051",
+  "arc_id": "ARC006",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {"min": 2800, "max": 3800},
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-QINWULOU",
+    "MOD-CHAR-GUHANSHENG",
+    "MOD-CHAR-YANPINGZHANG",
+    "MOD-CHAR-LATESHADOW",
+    "MOD-EVIDENCE-JIA",
+    "MOD-LOCATION-SEALPLATFORM"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "建立顧寒生被捕與七日後公審倒數。",
+    "讓晏平章的方案同時具有效率、威脅與制度合理性。",
+    "讓秦無漏拒絕以三萬一千二百戶居民為救援代價。",
+    "以遲影展示甲字殘序副本作為章尾轉折。"
+  ],
+  "prohibitions": [
+    "本章不得救出顧寒生。",
+    "不得直接摧毀封界台或切斷補天線。",
+    "不得補齊甲字令最高簽發者。",
+    "不得提前出現可用的界律科技。"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "正文後另輸出符合 chapter_result.schema.json 的 JSON。"
+}
