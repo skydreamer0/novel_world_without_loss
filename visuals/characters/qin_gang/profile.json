@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "character_id": "qin_gang",
+  "canonical_name": "秦罡 (Qin Gang)",
+  "aliases": [
+    "秦罡",
+    "秦剛",
+    "Qin Gang"
+  ],
+  "role": "Collateral Qin Cultivator / Sink River City Proxy",
+  "visual_anchors": {
+    "apparent_age": "weathered late-30s Chinese cultivator",
+    "face_structure": "hardened rectangular face, weary tired brow, dark stubble, faint facial scars",
+    "eyes": "tired sunken dark-brown eyes with subtle bloodshot veins from domain cracking",
+    "hair": "coarse black hair partially tied up with a worn dark leather strap, messy loose strands",
+    "physique": "broad-shouldered burly build, slightly slouched stance reflecting exhaustion",
+    "signature_clothing": "distressed slate-grey and dark brown collated Qin branch martial robe, worn leather arm guards",
+    "signature_item": "cracked realm core token around waist",
+    "distinguishing_marks": [
+      "faint spiderweb hairline fractures glowing dim blue along right wrist and neck",
+      "desperate grim posture"
+    ]
+  },
+  "forbidden_traits": [
+    "immaculate white noble robe",
+    "pristine golden crown",
+    "youthful handsome prodigy face",
+    "glowing magic aura",
+    "heavy western plate armor"
+  ],
+  "prompt_tokens": [
+    "qin_gang_char",
+    "weathered late-30s Chinese cultivator",
+    "hardened rectangular face with weary brow",
+    "distressed slate-grey martial robe",
+    "faint domain crack discolorations on wrist"
+  ],
+  "display": {
+    "role": "秦氏旁支界修 / 沉河城掌界人",
+    "visual_anchors": {
+      "apparent_age": "三十末歲疲憊滄桑的界修",
+      "face_structure": "硬朗方臉，眉宇緊繃帶有倦態，留有青黑鬍渣",
+      "eyes": "深邃凹陷的暗棕眼瞳，帶有些許血絲",
+      "hair": "粗硬黑髮用舊皮帶隨意束起，鬢角微亂",
+      "physique": "魁梧寬肩，姿態略顯沉重疲憊",
+      "signature_clothing": "磨損的石灰與深棕秦氏旁支武袍，皮質護腕",
+      "signature_item": "腰間懸掛的微裂界核牌",
+      "distinguishing_marks": [
+        "右腕與頸側隱現細微的蛛網狀暗藍界裂痕跡",
+        "窮途末路的沉重決絕神態"
+      ]
+    },
+    "forbidden_traits": [
+      "純白貴族長袍",
+      "華麗金冠",
+      "俊美少年臉",
+      "耀眼法術光環",
+      "歐式重甲"
+    ]
+  }
+}

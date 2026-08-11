@@ -1,9 +1,8 @@
 import { state, els } from './state.js';
 
-const CATALOG_ASSET_ROOT = '../visual_harness/';
+const CATALOG_ASSET_ROOT = '../visuals/';
 
-// Visual Bible anchor keys are English by contract (the prompt engine reads them); the Reader is a
-// Traditional Chinese surface, so labels are translated here and values come from `display`.
+// Canonical visual anchor keys remain English in source data; Reader displays their Chinese labels.
 const ANCHOR_LABELS = {
   apparent_age: '外貌年齡',
   face_structure: '臉部結構',
@@ -21,7 +20,7 @@ const ANCHOR_ORDER = Object.keys(ANCHOR_LABELS);
 const UNCROPPED_REFERENCE_ROLES = new Set(['turnaround', 'outfit', 'pose']);
 
 function projectionCharacters() {
-  const projection = window.WWL_CHARACTER_CATALOG;
+  const projection = window.WWL_VISUAL_CATALOG;
   if (!projection || projection.schema_version !== 1 || !Array.isArray(projection.characters)) {
     return [];
   }
@@ -55,7 +54,7 @@ function displayForbidden(character) {
 }
 
 function searchText(character) {
-  // Both languages stay searchable: readers type Chinese, the Visual Bible is authored in English.
+  // Both languages stay searchable: readers type Chinese, while source data also keeps English aliases.
   return [
     character.canonical_name,
     ...(character.aliases || []),
@@ -228,7 +227,7 @@ function appendAnchorDefinition(parent, anchors) {
     return;
   }
 
-  // Known anchors render in Visual Bible order; anything unmapped still shows, just after them.
+  // Known anchors render in visual-library order; anything unmapped still shows after them.
   const keys = [
     ...ANCHOR_ORDER.filter((key) => source[key] !== undefined),
     ...Object.keys(source).filter((key) => !ANCHOR_LABELS[key]),
@@ -350,12 +349,12 @@ function showCharacterDetail(character) {
   if (referenceSetId) {
     const reference = document.createElement('p');
     reference.className = 'character-reference-note';
-    reference.textContent = `參考組 · ${referenceSetId}`;
+    reference.textContent = `角色版本 · ${referenceSetId}`;
     detail.appendChild(reference);
   } else {
     const reference = document.createElement('p');
     reference.className = 'character-reference-note is-missing';
-    reference.textContent = '尚未建立已核准的 Reference Set · 目前顯示文字替代圖';
+    reference.textContent = '尚未建立已核准的角色版本 · 目前顯示文字替代圖';
     detail.appendChild(reference);
   }
 

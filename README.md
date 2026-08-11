@@ -61,7 +61,7 @@ novel_world_without_loss/
 │   ├── vol_01/                  # 第一卷《空胎》正文 (000_楔子.md ~ 070_啟航第九裂帶.md，共 71 章完結)
 │   └── vol_02/                  # 第二卷《獵界》正文 (071_裂帶飢城.md ~ 110_痛泉.md，持續連載中)
 ├── game/                        # 修仙/界域經營迷你遊戲原型
-└── visual_harness/              # 視覺聖經與 GraphRAG 測試 harness
+└── visuals/                     # 角色、場景與世界視覺資產庫
 ```
 
 ---

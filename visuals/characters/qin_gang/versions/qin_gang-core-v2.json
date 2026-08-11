@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "qin_gang-core-v2",
+  "character_id": "qin_gang",
+  "version": 2,
+  "label": "裸臂墨晶鏡四面核心造型（待核准）",
+  "status": "draft",
+  "is_primary": false,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "characters/qin_gang/images/qin_gang_turnaround_v2.png",
+      "sha256": "6529eaca5ee1481d7fb744db11d71354a2c3aad141af2bc27c07d0612ceb3494",
+      "media_type": "image/png",
+      "source": "imagegen 新版標準四面總覽，2026-08-08 待核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "characters/qin_gang/images/qin_gang_v2_front.png",
+      "sha256": "022537ddc165e57696183e4765b81eb58b95d14469f9db53105f596a8f89d831",
+      "media_type": "image/png",
+      "source": "由新版四面總覽裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "characters/qin_gang/images/qin_gang_v2_three_quarter.png",
+      "sha256": "299cec75d0c64cea827801df7d963184c3f4e01a12b1886db5a1547b5b56cf1b",
+      "media_type": "image/png",
+      "source": "由新版四面總覽裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "characters/qin_gang/images/qin_gang_v2_profile.png",
+      "sha256": "6517d0a06f37a987bb7c2134d0ae177109968c473149628b174593eebd917cad",
+      "media_type": "image/png",
+      "source": "由新版四面總覽裁切：完整側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "characters/qin_gang/images/qin_gang_v2_back.png",
+      "sha256": "f6f0deccd9a3133e476005f34ba7be1c43312549528ce9ee9bff5f57dd572fe4",
+      "media_type": "image/png",
+      "source": "由新版四面總覽裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "核准後，場景生成必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "核准後優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}

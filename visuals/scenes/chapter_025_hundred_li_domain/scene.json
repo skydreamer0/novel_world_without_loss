@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_025_hundred_li_domain",
+  "chapter_number": 25,
+  "chapter_label": "第 025 章《百里開界》",
+  "title": "百里開界",
+  "character_refs": [
+    {
+      "character_id": "qin_zhao",
+      "reference_set_id": "qin_zhao-core-v2"
+    }
+  ],
+  "item_ids": [
+    "empty_womb"
+  ],
+  "location_id": "qingya_city",
+  "camera": "medium low-angle heroic shot",
+  "action_description": "Qin Zhao stands inside a golden spirit array, holding the supreme domain seed glowing with radiant light",
+  "mood": "dignified yet troubled resolution",
+  "display_asset": null
+}

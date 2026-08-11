@@ -1,0 +1,19 @@
+{
+  "name": "novel-world-without-loss-visuals",
+  "version": "1.0.0",
+  "description": "Character and scene visual library for World Without Loss",
+  "main": "tools/visual_catalog.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node tools/build.js",
+    "check": "node tools/build.js --check",
+    "test": "node tools/build.js --check && node --test tests/*.test.js"
+  },
+  "keywords": [
+    "visual-library",
+    "character-reference",
+    "novel-art"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT"
+}

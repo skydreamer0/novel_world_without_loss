@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_004_core_awakening",
+  "chapter_number": 4,
+  "chapter_label": "第 004 章《殘核》",
+  "title": "殘核初醒",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    },
+    {
+      "character_id": "residual_core",
+      "reference_set_id": "residual_core-core-v2"
+    }
+  ],
+  "item_ids": [
+    "empty_womb"
+  ],
+  "location_id": null,
+  "camera": "cinematic macro medium shot, atmospheric lighting",
+  "action_description": "Qin Wulou reaches toward the Residual Core, a luminous cyan faceted octahedral crystal held inside intersecting aged-gold astrolabe frames and a cyan ring of non-readable ancient glyphs",
+  "mood": "mysterious ancient revelation",
+  "display_asset": {
+    "path": "scenes/chapter_004_core_awakening/chapter_004_residual_core.jpg",
+    "sha256": "256885042869aa400d76a0ee1fde376d0a52f881b4e24828dca40b425c726cc0",
+    "media_type": "image/jpeg"
+  }
+}

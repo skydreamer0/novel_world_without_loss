@@ -1,4 +1,4 @@
-const CACHE_NAME = 'reader-cache-v3';
+const CACHE_NAME = 'reader-cache-v5';
 
 self.addEventListener('install', () => {
   // Activate the new SW immediately instead of waiting for old tabs to close.
