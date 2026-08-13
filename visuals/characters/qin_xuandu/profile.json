@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "qin_xuandu",
+  "canonical_name": "秦玄度 (Qin Xuandu)",
+  "aliases": [
+    "秦玄度",
+    "Qin Xuandu"
+  ],
+  "role": "Qin Physician / Opening-Realm Evidence Keeper",
+  "visual_anchors": {
+    "apparent_age": "early forties",
+    "face_structure": "fine-boned composed physician's face",
+    "eyes": "dark clinical eyes that notice physical details before status",
+    "hair": "neatly tied black hair with restrained grey at the temples",
+    "physique": "slender, steady-handed and reserved",
+    "signature_clothing": "muted grey-green physician robes with narrow washable sleeves",
+    "signature_item": "aged wooden medicine case with needle tubes and evidence packets",
+    "distinguishing_marks": [
+      "two fingers habitually poised for pulse-taking",
+      "herbal discoloration on the cuffs"
+    ]
+  },
+  "forbidden_traits": [
+    "white modern lab coat",
+    "ornate alchemist robe",
+    "glowing medicine",
+    "combat-heavy physique"
+  ],
+  "prompt_tokens": [
+    "qin_xuandu_char",
+    "restrained Qin physician",
+    "grey-green medical robe",
+    "wooden medicine evidence case"
+  ]
+}
+

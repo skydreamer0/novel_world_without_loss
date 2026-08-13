@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "shi_ku",
+  "canonical_name": "石苦 (Shi Ku)",
+  "aliases": [
+    "石苦",
+    "Shi Ku"
+  ],
+  "role": "Black-Mine Elder / Rescued Miners' Representative",
+  "visual_anchors": {
+    "apparent_age": "early sixties",
+    "face_structure": "deeply lined leathery miner's face with a blunt chin",
+    "eyes": "clouded brown eyes, patient and difficult to intimidate",
+    "hair": "thin grey hair tied in a small low knot",
+    "physique": "stooped, sinewy and work-worn",
+    "signature_clothing": "many-times-patched black mine coat over faded earth-coloured layers",
+    "signature_item": "worn stone tally and short-handled miner's pick",
+    "distinguishing_marks": [
+      "silica-white eyebrows",
+      "two missing fingertips on the left hand"
+    ]
+  },
+  "forbidden_traits": [
+    "wise immortal robes",
+    "long perfect white beard",
+    "clean ceremonial clothing",
+    "oversized fantasy weapon"
+  ],
+  "prompt_tokens": [
+    "shi_ku_char",
+    "elder black-mine survivor",
+    "patched mine coat",
+    "worn stone tally"
+  ]
+}
+

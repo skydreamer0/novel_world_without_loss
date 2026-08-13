@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "fang_zhe",
+  "canonical_name": "方折 (Fang Zhe)",
+  "aliases": [
+    "方折",
+    "Fang Zhe"
+  ],
+  "role": "Retired Guard / Civic Armed Counterweight",
+  "visual_anchors": {
+    "apparent_age": "mid-forties",
+    "face_structure": "angular scarred veteran's face with hollow cheeks",
+    "eyes": "alert right eye and permanently clouded blind left eye",
+    "hair": "short black hair heavily threaded with grey",
+    "physique": "lean, compact and still combat-ready",
+    "signature_clothing": "weathered charcoal guard coat over flexible leather-and-cloth protection",
+    "signature_item": "broken old guard token worn inside the belt",
+    "distinguishing_marks": [
+      "blind left eye",
+      "diagonal scar crossing the left brow and cheek"
+    ]
+  },
+  "forbidden_traits": [
+    "two healthy eyes",
+    "polished ceremonial armor",
+    "young heroic face",
+    "eyepatch hiding the clouded eye"
+  ],
+  "prompt_tokens": [
+    "fang_zhe_char",
+    "retired scarred guard",
+    "blind clouded left eye",
+    "weathered charcoal guard coat"
+  ]
+}
+

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "yu_lu",
+  "canonical_name": "余鹿 (Yu Lu)",
+  "aliases": [
+    "余鹿",
+    "Yu Lu"
+  ],
+  "role": "Young Hollow-Womb Survivor / Residual-Mark Bearer",
+  "visual_anchors": {
+    "apparent_age": "nineteen",
+    "face_structure": "young narrow male face, not yet hardened into adulthood",
+    "eyes": "wide dark eyes carrying fear, stubbornness and quick trust",
+    "hair": "unkempt black hair falling across the brow",
+    "physique": "slim, underfed and still adolescent in proportion",
+    "signature_clothing": "torn dark mine shirt, wrapped forearms and patched narrow trousers",
+    "signature_item": "braided vine rope used to secure and guide other survivors",
+    "distinguishing_marks": [
+      "branching black residual marks climbing the left neck and forearm",
+      "small split in the lower lip"
+    ]
+  },
+  "forbidden_traits": [
+    "adult muscular hero",
+    "female presentation",
+    "glowing demonic tattoos",
+    "luxury travel clothes"
+  ],
+  "prompt_tokens": [
+    "yu_lu_char",
+    "nineteen-year-old male survivor",
+    "branching black residual marks",
+    "braided vine rescue rope"
+  ]
+}
+

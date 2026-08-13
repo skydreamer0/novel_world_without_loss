@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "yue_chenshan",
+  "canonical_name": "岳沉山 (Yue Chenshan)",
+  "aliases": [
+    "岳沉山",
+    "Yue Chenshan"
+  ],
+  "role": "Mountain-Cutting Tower Envoy / Realm Auction Combatant",
+  "visual_anchors": {
+    "apparent_age": "early forties",
+    "face_structure": "heavy square martial face with a low scarred brow",
+    "eyes": "ember-brown eyes carrying controlled competitive force",
+    "hair": "dark brown-black hair tied into a short battle knot",
+    "physique": "large, dense and mountain-strong",
+    "signature_clothing": "dark rust and charcoal tower battle layers with compact Eastern lamellar reinforcement",
+    "signature_item": "sealed battle coffer marked by one non-glowing fire seal",
+    "distinguishing_marks": [
+      "burned line across the left collarbone",
+      "stone-weight training rings at the belt"
+    ]
+  },
+  "forbidden_traits": [
+    "Western plate armor",
+    "flaming body aura",
+    "giant decorative pauldrons",
+    "golden hero costume"
+  ],
+  "prompt_tokens": [
+    "yue_chenshan_char",
+    "Mountain-Cutting Tower envoy",
+    "sealed battle coffer",
+    "dark rust compact battle layers"
+  ]
+}
+

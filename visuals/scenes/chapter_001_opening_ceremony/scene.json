@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_001_opening_ceremony",
+  "chapter_number": 1,
+  "chapter_label": "第 001 章《開界大典》",
+  "title": "無相界種偏移前",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    },
+    {
+      "character_id": "qin_zhao",
+      "reference_set_id": "qin_zhao-core-v2"
+    },
+    {
+      "character_id": "qin_huaizhong",
+      "reference_set_id": "qin_huaizhong-core-v1"
+    }
+  ],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "cinematic low three-quarter 16:9 landscape at altar height",
+  "action_description": "Qin Wulou stands inside the 108-stone opening array beneath the gravitational-black Formless Domain Seed while Qin Huaizhong completes the ritual seal and Qin Zhao watches from the front viewing tier",
+  "mood": "monumental ritual stillness hiding calculated betrayal",
+  "display_asset": {
+    "path": "scenes/chapter_001_opening_ceremony/chapter_001_opening_ceremony_v1.png",
+    "sha256": "ecfe1e487e14997823932170958ae37475f1753a1aba16c657652861fc439202",
+    "media_type": "image/png"
+  }
+}

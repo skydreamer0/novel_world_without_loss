@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "qin_yuanshuo",
+  "canonical_name": "秦元朔 (Qin Yuanshuo)",
+  "aliases": [
+    "秦元朔",
+    "Qin Yuanshuo"
+  ],
+  "role": "Qin Zhao's Uncle / Realm-Opening Administrator",
+  "visual_anchors": {
+    "apparent_age": "late forties",
+    "face_structure": "square orderly administrator's face with trimmed moustache lines",
+    "eyes": "measured dark eyes accustomed to balancing risk",
+    "hair": "black hair streaked with grey in a compact official knot",
+    "physique": "sturdy, formal and unhurried",
+    "signature_clothing": "deep ink-blue Qin administrative robe with subdued bronze closures",
+    "signature_item": "stack of slim realm-opening ledger tablets in a belt case",
+    "distinguishing_marks": [
+      "one worn bronze thumb ring",
+      "precisely aligned belt tools"
+    ]
+  },
+  "forbidden_traits": [
+    "imperial dragon robe",
+    "youthful warrior styling",
+    "excess jewelry",
+    "Western business suit"
+  ],
+  "prompt_tokens": [
+    "qin_yuanshuo_char",
+    "Qin realm-opening administrator",
+    "ink-blue formal robe",
+    "ledger tablet belt case"
+  ]
+}
+

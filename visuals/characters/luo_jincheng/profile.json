@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "luo_jincheng",
+  "canonical_name": "羅盡城 (Luo Jincheng)",
+  "aliases": [
+    "羅盡城",
+    "Luo Jincheng"
+  ],
+  "role": "Stone Gate Defender / Refusal Commander",
+  "visual_anchors": {
+    "apparent_age": "early forties",
+    "face_structure": "square battered defender's face with a broken-nose ridge",
+    "eyes": "fierce black eyes held under a disciplined brow",
+    "hair": "short rough black hair with shaved practical sides",
+    "physique": "powerful, thick-necked and built for holding ground",
+    "signature_clothing": "dark stone-grey layered gate-defense coat with leather and lamellar reinforcements",
+    "signature_item": "chipped rectangular gate shield and short command baton",
+    "distinguishing_marks": [
+      "split scar through the right eyebrow",
+      "stone dust ground into the shoulder plates"
+    ]
+  },
+  "forbidden_traits": [
+    "Western knight armor",
+    "shining heroic plate",
+    "ornamental giant sword",
+    "young princely face"
+  ],
+  "prompt_tokens": [
+    "luo_jincheng_char",
+    "Stone Gate refusal commander",
+    "chipped gate shield",
+    "dark layered defense coat"
+  ]
+}
+

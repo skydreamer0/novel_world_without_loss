@@ -44,12 +44,12 @@ function writeCharacter(root, characterId, referenceSet) {
   );
 }
 
-test('loads the ten characters from one visual library', () => {
+test('loads the complete named-character visual library', () => {
   const catalog = VisualCatalog.load(VISUALS_ROOT);
   const characters = catalog.listCharacters();
   const ids = characters.map((character) => character.character_id);
 
-  assert.equal(characters.length, 10);
+  assert.equal(characters.length, 35);
   assert.deepEqual(ids, [...ids].sort());
   assert.equal(catalog.resolveCharacterId('秦無漏'), 'qin_woulou');
   assert.equal(catalog.resolveCharacterId('秦罡'), 'qin_gang');
@@ -123,15 +123,18 @@ test('missing image files fail validation', () => {
 
 test('the Reader projection is generated from the validated catalog', () => {
   const result = buildVisualCatalog(VISUALS_ROOT, { write: false });
-  assert.equal(result.snapshot.characters.length, 10);
+  assert.equal(result.snapshot.characters.length, 35);
   assert.match(result.browser_code, /^\/\* Generated/);
   assert.match(result.browser_code, /window\.WWL_VISUAL_CATALOG/);
 });
 
 test('scene and world files remain valid after simplification', () => {
   const catalog = VisualCatalog.load(VISUALS_ROOT);
-  const sceneDirs = fs.readdirSync(path.join(VISUALS_ROOT, 'scenes')).sort();
-  assert.equal(sceneDirs.length, 3);
+  const sceneDirs = fs.readdirSync(path.join(VISUALS_ROOT, 'scenes'), { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
+  assert.equal(sceneDirs.length, 5);
 
   sceneDirs.forEach((directoryName) => {
     const sceneDir = path.join(VISUALS_ROOT, 'scenes', directoryName);

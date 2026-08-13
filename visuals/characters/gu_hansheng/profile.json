@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "gu_hansheng",
+  "canonical_name": "顧寒生 (Gu Hansheng)",
+  "aliases": [
+    "顧寒生",
+    "Gu Hansheng"
+  ],
+  "role": "Void Vessel Navigator / Grey-Ridge Refugee Leader",
+  "visual_anchors": {
+    "apparent_age": "early fifties",
+    "face_structure": "long weathered navigator's face with a short iron-grey beard",
+    "eyes": "steady dark eyes trained on distant bearings",
+    "hair": "black-grey hair gathered in a practical low bun",
+    "physique": "lean, balanced and adapted to an uneven gait",
+    "signature_clothing": "layered charcoal navigator coat with faded coordinate tracings and compact utility belts",
+    "signature_item": "bronze bearing compass worn at the chest",
+    "distinguishing_marks": [
+      "anatomical right leg replaced by rootwood-and-ancient-bronze prosthetic",
+      "old wind scars across both cheeks"
+    ]
+  },
+  "forbidden_traits": [
+    "left-leg prosthetic",
+    "two natural legs",
+    "bright steampunk brass",
+    "youthful clean-shaven face"
+  ],
+  "prompt_tokens": [
+    "gu_hansheng_char",
+    "void vessel navigator",
+    "right rootwood bronze prosthetic leg",
+    "charcoal coordinate coat"
+  ]
+}
+

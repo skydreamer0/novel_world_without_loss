@@ -2,20 +2,28 @@
   "schema_version": 1,
   "scene_id": "chapter_025_hundred_li_domain",
   "chapter_number": 25,
-  "chapter_label": "第 025 章《百里開界》",
+  "chapter_label": "第 025 章《秦昭開界》",
   "title": "百里開界",
   "character_refs": [
     {
       "character_id": "qin_zhao",
       "reference_set_id": "qin_zhao-core-v2"
+    },
+    {
+      "character_id": "qin_huaizhong",
+      "reference_set_id": "qin_huaizhong-core-v1"
     }
   ],
   "item_ids": [
     "empty_womb"
   ],
   "location_id": "qingya_city",
-  "camera": "medium low-angle heroic shot",
-  "action_description": "Qin Zhao stands inside a golden spirit array, holding the supreme domain seed glowing with radiant light",
-  "mood": "dignified yet troubled resolution",
-  "display_asset": null
+  "camera": "cinematic medium-wide low-angle 16:9 landscape",
+  "action_description": "Qin Zhao studies the faint black line across his palm after forming a 103-li domain of river valley, nine sword hills and unclaimed transparent land while Qin Huaizhong offers formal congratulations",
+  "mood": "public triumph isolated by private dread",
+  "display_asset": {
+    "path": "scenes/chapter_025_hundred_li_domain/chapter_025_hundred_li_domain_v1.png",
+    "sha256": "de1599968c13a406d9e32a15568e913127c973f325b839c4eee79e88caaa6394",
+    "media_type": "image/png"
+  }
 }

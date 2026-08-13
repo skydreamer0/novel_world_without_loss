@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "shi_ku-core-v1",
+  "character_id": "shi_ku",
+  "version": 1,
+  "label": "標準四面核心造型",
+  "status": "approved",
+  "is_primary": true,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "characters/shi_ku/images/shi_ku_turnaround_v1.png",
+      "sha256": "e98c4fc6ad6c76c24314cdf4e10f8c16e4811dce7586073e022829732feda64a",
+      "media_type": "image/png",
+      "source": "imagegen 標準四面總覽，2026-08-11 核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "characters/shi_ku/images/shi_ku_v1_front.png",
+      "sha256": "b17e9435212214fe3b84ede6efdaa76ee18fdd929715e6c47e69ba8e167093e9",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "characters/shi_ku/images/shi_ku_v1_three_quarter.png",
+      "sha256": "3c07e852088430c60f2ad638b4cc2e4335d645163ddecaf04a299ef5f4f16280",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "characters/shi_ku/images/shi_ku_v1_profile.png",
+      "sha256": "4cabc496ac3efb25308dd835106c20c13d55cb2c1658ec4a00f5508df4e80f46",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：完整側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "characters/shi_ku/images/shi_ku_v1_back.png",
+      "sha256": "28c5ddf1f6effd311d6473f9d1416984b7223874497ee3d376e00c079ad12bcf",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}
+

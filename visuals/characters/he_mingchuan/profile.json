@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "he_mingchuan",
+  "canonical_name": "賀鳴川 (He Mingchuan)",
+  "aliases": [
+    "賀鳴川",
+    "He Mingchuan"
+  ],
+  "role": "Qingya Boundary Patrol Captain / Evidence Protector",
+  "visual_anchors": {
+    "apparent_age": "mid-thirties",
+    "face_structure": "square disciplined patrolman's face with a weather-cut jaw",
+    "eyes": "watchful dark-brown eyes trained to read trails and testimony",
+    "hair": "short tied-back black hair suited to field duty",
+    "physique": "athletic, grounded and practical",
+    "signature_clothing": "desaturated blue-grey Qingya patrol uniform with layered cloth-leather protection",
+    "signature_item": "sealed evidence tube and boundary whistle at the belt",
+    "distinguishing_marks": [
+      "wind-burned cheekbones",
+      "patched right shoulder from repeated field repairs"
+    ]
+  },
+  "forbidden_traits": [
+    "polished palace guard armor",
+    "bright heroic blue",
+    "decorative spear posing",
+    "court-official hat"
+  ],
+  "prompt_tokens": [
+    "he_mingchuan_char",
+    "Qingya boundary patrol captain",
+    "sealed evidence tube",
+    "blue-grey field uniform"
+  ]
+}
+

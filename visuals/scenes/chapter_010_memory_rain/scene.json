@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_010_memory_rain",
+  "chapter_number": 10,
+  "chapter_label": "第 010 章《記憶雨》",
+  "title": "南渠記憶雨",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    },
+    {
+      "character_id": "jiluo",
+      "reference_set_id": "jiluo-core-v2"
+    },
+    {
+      "character_id": "fang_zhe",
+      "reference_set_id": "fang_zhe-core-v1"
+    }
+  ],
+  "item_ids": [
+    "empty_womb"
+  ],
+  "location_id": null,
+  "camera": "cinematic eye-level 16:9 wide shot along the South Canal",
+  "action_description": "Silver droplets reveal shared memories over the canal between Sink River City and the Qingjiao mother-root as Qin Wulou absorbs the residual rain and Jiluo and Fang Zhe lower their weapons",
+  "mood": "grief, exposed memory and fragile de-escalation",
+  "display_asset": {
+    "path": "scenes/chapter_010_memory_rain/chapter_010_memory_rain_v1.png",
+    "sha256": "eeb0e6a2e8b9c9d9e3817121f70d7b0f0899baec1dae7b6d1ab76197adca89b1",
+    "media_type": "image/png"
+  }
+}

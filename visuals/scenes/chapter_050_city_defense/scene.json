@@ -10,20 +10,20 @@
       "reference_set_id": "qin_woulou-core-v2"
     },
     {
-      "character_id": "residual_core",
-      "reference_set_id": "residual_core-core-v2"
+      "character_id": "yan_pingzhang",
+      "reference_set_id": "yan_pingzhang-core-v1"
     }
   ],
   "item_ids": [
     "empty_womb"
   ],
   "location_id": "qingya_city",
-  "camera": "wide cinematic dramatic low-angle shot",
-  "action_description": "Qin Wulou stands atop Qingya Citadel wall, channeling a void domain barrier to protect the city against the boundary wave",
-  "mood": "intense cold determination",
+  "camera": "cinematic low eye-level 16:9 wide confrontation",
+  "action_description": "Qin Wulou keeps seven bounded civic authorizations separate while Yan Pingzhang's silver repair threads multiply, tangle above the graveyard and fail to locate a single core",
+  "mood": "costly civic defense under intellectual and moral pressure",
   "display_asset": {
-    "path": "scenes/chapter_050_city_defense/chapter_050_scene.jpg",
-    "sha256": "86201649b7493b5b8c649c270098048b496bcacd53ade5ef96785d948bf059a1",
-    "media_type": "image/jpeg"
+    "path": "scenes/chapter_050_city_defense/chapter_050_seven_breaths_v2.png",
+    "sha256": "52b57ef9beb9757c38cd6f357adfb65cf41832a72d45e78e4969c3d9586c07b3",
+    "media_type": "image/png"
   }
 }

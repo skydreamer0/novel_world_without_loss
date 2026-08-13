@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "jian_wujiu",
+  "canonical_name": "劍無咎 (Jian Wuju)",
+  "aliases": [
+    "劍無咎",
+    "Jian Wuju"
+  ],
+  "role": "Former Broken Sword Sect Master / Pure-Law Absolutist",
+  "visual_anchors": {
+    "apparent_age": "late forties",
+    "face_structure": "severe triangular swordsman's face with high cheekbones",
+    "eyes": "razor-focused black eyes stripped of warmth",
+    "hair": "long black hair streaked with white and bound in a plain high tail",
+    "physique": "tall, lean and cable-strong",
+    "signature_clothing": "charcoal sword-sect robes cut close for movement, with one faded broken-blade emblem",
+    "signature_item": "plain old sword with a chipped guard and immaculate edge",
+    "distinguishing_marks": [
+      "white streak over the left temple",
+      "callused right hand held unnaturally still"
+    ]
+  },
+  "forbidden_traits": [
+    "ornate glowing sword",
+    "white immortal prince robes",
+    "youthful beauty styling",
+    "multiple floating blades"
+  ],
+  "prompt_tokens": [
+    "jian_wujiu_char",
+    "former Broken Sword sect master",
+    "plain chipped-guard sword",
+    "charcoal close-cut sword robes"
+  ]
+}
+

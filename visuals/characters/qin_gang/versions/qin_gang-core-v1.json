@@ -4,8 +4,8 @@
   "character_id": "qin_gang",
   "version": 1,
   "label": "標準四面核心造型",
-  "status": "approved",
-  "is_primary": true,
+  "status": "retired",
+  "is_primary": false,
   "references": [
     {
       "role": "turnaround",

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "liang_he",
+  "canonical_name": "梁禾 (Liang He)",
+  "aliases": [
+    "梁禾",
+    "Liang He"
+  ],
+  "role": "Young Farmer / Human-Qingjiao Liaison",
+  "visual_anchors": {
+    "apparent_age": "early twenties",
+    "face_structure": "open sun-browned young farmer's face with a firm chin",
+    "eyes": "steady warm-brown eyes, cautious but compassionate",
+    "hair": "roughly tied black hair with one conspicuous white streak at the right temple",
+    "physique": "lean, work-hardened and quick",
+    "signature_clothing": "plain undyed hemp work robe, bound calves and a faded green shoulder cloth",
+    "signature_item": "small seed pouch and braided field cord at the belt",
+    "distinguishing_marks": [
+      "single white temple streak caused by power expenditure",
+      "soil-darkened hands"
+    ]
+  },
+  "forbidden_traits": [
+    "noble silks",
+    "delicate scholar build",
+    "glowing green aura",
+    "ornamental crown"
+  ],
+  "prompt_tokens": [
+    "liang_he_char",
+    "young field liaison",
+    "one white temple streak",
+    "undyed hemp work clothes"
+  ]
+}
+

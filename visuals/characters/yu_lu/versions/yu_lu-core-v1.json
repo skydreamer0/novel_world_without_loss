@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "yu_lu-core-v1",
+  "character_id": "yu_lu",
+  "version": 1,
+  "label": "標準四面核心造型",
+  "status": "approved",
+  "is_primary": true,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "characters/yu_lu/images/yu_lu_turnaround_v1.png",
+      "sha256": "895b2cebbb59c5af5a7988b1e43c33d2033fe50116adecf8bef953d0903ad415",
+      "media_type": "image/png",
+      "source": "imagegen 標準四面總覽，2026-08-11 核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "characters/yu_lu/images/yu_lu_v1_front.png",
+      "sha256": "48bbfdd6d8305ae95575fa62733598755efd66a2f4c4d04a79192d34f7bf8b5b",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "characters/yu_lu/images/yu_lu_v1_three_quarter.png",
+      "sha256": "94df078acf20f0cd8cc87fb9f14dfae174b9232649a6222f5331d49745c515f8",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "characters/yu_lu/images/yu_lu_v1_profile.png",
+      "sha256": "9be45d93ebfd21a9018afff691da498ef8bdbfa6381b1b3ab69a0c1f8cf38aef",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：完整側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "characters/yu_lu/images/yu_lu_v1_back.png",
+      "sha256": "6a35237713b137a3228af5c13200140f5de7fd743d786e3d81296785c45074df",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}
+

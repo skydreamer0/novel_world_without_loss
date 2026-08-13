@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "qin_che",
+  "canonical_name": "秦徹 (Qin Che)",
+  "aliases": [
+    "秦徹",
+    "Qin Che"
+  ],
+  "role": "Qin Wulou's Father / Boundary-Seed Ledger Officer",
+  "visual_anchors": {
+    "apparent_age": "late thirties",
+    "face_structure": "long intelligent face worn thin by travel and calculation",
+    "eyes": "precise dark eyes with restrained paternal fatigue",
+    "hair": "black hair tied low with early grey at the sideburns",
+    "physique": "lean, durable and accustomed to long expeditions",
+    "signature_clothing": "dark slate navigator-accountant coat with layered travel hems and utility belts",
+    "signature_item": "bronze boundary compass paired with a compact counting frame",
+    "distinguishing_marks": [
+      "fine compass-burn line across the left palm",
+      "habit of checking horizon angles"
+    ]
+  },
+  "forbidden_traits": [
+    "ghostly transparent body",
+    "funeral clothes",
+    "ornate battle armor",
+    "carefree smile"
+  ],
+  "prompt_tokens": [
+    "qin_che_char",
+    "boundary navigator accountant",
+    "bronze compass and counting frame",
+    "dark slate travel coat"
+  ]
+}
+

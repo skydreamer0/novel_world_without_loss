@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "qin_huaizhong",
+  "canonical_name": "秦懷忠 (Qin Huaizhong)",
+  "aliases": [
+    "秦懷忠",
+    "Qin Huaizhong"
+  ],
+  "role": "Qin Loyal-Line Realm Master / First-Volume Antagonist",
+  "visual_anchors": {
+    "apparent_age": "mid-fifties",
+    "face_structure": "broad weathered authoritative face with a heavy jaw",
+    "eyes": "dark calculating eyes under heavy straight brows",
+    "hair": "iron-black hair streaked with grey and tied in a strict high knot",
+    "physique": "broad-shouldered, heavy and commanding",
+    "signature_clothing": "dark oxblood Qin realm-master robe with restrained bronze edging and a wide tally belt",
+    "signature_item": "twelve removable ivory tally tabs arranged across the belt",
+    "distinguishing_marks": [
+      "old stone-vein scarring at both wrists",
+      "habitually squared formal posture"
+    ]
+  },
+  "forbidden_traits": [
+    "youthful face",
+    "golden emperor crown",
+    "ornate Western plate armor",
+    "friendly smile"
+  ],
+  "prompt_tokens": [
+    "qin_huaizhong_char",
+    "Qin loyal-line realm master",
+    "twelve belt tally tabs",
+    "dark oxblood administrative robe"
+  ]
+}
+

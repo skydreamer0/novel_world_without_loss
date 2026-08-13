@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "yuan_xi",
+  "canonical_name": "袁細 (Yuan Xi)",
+  "aliases": [
+    "袁細",
+    "Yuan Xi"
+  ],
+  "role": "Hollow-Womb Mine Survivor / Tracking-Seal Dismantler",
+  "visual_anchors": {
+    "apparent_age": "about twenty-five",
+    "face_structure": "fine angular young woman's face sharpened by hunger and concentration",
+    "eyes": "quick dark eyes that constantly map mechanisms and exits",
+    "hair": "cropped practical black hair with one longer side strand",
+    "physique": "small, wiry and dexterous",
+    "signature_clothing": "close-bound charcoal mine layers with reinforced knees and a narrow tool harness",
+    "signature_item": "hooked seal-lifting pick and three dismantling wedges",
+    "distinguishing_marks": [
+      "thin tracking-seal burn behind the right ear",
+      "split calluses across both thumbs"
+    ]
+  },
+  "forbidden_traits": [
+    "flowing princess hair",
+    "ornate feminine gown",
+    "seductive pose",
+    "clean jewel-like tools"
+  ],
+  "prompt_tokens": [
+    "yuan_xi_char",
+    "wiry female seal dismantler",
+    "cropped black hair",
+    "hooked seal-lifting tools"
+  ]
+}
+

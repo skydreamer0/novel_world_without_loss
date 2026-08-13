@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "tianheng_shouzuo",
+  "canonical_name": "天衡首座 (Tianheng First Seat)",
+  "aliases": [
+    "天衡首座",
+    "Tianheng First Seat"
+  ],
+  "role": "Tianheng Central First Seat / Centralization Architect",
+  "visual_anchors": {
+    "apparent_age": "late fifties to early sixties",
+    "face_structure": "long austere symmetrical face with controlled institutional calm",
+    "eyes": "pale dark-grey eyes with an unwavering evaluative stare",
+    "hair": "silver-black hair combed smooth into a formal crown knot",
+    "physique": "tall, spare and perfectly upright",
+    "signature_clothing": "pale stone-grey layered central-court robe with severe geometric seams and no luxury embroidery",
+    "signature_item": "flat circular Tianheng authority seal fixed at the sternum",
+    "distinguishing_marks": [
+      "immaculate cuffs",
+      "expression almost emptied of personal emotion"
+    ]
+  },
+  "forbidden_traits": [
+    "religious halo",
+    "white angel costume",
+    "golden emperor regalia",
+    "flowing romantic sleeves"
+  ],
+  "prompt_tokens": [
+    "tianheng_shouzuo_char",
+    "central first seat",
+    "pale institutional robe",
+    "austere geometric authority seal"
+  ]
+}
+

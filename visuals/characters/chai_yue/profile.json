@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "chai_yue",
+  "canonical_name": "柴岳 (Chai Yue)",
+  "aliases": [
+    "柴岳",
+    "Chai Yue"
+  ],
+  "role": "Black-Mine Owner / Life-Anchor Exploiter",
+  "visual_anchors": {
+    "apparent_age": "late forties",
+    "face_structure": "full controlled merchant-owner face with a narrow mouth",
+    "eyes": "small cold dark eyes that assess people as inventory",
+    "hair": "oiled black hair with grey hidden in a formal knot",
+    "physique": "solid, well-fed and carefully composed",
+    "signature_clothing": "expensive dark umber robe protected by a dust-resistant sleeveless overcoat",
+    "signature_item": "life-anchor contract case and heavy seal ring",
+    "distinguishing_marks": [
+      "one coal-black thumbnail",
+      "dust-free inner collar contrasting with the mine exterior"
+    ]
+  },
+  "forbidden_traits": [
+    "ragged miner appearance",
+    "comic obesity",
+    "golden imperial costume",
+    "openly monstrous face"
+  ],
+  "prompt_tokens": [
+    "chai_yue_char",
+    "black-mine owner",
+    "life-anchor contract case",
+    "expensive dark umber robe"
+  ]
+}
+

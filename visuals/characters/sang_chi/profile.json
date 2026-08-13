@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "sang_chi",
+  "canonical_name": "桑遲 (Sang Chi)",
+  "aliases": [
+    "桑遲",
+    "Sang Chi"
+  ],
+  "role": "Liuxia Water Official / Autonomous Council Elder",
+  "visual_anchors": {
+    "apparent_age": "late fifties",
+    "face_structure": "narrow composed water official's face with deep nasolabial lines",
+    "eyes": "quiet dark eyes used to measuring flow, scarcity and public anger",
+    "hair": "long grey-black hair tied low with a faded blue cord",
+    "physique": "lean, patient and slightly bowed",
+    "signature_clothing": "faded blue-grey water-office robe with repaired waterproof shoulder panels",
+    "signature_item": "bamboo water gauge and rolled canal map",
+    "distinguishing_marks": [
+      "mineral tide marks on the robe hem",
+      "one permanently bent index finger"
+    ]
+  },
+  "forbidden_traits": [
+    "luxury court official robe",
+    "water magic aura",
+    "young scholar face",
+    "ornate crown"
+  ],
+  "prompt_tokens": [
+    "sang_chi_char",
+    "Liuxia water official",
+    "bamboo water gauge",
+    "faded blue-grey repaired robe"
+  ]
+}
+

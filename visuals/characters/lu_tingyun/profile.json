@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "lu_tingyun",
+  "canonical_name": "陸停雲 (Lu Tingyun)",
+  "aliases": [
+    "陸停雲",
+    "Lu Tingyun"
+  ],
+  "role": "Hollow-Womb Survivor / Nucleusless Anchor",
+  "visual_anchors": {
+    "apparent_age": "late twenties",
+    "face_structure": "pale narrow survivor's face with sunken but resolute cheeks",
+    "eyes": "dark exhausted eyes that remain sharply present",
+    "hair": "uneven shoulder-length black hair roughly tied back",
+    "physique": "gaunt, upright through effort and marked by malnutrition",
+    "signature_clothing": "patched soot-grey mine clothing wrapped with a faded protective sash",
+    "signature_item": "small hollow stone anchor tied below the sternum",
+    "distinguishing_marks": [
+      "healed hollow-womb anchor scar low on the abdomen",
+      "black dust embedded at the nail beds"
+    ]
+  },
+  "forbidden_traits": [
+    "healthy rosy complexion",
+    "glamorous assassin styling",
+    "exposed erotic costume",
+    "glowing abdominal core"
+  ],
+  "prompt_tokens": [
+    "lu_tingyun_char",
+    "hollow-womb survivor",
+    "soot-grey patched mine clothes",
+    "lower-abdomen anchor scar"
+  ]
+}
+

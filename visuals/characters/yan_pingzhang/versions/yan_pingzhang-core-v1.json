@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "yan_pingzhang-core-v1",
+  "character_id": "yan_pingzhang",
+  "version": 1,
+  "label": "標準四面核心造型",
+  "status": "approved",
+  "is_primary": true,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "characters/yan_pingzhang/images/yan_pingzhang_turnaround_v1.png",
+      "sha256": "46b41c1a825066a65442d421aea5bdaf58f27e3361a6c9365fa2cc6f07d26e03",
+      "media_type": "image/png",
+      "source": "imagegen 標準四面總覽，2026-08-11 核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_front.png",
+      "sha256": "31aef64e539ed08f731a1962bde7b2f8a05691d1270402f4cafbb00833d90080",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_three_quarter.png",
+      "sha256": "eaf946243f1a8e88599f1f7abb02273e076198fe7bc7d87928bfb0a5dbf28210",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_profile.png",
+      "sha256": "114b7eaca565176933e042ebaa9bbc923144dcc1d250336cf76322734e95c1f3",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：完整側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_back.png",
+      "sha256": "426463f673721c1ef62221ee32b7563acd5a05d7b4b57397f5ddacd993be9e23",
+      "media_type": "image/png",
+      "source": "由核准四面總覽無損裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}
+

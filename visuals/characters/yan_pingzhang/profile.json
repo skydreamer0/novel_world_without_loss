@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "yan_pingzhang",
+  "canonical_name": "晏平章 (Yan Pingzhang)",
+  "aliases": [
+    "晏平章",
+    "Yan Pingzhang"
+  ],
+  "role": "Tianheng Repair Envoy / Central Emergency Administrator",
+  "visual_anchors": {
+    "apparent_age": "mid-forties",
+    "face_structure": "balanced severe administrator's face with precise planes",
+    "eyes": "cool analytical dark-grey eyes focused on system failure",
+    "hair": "black hair threaded with silver in an exact official knot",
+    "physique": "tall, composed and economical in movement",
+    "signature_clothing": "structured ash-white Tianheng envoy robe with dark graphite seams",
+    "signature_item": "straight calibration ruler paired with three distinct repair seals",
+    "distinguishing_marks": [
+      "three repair-seal cases aligned at the left hip",
+      "thin ruler scar across the right thumb"
+    ]
+  },
+  "forbidden_traits": [
+    "religious priest styling",
+    "golden imperial robe",
+    "ornate fantasy armor",
+    "warm casual posture"
+  ],
+  "prompt_tokens": [
+    "yan_pingzhang_char",
+    "Tianheng repair envoy",
+    "three repair seals and ruler",
+    "structured ash-white robe"
+  ]
+}
+

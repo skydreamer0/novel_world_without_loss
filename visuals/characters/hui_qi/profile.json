@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "hui_qi",
+  "canonical_name": "灰七 (Hui Qi)",
+  "aliases": [
+    "灰七",
+    "Hui Qi"
+  ],
+  "role": "Freed Boundary Tracking Hound / Residual-Coordinate Tracker",
+  "visual_anchors": {
+    "apparent_age": "adult working hound",
+    "face_structure": "long wedge-shaped canine head with a scarred muzzle",
+    "eyes": "intelligent amber eyes, wary but no longer submissive",
+    "hair": "coarse ash-black double coat with a lighter grey muzzle and chest",
+    "physique": "rangy, long-legged and endurance-built",
+    "signature_clothing": "weathered tracking harness with the coercive control fittings removed",
+    "signature_item": "broken control-collar ring retained as evidence on the harness",
+    "distinguishing_marks": [
+      "notched left ear",
+      "pale collar scar visible through the neck fur"
+    ]
+  },
+  "forbidden_traits": [
+    "cute puppy proportions",
+    "fantasy wolf horns",
+    "glowing eyes",
+    "intact control collar"
+  ],
+  "prompt_tokens": [
+    "hui_qi_char",
+    "freed ash-black tracking hound",
+    "notched left ear",
+    "broken control collar evidence"
+  ]
+}
+

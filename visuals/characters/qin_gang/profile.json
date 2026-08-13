@@ -10,15 +10,16 @@
   "role": "Collateral Qin Cultivator / Sink River City Proxy",
   "visual_anchors": {
     "apparent_age": "weathered late-30s Chinese cultivator",
-    "face_structure": "hardened rectangular face, weary tired brow, dark stubble, faint facial scars",
-    "eyes": "tired sunken dark-brown eyes with subtle bloodshot veins from domain cracking",
-    "hair": "coarse black hair partially tied up with a worn dark leather strap, messy loose strands",
-    "physique": "broad-shouldered burly build, slightly slouched stance reflecting exhaustion",
-    "signature_clothing": "distressed slate-grey and dark brown collated Qin branch martial robe, worn leather arm guards",
-    "signature_item": "cracked realm core token around waist",
+    "face_structure": "hardened rectangular face, weary tired brow, dark stubble, faint facial scars and a pressured crooked half-smile",
+    "eyes": "tired dark-brown eyes usually concealed behind small round smoky ink-crystal realm-observation lenses in thin blackened-bronze frames",
+    "hair": "short coarse asymmetrical hair with black regrowth and irregular mineral-silver and desaturated storm-blue dyed sections through the forelock, crown and one temple",
+    "physique": "broad-shouldered burly stone-worker build with powerful exposed arms and a relaxed heavy stance",
+    "signature_clothing": "sleeveless charcoal cross-collar martial tunic in distressed slate-grey hemp and dark root leather, with hand-bound wrist wraps and a worn cloth sash",
+    "signature_item": "cracked realm-core token worn on a braided dark cord at the collarbone",
     "distinguishing_marks": [
-      "faint spiderweb hairline fractures glowing dim blue along right wrist and neck",
-      "desperate grim posture"
+      "small round smoky ink-crystal glasses and visibly mineral-dyed silver-blue hair",
+      "faint spiderweb hairline fractures glowing dim blue along the right arm and neck",
+      "gallows-humour half-smile masking desperate calculation"
     ]
   },
   "forbidden_traits": [
@@ -26,28 +27,35 @@
     "pristine golden crown",
     "youthful handsome prodigy face",
     "glowing magic aura",
-    "heavy western plate armor"
+    "heavy western plate armor",
+    "ordinary modern plastic sunglasses",
+    "neon hair dye",
+    "contemporary streetwear"
   ],
   "prompt_tokens": [
     "qin_gang_char",
     "weathered late-30s Chinese cultivator",
-    "hardened rectangular face with weary brow",
-    "distressed slate-grey martial robe",
-    "faint domain crack discolorations on wrist"
+    "hardened rectangular face with weary brow and crooked half-smile",
+    "small round smoky ink-crystal realm-observation glasses",
+    "short black-root hair with faded mineral-silver and storm-blue dye",
+    "sleeveless distressed slate-grey cross-collar martial tunic",
+    "powerful exposed stone-worker arms",
+    "faint domain crack discolorations on right arm"
   ],
   "display": {
     "role": "秦氏旁支界修 / 沉河城掌界人",
     "visual_anchors": {
       "apparent_age": "三十末歲疲憊滄桑的界修",
-      "face_structure": "硬朗方臉，眉宇緊繃帶有倦態，留有青黑鬍渣",
-      "eyes": "深邃凹陷的暗棕眼瞳，帶有些許血絲",
-      "hair": "粗硬黑髮用舊皮帶隨意束起，鬢角微亂",
-      "physique": "魁梧寬肩，姿態略顯沉重疲憊",
-      "signature_clothing": "磨損的石灰與深棕秦氏旁支武袍，皮質護腕",
-      "signature_item": "腰間懸掛的微裂界核牌",
+      "face_structure": "硬朗方臉，眉宇緊繃帶有倦態，留有青黑鬍渣與承壓般的歪斜半笑",
+      "eyes": "疲憊的暗棕眼瞳平時藏在小型圓片墨晶觀界鏡後，鏡框為細窄黝銅材質",
+      "hair": "粗硬不對稱短髮，保留黑色新生髮根，額髮、頭頂與一側鬢角帶不均勻且略褪色的霧銀與灰藍礦染",
+      "physique": "魁梧寬肩的搬石者體格，雙臂強壯外露，站姿沉重而鬆弛",
+      "signature_clothing": "磨損石灰麻布與深色根革製成的無袖交領短武袍，配手纏護腕與舊布腰帶",
+      "signature_item": "以深色編繩佩在鎖骨前的微裂界核牌",
       "distinguishing_marks": [
-        "右腕與頸側隱現細微的蛛網狀暗藍界裂痕跡",
-        "窮途末路的沉重決絕神態"
+        "小型圓片墨晶鏡與清楚可辨的霧銀灰藍礦染短髮",
+        "右臂與頸側隱現細微的蛛網狀暗藍界裂痕跡",
+        "以黑色幽默般的半笑掩住窮途末路的盤算"
       ]
     },
     "forbidden_traits": [
@@ -55,7 +63,10 @@
       "華麗金冠",
       "俊美少年臉",
       "耀眼法術光環",
-      "歐式重甲"
+      "歐式重甲",
+      "普通現代塑膠太陽眼鏡",
+      "霓虹染髮",
+      "現代街頭服飾"
     ]
   }
 }

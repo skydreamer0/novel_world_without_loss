@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "ji_xiaoshan",
+  "canonical_name": "季小山 (Ji Xiaoshan)",
+  "aliases": [
+    "季小山",
+    "Ji Xiaoshan"
+  ],
+  "role": "Hollow-Womb Mine Survivor / Bone-Chamber Dismantler",
+  "visual_anchors": {
+    "apparent_age": "early thirties",
+    "face_structure": "broad square miner's face with a flattened nose",
+    "eyes": "deep-set cautious eyes that brighten around practical problems",
+    "hair": "short coarse black hair cut unevenly with a work knife",
+    "physique": "short, stocky and immensely strong through the shoulders",
+    "signature_clothing": "thick patched brown-black mine jacket with rope bindings and leather knee guards",
+    "signature_item": "bone-chamber pry bar with a wrapped two-hand grip",
+    "distinguishing_marks": [
+      "old crushing scar along the right forearm",
+      "stone dust permanently whitening the brows"
+    ]
+  },
+  "forbidden_traits": [
+    "tall elegant swordsman build",
+    "ceremonial armor",
+    "large fantasy hammer",
+    "clean noble clothing"
+  ],
+  "prompt_tokens": [
+    "ji_xiaoshan_char",
+    "stocky mine survivor",
+    "bone-chamber pry bar",
+    "patched brown-black mine jacket"
+  ]
+}
+

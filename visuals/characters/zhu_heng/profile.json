@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "zhu_heng",
+  "canonical_name": "祝衡 (Zhu Heng)",
+  "aliases": [
+    "祝衡",
+    "Zhu Heng"
+  ],
+  "role": "Qingya Grain Merchant / Unstable Creditor-Ally",
+  "visual_anchors": {
+    "apparent_age": "late forties",
+    "face_structure": "rounded clever merchant's face with a neat narrow beard",
+    "eyes": "quick cautious dark eyes that recalculate every alliance",
+    "hair": "oiled black hair with grey at the temples in a tidy merchant knot",
+    "physique": "soft around the middle but brisk and energetic",
+    "signature_clothing": "muted olive-brown merchant robe layered with twelve narrow account-cloth strips",
+    "signature_item": "small wooden abacus and grain-credit seal box",
+    "distinguishing_marks": [
+      "twelve separately knotted account cloths",
+      "right index finger stained by red ledger paste"
+    ]
+  },
+  "forbidden_traits": [
+    "comic greedy caricature",
+    "gold-covered robe",
+    "imperial official hat",
+    "battle armor"
+  ],
+  "prompt_tokens": [
+    "zhu_heng_char",
+    "Qingya grain creditor",
+    "twelve account-cloth layers",
+    "wooden abacus and seal box"
+  ]
+}
+

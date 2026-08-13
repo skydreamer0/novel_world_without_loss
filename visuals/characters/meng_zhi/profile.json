@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "meng_zhi",
+  "canonical_name": "孟直 (Meng Zhi)",
+  "aliases": [
+    "孟直",
+    "Meng Zhi"
+  ],
+  "role": "Sanhuai Village Head / Migration Vote Convenor",
+  "visual_anchors": {
+    "apparent_age": "early fifties",
+    "face_structure": "broad honest village elder's face with a sun-broken nose",
+    "eyes": "direct brown eyes, cautious about promises but open to evidence",
+    "hair": "black-grey hair tied simply behind the head",
+    "physique": "sturdy, thick-handed and farmer-strong",
+    "signature_clothing": "plain layered earth-brown village coat with a faded indigo waist cloth",
+    "signature_item": "bundle of migration voting sticks tied with three-colour cord",
+    "distinguishing_marks": [
+      "weather cracks across both hands",
+      "old hoe scar at the right jaw"
+    ]
+  },
+  "forbidden_traits": [
+    "official court hat",
+    "rich mayor robes",
+    "warrior armor",
+    "mystical staff"
+  ],
+  "prompt_tokens": [
+    "meng_zhi_char",
+    "Sanhuai village head",
+    "migration voting sticks",
+    "plain earth-brown village coat"
+  ]
+}
+

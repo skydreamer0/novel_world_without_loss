@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "lu_sihai",
+  "canonical_name": "盧四海 (Lu Sihai)",
+  "aliases": [
+    "盧四海",
+    "Lu Sihai"
+  ],
+  "role": "Stone Gate Household Representative / Mutual-Aid Signatory",
+  "visual_anchors": {
+    "apparent_age": "mid-forties",
+    "face_structure": "ordinary weathered civilian face with a broad brow and tired mouth",
+    "eyes": "careful dark eyes accustomed to speaking for many households",
+    "hair": "plain black-grey hair tied at the nape",
+    "physique": "average, work-worn and unmilitary",
+    "signature_clothing": "patched taupe civilian coat over layered household work clothes",
+    "signature_item": "signed mutual-aid cloth folded in a wooden document sleeve",
+    "distinguishing_marks": [
+      "frayed red family cord at the wrist",
+      "inked household tally lines on the left palm"
+    ]
+  },
+  "forbidden_traits": [
+    "military commander armor",
+    "rich merchant clothing",
+    "official crown",
+    "martial hero pose"
+  ],
+  "prompt_tokens": [
+    "lu_sihai_char",
+    "Stone Gate household representative",
+    "mutual-aid document cloth",
+    "patched taupe civilian coat"
+  ]
+}
+

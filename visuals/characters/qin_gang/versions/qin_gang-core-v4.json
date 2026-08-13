@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "reference_set_id": "qin_gang-core-v4",
+  "character_id": "qin_gang",
+  "version": 4,
+  "label": "墨晶鏡與銀藍礦染四面核心造型",
+  "status": "approved",
+  "is_primary": true,
+  "references": [
+    {
+      "role": "turnaround",
+      "path": "characters/qin_gang/images/qin_gang_turnaround_v4.png",
+      "sha256": "f48a7759f409ae29a947b00858068f73337c463e8658d56998497d4dd726b10c",
+      "media_type": "image/png",
+      "source": "依使用者偏好的 v2 墨晶鏡與染髮方向進行世界觀內收斂的 imagegen 標準四面總覽，2026-08-11 核准"
+    },
+    {
+      "role": "full_body_front",
+      "path": "characters/qin_gang/images/qin_gang_v4_front.png",
+      "sha256": "deb78128795d05b272329e28f353aa58148feda330d364b3517c31a6522f97f3",
+      "media_type": "image/png",
+      "source": "由 v4 四面總覽等寬裁切：正面"
+    },
+    {
+      "role": "full_body_three_quarter",
+      "path": "characters/qin_gang/images/qin_gang_v4_three_quarter.png",
+      "sha256": "ab904b91268b8a67959a41c61c53a8fa9a926133d33ee2387a4ebe15920e0128",
+      "media_type": "image/png",
+      "source": "由 v4 四面總覽等寬裁切：四分之三"
+    },
+    {
+      "role": "full_body_profile",
+      "path": "characters/qin_gang/images/qin_gang_v4_profile.png",
+      "sha256": "22f725a947fe2247e6eea540eed88439f36dceb4614fdf0c926b5ebbd5083213",
+      "media_type": "image/png",
+      "source": "由 v4 四面總覽等寬裁切：完整右側面"
+    },
+    {
+      "role": "full_body_back",
+      "path": "characters/qin_gang/images/qin_gang_v4_back.png",
+      "sha256": "92e960110737007e500a46023aa9ebdfb7730331f3979b8f64a0a8481534bd84",
+      "media_type": "image/png",
+      "source": "由 v4 四面總覽等寬裁切：背面"
+    }
+  ],
+  "engine_bindings": {
+    "codex": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "核准後，四個獨立視角共同鎖定墨晶鏡、銀藍礦染、無袖交領武袍與右臂界裂。"
+    },
+    "gemini": {
+      "reference_roles": [
+        "full_body_front",
+        "full_body_three_quarter",
+        "full_body_profile",
+        "full_body_back"
+      ],
+      "notes": "核准後優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+    }
+  }
+}

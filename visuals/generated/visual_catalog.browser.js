@@ -4,6 +4,128 @@ window.WWL_VISUAL_CATALOG = {
   "characters": [
     {
       "schema_version": 1,
+      "character_id": "chai_yue",
+      "canonical_name": "柴岳 (Chai Yue)",
+      "aliases": [
+        "柴岳",
+        "Chai Yue"
+      ],
+      "role": "Black-Mine Owner / Life-Anchor Exploiter",
+      "visual_anchors": {
+        "apparent_age": "late forties",
+        "face_structure": "full controlled merchant-owner face with a narrow mouth",
+        "eyes": "small cold dark eyes that assess people as inventory",
+        "hair": "oiled black hair with grey hidden in a formal knot",
+        "physique": "solid, well-fed and carefully composed",
+        "signature_clothing": "expensive dark umber robe protected by a dust-resistant sleeveless overcoat",
+        "signature_item": "life-anchor contract case and heavy seal ring",
+        "distinguishing_marks": [
+          "one coal-black thumbnail",
+          "dust-free inner collar contrasting with the mine exterior"
+        ]
+      },
+      "forbidden_traits": [
+        "ragged miner appearance",
+        "comic obesity",
+        "golden imperial costume",
+        "openly monstrous face"
+      ],
+      "prompt_tokens": [
+        "chai_yue_char",
+        "black-mine owner",
+        "life-anchor contract case",
+        "expensive dark umber robe"
+      ],
+      "reference_set_ids": [
+        "chai_yue-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "chai_yue-core-v1",
+          "character_id": "chai_yue",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/chai_yue/images/chai_yue_turnaround_v1.png",
+              "sha256": "7173c5e2b5217ab4403bc66266e84930e4c88e08b29f19b386f3ce1e11ee8b13",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/chai_yue/images/chai_yue_v1_front.png",
+              "sha256": "518bdac71f4dc0423bba182e7722f180a93ba6c8daa11e9b99e764b640bf9155",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/chai_yue/images/chai_yue_v1_three_quarter.png",
+              "sha256": "ea55a5cb7a3af15d9b062db37da5ebdf88847dc7cbcf8f9232bf44e502e01fa1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/chai_yue/images/chai_yue_v1_profile.png",
+              "sha256": "5335fd6e4298e7a46ab0912c939dc6b7a696dea3370a86aa852af7caacf39a1f",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/chai_yue/images/chai_yue_v1_back.png",
+              "sha256": "303ff9beebabd9ebe8e65f57be1f857a05d27f97b70bcbe4e5ba79d14042024a",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/chai_yue/images/chai_yue_turnaround_v1.png",
+        "sha256": "7173c5e2b5217ab4403bc66266e84930e4c88e08b29f19b386f3ce1e11ee8b13",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "chai_yue-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/chai_yue/images/chai_yue_v1_three_quarter.png",
+        "sha256": "ea55a5cb7a3af15d9b062db37da5ebdf88847dc7cbcf8f9232bf44e502e01fa1",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "chai_yue-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
       "character_id": "chiying",
       "canonical_name": "遲影 (Chiying)",
       "aliases": [
@@ -176,6 +298,738 @@ window.WWL_VISUAL_CATALOG = {
     },
     {
       "schema_version": 1,
+      "character_id": "fang_zhe",
+      "canonical_name": "方折 (Fang Zhe)",
+      "aliases": [
+        "方折",
+        "Fang Zhe"
+      ],
+      "role": "Retired Guard / Civic Armed Counterweight",
+      "visual_anchors": {
+        "apparent_age": "mid-forties",
+        "face_structure": "angular scarred veteran's face with hollow cheeks",
+        "eyes": "alert right eye and permanently clouded blind left eye",
+        "hair": "short black hair heavily threaded with grey",
+        "physique": "lean, compact and still combat-ready",
+        "signature_clothing": "weathered charcoal guard coat over flexible leather-and-cloth protection",
+        "signature_item": "broken old guard token worn inside the belt",
+        "distinguishing_marks": [
+          "blind left eye",
+          "diagonal scar crossing the left brow and cheek"
+        ]
+      },
+      "forbidden_traits": [
+        "two healthy eyes",
+        "polished ceremonial armor",
+        "young heroic face",
+        "eyepatch hiding the clouded eye"
+      ],
+      "prompt_tokens": [
+        "fang_zhe_char",
+        "retired scarred guard",
+        "blind clouded left eye",
+        "weathered charcoal guard coat"
+      ],
+      "reference_set_ids": [
+        "fang_zhe-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "fang_zhe-core-v1",
+          "character_id": "fang_zhe",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/fang_zhe/images/fang_zhe_turnaround_v1.png",
+              "sha256": "238cda1b42fb8ff84b0dc3fe2799cd41d207c9824b54ff12ca3d5d5637a3f763",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/fang_zhe/images/fang_zhe_v1_front.png",
+              "sha256": "2807d5f22732a7f61f5613dba93645e359dcccfb1c87ee98c45bf15988264120",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/fang_zhe/images/fang_zhe_v1_three_quarter.png",
+              "sha256": "daa76ac4095ca8970ecc7a0726cebda31ea2648185faf3b483c0619447e810f9",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/fang_zhe/images/fang_zhe_v1_profile.png",
+              "sha256": "908be54049099a87a92c3fc5b8fa6f78e658463f4fa542515ca3d8d5f4953687",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/fang_zhe/images/fang_zhe_v1_back.png",
+              "sha256": "8e4219b2f244bd67bd8b4e5ca336789f982e91a63d9fa833ca47b3d30ca0a610",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/fang_zhe/images/fang_zhe_turnaround_v1.png",
+        "sha256": "238cda1b42fb8ff84b0dc3fe2799cd41d207c9824b54ff12ca3d5d5637a3f763",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "fang_zhe-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/fang_zhe/images/fang_zhe_v1_three_quarter.png",
+        "sha256": "daa76ac4095ca8970ecc7a0726cebda31ea2648185faf3b483c0619447e810f9",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "fang_zhe-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "gu_hansheng",
+      "canonical_name": "顧寒生 (Gu Hansheng)",
+      "aliases": [
+        "顧寒生",
+        "Gu Hansheng"
+      ],
+      "role": "Void Vessel Navigator / Grey-Ridge Refugee Leader",
+      "visual_anchors": {
+        "apparent_age": "early fifties",
+        "face_structure": "long weathered navigator's face with a short iron-grey beard",
+        "eyes": "steady dark eyes trained on distant bearings",
+        "hair": "black-grey hair gathered in a practical low bun",
+        "physique": "lean, balanced and adapted to an uneven gait",
+        "signature_clothing": "layered charcoal navigator coat with faded coordinate tracings and compact utility belts",
+        "signature_item": "bronze bearing compass worn at the chest",
+        "distinguishing_marks": [
+          "anatomical right leg replaced by rootwood-and-ancient-bronze prosthetic",
+          "old wind scars across both cheeks"
+        ]
+      },
+      "forbidden_traits": [
+        "left-leg prosthetic",
+        "two natural legs",
+        "bright steampunk brass",
+        "youthful clean-shaven face"
+      ],
+      "prompt_tokens": [
+        "gu_hansheng_char",
+        "void vessel navigator",
+        "right rootwood bronze prosthetic leg",
+        "charcoal coordinate coat"
+      ],
+      "reference_set_ids": [
+        "gu_hansheng-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "gu_hansheng-core-v1",
+          "character_id": "gu_hansheng",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/gu_hansheng/images/gu_hansheng_turnaround_v1.png",
+              "sha256": "eb7831fcd6e6903deb25cf76a2d261f6da2f98b65cdda37d268cf2fd609b27f1",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/gu_hansheng/images/gu_hansheng_v1_front.png",
+              "sha256": "0207c98bc344ea6bbd9de0f4ad9866f9498dd04ec96c7178b280a549440cbf60",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/gu_hansheng/images/gu_hansheng_v1_three_quarter.png",
+              "sha256": "c91eede0d4b5443f5dc049ee47b82aee59c637c30063273fc09ab9946025f9d3",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/gu_hansheng/images/gu_hansheng_v1_profile.png",
+              "sha256": "3fcde904b7850a8079bf3c68613219f786ea2f095e61e42f083fa7d99889c984",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/gu_hansheng/images/gu_hansheng_v1_back.png",
+              "sha256": "4222a25e2d2abdead4b22b4cf076549a685195d5e17db4d8a1992b0d48565dee",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/gu_hansheng/images/gu_hansheng_turnaround_v1.png",
+        "sha256": "eb7831fcd6e6903deb25cf76a2d261f6da2f98b65cdda37d268cf2fd609b27f1",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "gu_hansheng-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/gu_hansheng/images/gu_hansheng_v1_three_quarter.png",
+        "sha256": "c91eede0d4b5443f5dc049ee47b82aee59c637c30063273fc09ab9946025f9d3",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "gu_hansheng-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "he_mingchuan",
+      "canonical_name": "賀鳴川 (He Mingchuan)",
+      "aliases": [
+        "賀鳴川",
+        "He Mingchuan"
+      ],
+      "role": "Qingya Boundary Patrol Captain / Evidence Protector",
+      "visual_anchors": {
+        "apparent_age": "mid-thirties",
+        "face_structure": "square disciplined patrolman's face with a weather-cut jaw",
+        "eyes": "watchful dark-brown eyes trained to read trails and testimony",
+        "hair": "short tied-back black hair suited to field duty",
+        "physique": "athletic, grounded and practical",
+        "signature_clothing": "desaturated blue-grey Qingya patrol uniform with layered cloth-leather protection",
+        "signature_item": "sealed evidence tube and boundary whistle at the belt",
+        "distinguishing_marks": [
+          "wind-burned cheekbones",
+          "patched right shoulder from repeated field repairs"
+        ]
+      },
+      "forbidden_traits": [
+        "polished palace guard armor",
+        "bright heroic blue",
+        "decorative spear posing",
+        "court-official hat"
+      ],
+      "prompt_tokens": [
+        "he_mingchuan_char",
+        "Qingya boundary patrol captain",
+        "sealed evidence tube",
+        "blue-grey field uniform"
+      ],
+      "reference_set_ids": [
+        "he_mingchuan-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "he_mingchuan-core-v1",
+          "character_id": "he_mingchuan",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/he_mingchuan/images/he_mingchuan_turnaround_v1.png",
+              "sha256": "9ec9b8af140b5b0cdccccbcea7517d3885e77ace95d7a42b962864c00ae6f004",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/he_mingchuan/images/he_mingchuan_v1_front.png",
+              "sha256": "9e1369298806af494e6b686f9c97d1f3ff297b48eab94d5351b3265aa368b39b",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/he_mingchuan/images/he_mingchuan_v1_three_quarter.png",
+              "sha256": "9ecf2adbddeb831a0e67a5e77313100b434f73afbddd01bbd9eaebf507ff9178",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/he_mingchuan/images/he_mingchuan_v1_profile.png",
+              "sha256": "36816a37e73670982f05eddffae56648e85c3b6aa7de0d97439d923713d3cad6",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/he_mingchuan/images/he_mingchuan_v1_back.png",
+              "sha256": "27123a2593e81c3b8193e688a6df7770343989db1825187235b47901771cbcf0",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/he_mingchuan/images/he_mingchuan_turnaround_v1.png",
+        "sha256": "9ec9b8af140b5b0cdccccbcea7517d3885e77ace95d7a42b962864c00ae6f004",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "he_mingchuan-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/he_mingchuan/images/he_mingchuan_v1_three_quarter.png",
+        "sha256": "9ecf2adbddeb831a0e67a5e77313100b434f73afbddd01bbd9eaebf507ff9178",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "he_mingchuan-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "hui_qi",
+      "canonical_name": "灰七 (Hui Qi)",
+      "aliases": [
+        "灰七",
+        "Hui Qi"
+      ],
+      "role": "Freed Boundary Tracking Hound / Residual-Coordinate Tracker",
+      "visual_anchors": {
+        "apparent_age": "adult working hound",
+        "face_structure": "long wedge-shaped canine head with a scarred muzzle",
+        "eyes": "intelligent amber eyes, wary but no longer submissive",
+        "hair": "coarse ash-black double coat with a lighter grey muzzle and chest",
+        "physique": "rangy, long-legged and endurance-built",
+        "signature_clothing": "weathered tracking harness with the coercive control fittings removed",
+        "signature_item": "broken control-collar ring retained as evidence on the harness",
+        "distinguishing_marks": [
+          "notched left ear",
+          "pale collar scar visible through the neck fur"
+        ]
+      },
+      "forbidden_traits": [
+        "cute puppy proportions",
+        "fantasy wolf horns",
+        "glowing eyes",
+        "intact control collar"
+      ],
+      "prompt_tokens": [
+        "hui_qi_char",
+        "freed ash-black tracking hound",
+        "notched left ear",
+        "broken control collar evidence"
+      ],
+      "reference_set_ids": [
+        "hui_qi-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "hui_qi-core-v1",
+          "character_id": "hui_qi",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/hui_qi/images/hui_qi_turnaround_v1.png",
+              "sha256": "cee326f2cd9996cd4eef8c0909460e6d4a79951adfae0f263260f92632c017cd",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/hui_qi/images/hui_qi_v1_front.png",
+              "sha256": "2b1e486756b0530c8d31ed746dc9e441ea1a8fe452eaa441bf33e7797e33a7ca",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/hui_qi/images/hui_qi_v1_three_quarter.png",
+              "sha256": "f03105d6b6cac16f4c24e4c32149268c83ce060e13cc43eb72029ad547fd24ee",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/hui_qi/images/hui_qi_v1_profile.png",
+              "sha256": "8ed76eed62d74c51c4382f6f1cc502892755a808d0ef440eb4a3755e6415e68e",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/hui_qi/images/hui_qi_v1_back.png",
+              "sha256": "f06c53eb67e9a6bebb43d31b878d3acc11dc55f714460c876f580b4f318a3d20",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/hui_qi/images/hui_qi_turnaround_v1.png",
+        "sha256": "cee326f2cd9996cd4eef8c0909460e6d4a79951adfae0f263260f92632c017cd",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "hui_qi-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/hui_qi/images/hui_qi_v1_three_quarter.png",
+        "sha256": "f03105d6b6cac16f4c24e4c32149268c83ce060e13cc43eb72029ad547fd24ee",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "hui_qi-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "ji_xiaoshan",
+      "canonical_name": "季小山 (Ji Xiaoshan)",
+      "aliases": [
+        "季小山",
+        "Ji Xiaoshan"
+      ],
+      "role": "Hollow-Womb Mine Survivor / Bone-Chamber Dismantler",
+      "visual_anchors": {
+        "apparent_age": "early thirties",
+        "face_structure": "broad square miner's face with a flattened nose",
+        "eyes": "deep-set cautious eyes that brighten around practical problems",
+        "hair": "short coarse black hair cut unevenly with a work knife",
+        "physique": "short, stocky and immensely strong through the shoulders",
+        "signature_clothing": "thick patched brown-black mine jacket with rope bindings and leather knee guards",
+        "signature_item": "bone-chamber pry bar with a wrapped two-hand grip",
+        "distinguishing_marks": [
+          "old crushing scar along the right forearm",
+          "stone dust permanently whitening the brows"
+        ]
+      },
+      "forbidden_traits": [
+        "tall elegant swordsman build",
+        "ceremonial armor",
+        "large fantasy hammer",
+        "clean noble clothing"
+      ],
+      "prompt_tokens": [
+        "ji_xiaoshan_char",
+        "stocky mine survivor",
+        "bone-chamber pry bar",
+        "patched brown-black mine jacket"
+      ],
+      "reference_set_ids": [
+        "ji_xiaoshan-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "ji_xiaoshan-core-v1",
+          "character_id": "ji_xiaoshan",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/ji_xiaoshan/images/ji_xiaoshan_turnaround_v1.png",
+              "sha256": "54f0bed3f95056d2b4ec3b57670eae6a88e4715f03462b33c48d0e58cf5249d5",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/ji_xiaoshan/images/ji_xiaoshan_v1_front.png",
+              "sha256": "755d7fcaa8389ea816368146320bc0a48497ac6eb7a9a64fc33df3075486de37",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/ji_xiaoshan/images/ji_xiaoshan_v1_three_quarter.png",
+              "sha256": "0c9bfa63132970f0a120a40aa025971fc8ed94f2847e62bc43ecd5ea5adc429e",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/ji_xiaoshan/images/ji_xiaoshan_v1_profile.png",
+              "sha256": "3f18d5899d5c246b40d1c4c0b99901bee05a1ca6578cbed412b791969c1326bd",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/ji_xiaoshan/images/ji_xiaoshan_v1_back.png",
+              "sha256": "64a62ef442f8884fbefc20411276c764f550712d3903c5ac3eb99a6e5036216a",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/ji_xiaoshan/images/ji_xiaoshan_turnaround_v1.png",
+        "sha256": "54f0bed3f95056d2b4ec3b57670eae6a88e4715f03462b33c48d0e58cf5249d5",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "ji_xiaoshan-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/ji_xiaoshan/images/ji_xiaoshan_v1_three_quarter.png",
+        "sha256": "0c9bfa63132970f0a120a40aa025971fc8ed94f2847e62bc43ecd5ea5adc429e",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "ji_xiaoshan-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "jian_wujiu",
+      "canonical_name": "劍無咎 (Jian Wuju)",
+      "aliases": [
+        "劍無咎",
+        "Jian Wuju"
+      ],
+      "role": "Former Broken Sword Sect Master / Pure-Law Absolutist",
+      "visual_anchors": {
+        "apparent_age": "late forties",
+        "face_structure": "severe triangular swordsman's face with high cheekbones",
+        "eyes": "razor-focused black eyes stripped of warmth",
+        "hair": "long black hair streaked with white and bound in a plain high tail",
+        "physique": "tall, lean and cable-strong",
+        "signature_clothing": "charcoal sword-sect robes cut close for movement, with one faded broken-blade emblem",
+        "signature_item": "plain old sword with a chipped guard and immaculate edge",
+        "distinguishing_marks": [
+          "white streak over the left temple",
+          "callused right hand held unnaturally still"
+        ]
+      },
+      "forbidden_traits": [
+        "ornate glowing sword",
+        "white immortal prince robes",
+        "youthful beauty styling",
+        "multiple floating blades"
+      ],
+      "prompt_tokens": [
+        "jian_wujiu_char",
+        "former Broken Sword sect master",
+        "plain chipped-guard sword",
+        "charcoal close-cut sword robes"
+      ],
+      "reference_set_ids": [
+        "jian_wujiu-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "jian_wujiu-core-v1",
+          "character_id": "jian_wujiu",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/jian_wujiu/images/jian_wujiu_turnaround_v1.png",
+              "sha256": "a69f31e0300f28bff5032b0b60feedf0d06238f16c62144b2755a241051de8ba",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/jian_wujiu/images/jian_wujiu_v1_front.png",
+              "sha256": "fa836978b2ac51e7c5cf69c34aaa5fcee3491219cbf9395e680d63cbfeceaa80",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/jian_wujiu/images/jian_wujiu_v1_three_quarter.png",
+              "sha256": "8e74f95de0d4e0a3705063d880a457683e88393ff20da0a95b9279d01b988bc7",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/jian_wujiu/images/jian_wujiu_v1_profile.png",
+              "sha256": "de00305b0b0373d43027c044ff36f668eb1e5183ed80bc133edf7237aa3e8f46",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/jian_wujiu/images/jian_wujiu_v1_back.png",
+              "sha256": "15fe3ce537870aeb9e6f2262647cdafafedc36e87584c9555435378371756327",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/jian_wujiu/images/jian_wujiu_turnaround_v1.png",
+        "sha256": "a69f31e0300f28bff5032b0b60feedf0d06238f16c62144b2755a241051de8ba",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "jian_wujiu-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/jian_wujiu/images/jian_wujiu_v1_three_quarter.png",
+        "sha256": "8e74f95de0d4e0a3705063d880a457683e88393ff20da0a95b9279d01b988bc7",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "jian_wujiu-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
       "character_id": "jiluo",
       "canonical_name": "棘蘿 (Jiluo)",
       "aliases": [
@@ -343,6 +1197,128 @@ window.WWL_VISUAL_CATALOG = {
         "media_type": "image/png",
         "source": "由核准四面總覽無損裁切：四分之三",
         "reference_set_id": "jiluo-core-v2"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "liang_he",
+      "canonical_name": "梁禾 (Liang He)",
+      "aliases": [
+        "梁禾",
+        "Liang He"
+      ],
+      "role": "Young Farmer / Human-Qingjiao Liaison",
+      "visual_anchors": {
+        "apparent_age": "early twenties",
+        "face_structure": "open sun-browned young farmer's face with a firm chin",
+        "eyes": "steady warm-brown eyes, cautious but compassionate",
+        "hair": "roughly tied black hair with one conspicuous white streak at the right temple",
+        "physique": "lean, work-hardened and quick",
+        "signature_clothing": "plain undyed hemp work robe, bound calves and a faded green shoulder cloth",
+        "signature_item": "small seed pouch and braided field cord at the belt",
+        "distinguishing_marks": [
+          "single white temple streak caused by power expenditure",
+          "soil-darkened hands"
+        ]
+      },
+      "forbidden_traits": [
+        "noble silks",
+        "delicate scholar build",
+        "glowing green aura",
+        "ornamental crown"
+      ],
+      "prompt_tokens": [
+        "liang_he_char",
+        "young field liaison",
+        "one white temple streak",
+        "undyed hemp work clothes"
+      ],
+      "reference_set_ids": [
+        "liang_he-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "liang_he-core-v1",
+          "character_id": "liang_he",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/liang_he/images/liang_he_turnaround_v1.png",
+              "sha256": "816e5955c5260eda96000c3f785ae66f87093460e740c92101c7b797a079398b",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/liang_he/images/liang_he_v1_front.png",
+              "sha256": "69143d6aaa2eaf68ac3bb3cb7b41169936adf3d3d645e6efc521ef4330d272b8",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/liang_he/images/liang_he_v1_three_quarter.png",
+              "sha256": "72e1a25a430307e3530e44121bfa6b19a6a70b1a24270255562c0883827c0fd1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/liang_he/images/liang_he_v1_profile.png",
+              "sha256": "2572d6ad08dbeb28e2dfb57044b547eae30a3beb4fa3cbb268ac720365cbdf60",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/liang_he/images/liang_he_v1_back.png",
+              "sha256": "766dba7b615d17aeb07fae96781b1045799e23ec4a22864bc25104bc392835cb",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/liang_he/images/liang_he_turnaround_v1.png",
+        "sha256": "816e5955c5260eda96000c3f785ae66f87093460e740c92101c7b797a079398b",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "liang_he-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/liang_he/images/liang_he_v1_three_quarter.png",
+        "sha256": "72e1a25a430307e3530e44121bfa6b19a6a70b1a24270255562c0883827c0fd1",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "liang_he-core-v1"
       }
     },
     {
@@ -530,6 +1506,616 @@ window.WWL_VISUAL_CATALOG = {
     },
     {
       "schema_version": 1,
+      "character_id": "lu_sihai",
+      "canonical_name": "盧四海 (Lu Sihai)",
+      "aliases": [
+        "盧四海",
+        "Lu Sihai"
+      ],
+      "role": "Stone Gate Household Representative / Mutual-Aid Signatory",
+      "visual_anchors": {
+        "apparent_age": "mid-forties",
+        "face_structure": "ordinary weathered civilian face with a broad brow and tired mouth",
+        "eyes": "careful dark eyes accustomed to speaking for many households",
+        "hair": "plain black-grey hair tied at the nape",
+        "physique": "average, work-worn and unmilitary",
+        "signature_clothing": "patched taupe civilian coat over layered household work clothes",
+        "signature_item": "signed mutual-aid cloth folded in a wooden document sleeve",
+        "distinguishing_marks": [
+          "frayed red family cord at the wrist",
+          "inked household tally lines on the left palm"
+        ]
+      },
+      "forbidden_traits": [
+        "military commander armor",
+        "rich merchant clothing",
+        "official crown",
+        "martial hero pose"
+      ],
+      "prompt_tokens": [
+        "lu_sihai_char",
+        "Stone Gate household representative",
+        "mutual-aid document cloth",
+        "patched taupe civilian coat"
+      ],
+      "reference_set_ids": [
+        "lu_sihai-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "lu_sihai-core-v1",
+          "character_id": "lu_sihai",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/lu_sihai/images/lu_sihai_turnaround_v1.png",
+              "sha256": "07c724e7eec2c204ee9bc7a865f1dba2e3469bfd85c1036677544e4ddd1d2a0b",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/lu_sihai/images/lu_sihai_v1_front.png",
+              "sha256": "5077dfce3ad08cdf7651e2c29e494afeeab4835940d5e6b5099a3e2e1e03ee1d",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/lu_sihai/images/lu_sihai_v1_three_quarter.png",
+              "sha256": "1519d5a0b187516f06fe40d358d9654f563daec52c2df0b329bdebdf0fd9951a",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/lu_sihai/images/lu_sihai_v1_profile.png",
+              "sha256": "02b4916549ec56acdfad19813c6b6af2d73f511e130cd609caac851fbd9a9812",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/lu_sihai/images/lu_sihai_v1_back.png",
+              "sha256": "dd9e52fc042c65da948f8a0c2401f4230f94fe9a9ea1084aebf2fe08cd46358d",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/lu_sihai/images/lu_sihai_turnaround_v1.png",
+        "sha256": "07c724e7eec2c204ee9bc7a865f1dba2e3469bfd85c1036677544e4ddd1d2a0b",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "lu_sihai-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/lu_sihai/images/lu_sihai_v1_three_quarter.png",
+        "sha256": "1519d5a0b187516f06fe40d358d9654f563daec52c2df0b329bdebdf0fd9951a",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "lu_sihai-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "lu_tingyun",
+      "canonical_name": "陸停雲 (Lu Tingyun)",
+      "aliases": [
+        "陸停雲",
+        "Lu Tingyun"
+      ],
+      "role": "Hollow-Womb Survivor / Nucleusless Anchor",
+      "visual_anchors": {
+        "apparent_age": "late twenties",
+        "face_structure": "pale narrow survivor's face with sunken but resolute cheeks",
+        "eyes": "dark exhausted eyes that remain sharply present",
+        "hair": "uneven shoulder-length black hair roughly tied back",
+        "physique": "gaunt, upright through effort and marked by malnutrition",
+        "signature_clothing": "patched soot-grey mine clothing wrapped with a faded protective sash",
+        "signature_item": "small hollow stone anchor tied below the sternum",
+        "distinguishing_marks": [
+          "healed hollow-womb anchor scar low on the abdomen",
+          "black dust embedded at the nail beds"
+        ]
+      },
+      "forbidden_traits": [
+        "healthy rosy complexion",
+        "glamorous assassin styling",
+        "exposed erotic costume",
+        "glowing abdominal core"
+      ],
+      "prompt_tokens": [
+        "lu_tingyun_char",
+        "hollow-womb survivor",
+        "soot-grey patched mine clothes",
+        "lower-abdomen anchor scar"
+      ],
+      "reference_set_ids": [
+        "lu_tingyun-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "lu_tingyun-core-v1",
+          "character_id": "lu_tingyun",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/lu_tingyun/images/lu_tingyun_turnaround_v1.png",
+              "sha256": "a8290c7ee71c362314469c5788b70d284bc117053e9da8fbeeca8b68fed07e47",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/lu_tingyun/images/lu_tingyun_v1_front.png",
+              "sha256": "9f14d10a8a2389c4d215c5fb958e28c3b4c8e4e122a467860cf0233e27635e04",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/lu_tingyun/images/lu_tingyun_v1_three_quarter.png",
+              "sha256": "9f7b908757e51eccbff76d075a0c2330bce8529e1534a5002900b298cd8c6996",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/lu_tingyun/images/lu_tingyun_v1_profile.png",
+              "sha256": "e10f7775d45c23d67074891f3a2158a3700677d879ea1ae558ecc2775983c5f9",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/lu_tingyun/images/lu_tingyun_v1_back.png",
+              "sha256": "241b8d7b9ca7be05bde1aa1092930601d0590ef107781907799829e90f2ae692",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/lu_tingyun/images/lu_tingyun_turnaround_v1.png",
+        "sha256": "a8290c7ee71c362314469c5788b70d284bc117053e9da8fbeeca8b68fed07e47",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "lu_tingyun-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/lu_tingyun/images/lu_tingyun_v1_three_quarter.png",
+        "sha256": "9f7b908757e51eccbff76d075a0c2330bce8529e1534a5002900b298cd8c6996",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "lu_tingyun-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "luo_jincheng",
+      "canonical_name": "羅盡城 (Luo Jincheng)",
+      "aliases": [
+        "羅盡城",
+        "Luo Jincheng"
+      ],
+      "role": "Stone Gate Defender / Refusal Commander",
+      "visual_anchors": {
+        "apparent_age": "early forties",
+        "face_structure": "square battered defender's face with a broken-nose ridge",
+        "eyes": "fierce black eyes held under a disciplined brow",
+        "hair": "short rough black hair with shaved practical sides",
+        "physique": "powerful, thick-necked and built for holding ground",
+        "signature_clothing": "dark stone-grey layered gate-defense coat with leather and lamellar reinforcements",
+        "signature_item": "chipped rectangular gate shield and short command baton",
+        "distinguishing_marks": [
+          "split scar through the right eyebrow",
+          "stone dust ground into the shoulder plates"
+        ]
+      },
+      "forbidden_traits": [
+        "Western knight armor",
+        "shining heroic plate",
+        "ornamental giant sword",
+        "young princely face"
+      ],
+      "prompt_tokens": [
+        "luo_jincheng_char",
+        "Stone Gate refusal commander",
+        "chipped gate shield",
+        "dark layered defense coat"
+      ],
+      "reference_set_ids": [
+        "luo_jincheng-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "luo_jincheng-core-v1",
+          "character_id": "luo_jincheng",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/luo_jincheng/images/luo_jincheng_turnaround_v1.png",
+              "sha256": "6b0c45739f1ec1383d7c55705802e4f6061974beb3a4e0ba9516cdb029372e65",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/luo_jincheng/images/luo_jincheng_v1_front.png",
+              "sha256": "601024408de6247ee1c1ed7e3804c90eb4a9d054ebc5dd1fcaec212c6e4c2556",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/luo_jincheng/images/luo_jincheng_v1_three_quarter.png",
+              "sha256": "849e951dbe16e0c85e859990594c93ca87e2942faf6d7f87f86bf49ee1cc6124",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/luo_jincheng/images/luo_jincheng_v1_profile.png",
+              "sha256": "54bda24ceea96fbb41e8b2ec27db4a5cfe0bbcfc5375e0eda770f2e6b56b00f6",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/luo_jincheng/images/luo_jincheng_v1_back.png",
+              "sha256": "9f9de93ec98f425100fb5caf25638c4f52352112c5b0abbc563b15be6acba037",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/luo_jincheng/images/luo_jincheng_turnaround_v1.png",
+        "sha256": "6b0c45739f1ec1383d7c55705802e4f6061974beb3a4e0ba9516cdb029372e65",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "luo_jincheng-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/luo_jincheng/images/luo_jincheng_v1_three_quarter.png",
+        "sha256": "849e951dbe16e0c85e859990594c93ca87e2942faf6d7f87f86bf49ee1cc6124",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "luo_jincheng-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "meng_zhi",
+      "canonical_name": "孟直 (Meng Zhi)",
+      "aliases": [
+        "孟直",
+        "Meng Zhi"
+      ],
+      "role": "Sanhuai Village Head / Migration Vote Convenor",
+      "visual_anchors": {
+        "apparent_age": "early fifties",
+        "face_structure": "broad honest village elder's face with a sun-broken nose",
+        "eyes": "direct brown eyes, cautious about promises but open to evidence",
+        "hair": "black-grey hair tied simply behind the head",
+        "physique": "sturdy, thick-handed and farmer-strong",
+        "signature_clothing": "plain layered earth-brown village coat with a faded indigo waist cloth",
+        "signature_item": "bundle of migration voting sticks tied with three-colour cord",
+        "distinguishing_marks": [
+          "weather cracks across both hands",
+          "old hoe scar at the right jaw"
+        ]
+      },
+      "forbidden_traits": [
+        "official court hat",
+        "rich mayor robes",
+        "warrior armor",
+        "mystical staff"
+      ],
+      "prompt_tokens": [
+        "meng_zhi_char",
+        "Sanhuai village head",
+        "migration voting sticks",
+        "plain earth-brown village coat"
+      ],
+      "reference_set_ids": [
+        "meng_zhi-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "meng_zhi-core-v1",
+          "character_id": "meng_zhi",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/meng_zhi/images/meng_zhi_turnaround_v1.png",
+              "sha256": "cea42c48be0c3af13859ebb2f623cc48a705dba944580b9c8410d6804dd71858",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/meng_zhi/images/meng_zhi_v1_front.png",
+              "sha256": "4b7ba84c595ade2334ba7b08dfcc2c7debd8273c2ad96b5b7f3407668fc781c1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/meng_zhi/images/meng_zhi_v1_three_quarter.png",
+              "sha256": "e82bc5ac54a412444aeff69ec5ee59b266e6d95c0307fba6fc79ea40d34ab899",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/meng_zhi/images/meng_zhi_v1_profile.png",
+              "sha256": "6f71df28017f86d0ca9f463f0509194b8a78337199ea8f81bcd385dfa6b77987",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/meng_zhi/images/meng_zhi_v1_back.png",
+              "sha256": "0e781f6d66c2cba894161cb4e26f9d8c42661770d7fe60524ecf49337f318832",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/meng_zhi/images/meng_zhi_turnaround_v1.png",
+        "sha256": "cea42c48be0c3af13859ebb2f623cc48a705dba944580b9c8410d6804dd71858",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "meng_zhi-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/meng_zhi/images/meng_zhi_v1_three_quarter.png",
+        "sha256": "e82bc5ac54a412444aeff69ec5ee59b266e6d95c0307fba6fc79ea40d34ab899",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "meng_zhi-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "qin_che",
+      "canonical_name": "秦徹 (Qin Che)",
+      "aliases": [
+        "秦徹",
+        "Qin Che"
+      ],
+      "role": "Qin Wulou's Father / Boundary-Seed Ledger Officer",
+      "visual_anchors": {
+        "apparent_age": "late thirties",
+        "face_structure": "long intelligent face worn thin by travel and calculation",
+        "eyes": "precise dark eyes with restrained paternal fatigue",
+        "hair": "black hair tied low with early grey at the sideburns",
+        "physique": "lean, durable and accustomed to long expeditions",
+        "signature_clothing": "dark slate navigator-accountant coat with layered travel hems and utility belts",
+        "signature_item": "bronze boundary compass paired with a compact counting frame",
+        "distinguishing_marks": [
+          "fine compass-burn line across the left palm",
+          "habit of checking horizon angles"
+        ]
+      },
+      "forbidden_traits": [
+        "ghostly transparent body",
+        "funeral clothes",
+        "ornate battle armor",
+        "carefree smile"
+      ],
+      "prompt_tokens": [
+        "qin_che_char",
+        "boundary navigator accountant",
+        "bronze compass and counting frame",
+        "dark slate travel coat"
+      ],
+      "reference_set_ids": [
+        "qin_che-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "qin_che-core-v1",
+          "character_id": "qin_che",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_che/images/qin_che_turnaround_v1.png",
+              "sha256": "63fb7fa1c67fd4cbc542b54b47f4f3537e56a68fe3b73a12d1c0cb21bdc794dc",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_che/images/qin_che_v1_front.png",
+              "sha256": "49df9c5df2a09ca40eae4daa821236851694deec090247791de97cd2f86272c1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_che/images/qin_che_v1_three_quarter.png",
+              "sha256": "f9824fcf186f71fe10ad9180745b107148c691cb8a2562a5d8218da7d8c25a86",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_che/images/qin_che_v1_profile.png",
+              "sha256": "8a463d5dbb8a7f9bb3b9f2053184e2376129bfe27f3e8a78c03fcac9ce146df0",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_che/images/qin_che_v1_back.png",
+              "sha256": "471de0f4668247e4872baa50c408db6b7199f7d1ac80c051cd5b691db3c0c8d2",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/qin_che/images/qin_che_turnaround_v1.png",
+        "sha256": "63fb7fa1c67fd4cbc542b54b47f4f3537e56a68fe3b73a12d1c0cb21bdc794dc",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "qin_che-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/qin_che/images/qin_che_v1_three_quarter.png",
+        "sha256": "f9824fcf186f71fe10ad9180745b107148c691cb8a2562a5d8218da7d8c25a86",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "qin_che-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
       "character_id": "qin_gang",
       "canonical_name": "秦罡 (Qin Gang)",
       "aliases": [
@@ -540,15 +2126,16 @@ window.WWL_VISUAL_CATALOG = {
       "role": "Collateral Qin Cultivator / Sink River City Proxy",
       "visual_anchors": {
         "apparent_age": "weathered late-30s Chinese cultivator",
-        "face_structure": "hardened rectangular face, weary tired brow, dark stubble, faint facial scars",
-        "eyes": "tired sunken dark-brown eyes with subtle bloodshot veins from domain cracking",
-        "hair": "coarse black hair partially tied up with a worn dark leather strap, messy loose strands",
-        "physique": "broad-shouldered burly build, slightly slouched stance reflecting exhaustion",
-        "signature_clothing": "distressed slate-grey and dark brown collated Qin branch martial robe, worn leather arm guards",
-        "signature_item": "cracked realm core token around waist",
+        "face_structure": "hardened rectangular face, weary tired brow, dark stubble, faint facial scars and a pressured crooked half-smile",
+        "eyes": "tired dark-brown eyes usually concealed behind small round smoky ink-crystal realm-observation lenses in thin blackened-bronze frames",
+        "hair": "short coarse asymmetrical hair with black regrowth and irregular mineral-silver and desaturated storm-blue dyed sections through the forelock, crown and one temple",
+        "physique": "broad-shouldered burly stone-worker build with powerful exposed arms and a relaxed heavy stance",
+        "signature_clothing": "sleeveless charcoal cross-collar martial tunic in distressed slate-grey hemp and dark root leather, with hand-bound wrist wraps and a worn cloth sash",
+        "signature_item": "cracked realm-core token worn on a braided dark cord at the collarbone",
         "distinguishing_marks": [
-          "faint spiderweb hairline fractures glowing dim blue along right wrist and neck",
-          "desperate grim posture"
+          "small round smoky ink-crystal glasses and visibly mineral-dyed silver-blue hair",
+          "faint spiderweb hairline fractures glowing dim blue along the right arm and neck",
+          "gallows-humour half-smile masking desperate calculation"
         ]
       },
       "forbidden_traits": [
@@ -556,28 +2143,35 @@ window.WWL_VISUAL_CATALOG = {
         "pristine golden crown",
         "youthful handsome prodigy face",
         "glowing magic aura",
-        "heavy western plate armor"
+        "heavy western plate armor",
+        "ordinary modern plastic sunglasses",
+        "neon hair dye",
+        "contemporary streetwear"
       ],
       "prompt_tokens": [
         "qin_gang_char",
         "weathered late-30s Chinese cultivator",
-        "hardened rectangular face with weary brow",
-        "distressed slate-grey martial robe",
-        "faint domain crack discolorations on wrist"
+        "hardened rectangular face with weary brow and crooked half-smile",
+        "small round smoky ink-crystal realm-observation glasses",
+        "short black-root hair with faded mineral-silver and storm-blue dye",
+        "sleeveless distressed slate-grey cross-collar martial tunic",
+        "powerful exposed stone-worker arms",
+        "faint domain crack discolorations on right arm"
       ],
       "display": {
         "role": "秦氏旁支界修 / 沉河城掌界人",
         "visual_anchors": {
           "apparent_age": "三十末歲疲憊滄桑的界修",
-          "face_structure": "硬朗方臉，眉宇緊繃帶有倦態，留有青黑鬍渣",
-          "eyes": "深邃凹陷的暗棕眼瞳，帶有些許血絲",
-          "hair": "粗硬黑髮用舊皮帶隨意束起，鬢角微亂",
-          "physique": "魁梧寬肩，姿態略顯沉重疲憊",
-          "signature_clothing": "磨損的石灰與深棕秦氏旁支武袍，皮質護腕",
-          "signature_item": "腰間懸掛的微裂界核牌",
+          "face_structure": "硬朗方臉，眉宇緊繃帶有倦態，留有青黑鬍渣與承壓般的歪斜半笑",
+          "eyes": "疲憊的暗棕眼瞳平時藏在小型圓片墨晶觀界鏡後，鏡框為細窄黝銅材質",
+          "hair": "粗硬不對稱短髮，保留黑色新生髮根，額髮、頭頂與一側鬢角帶不均勻且略褪色的霧銀與灰藍礦染",
+          "physique": "魁梧寬肩的搬石者體格，雙臂強壯外露，站姿沉重而鬆弛",
+          "signature_clothing": "磨損石灰麻布與深色根革製成的無袖交領短武袍，配手纏護腕與舊布腰帶",
+          "signature_item": "以深色編繩佩在鎖骨前的微裂界核牌",
           "distinguishing_marks": [
-            "右腕與頸側隱現細微的蛛網狀暗藍界裂痕跡",
-            "窮途末路的沉重決絕神態"
+            "小型圓片墨晶鏡與清楚可辨的霧銀灰藍礦染短髮",
+            "右臂與頸側隱現細微的蛛網狀暗藍界裂痕跡",
+            "以黑色幽默般的半笑掩住窮途末路的盤算"
           ]
         },
         "forbidden_traits": [
@@ -585,20 +2179,157 @@ window.WWL_VISUAL_CATALOG = {
           "華麗金冠",
           "俊美少年臉",
           "耀眼法術光環",
-          "歐式重甲"
+          "歐式重甲",
+          "普通現代塑膠太陽眼鏡",
+          "霓虹染髮",
+          "現代街頭服飾"
         ]
       },
       "reference_set_ids": [
+        "qin_gang-core-v4",
+        "qin_gang-core-v3",
         "qin_gang-core-v2",
         "qin_gang-core-v1"
       ],
       "reference_sets": [
         {
           "schema_version": 1,
+          "reference_set_id": "qin_gang-core-v4",
+          "character_id": "qin_gang",
+          "version": 4,
+          "label": "墨晶鏡與銀藍礦染四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_gang/images/qin_gang_turnaround_v4.png",
+              "sha256": "f48a7759f409ae29a947b00858068f73337c463e8658d56998497d4dd726b10c",
+              "media_type": "image/png",
+              "source": "依使用者偏好的 v2 墨晶鏡與染髮方向進行世界觀內收斂的 imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_gang/images/qin_gang_v4_front.png",
+              "sha256": "deb78128795d05b272329e28f353aa58148feda330d364b3517c31a6522f97f3",
+              "media_type": "image/png",
+              "source": "由 v4 四面總覽等寬裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_gang/images/qin_gang_v4_three_quarter.png",
+              "sha256": "ab904b91268b8a67959a41c61c53a8fa9a926133d33ee2387a4ebe15920e0128",
+              "media_type": "image/png",
+              "source": "由 v4 四面總覽等寬裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_gang/images/qin_gang_v4_profile.png",
+              "sha256": "22f725a947fe2247e6eea540eed88439f36dceb4614fdf0c926b5ebbd5083213",
+              "media_type": "image/png",
+              "source": "由 v4 四面總覽等寬裁切：完整右側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_gang/images/qin_gang_v4_back.png",
+              "sha256": "92e960110737007e500a46023aa9ebdfb7730331f3979b8f64a0a8481534bd84",
+              "media_type": "image/png",
+              "source": "由 v4 四面總覽等寬裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "核准後，四個獨立視角共同鎖定墨晶鏡、銀藍礦染、無袖交領武袍與右臂界裂。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "核准後優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        },
+        {
+          "schema_version": 1,
+          "reference_set_id": "qin_gang-core-v3",
+          "character_id": "qin_gang",
+          "version": 3,
+          "label": "古典保守一致化四面核心造型（方向未採用）",
+          "status": "retired",
+          "is_primary": false,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_gang/images/qin_gang_turnaround_v3.png",
+              "sha256": "d1004be50ed718bbd24857944d9d344f3b8b154c7049adc4be94470b0c746de2",
+              "media_type": "image/png",
+              "source": "以核准 v1 身份與服裝為錨點，修正 v2 現代化偏離的 imagegen 標準四面總覽，2026-08-11 待核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_gang/images/qin_gang_v3_front.png",
+              "sha256": "a2b9542111f45c247a44c89942e72447c773d6738956f12e825862b19ca04e6f",
+              "media_type": "image/png",
+              "source": "由 v3 四面總覽等寬裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_gang/images/qin_gang_v3_three_quarter.png",
+              "sha256": "8514632f94026c9088a6898f7027b3fb8af4631a836668ca094ad7c1b93a9765",
+              "media_type": "image/png",
+              "source": "由 v3 四面總覽等寬裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_gang/images/qin_gang_v3_profile.png",
+              "sha256": "fb7d7f58caec6e98d122ea303c39c46bd2dc2cc4a2a2a2ab1fb1e1e08480e04e",
+              "media_type": "image/png",
+              "source": "由 v3 四面總覽等寬裁切：完整右側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_gang/images/qin_gang_v3_back.png",
+              "sha256": "2470ca500b12e23a5fc6313095f017a9da83ffae4b810a09e00d6b99d25784e9",
+              "media_type": "image/png",
+              "source": "由 v3 四面總覽等寬裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "核准後，場景生成必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "核准後優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        },
+        {
+          "schema_version": 1,
           "reference_set_id": "qin_gang-core-v2",
           "character_id": "qin_gang",
           "version": 2,
-          "label": "裸臂墨晶鏡四面核心造型（待核准）",
+          "label": "裸臂墨晶鏡四面核心造型（美術方向參考）",
           "status": "draft",
           "is_primary": false,
           "references": [
@@ -665,8 +2396,8 @@ window.WWL_VISUAL_CATALOG = {
           "character_id": "qin_gang",
           "version": 1,
           "label": "標準四面核心造型",
-          "status": "approved",
-          "is_primary": true,
+          "status": "retired",
+          "is_primary": false,
           "references": [
             {
               "role": "turnaround",
@@ -728,19 +2459,141 @@ window.WWL_VISUAL_CATALOG = {
       ],
       "preferred_reference": {
         "role": "turnaround",
-        "path": "characters/qin_gang/images/qin_gang_turnaround_v1.png",
-        "sha256": "d33eec4342c9e95183bcfc7e1ed78340116fca44cd2159d8c48b0fbc698150bc",
+        "path": "characters/qin_gang/images/qin_gang_turnaround_v4.png",
+        "sha256": "f48a7759f409ae29a947b00858068f73337c463e8658d56998497d4dd726b10c",
         "media_type": "image/png",
-        "source": "imagegen 標準四面總覽，2026-08-08 核准",
-        "reference_set_id": "qin_gang-core-v1"
+        "source": "依使用者偏好的 v2 墨晶鏡與染髮方向進行世界觀內收斂的 imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "qin_gang-core-v4"
       },
       "display_reference": {
         "role": "full_body_three_quarter",
-        "path": "characters/qin_gang/images/qin_gang_v1_three_quarter.png",
-        "sha256": "7a24bcf3e97157f5b948c0a0643aae15a64e4d6a3be3625ac721740efda420ff",
+        "path": "characters/qin_gang/images/qin_gang_v4_three_quarter.png",
+        "sha256": "ab904b91268b8a67959a41c61c53a8fa9a926133d33ee2387a4ebe15920e0128",
+        "media_type": "image/png",
+        "source": "由 v4 四面總覽等寬裁切：四分之三",
+        "reference_set_id": "qin_gang-core-v4"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "qin_huaizhong",
+      "canonical_name": "秦懷忠 (Qin Huaizhong)",
+      "aliases": [
+        "秦懷忠",
+        "Qin Huaizhong"
+      ],
+      "role": "Qin Loyal-Line Realm Master / First-Volume Antagonist",
+      "visual_anchors": {
+        "apparent_age": "mid-fifties",
+        "face_structure": "broad weathered authoritative face with a heavy jaw",
+        "eyes": "dark calculating eyes under heavy straight brows",
+        "hair": "iron-black hair streaked with grey and tied in a strict high knot",
+        "physique": "broad-shouldered, heavy and commanding",
+        "signature_clothing": "dark oxblood Qin realm-master robe with restrained bronze edging and a wide tally belt",
+        "signature_item": "twelve removable ivory tally tabs arranged across the belt",
+        "distinguishing_marks": [
+          "old stone-vein scarring at both wrists",
+          "habitually squared formal posture"
+        ]
+      },
+      "forbidden_traits": [
+        "youthful face",
+        "golden emperor crown",
+        "ornate Western plate armor",
+        "friendly smile"
+      ],
+      "prompt_tokens": [
+        "qin_huaizhong_char",
+        "Qin loyal-line realm master",
+        "twelve belt tally tabs",
+        "dark oxblood administrative robe"
+      ],
+      "reference_set_ids": [
+        "qin_huaizhong-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "qin_huaizhong-core-v1",
+          "character_id": "qin_huaizhong",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_huaizhong/images/qin_huaizhong_turnaround_v1.png",
+              "sha256": "9a36c94e863c06511e7dbe2f11018c66acca4898eb12e1106ae4c4bbc5e5174f",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_huaizhong/images/qin_huaizhong_v1_front.png",
+              "sha256": "d2c4eb5f50e5c8989b4580276ee689e92ccbe082877513c2f691dd7bd12d7437",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_huaizhong/images/qin_huaizhong_v1_three_quarter.png",
+              "sha256": "a63222a2bda88374e92a3ae41f3ef5227dce15ef10ff7c68201d5863883870c6",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_huaizhong/images/qin_huaizhong_v1_profile.png",
+              "sha256": "570513e42e16c0ea7bf60dd3a732937dcd2bc17c2df352bbcfa90df81dd9c1cc",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_huaizhong/images/qin_huaizhong_v1_back.png",
+              "sha256": "53df41c6ca78a1d49dcaa001e20cb2ba067741bab28b744d902de893668a63ab",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/qin_huaizhong/images/qin_huaizhong_turnaround_v1.png",
+        "sha256": "9a36c94e863c06511e7dbe2f11018c66acca4898eb12e1106ae4c4bbc5e5174f",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "qin_huaizhong-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/qin_huaizhong/images/qin_huaizhong_v1_three_quarter.png",
+        "sha256": "a63222a2bda88374e92a3ae41f3ef5227dce15ef10ff7c68201d5863883870c6",
         "media_type": "image/png",
         "source": "由核准四面總覽無損裁切：四分之三",
-        "reference_set_id": "qin_gang-core-v1"
+        "reference_set_id": "qin_huaizhong-core-v1"
       }
     },
     {
@@ -925,6 +2778,250 @@ window.WWL_VISUAL_CATALOG = {
         "media_type": "image/png",
         "source": "由核准四面總覽無損裁切：四分之三",
         "reference_set_id": "qin_woulou-core-v2"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "qin_xuandu",
+      "canonical_name": "秦玄度 (Qin Xuandu)",
+      "aliases": [
+        "秦玄度",
+        "Qin Xuandu"
+      ],
+      "role": "Qin Physician / Opening-Realm Evidence Keeper",
+      "visual_anchors": {
+        "apparent_age": "early forties",
+        "face_structure": "fine-boned composed physician's face",
+        "eyes": "dark clinical eyes that notice physical details before status",
+        "hair": "neatly tied black hair with restrained grey at the temples",
+        "physique": "slender, steady-handed and reserved",
+        "signature_clothing": "muted grey-green physician robes with narrow washable sleeves",
+        "signature_item": "aged wooden medicine case with needle tubes and evidence packets",
+        "distinguishing_marks": [
+          "two fingers habitually poised for pulse-taking",
+          "herbal discoloration on the cuffs"
+        ]
+      },
+      "forbidden_traits": [
+        "white modern lab coat",
+        "ornate alchemist robe",
+        "glowing medicine",
+        "combat-heavy physique"
+      ],
+      "prompt_tokens": [
+        "qin_xuandu_char",
+        "restrained Qin physician",
+        "grey-green medical robe",
+        "wooden medicine evidence case"
+      ],
+      "reference_set_ids": [
+        "qin_xuandu-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "qin_xuandu-core-v1",
+          "character_id": "qin_xuandu",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_xuandu/images/qin_xuandu_turnaround_v1.png",
+              "sha256": "da0031eb014fda0cdb25152e70e89843ba1d0512dbb5addcdd79661ff3a275b8",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_xuandu/images/qin_xuandu_v1_front.png",
+              "sha256": "d045337afd0695f2d16e346a87d14b9d11e1b4bb63d759746629ddf6e483571b",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_xuandu/images/qin_xuandu_v1_three_quarter.png",
+              "sha256": "52376e76e361655830b069d770e47a30c091682709919a9fa3e45a34b7ebf04e",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_xuandu/images/qin_xuandu_v1_profile.png",
+              "sha256": "6c74abf900bdb408864ec5f253868b6141adef8725ca031d1010ce558e74ef60",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_xuandu/images/qin_xuandu_v1_back.png",
+              "sha256": "ee5b3c316e77467cf192d2d3a4abaa6b2728706e50c9cccbbece481e4f3080d4",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/qin_xuandu/images/qin_xuandu_turnaround_v1.png",
+        "sha256": "da0031eb014fda0cdb25152e70e89843ba1d0512dbb5addcdd79661ff3a275b8",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "qin_xuandu-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/qin_xuandu/images/qin_xuandu_v1_three_quarter.png",
+        "sha256": "52376e76e361655830b069d770e47a30c091682709919a9fa3e45a34b7ebf04e",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "qin_xuandu-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "qin_yuanshuo",
+      "canonical_name": "秦元朔 (Qin Yuanshuo)",
+      "aliases": [
+        "秦元朔",
+        "Qin Yuanshuo"
+      ],
+      "role": "Qin Zhao's Uncle / Realm-Opening Administrator",
+      "visual_anchors": {
+        "apparent_age": "late forties",
+        "face_structure": "square orderly administrator's face with trimmed moustache lines",
+        "eyes": "measured dark eyes accustomed to balancing risk",
+        "hair": "black hair streaked with grey in a compact official knot",
+        "physique": "sturdy, formal and unhurried",
+        "signature_clothing": "deep ink-blue Qin administrative robe with subdued bronze closures",
+        "signature_item": "stack of slim realm-opening ledger tablets in a belt case",
+        "distinguishing_marks": [
+          "one worn bronze thumb ring",
+          "precisely aligned belt tools"
+        ]
+      },
+      "forbidden_traits": [
+        "imperial dragon robe",
+        "youthful warrior styling",
+        "excess jewelry",
+        "Western business suit"
+      ],
+      "prompt_tokens": [
+        "qin_yuanshuo_char",
+        "Qin realm-opening administrator",
+        "ink-blue formal robe",
+        "ledger tablet belt case"
+      ],
+      "reference_set_ids": [
+        "qin_yuanshuo-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "qin_yuanshuo-core-v1",
+          "character_id": "qin_yuanshuo",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/qin_yuanshuo/images/qin_yuanshuo_turnaround_v1.png",
+              "sha256": "8543bedad976301c2acfe1c731e68f4ce3c24c738384b46ac19ed14bbed8b39a",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/qin_yuanshuo/images/qin_yuanshuo_v1_front.png",
+              "sha256": "0f18ec82f728c58f1aba6777ad97c4d79cbfff226c60f0136db2e32157e8c6cf",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/qin_yuanshuo/images/qin_yuanshuo_v1_three_quarter.png",
+              "sha256": "0afe7030a1536d4df391d5dee6458c6077dc1373bce4181f2263e3279f9302c9",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/qin_yuanshuo/images/qin_yuanshuo_v1_profile.png",
+              "sha256": "f6d31967b8a7fb8c22bfb02e896afd7523912bf3c8bfe4fbafdac5bf729955d4",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/qin_yuanshuo/images/qin_yuanshuo_v1_back.png",
+              "sha256": "9c3e3be0aadb02a4063270c440b33226c9a06c204451a12182469b2af8086ef3",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/qin_yuanshuo/images/qin_yuanshuo_turnaround_v1.png",
+        "sha256": "8543bedad976301c2acfe1c731e68f4ce3c24c738384b46ac19ed14bbed8b39a",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "qin_yuanshuo-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/qin_yuanshuo/images/qin_yuanshuo_v1_three_quarter.png",
+        "sha256": "0afe7030a1536d4df391d5dee6458c6077dc1373bce4181f2263e3279f9302c9",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "qin_yuanshuo-core-v1"
       }
     },
     {
@@ -1500,6 +3597,372 @@ window.WWL_VISUAL_CATALOG = {
     },
     {
       "schema_version": 1,
+      "character_id": "sang_chi",
+      "canonical_name": "桑遲 (Sang Chi)",
+      "aliases": [
+        "桑遲",
+        "Sang Chi"
+      ],
+      "role": "Liuxia Water Official / Autonomous Council Elder",
+      "visual_anchors": {
+        "apparent_age": "late fifties",
+        "face_structure": "narrow composed water official's face with deep nasolabial lines",
+        "eyes": "quiet dark eyes used to measuring flow, scarcity and public anger",
+        "hair": "long grey-black hair tied low with a faded blue cord",
+        "physique": "lean, patient and slightly bowed",
+        "signature_clothing": "faded blue-grey water-office robe with repaired waterproof shoulder panels",
+        "signature_item": "bamboo water gauge and rolled canal map",
+        "distinguishing_marks": [
+          "mineral tide marks on the robe hem",
+          "one permanently bent index finger"
+        ]
+      },
+      "forbidden_traits": [
+        "luxury court official robe",
+        "water magic aura",
+        "young scholar face",
+        "ornate crown"
+      ],
+      "prompt_tokens": [
+        "sang_chi_char",
+        "Liuxia water official",
+        "bamboo water gauge",
+        "faded blue-grey repaired robe"
+      ],
+      "reference_set_ids": [
+        "sang_chi-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "sang_chi-core-v1",
+          "character_id": "sang_chi",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/sang_chi/images/sang_chi_turnaround_v1.png",
+              "sha256": "e57dbe98e8bb9c4395ddde08d6a92986108cedf500b6adbd8b10848f5c5e64ca",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/sang_chi/images/sang_chi_v1_front.png",
+              "sha256": "c8d55e45342baa31da2a9b4a2982fe3566361b82ea766d70a2b5dae5ea066ffb",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/sang_chi/images/sang_chi_v1_three_quarter.png",
+              "sha256": "4bd80d74e9227cf4f4ca2fdbe70b26124f1ddaa053fcd4701ca67b4de8e77d1f",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/sang_chi/images/sang_chi_v1_profile.png",
+              "sha256": "2421e6cbaf94dca1f76c9ab8021b5818862ff9d3a0a34e58677b3f79a71712ab",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/sang_chi/images/sang_chi_v1_back.png",
+              "sha256": "36549fc884355f023f08bfac53606037ed25b63abe69e4eaec4815ae3ab818ef",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/sang_chi/images/sang_chi_turnaround_v1.png",
+        "sha256": "e57dbe98e8bb9c4395ddde08d6a92986108cedf500b6adbd8b10848f5c5e64ca",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "sang_chi-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/sang_chi/images/sang_chi_v1_three_quarter.png",
+        "sha256": "4bd80d74e9227cf4f4ca2fdbe70b26124f1ddaa053fcd4701ca67b4de8e77d1f",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "sang_chi-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "shen_jinian",
+      "canonical_name": "沈季年 (Shen Jinian)",
+      "aliases": [
+        "沈季年",
+        "Shen Jinian"
+      ],
+      "role": "Sink River Record Clerk / Residents' Council Founder",
+      "visual_anchors": {
+        "apparent_age": "early thirties",
+        "face_structure": "narrow tired scholar's face with practical cheekbones",
+        "eyes": "quick observant dark eyes with sleepless shadows",
+        "hair": "loosely tied black hair with stray strands around the temples",
+        "physique": "slim and slightly stooped from desk work",
+        "signature_clothing": "patched brown-grey clerk layers with rolled cuffs and a weatherproof shoulder wrap",
+        "signature_item": "cloth-bound public ledger and reed-pen case",
+        "distinguishing_marks": [
+          "permanent ink stains on the fingers",
+          "carefully repaired satchel straps"
+        ]
+      },
+      "forbidden_traits": [
+        "luxury scholar silk",
+        "official crown",
+        "combat armor",
+        "clean unworked hands"
+      ],
+      "prompt_tokens": [
+        "shen_jinian_char",
+        "patched civic record clerk",
+        "cloth public ledger",
+        "ink-stained fingers"
+      ],
+      "reference_set_ids": [
+        "shen_jinian-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "shen_jinian-core-v1",
+          "character_id": "shen_jinian",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/shen_jinian/images/shen_jinian_turnaround_v1.png",
+              "sha256": "b0b5462993e65156eefc262cec7409f42d5b412adcf1d3332329059df80dbe61",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/shen_jinian/images/shen_jinian_v1_front.png",
+              "sha256": "8eed5168d13f944151c4673eceaa00992cd7e0d422ef1d6b4bb11f3c3cd49e9a",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/shen_jinian/images/shen_jinian_v1_three_quarter.png",
+              "sha256": "10a646c6cf19e73f913fa7eabe1944190973f712f5008d7231f7ef1ed66f3238",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/shen_jinian/images/shen_jinian_v1_profile.png",
+              "sha256": "544b677962043ee7773127b6b302265ed963908a87b1616dfe389d6a210df9a7",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/shen_jinian/images/shen_jinian_v1_back.png",
+              "sha256": "52e05a1d7c8d669752239f42ba25c302183128c29cf6a6a98208a025883043fe",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/shen_jinian/images/shen_jinian_turnaround_v1.png",
+        "sha256": "b0b5462993e65156eefc262cec7409f42d5b412adcf1d3332329059df80dbe61",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "shen_jinian-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/shen_jinian/images/shen_jinian_v1_three_quarter.png",
+        "sha256": "10a646c6cf19e73f913fa7eabe1944190973f712f5008d7231f7ef1ed66f3238",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "shen_jinian-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "shi_ku",
+      "canonical_name": "石苦 (Shi Ku)",
+      "aliases": [
+        "石苦",
+        "Shi Ku"
+      ],
+      "role": "Black-Mine Elder / Rescued Miners' Representative",
+      "visual_anchors": {
+        "apparent_age": "early sixties",
+        "face_structure": "deeply lined leathery miner's face with a blunt chin",
+        "eyes": "clouded brown eyes, patient and difficult to intimidate",
+        "hair": "thin grey hair tied in a small low knot",
+        "physique": "stooped, sinewy and work-worn",
+        "signature_clothing": "many-times-patched black mine coat over faded earth-coloured layers",
+        "signature_item": "worn stone tally and short-handled miner's pick",
+        "distinguishing_marks": [
+          "silica-white eyebrows",
+          "two missing fingertips on the left hand"
+        ]
+      },
+      "forbidden_traits": [
+        "wise immortal robes",
+        "long perfect white beard",
+        "clean ceremonial clothing",
+        "oversized fantasy weapon"
+      ],
+      "prompt_tokens": [
+        "shi_ku_char",
+        "elder black-mine survivor",
+        "patched mine coat",
+        "worn stone tally"
+      ],
+      "reference_set_ids": [
+        "shi_ku-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "shi_ku-core-v1",
+          "character_id": "shi_ku",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/shi_ku/images/shi_ku_turnaround_v1.png",
+              "sha256": "e98c4fc6ad6c76c24314cdf4e10f8c16e4811dce7586073e022829732feda64a",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/shi_ku/images/shi_ku_v1_front.png",
+              "sha256": "b17e9435212214fe3b84ede6efdaa76ee18fdd929715e6c47e69ba8e167093e9",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/shi_ku/images/shi_ku_v1_three_quarter.png",
+              "sha256": "3c07e852088430c60f2ad638b4cc2e4335d645163ddecaf04a299ef5f4f16280",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/shi_ku/images/shi_ku_v1_profile.png",
+              "sha256": "4cabc496ac3efb25308dd835106c20c13d55cb2c1658ec4a00f5508df4e80f46",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/shi_ku/images/shi_ku_v1_back.png",
+              "sha256": "28c5ddf1f6effd311d6473f9d1416984b7223874497ee3d376e00c079ad12bcf",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/shi_ku/images/shi_ku_turnaround_v1.png",
+        "sha256": "e98c4fc6ad6c76c24314cdf4e10f8c16e4811dce7586073e022829732feda64a",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "shi_ku-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/shi_ku/images/shi_ku_v1_three_quarter.png",
+        "sha256": "3c07e852088430c60f2ad638b4cc2e4335d645163ddecaf04a299ef5f4f16280",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "shi_ku-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
       "character_id": "su_wanzhao",
       "canonical_name": "蘇晚照 (Su Wanzhao)",
       "aliases": [
@@ -1649,6 +4112,616 @@ window.WWL_VISUAL_CATALOG = {
     },
     {
       "schema_version": 1,
+      "character_id": "tianheng_shouzuo",
+      "canonical_name": "天衡首座 (Tianheng First Seat)",
+      "aliases": [
+        "天衡首座",
+        "Tianheng First Seat"
+      ],
+      "role": "Tianheng Central First Seat / Centralization Architect",
+      "visual_anchors": {
+        "apparent_age": "late fifties to early sixties",
+        "face_structure": "long austere symmetrical face with controlled institutional calm",
+        "eyes": "pale dark-grey eyes with an unwavering evaluative stare",
+        "hair": "silver-black hair combed smooth into a formal crown knot",
+        "physique": "tall, spare and perfectly upright",
+        "signature_clothing": "pale stone-grey layered central-court robe with severe geometric seams and no luxury embroidery",
+        "signature_item": "flat circular Tianheng authority seal fixed at the sternum",
+        "distinguishing_marks": [
+          "immaculate cuffs",
+          "expression almost emptied of personal emotion"
+        ]
+      },
+      "forbidden_traits": [
+        "religious halo",
+        "white angel costume",
+        "golden emperor regalia",
+        "flowing romantic sleeves"
+      ],
+      "prompt_tokens": [
+        "tianheng_shouzuo_char",
+        "central first seat",
+        "pale institutional robe",
+        "austere geometric authority seal"
+      ],
+      "reference_set_ids": [
+        "tianheng_shouzuo-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "tianheng_shouzuo-core-v1",
+          "character_id": "tianheng_shouzuo",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_turnaround_v1.png",
+              "sha256": "7b2edd2bc9792a9f9ea82e46aafcd6ec74495bbcdb1f8fc76a62b9d12bf5e5e3",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_v1_front.png",
+              "sha256": "6bbd13c7e4d88712a65c4c649b39024c72c8a221062cdea79c6eb1b2adc5e254",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_v1_three_quarter.png",
+              "sha256": "4db2be62d396d6f449b6921f362e727686497e7109c41196722c52aff756ac85",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_v1_profile.png",
+              "sha256": "f4841c19f545f481ac669ad197cfa4be1edac61c50105281cca9dfc9bac76fe9",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_v1_back.png",
+              "sha256": "4af77fae7a006b7b407c49b337f4913ee130b98e845ceb0255928e82ebd46fe8",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_turnaround_v1.png",
+        "sha256": "7b2edd2bc9792a9f9ea82e46aafcd6ec74495bbcdb1f8fc76a62b9d12bf5e5e3",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "tianheng_shouzuo-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/tianheng_shouzuo/images/tianheng_shouzuo_v1_three_quarter.png",
+        "sha256": "4db2be62d396d6f449b6921f362e727686497e7109c41196722c52aff756ac85",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "tianheng_shouzuo-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "yan_pingzhang",
+      "canonical_name": "晏平章 (Yan Pingzhang)",
+      "aliases": [
+        "晏平章",
+        "Yan Pingzhang"
+      ],
+      "role": "Tianheng Repair Envoy / Central Emergency Administrator",
+      "visual_anchors": {
+        "apparent_age": "mid-forties",
+        "face_structure": "balanced severe administrator's face with precise planes",
+        "eyes": "cool analytical dark-grey eyes focused on system failure",
+        "hair": "black hair threaded with silver in an exact official knot",
+        "physique": "tall, composed and economical in movement",
+        "signature_clothing": "structured ash-white Tianheng envoy robe with dark graphite seams",
+        "signature_item": "straight calibration ruler paired with three distinct repair seals",
+        "distinguishing_marks": [
+          "three repair-seal cases aligned at the left hip",
+          "thin ruler scar across the right thumb"
+        ]
+      },
+      "forbidden_traits": [
+        "religious priest styling",
+        "golden imperial robe",
+        "ornate fantasy armor",
+        "warm casual posture"
+      ],
+      "prompt_tokens": [
+        "yan_pingzhang_char",
+        "Tianheng repair envoy",
+        "three repair seals and ruler",
+        "structured ash-white robe"
+      ],
+      "reference_set_ids": [
+        "yan_pingzhang-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "yan_pingzhang-core-v1",
+          "character_id": "yan_pingzhang",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/yan_pingzhang/images/yan_pingzhang_turnaround_v1.png",
+              "sha256": "46b41c1a825066a65442d421aea5bdaf58f27e3361a6c9365fa2cc6f07d26e03",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_front.png",
+              "sha256": "31aef64e539ed08f731a1962bde7b2f8a05691d1270402f4cafbb00833d90080",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_three_quarter.png",
+              "sha256": "eaf946243f1a8e88599f1f7abb02273e076198fe7bc7d87928bfb0a5dbf28210",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_profile.png",
+              "sha256": "114b7eaca565176933e042ebaa9bbc923144dcc1d250336cf76322734e95c1f3",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_back.png",
+              "sha256": "426463f673721c1ef62221ee32b7563acd5a05d7b4b57397f5ddacd993be9e23",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/yan_pingzhang/images/yan_pingzhang_turnaround_v1.png",
+        "sha256": "46b41c1a825066a65442d421aea5bdaf58f27e3361a6c9365fa2cc6f07d26e03",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "yan_pingzhang-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/yan_pingzhang/images/yan_pingzhang_v1_three_quarter.png",
+        "sha256": "eaf946243f1a8e88599f1f7abb02273e076198fe7bc7d87928bfb0a5dbf28210",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "yan_pingzhang-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "yu_lu",
+      "canonical_name": "余鹿 (Yu Lu)",
+      "aliases": [
+        "余鹿",
+        "Yu Lu"
+      ],
+      "role": "Young Hollow-Womb Survivor / Residual-Mark Bearer",
+      "visual_anchors": {
+        "apparent_age": "nineteen",
+        "face_structure": "young narrow male face, not yet hardened into adulthood",
+        "eyes": "wide dark eyes carrying fear, stubbornness and quick trust",
+        "hair": "unkempt black hair falling across the brow",
+        "physique": "slim, underfed and still adolescent in proportion",
+        "signature_clothing": "torn dark mine shirt, wrapped forearms and patched narrow trousers",
+        "signature_item": "braided vine rope used to secure and guide other survivors",
+        "distinguishing_marks": [
+          "branching black residual marks climbing the left neck and forearm",
+          "small split in the lower lip"
+        ]
+      },
+      "forbidden_traits": [
+        "adult muscular hero",
+        "female presentation",
+        "glowing demonic tattoos",
+        "luxury travel clothes"
+      ],
+      "prompt_tokens": [
+        "yu_lu_char",
+        "nineteen-year-old male survivor",
+        "branching black residual marks",
+        "braided vine rescue rope"
+      ],
+      "reference_set_ids": [
+        "yu_lu-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "yu_lu-core-v1",
+          "character_id": "yu_lu",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/yu_lu/images/yu_lu_turnaround_v1.png",
+              "sha256": "895b2cebbb59c5af5a7988b1e43c33d2033fe50116adecf8bef953d0903ad415",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/yu_lu/images/yu_lu_v1_front.png",
+              "sha256": "48bbfdd6d8305ae95575fa62733598755efd66a2f4c4d04a79192d34f7bf8b5b",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/yu_lu/images/yu_lu_v1_three_quarter.png",
+              "sha256": "94df078acf20f0cd8cc87fb9f14dfae174b9232649a6222f5331d49745c515f8",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/yu_lu/images/yu_lu_v1_profile.png",
+              "sha256": "9be45d93ebfd21a9018afff691da498ef8bdbfa6381b1b3ab69a0c1f8cf38aef",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/yu_lu/images/yu_lu_v1_back.png",
+              "sha256": "6a35237713b137a3228af5c13200140f5de7fd743d786e3d81296785c45074df",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/yu_lu/images/yu_lu_turnaround_v1.png",
+        "sha256": "895b2cebbb59c5af5a7988b1e43c33d2033fe50116adecf8bef953d0903ad415",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "yu_lu-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/yu_lu/images/yu_lu_v1_three_quarter.png",
+        "sha256": "94df078acf20f0cd8cc87fb9f14dfae174b9232649a6222f5331d49745c515f8",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "yu_lu-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "yuan_xi",
+      "canonical_name": "袁細 (Yuan Xi)",
+      "aliases": [
+        "袁細",
+        "Yuan Xi"
+      ],
+      "role": "Hollow-Womb Mine Survivor / Tracking-Seal Dismantler",
+      "visual_anchors": {
+        "apparent_age": "about twenty-five",
+        "face_structure": "fine angular young woman's face sharpened by hunger and concentration",
+        "eyes": "quick dark eyes that constantly map mechanisms and exits",
+        "hair": "cropped practical black hair with one longer side strand",
+        "physique": "small, wiry and dexterous",
+        "signature_clothing": "close-bound charcoal mine layers with reinforced knees and a narrow tool harness",
+        "signature_item": "hooked seal-lifting pick and three dismantling wedges",
+        "distinguishing_marks": [
+          "thin tracking-seal burn behind the right ear",
+          "split calluses across both thumbs"
+        ]
+      },
+      "forbidden_traits": [
+        "flowing princess hair",
+        "ornate feminine gown",
+        "seductive pose",
+        "clean jewel-like tools"
+      ],
+      "prompt_tokens": [
+        "yuan_xi_char",
+        "wiry female seal dismantler",
+        "cropped black hair",
+        "hooked seal-lifting tools"
+      ],
+      "reference_set_ids": [
+        "yuan_xi-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "yuan_xi-core-v1",
+          "character_id": "yuan_xi",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/yuan_xi/images/yuan_xi_turnaround_v1.png",
+              "sha256": "b1cfc52793a4b43fd6d22ef6504cd512f6251eb9f61cec2740419db1e88fcb51",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/yuan_xi/images/yuan_xi_v1_front.png",
+              "sha256": "97b0c967de8b51b63319e8ae186812cceeec038ed4a7d15e32210eb29bd5f715",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/yuan_xi/images/yuan_xi_v1_three_quarter.png",
+              "sha256": "6e17a58ae45d28c88161c4d54b41d15884cdc904cb3d0f9a65d0e89c98539433",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/yuan_xi/images/yuan_xi_v1_profile.png",
+              "sha256": "55debb5892486174569a5d36cd0cb719766a3c7bf9dcff818118c27f48ff7ffc",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/yuan_xi/images/yuan_xi_v1_back.png",
+              "sha256": "27f8023f6dfe745535e989b0af14c63e2b4dedfafc506c0dd3d957c552d28e1b",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/yuan_xi/images/yuan_xi_turnaround_v1.png",
+        "sha256": "b1cfc52793a4b43fd6d22ef6504cd512f6251eb9f61cec2740419db1e88fcb51",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "yuan_xi-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/yuan_xi/images/yuan_xi_v1_three_quarter.png",
+        "sha256": "6e17a58ae45d28c88161c4d54b41d15884cdc904cb3d0f9a65d0e89c98539433",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "yuan_xi-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "yue_chenshan",
+      "canonical_name": "岳沉山 (Yue Chenshan)",
+      "aliases": [
+        "岳沉山",
+        "Yue Chenshan"
+      ],
+      "role": "Mountain-Cutting Tower Envoy / Realm Auction Combatant",
+      "visual_anchors": {
+        "apparent_age": "early forties",
+        "face_structure": "heavy square martial face with a low scarred brow",
+        "eyes": "ember-brown eyes carrying controlled competitive force",
+        "hair": "dark brown-black hair tied into a short battle knot",
+        "physique": "large, dense and mountain-strong",
+        "signature_clothing": "dark rust and charcoal tower battle layers with compact Eastern lamellar reinforcement",
+        "signature_item": "sealed battle coffer marked by one non-glowing fire seal",
+        "distinguishing_marks": [
+          "burned line across the left collarbone",
+          "stone-weight training rings at the belt"
+        ]
+      },
+      "forbidden_traits": [
+        "Western plate armor",
+        "flaming body aura",
+        "giant decorative pauldrons",
+        "golden hero costume"
+      ],
+      "prompt_tokens": [
+        "yue_chenshan_char",
+        "Mountain-Cutting Tower envoy",
+        "sealed battle coffer",
+        "dark rust compact battle layers"
+      ],
+      "reference_set_ids": [
+        "yue_chenshan-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "yue_chenshan-core-v1",
+          "character_id": "yue_chenshan",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/yue_chenshan/images/yue_chenshan_turnaround_v1.png",
+              "sha256": "cc077ec18fb2dd55414db83c18c556c2a3d5934c56e3d76b5dfd7ab1bf2f82b4",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/yue_chenshan/images/yue_chenshan_v1_front.png",
+              "sha256": "4712205fc71cfdc3e3a275e790d2f37cc599e4fc6b094bd2f3e6cdc594cb8e65",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/yue_chenshan/images/yue_chenshan_v1_three_quarter.png",
+              "sha256": "496947931b19b2efb4d23072e33d7d2b79306151ea2a17f827cc1b15e0669ef1",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/yue_chenshan/images/yue_chenshan_v1_profile.png",
+              "sha256": "f92d2d97d5330a2f5bd1b68d79f6aa3828a6832102bd1def2e2be04f1f8ed269",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/yue_chenshan/images/yue_chenshan_v1_back.png",
+              "sha256": "ac8884cb7242f7e3039414a401234c390038424c088cb48ef589528edb8d4a81",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/yue_chenshan/images/yue_chenshan_turnaround_v1.png",
+        "sha256": "cc077ec18fb2dd55414db83c18c556c2a3d5934c56e3d76b5dfd7ab1bf2f82b4",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "yue_chenshan-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/yue_chenshan/images/yue_chenshan_v1_three_quarter.png",
+        "sha256": "496947931b19b2efb4d23072e33d7d2b79306151ea2a17f827cc1b15e0669ef1",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "yue_chenshan-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
       "character_id": "zhiyuan",
       "canonical_name": "紙鳶 (Zhiyuan)",
       "aliases": [
@@ -1793,6 +4866,128 @@ window.WWL_VISUAL_CATALOG = {
         "media_type": "image/png",
         "source": "由核准四面總覽無損裁切：四分之三",
         "reference_set_id": "zhiyuan-core-v1"
+      }
+    },
+    {
+      "schema_version": 1,
+      "character_id": "zhu_heng",
+      "canonical_name": "祝衡 (Zhu Heng)",
+      "aliases": [
+        "祝衡",
+        "Zhu Heng"
+      ],
+      "role": "Qingya Grain Merchant / Unstable Creditor-Ally",
+      "visual_anchors": {
+        "apparent_age": "late forties",
+        "face_structure": "rounded clever merchant's face with a neat narrow beard",
+        "eyes": "quick cautious dark eyes that recalculate every alliance",
+        "hair": "oiled black hair with grey at the temples in a tidy merchant knot",
+        "physique": "soft around the middle but brisk and energetic",
+        "signature_clothing": "muted olive-brown merchant robe layered with twelve narrow account-cloth strips",
+        "signature_item": "small wooden abacus and grain-credit seal box",
+        "distinguishing_marks": [
+          "twelve separately knotted account cloths",
+          "right index finger stained by red ledger paste"
+        ]
+      },
+      "forbidden_traits": [
+        "comic greedy caricature",
+        "gold-covered robe",
+        "imperial official hat",
+        "battle armor"
+      ],
+      "prompt_tokens": [
+        "zhu_heng_char",
+        "Qingya grain creditor",
+        "twelve account-cloth layers",
+        "wooden abacus and seal box"
+      ],
+      "reference_set_ids": [
+        "zhu_heng-core-v1"
+      ],
+      "reference_sets": [
+        {
+          "schema_version": 1,
+          "reference_set_id": "zhu_heng-core-v1",
+          "character_id": "zhu_heng",
+          "version": 1,
+          "label": "標準四面核心造型",
+          "status": "approved",
+          "is_primary": true,
+          "references": [
+            {
+              "role": "turnaround",
+              "path": "characters/zhu_heng/images/zhu_heng_turnaround_v1.png",
+              "sha256": "9052b1e304305bc828747650a268e31f18ddba9f5e28fa22eac79f3d7c339c87",
+              "media_type": "image/png",
+              "source": "imagegen 標準四面總覽，2026-08-11 核准"
+            },
+            {
+              "role": "full_body_front",
+              "path": "characters/zhu_heng/images/zhu_heng_v1_front.png",
+              "sha256": "817884ea53777e8744051f11a693e5525daa918e45e41aec08cea05626a3c472",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：正面"
+            },
+            {
+              "role": "full_body_three_quarter",
+              "path": "characters/zhu_heng/images/zhu_heng_v1_three_quarter.png",
+              "sha256": "dc7cd5546f5c4ec342462de516e65af2d6280aa0e4c6253bc57965d5373730ff",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：四分之三"
+            },
+            {
+              "role": "full_body_profile",
+              "path": "characters/zhu_heng/images/zhu_heng_v1_profile.png",
+              "sha256": "b9878a3b5a3587033f1ef1b9c044ad4075d6f7dcee0f1648a2c01216f24870b2",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：完整側面"
+            },
+            {
+              "role": "full_body_back",
+              "path": "characters/zhu_heng/images/zhu_heng_v1_back.png",
+              "sha256": "c4dfb0e3375d892b4df5d3389a5b3cf170caeeea5e1195353798349819421590",
+              "media_type": "image/png",
+              "source": "由核准四面總覽無損裁切：背面"
+            }
+          ],
+          "engine_bindings": {
+            "codex": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "場景生成前必須引用同一版本的四個獨立視角；turnaround 供人工整體核對。"
+            },
+            "gemini": {
+              "reference_roles": [
+                "full_body_front",
+                "full_body_three_quarter",
+                "full_body_profile",
+                "full_body_back"
+              ],
+              "notes": "優先傳入四個獨立視角；受參考圖數限制時保留正面、四分之三與背面。"
+            }
+          }
+        }
+      ],
+      "preferred_reference": {
+        "role": "turnaround",
+        "path": "characters/zhu_heng/images/zhu_heng_turnaround_v1.png",
+        "sha256": "9052b1e304305bc828747650a268e31f18ddba9f5e28fa22eac79f3d7c339c87",
+        "media_type": "image/png",
+        "source": "imagegen 標準四面總覽，2026-08-11 核准",
+        "reference_set_id": "zhu_heng-core-v1"
+      },
+      "display_reference": {
+        "role": "full_body_three_quarter",
+        "path": "characters/zhu_heng/images/zhu_heng_v1_three_quarter.png",
+        "sha256": "dc7cd5546f5c4ec342462de516e65af2d6280aa0e4c6253bc57965d5373730ff",
+        "media_type": "image/png",
+        "source": "由核准四面總覽無損裁切：四分之三",
+        "reference_set_id": "zhu_heng-core-v1"
       }
     }
   ]

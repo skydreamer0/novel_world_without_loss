@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "character_id": "shen_jinian",
+  "canonical_name": "沈季年 (Shen Jinian)",
+  "aliases": [
+    "沈季年",
+    "Shen Jinian"
+  ],
+  "role": "Sink River Record Clerk / Residents' Council Founder",
+  "visual_anchors": {
+    "apparent_age": "early thirties",
+    "face_structure": "narrow tired scholar's face with practical cheekbones",
+    "eyes": "quick observant dark eyes with sleepless shadows",
+    "hair": "loosely tied black hair with stray strands around the temples",
+    "physique": "slim and slightly stooped from desk work",
+    "signature_clothing": "patched brown-grey clerk layers with rolled cuffs and a weatherproof shoulder wrap",
+    "signature_item": "cloth-bound public ledger and reed-pen case",
+    "distinguishing_marks": [
+      "permanent ink stains on the fingers",
+      "carefully repaired satchel straps"
+    ]
+  },
+  "forbidden_traits": [
+    "luxury scholar silk",
+    "official crown",
+    "combat armor",
+    "clean unworked hands"
+  ],
+  "prompt_tokens": [
+    "shen_jinian_char",
+    "patched civic record clerk",
+    "cloth public ledger",
+    "ink-stained fingers"
+  ]
+}
+
