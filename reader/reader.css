@@ -176,6 +176,44 @@ body.nav-hidden .top-nav {
   margin: 2em 0;
 }
 
+.content .chapter-illustration {
+  width: min(100%, 36rem);
+  margin: 2.75em auto 3em;
+  text-align: center;
+}
+
+.content .chapter-illustration--portrait {
+  width: min(100%, 20rem);
+}
+
+.content .chapter-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--line));
+  border-radius: calc(var(--border-radius) + 2px);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--accent) 16%, transparent),
+    0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.content .chapter-illustration figcaption {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.content .chapter-illustration figcaption span {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
 .content.loading {
   position: relative;
   min-height: 450px;

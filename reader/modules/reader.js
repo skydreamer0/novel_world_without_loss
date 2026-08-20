@@ -112,6 +112,8 @@ export function createChapterSection(index, title, rawText) {
   section.dataset.chapterPath = state.files[index].path;
   section.innerHTML = marked.parse(rawText);
 
+  resolveChapterAssetPaths(section, state.files[index].path);
+
   // Mark first prose paragraph for drop-cap (skip headings, blockquotes, hr-led blocks)
   const firstP = section.querySelector(":scope > p");
   if (firstP) {
@@ -127,6 +129,33 @@ export function createChapterSection(index, title, rawText) {
   applyHighlightsToSection(section, path);
 
   return section;
+}
+
+function resolveChapterAssetPaths(section, chapterPath) {
+  const repoOrigin = "https://novel-assets.local/";
+
+  section.querySelectorAll("img[src]").forEach((img) => {
+    const source = img.getAttribute("src");
+    if (!source || /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(source)) return;
+
+    const resolved = new URL(source, new URL(chapterPath, repoOrigin));
+    if (resolved.origin !== new URL(repoOrigin).origin) return;
+
+    const assetPath = decodeURIComponent(resolved.pathname.slice(1));
+    const localPath = location.pathname.includes("/reader/")
+      ? `../${assetPath}`
+      : `./${assetPath}`;
+
+    img.addEventListener("error", () => {
+      if (img.dataset.remoteFallback === "true") return;
+      img.dataset.remoteFallback = "true";
+      img.src = getApiUrl(assetPath);
+    }, { once: true });
+
+    img.src = encodeURI(localPath);
+    if (!img.loading) img.loading = "lazy";
+    img.decoding = "async";
+  });
 }
 
 export function createChapterDivider(title) {
