@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_089_water_grain",
+  "chapter_number": 89,
+  "chapter_label": "第八十九章：斬岳",
+  "title": "一滴水、一粒鈍穀",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    }
+  ],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative medium or detail scene",
+  "action_description": "秦無漏以左手靠近指寬石溝，右臂包紮垂下，微小銀芽與水痕在洗劍峰石縫展開",
+  "mood": "克制、疲憊，生活中的微小成果與代價並存",
+  "display_asset": {
+    "path": "scenes/chapter_089_water_grain/chapter_089_water_grain_v1_reader.webp",
+    "sha256": "e9b0e0c4b62cfb24de486dfff95a452bd97020ef5c93b95d31892e52e06d4fac",
+    "media_type": "image/webp"
+  }
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "scene_id": "chapter_070_ninth_rift_departure",
   "chapter_number": 70,
-  "chapter_label": "第 070 章《啟航第九裂帶》",
-  "title": "萬界城啟航第九裂帶",
+  "chapter_label": "第七十章：啟航第九裂帶",
+  "title": "一起帶走",
   "character_refs": [
     {
       "character_id": "qin_woulou",
@@ -14,12 +14,12 @@
     "empty_womb"
   ],
   "location_id": "wanjie_city",
-  "camera": "cinematic extreme-wide 16:9 landscape behind the wounded global anchor",
-  "action_description": "The inhabited districts, river, root-forest and fields of Wanjie City move inside a translucent boundary through a failing realm gate while Qin Wulou serves as the small external anchor",
-  "mood": "dangerous collective departure under hunger and irreversible risk",
+  "camera": "16:9 wide scene from city wall",
+  "action_description": "秦無漏右臂垂下，左手按住城牆，身影逐漸淡去，棚屋與生活座標一同跟隨",
+  "mood": "克制、疲憊，生活中的微小成果與代價並存",
   "display_asset": {
-    "path": "scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v1.png",
-    "sha256": "0efb2f81cf9818ce14a63b0f0f3ffbbf45fcd218ee3f085161d1b9becc219b35",
-    "media_type": "image/png"
+    "path": "scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v2_reader.webp",
+    "sha256": "5d414b20414b4b9eabea5f9acb67df3979b03ef10641bf8f612c617028443778",
+    "media_type": "image/webp"
   }
 }

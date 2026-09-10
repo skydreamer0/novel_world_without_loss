@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_110_pain_spring",
+  "chapter_number": 110,
+  "chapter_label": "第一百一十章：痛泉",
+  "title": "泉邊的一道繩",
+  "character_refs": [],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative medium or detail scene",
+  "action_description": "杜衡坐在隔離繩外，女兒替他繫緊厚底鞋，石片分隔的小池泛著青銀水紋",
+  "mood": "克制、疲憊，生活中的微小成果與代價並存",
+  "display_asset": {
+    "path": "scenes/chapter_110_pain_spring/chapter_110_pain_spring_v1_reader.webp",
+    "sha256": "0ae6453fcca81b3200a77969046238acc68904b39e7da2f13934f97fd5b992cd",
+    "media_type": "image/webp"
+  }
+}

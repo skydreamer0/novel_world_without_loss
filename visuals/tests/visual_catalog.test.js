@@ -134,7 +134,7 @@ test('scene and world files remain valid after simplification', () => {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
-  assert.equal(sceneDirs.length, 8);
+  assert.equal(sceneDirs.length, 11);
 
   sceneDirs.forEach((directoryName) => {
     const sceneDir = path.join(VISUALS_ROOT, 'scenes', directoryName);

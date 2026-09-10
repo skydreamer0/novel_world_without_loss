@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_097_freshwater_well",
+  "chapter_number": 97,
+  "chapter_label": "第九十七章：只帶三十四戶",
+  "title": "井到了，水債仍在",
+  "character_refs": [],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative medium or detail scene",
+  "action_description": "遷入者靜候新井旁，水桶與殘存屋基圍著暫封出水口，井水尚未接入田渠",
+  "mood": "克制、疲憊，生活中的微小成果與代價並存",
+  "display_asset": {
+    "path": "scenes/chapter_097_freshwater_well/chapter_097_freshwater_well_v1_reader.webp",
+    "sha256": "a9c7ab786519784f78396666e7e154964bddc2b78f215ce9d52b70dd2047e5ca",
+    "media_type": "image/webp"
+  }
+}

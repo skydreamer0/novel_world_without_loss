@@ -1,0 +1,179 @@
+[
+  {
+    "chapter": 85,
+    "manuscript": "manuscript/vol_02/085_截一場雨.md",
+    "source_manuscript_sha256": "3cd2bda83c227b065c81897e7340f52d8c08711929cf6d5beafd43320c5bc9bc",
+    "inserted_after": "三人受傷，一柄鐮刀報廢，得到的銀穀只夠二十人一餐。效率低得殘核連續標出紅字。",
+    "alt": "陸青禾與包紮手掌的農婦查看少量銀穀，報廢鐮刀留在收過的田邊",
+    "caption": "半畝首割，只夠二十人一餐",
+    "master": "visuals/scenes/chapter_085_sword_rain_field/chapter_085_sword_rain_field_v2.png",
+    "master_sha256": "309b099398d7602efc70df84ecc2f2c8a7a4dc994e5b2f4a0c09fee979c1621d",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_085_sword_rain_field/chapter_085_sword_rain_field_v2_reader.webp",
+    "display_sha256": "b2a7a976230dae2862106a621efbeaaf27bfc0943f0128b3617a1aa54137f80c",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 304898,
+    "generated_source": "C:\\Users\\User\\.codex\\generated_images\\01a08986-aaa2-74a1-a002-97f3f00825b7\\exec-8dc877a6-cc3d-4261-8b51-5e73c4eda2bc.png",
+    "character_refs": [
+      {
+        "character_id": "lu_qinghe",
+        "reference_set_id": "lu_qinghe-core-v2"
+      }
+    ],
+    "reference_files": [
+      {
+        "path": "visuals\\characters\\lu_qinghe\\images\\lu_qinghe_v2_three_quarter.png",
+        "sha256": "72d6285e7a018a0a49bf60fb23e2533b7265ddba132864ea99e9d3ed23471db2"
+      },
+      {
+        "path": "visuals\\scenes\\chapter_085_sword_rain_field\\chapter_085_sword_rain_field_v1.png",
+        "sha256": "7239c9d6e504eba7201eea1a1c18e2c4dbc0d5503ee0bd092b1e82e6dd20c1e6"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 70,
+    "manuscript": "manuscript/vol_01/070_啟航第九裂帶.md",
+    "source_manuscript_sha256": "33b20beb469eebd5c9fbb09b0beae5b71c18fe2651f43083c2e7edf4b9e6e98f",
+    "inserted_after": "三槐台與九顆殘心逐一跟上。",
+    "alt": "秦無漏右臂垂下，左手按住城牆，身影逐漸淡去，棚屋與生活座標一同跟隨",
+    "caption": "棚屋、傷者與生活一起帶走",
+    "master": "visuals/scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v2.png",
+    "master_sha256": "908e6c560fdb431c1f153d7242d8203635a4815102dc5ff0eb19ffaaca981449",
+    "master_size": [
+      1672,
+      941
+    ],
+    "display": "visuals/scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v2_reader.webp",
+    "display_sha256": "5d414b20414b4b9eabea5f9acb67df3979b03ef10641bf8f612c617028443778",
+    "display_size": [
+      1600,
+      900
+    ],
+    "display_bytes": 270198,
+    "generated_source": "C:\\Users\\User\\.codex\\generated_images\\01a08986-aaa2-74a1-a002-97f3f00825b7\\exec-738a28a1-1097-4a3d-9073-8406b366023d.png",
+    "character_refs": [
+      {
+        "character_id": "qin_woulou",
+        "reference_set_id": "qin_woulou-core-v2"
+      }
+    ],
+    "reference_files": [
+      {
+        "path": "visuals\\characters\\qin_woulou\\images\\qin_woulou_v2_three_quarter.png",
+        "sha256": "8dd3f79be51d0ab4264494da9e7ea0da3882b0532ffd5e7d1edf82e873240252"
+      },
+      {
+        "path": "visuals\\scenes\\chapter_070_ninth_rift_departure\\chapter_070_ninth_rift_departure_v1.png",
+        "sha256": "0efb2f81cf9818ce14a63b0f0f3ffbbf45fcd218ee3f085161d1b9becc219b35"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 97,
+    "manuscript": "manuscript/vol_02/097_只帶三十四戶.md",
+    "source_manuscript_sha256": "2a356e4d180d13e91ccecd05e3976a1a91a26f7c3afdbfcafb5c59ced14a0bfa",
+    "inserted_after": "空間裡第一次多出一口真正的淡水井，井上方卻沒有歡呼。",
+    "alt": "遷入者靜候新井旁，水桶與殘存屋基圍著暫封出水口，井水尚未接入田渠",
+    "caption": "淡井到了，井邊卻沒有歡呼",
+    "master": "visuals/scenes/chapter_097_freshwater_well/chapter_097_freshwater_well_v1.png",
+    "master_sha256": "396d288361a60858e593b84153e6cf6db767c66476d728001cac4cd35c016c57",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_097_freshwater_well/chapter_097_freshwater_well_v1_reader.webp",
+    "display_sha256": "a9c7ab786519784f78396666e7e154964bddc2b78f215ce9d52b70dd2047e5ca",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 339814,
+    "generated_source": "C:\\Users\\User\\.codex\\generated_images\\01a08986-aaa2-74a1-a002-97f3f00825b7\\exec-9a2f9678-b9d3-49c6-a34b-d08baebc66f4.png",
+    "character_refs": [],
+    "reference_files": [
+      {
+        "path": "visuals\\scenes\\chapter_085_sword_rain_field\\chapter_085_sword_rain_field_v1.png",
+        "sha256": "7239c9d6e504eba7201eea1a1c18e2c4dbc0d5503ee0bd092b1e82e6dd20c1e6"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 110,
+    "manuscript": "manuscript/vol_02/110_痛泉.md",
+    "source_manuscript_sha256": "e3d2ae1892af076ce8d1ba2eea7cd8dd6371e032ad8bd5393c8762d4dd15b4a4",
+    "inserted_after": "女兒沒有接話，只替他把鞋帶繫緊。",
+    "alt": "杜衡坐在隔離繩外，女兒替他繫緊厚底鞋，石片分隔的小池泛著青銀水紋",
+    "caption": "女兒繫緊鞋帶，泉邊仍留一道繩",
+    "master": "visuals/scenes/chapter_110_pain_spring/chapter_110_pain_spring_v1.png",
+    "master_sha256": "b0c515ca407402afc196999c171cf25b66097c59a91c07f99e4971afd44dd924",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_110_pain_spring/chapter_110_pain_spring_v1_reader.webp",
+    "display_sha256": "0ae6453fcca81b3200a77969046238acc68904b39e7da2f13934f97fd5b992cd",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 259930,
+    "generated_source": "C:\\Users\\User\\.codex\\generated_images\\01a08986-aaa2-74a1-a002-97f3f00825b7\\exec-ec6b7e56-6f50-4ed7-a4a0-2561c1f24e35.png",
+    "character_refs": [],
+    "reference_files": [
+      {
+        "path": "visuals\\scenes\\chapter_060_conditional_membrane\\chapter_060_conditional_membrane_v1.png",
+        "sha256": "49b2e3adfeace89002acab1983731bb968474af12471763a2d32b8790fad51e4"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 89,
+    "manuscript": "manuscript/vol_02/089_斬岳.md",
+    "source_manuscript_sha256": "8ac0957fdd41791a557a8b30e76b0c1886ee9c6b86f184234fb3a62f3514c730",
+    "inserted_after": "峰腰第一株銀芽完全展開。",
+    "alt": "秦無漏以左手靠近指寬石溝，右臂包紮垂下，微小銀芽與水痕在洗劍峰石縫展開",
+    "caption": "一滴水與一粒穀，留下灌溉痕",
+    "master": "visuals/scenes/chapter_089_water_grain/chapter_089_water_grain_v1.png",
+    "master_sha256": "8d661eadfefbd97d7984d32727254909a5a22ede69c54780bd93d4eee486a131",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_089_water_grain/chapter_089_water_grain_v1_reader.webp",
+    "display_sha256": "e9b0e0c4b62cfb24de486dfff95a452bd97020ef5c93b95d31892e52e06d4fac",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 211610,
+    "generated_source": "C:\\Users\\User\\.codex\\generated_images\\01a08986-aaa2-74a1-a002-97f3f00825b7\\exec-86832c93-f566-47ae-9906-63cce76442ef.png",
+    "character_refs": [
+      {
+        "character_id": "qin_woulou",
+        "reference_set_id": "qin_woulou-core-v2"
+      }
+    ],
+    "reference_files": [
+      {
+        "path": "visuals\\characters\\qin_woulou\\images\\qin_woulou_v2_three_quarter.png",
+        "sha256": "8dd3f79be51d0ab4264494da9e7ea0da3882b0532ffd5e7d1edf82e873240252"
+      },
+      {
+        "path": "visuals\\scenes\\chapter_060_conditional_membrane\\chapter_060_conditional_membrane_v1.png",
+        "sha256": "49b2e3adfeace89002acab1983731bb968474af12471763a2d32b8790fad51e4"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  }
+]
