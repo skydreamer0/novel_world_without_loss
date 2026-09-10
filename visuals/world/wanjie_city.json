@@ -1,0 +1,25 @@
+{
+  "location_id": "wanjie_city",
+  "canonical_name": "萬界城／空胎內部 (Wanjie City / Empty Womb Interior)",
+  "type": "Assembled Civic Inner World",
+  "visual_anchors": {
+    "architecture_style": "Mismatched rescued dark-fantasy stone districts joined by repaired bridges, canals, workshops and exposed civic infrastructure",
+    "landscape_system": "Qingjiao root-forest, grey-grain terraces, cemetery, black-sand work zones and multiple water routes contained by a thin translucent grey boundary membrane",
+    "atmosphere_and_sky": "Cold overcast inner-world sky with distant mountains and visibly incomplete spatial edges",
+    "lighting_setup": "Restrained cold ambient light with sparse warm work lamps and faint cyan boundary refraction",
+    "color_theme": "Charcoal stone, weathered wood, muted earth, grey-green crops, tarnished brass, restrained cyan"
+  },
+  "prompt_tokens": [
+    "wanjie_city_inner_world",
+    "assembled rescued city districts",
+    "patched bridges and civic canals",
+    "ancient Chinese dark fantasy infrastructure",
+    "thin translucent grey boundary membrane",
+    "precarious inhabited world under repair"
+  ],
+  "display_asset": {
+    "path": "world/images/wanjie_city_anchor_v1.png",
+    "sha256": "442aed65354a1451a76d684b34abf9255b61b4da00718b3f8fc463db1dd51686",
+    "media_type": "image/png"
+  }
+}

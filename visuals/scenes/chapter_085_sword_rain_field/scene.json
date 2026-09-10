@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_085_sword_rain_field",
+  "chapter_number": 85,
+  "chapter_label": "第 085 章《截一場雨》",
+  "title": "劍雨落入耕田",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    },
+    {
+      "character_id": "lu_qinghe",
+      "reference_set_id": "lu_qinghe-core-v2"
+    }
+  ],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "cinematic diagonal 16:9 wide shot from falling sword rain to irrigation furrows",
+  "action_description": "Lu Qinghe, Qin Wulou, farmers and outer disciples redirect lethal silver sword rain through wooden sluices and irrigation channels as the first hazardous sword-grain bends with the water",
+  "mood": "perilous improvisation and communal labor without effortless victory",
+  "display_asset": {
+    "path": "scenes/chapter_085_sword_rain_field/chapter_085_sword_rain_field_v1.png",
+    "sha256": "7239c9d6e504eba7201eea1a1c18e2c4dbc0d5503ee0bd092b1e82e6dd20c1e6",
+    "media_type": "image/png"
+  }
+}

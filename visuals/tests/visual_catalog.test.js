@@ -134,7 +134,7 @@ test('scene and world files remain valid after simplification', () => {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
-  assert.equal(sceneDirs.length, 5);
+  assert.equal(sceneDirs.length, 8);
 
   sceneDirs.forEach((directoryName) => {
     const sceneDir = path.join(VISUALS_ROOT, 'scenes', directoryName);
@@ -152,7 +152,7 @@ test('scene and world files remain valid after simplification', () => {
     }
   });
 
-  for (const filename of ['style.json', 'empty_womb.json', 'qingya_city.json']) {
+  for (const filename of ['style.json', 'empty_womb.json', 'qingya_city.json', 'wanjie_city.json']) {
     assert.doesNotThrow(() => JSON.parse(fs.readFileSync(path.join(VISUALS_ROOT, 'world', filename), 'utf8')));
   }
 });

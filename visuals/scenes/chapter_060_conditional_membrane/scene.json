@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_060_conditional_membrane",
+  "chapter_number": 60,
+  "chapter_label": "第 060 章《第一寸條件式界膜》",
+  "title": "第一寸條件式界膜",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    },
+    {
+      "character_id": "shen_jinian",
+      "reference_set_id": "shen_jinian-core-v1"
+    }
+  ],
+  "item_ids": [
+    "empty_womb"
+  ],
+  "location_id": "wanjie_city",
+  "camera": "cinematic low-angle 16:9 wide shot at ground measurement level",
+  "action_description": "Shen Jinian and civic clerks physically measure a twelve-step-long, one-inch-wide grey conditional boundary membrane while Qin Wulou watches without triumph",
+  "mood": "quiet discovery, scientific restraint and fragile collective hope",
+  "display_asset": {
+    "path": "scenes/chapter_060_conditional_membrane/chapter_060_conditional_membrane_v1.png",
+    "sha256": "49b2e3adfeace89002acab1983731bb968474af12471763a2d32b8790fad51e4",
+    "media_type": "image/png"
+  }
+}
