@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH113",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "取得分區分類帳與交割時序；座標只記格式不揭真相",
+    "拒絕整場總價與定額、收益綁約；逼對手逐項認帳",
+    "定分批接應與普通糧驗算；D2約五日糧，尚未遷入人口"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "第111章修訂正文為續寫基線；既有Harness僅封裝ARC006，若ARC012不可用，以已驗鐵律、111至120章細綱及當章開寫包人工覆核補足。結果保持DRAFT，不合併current_state.json。"
+}

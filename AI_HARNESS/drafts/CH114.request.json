@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH114",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "取得三席與個別承接者對降載辨識的限定同意",
+    "七籠只標需核驗，兩籠仍選留守；撤回立即停泉並有失去後續辨識的代價",
+    "以照影當下回應交叉核驗偽令，保留搬運者操作權至115章取得"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "第111章修訂正文為續寫基線；既有Harness僅封裝ARC006，若ARC012不可用，以已驗鐵律、111至120章細綱及當章開寫包人工覆核補足。結果保持DRAFT，不合併current_state.json。"
+}
