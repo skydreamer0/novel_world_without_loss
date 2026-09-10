@@ -3,6 +3,7 @@ import glob
 import os
 import re
 import sys
+from datetime import date
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS_DIR = os.path.join(BASE_DIR, "docs")
@@ -51,8 +52,8 @@ def num_to_cn(n):
             return hundreds
         elif rem < 10:
             return hundreds + '零' + units[rem]
-        elif rem == 10:
-            return hundreds + '一十'
+        elif rem < 20:
+            return hundreds + '一' + num_to_cn(rem)
         else:
             return hundreds + num_to_cn(rem)
     return str(n)
@@ -129,7 +130,7 @@ def build_writing_pack(chap_num, entities):
     
     content = f"""# 《無漏》第 {chap_num} 章 AI 開寫包
 
-生成時間：2026-07-28
+生成時間：{date.today().isoformat()}
 目標章節：第 {chap_num} 章
 關聯實體：{', '.join(entities) if entities else '無指定'}
 
