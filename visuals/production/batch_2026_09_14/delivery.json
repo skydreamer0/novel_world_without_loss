@@ -1,0 +1,170 @@
+[
+  {
+    "chapter": 20,
+    "manuscript": "manuscript/vol_01/020_第一根骨.md",
+    "source_manuscript_sha256": "d3478a72c41e1fe41a94b473eb732a5e58a75d15240d5b687ba5037c1ff95ab1",
+    "inserted_after": "第一根界骨成形。",
+    "alt": "秦無漏在黑暗空胎中望著新落穩的黑礦，山根向深處延伸，遠處城市與根林托住山體",
+    "caption": "黑礦停住，第一根界骨成形",
+    "master": "visuals/scenes/chapter_020_first_realm_bone/chapter_020_first_realm_bone_v1.png",
+    "master_sha256": "07bc8b361e3aa69d75a78bf465f624a8428c4e45a8fa9b6649da06e3fb55dda4",
+    "master_size": [
+      1672,
+      941
+    ],
+    "display": "visuals/scenes/chapter_020_first_realm_bone/chapter_020_first_realm_bone_v1_reader.webp",
+    "display_sha256": "3bb3802343e0988542a0ea55bccb7a243f0d60fc088fa18f47a8e7bf927da650",
+    "display_size": [
+      1600,
+      900
+    ],
+    "display_bytes": 281540,
+    "generated_source": "C:/Users/User/.codex/generated_images/01a08986-aaa2-74a1-a002-97f3f00825b7/exec-5693e52f-86b8-400f-9b4f-91b25dcd3c18.png",
+    "character_refs": [
+      {
+        "character_id": "qin_woulou",
+        "reference_set_id": "qin_woulou-core-v2"
+      }
+    ],
+    "reference_files": [
+      {
+        "path": "visuals/characters/qin_woulou/images/qin_woulou_v2_three_quarter.png",
+        "sha256": "8dd3f79be51d0ab4264494da9e7ea0da3882b0532ffd5e7d1edf82e873240252"
+      },
+      {
+        "path": "visuals/scenes/chapter_050_city_defense/chapter_050_seven_breaths_v2.png",
+        "sha256": "52b57ef9beb9757c38cd6f357adfb65cf41832a72d45e78e4969c3d9586c07b3"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 40,
+    "manuscript": "manuscript/vol_01/040_借一座城.md",
+    "source_manuscript_sha256": "5138c0fddcfea0651bf229325c91bd6e7df09277565188e55cc7221821a9121f",
+    "inserted_after": "柳峽城。\n\n自治狀態。",
+    "alt": "黑碗與紅碗盛著表決用的槐豆，疲憊居民靠在界碑旁，柳峽的街道與乾涸河道仍留原地",
+    "caption": "槐豆留在碗裡，城仍在原地",
+    "master": "visuals/scenes/chapter_040_liuxia_self_rule/chapter_040_liuxia_self_rule_v1.png",
+    "master_sha256": "959303434c386e50288eb603ee933d2c12cc743699136ebf33c0de1e6090658d",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_040_liuxia_self_rule/chapter_040_liuxia_self_rule_v1_reader.webp",
+    "display_sha256": "8b97e1bc27c40b7ed47f04f86d4bf7f9b3d2a1adb8621cc7d951981e3ea0dfdf",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 249136,
+    "generated_source": "C:/Users/User/.codex/generated_images/01a08986-aaa2-74a1-a002-97f3f00825b7/exec-b121cc99-ff1e-4fe1-8929-65b485439a06.png",
+    "character_refs": [],
+    "reference_files": [
+      {
+        "path": "visuals/scenes/chapter_050_city_defense/chapter_050_seven_breaths_v2.png",
+        "sha256": "52b57ef9beb9757c38cd6f357adfb65cf41832a72d45e78e4969c3d9586c07b3"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 73,
+    "manuscript": "manuscript/vol_02/073_青崖城下.md",
+    "source_manuscript_sha256": "42201b77affc9e203e7dcd5b2df5d514ce0076b4ef975f010ff249b8cc15ad30",
+    "inserted_after": "行人頭頂都懸著價牌。不是自己的價格，是他們所背天地的剩餘壽命。",
+    "alt": "青崖巨穴中的倒懸石台以鎖鏈和殘根相連，上層糧攤與行人延向深處，頭頂懸著模糊價牌",
+    "caption": "石台倒懸，糧市亮在巨穴上層",
+    "master": "visuals/scenes/chapter_073_qingya_under_market/chapter_073_qingya_under_market_v1.png",
+    "master_sha256": "f2572529cca6c86c1ee83f1f913fe4a2fb22c9a7144a7bec0350a43240452959",
+    "master_size": [
+      1672,
+      941
+    ],
+    "display": "visuals/scenes/chapter_073_qingya_under_market/chapter_073_qingya_under_market_v1_reader.webp",
+    "display_sha256": "07a3748b26adcebb323faa19c12aa981e40c68bb15cd2e87bca821bf8f879c55",
+    "display_size": [
+      1600,
+      900
+    ],
+    "display_bytes": 361262,
+    "generated_source": "C:/Users/User/.codex/generated_images/01a08986-aaa2-74a1-a002-97f3f00825b7/exec-ca666b45-798a-48df-8b3b-2f20a1532052.png",
+    "character_refs": [],
+    "reference_files": [
+      {
+        "path": "visuals/scenes/chapter_050_city_defense/chapter_050_seven_breaths_v2.png",
+        "sha256": "52b57ef9beb9757c38cd6f357adfb65cf41832a72d45e78e4969c3d9586c07b3"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 116,
+    "manuscript": "manuscript/vol_02/116_第一座空籠.md",
+    "source_manuscript_sha256": "95722875df63a7a2bc48ceb76968b32599f6008b2521493c1fb5fb969d30f294",
+    "inserted_after": "第一座空籠出現在牧場的秤前。",
+    "alt": "牧場秤前的鐵籠外框已空，鬆垂役索與卸開扣環留在承托架旁，籠內已沒有屋、人或土地",
+    "caption": "屋、人與土地離開，只剩空籠",
+    "master": "visuals/scenes/chapter_116_first_empty_cage/chapter_116_first_empty_cage_v1.png",
+    "master_sha256": "f66a703ec20e416304686e28316e8f6f59bd41deeec639062f680c03da1264d0",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_116_first_empty_cage/chapter_116_first_empty_cage_v1_reader.webp",
+    "display_sha256": "e4dbef06628055a52eed7861209c3f1d1e0b2ddaa0cc2c5e0acfbb4d9d47b205",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 381088,
+    "generated_source": "C:/Users/User/.codex/generated_images/01a08986-aaa2-74a1-a002-97f3f00825b7/exec-50de928f-3e57-4be1-b920-d9b23d8fc4c2.png",
+    "character_refs": [],
+    "reference_files": [
+      {
+        "path": "visuals/scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v2.png",
+        "sha256": "908e6c560fdb431c1f153d7242d8203635a4815102dc5ff0eb19ffaaca981449"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  },
+  {
+    "chapter": 119,
+    "manuscript": "manuscript/vol_02/119_妖林邊界.md",
+    "source_manuscript_sha256": "e3c4436e8e1a4723929f4c80377784ad00d05c790c297c38ceaa83f2211cb23e",
+    "inserted_after": "共同森林還只有這麼一小片。",
+    "alt": "棘蘿守在核心林外，木樁圈出僅供幾頂棚的細根與濕布，量罐和送水車標出共同森林的限度",
+    "caption": "木樁之內試住，木樁之外送水",
+    "master": "visuals/scenes/chapter_119_common_forest_boundary/chapter_119_common_forest_boundary_v1.png",
+    "master_sha256": "ba7d87011f2b82da588f4b32ff177dcfd3c83f2a41cdc46030736bc48bf759b0",
+    "master_size": [
+      1536,
+      1024
+    ],
+    "display": "visuals/scenes/chapter_119_common_forest_boundary/chapter_119_common_forest_boundary_v1_reader.webp",
+    "display_sha256": "253186cbe0cd8e4fe7ca92492ea477ebef8e69448edf63b2dfa3de7c87adf9e9",
+    "display_size": [
+      1536,
+      1024
+    ],
+    "display_bytes": 430392,
+    "generated_source": "C:/Users/User/.codex/generated_images/01a08986-aaa2-74a1-a002-97f3f00825b7/exec-77eb7fa1-3624-4748-99dc-32adb1dc0b87.png",
+    "character_refs": [
+      {
+        "character_id": "jiluo",
+        "reference_set_id": "jiluo-core-v2"
+      }
+    ],
+    "reference_files": [
+      {
+        "path": "visuals/characters/jiluo/images/jiluo_v2_three_quarter.png",
+        "sha256": "dfaa5093f9706e4efc46d6666eec026ff244f7840394c95d11f92fa572ff6a61"
+      },
+      {
+        "path": "visuals/scenes/chapter_070_ninth_rift_departure/chapter_070_ninth_rift_departure_v2.png",
+        "sha256": "908e6c560fdb431c1f153d7242d8203635a4815102dc5ff0eb19ffaaca981449"
+      }
+    ],
+    "generation_mode": "built-in image_gen"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_040_liuxia_self_rule",
+  "chapter_number": 40,
+  "chapter_label": "第四十章：借一座城",
+  "title": "柳峽自治",
+  "character_refs": [],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative composition",
+  "action_description": "黑碗與紅碗盛著表決用的槐豆，疲憊居民靠在界碑旁，柳峽的街道與乾涸河道仍留原地",
+  "mood": "克制，保留生活尺度與行動代價",
+  "display_asset": {
+    "path": "scenes/chapter_040_liuxia_self_rule/chapter_040_liuxia_self_rule_v1_reader.webp",
+    "sha256": "8b97e1bc27c40b7ed47f04f86d4bf7f9b3d2a1adb8621cc7d951981e3ea0dfdf",
+    "media_type": "image/webp"
+  }
+}

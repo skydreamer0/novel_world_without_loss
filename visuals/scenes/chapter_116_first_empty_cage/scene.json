@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_116_first_empty_cage",
+  "chapter_number": 116,
+  "chapter_label": "第一百一十六章：第一座空籠",
+  "title": "第一座空籠",
+  "character_refs": [],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative composition",
+  "action_description": "牧場秤前的鐵籠外框已空，鬆垂役索與卸開扣環留在承托架旁，籠內已沒有屋、人或土地",
+  "mood": "克制，保留生活尺度與行動代價",
+  "display_asset": {
+    "path": "scenes/chapter_116_first_empty_cage/chapter_116_first_empty_cage_v1_reader.webp",
+    "sha256": "e4dbef06628055a52eed7861209c3f1d1e0b2ddaa0cc2c5e0acfbb4d9d47b205",
+    "media_type": "image/webp"
+  }
+}

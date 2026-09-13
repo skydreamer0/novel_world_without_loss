@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_119_common_forest_boundary",
+  "chapter_number": 119,
+  "chapter_label": "第一百一十九章：妖林邊界",
+  "title": "共同森林邊界",
+  "character_refs": [
+    {
+      "character_id": "jiluo",
+      "reference_set_id": "jiluo-core-v2"
+    }
+  ],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "3:2 narrative composition",
+  "action_description": "棘蘿守在核心林外，木樁圈出僅供幾頂棚的細根與濕布，量罐和送水車標出共同森林的限度",
+  "mood": "克制，保留生活尺度與行動代價",
+  "display_asset": {
+    "path": "scenes/chapter_119_common_forest_boundary/chapter_119_common_forest_boundary_v1_reader.webp",
+    "sha256": "253186cbe0cd8e4fe7ca92492ea477ebef8e69448edf63b2dfa3de7c87adf9e9",
+    "media_type": "image/webp"
+  }
+}

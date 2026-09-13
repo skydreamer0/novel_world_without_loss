@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_073_qingya_under_market",
+  "chapter_number": 73,
+  "chapter_label": "第七十三章：青崖城下",
+  "title": "青崖地下市",
+  "character_refs": [],
+  "item_ids": [],
+  "location_id": "qingya_city",
+  "camera": "16:9 narrative composition",
+  "action_description": "青崖巨穴中的倒懸石台以鎖鏈和殘根相連，上層糧攤與行人延向深處，頭頂懸著模糊價牌",
+  "mood": "克制，保留生活尺度與行動代價",
+  "display_asset": {
+    "path": "scenes/chapter_073_qingya_under_market/chapter_073_qingya_under_market_v1_reader.webp",
+    "sha256": "07a3748b26adcebb323faa19c12aa981e40c68bb15cd2e87bca821bf8f879c55",
+    "media_type": "image/webp"
+  }
+}

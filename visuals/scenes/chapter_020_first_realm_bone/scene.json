@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scene_id": "chapter_020_first_realm_bone",
+  "chapter_number": 20,
+  "chapter_label": "第二十章：第一根骨",
+  "title": "第一根界骨",
+  "character_refs": [
+    {
+      "character_id": "qin_woulou",
+      "reference_set_id": "qin_woulou-core-v2"
+    }
+  ],
+  "item_ids": [],
+  "location_id": null,
+  "camera": "16:9 narrative composition",
+  "action_description": "秦無漏在黑暗空胎中望著新落穩的黑礦，山根向深處延伸，遠處城市與根林托住山體",
+  "mood": "克制，保留生活尺度與行動代價",
+  "display_asset": {
+    "path": "scenes/chapter_020_first_realm_bone/chapter_020_first_realm_bone_v1_reader.webp",
+    "sha256": "3bb3802343e0988542a0ea55bccb7a243f0d60fc088fa18f47a8e7bf927da650",
+    "media_type": "image/webp"
+  }
+}
