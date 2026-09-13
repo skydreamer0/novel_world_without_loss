@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH117",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "D4由留守者自行暴動，顯示盲砸生命錨的實際死傷",
+    "循已存傷頻與照影提供當地限定救護；痛泉不重開、不接管暴動指揮",
+    "暴動者先穩生命承托、依交割解牽引再毀空扣環，使中央牧律出現真缺口；敵舟壓來"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "續接第116章初稿：供養61212人、D3糧約四日餘，117為D4。原Harness只支援ARC006，本章以回溯開寫包及鐵律人工補核；保持DRAFT，不合併canon。"
+}

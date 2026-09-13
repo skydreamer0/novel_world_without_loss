@@ -1,0 +1,93 @@
+{
+  "chapter_id": "CH114",
+  "mode": "DRAFT",
+  "summary": "秦無漏收到冒用萬界城名義的自斷根繫偽令，先向已知信路止令。三席與個別守墓匠限定降載辨傷，七處只列待核；承接者右額發涼即撤印封泉，第八道求醫訊號未辨且轉口失聯，改循照影追問。七處有兩處仍留守，其餘也未完成遷移授權。秦無漏以當下翻碗查問與轉接記號查出重放留影來自牧場驗看臺，借收貨方追責壓力逼其更正偽令。族代表隨後要求一印總押，明日當眾核問。",
+  "objectives": {
+    "achieved": [
+      "取得三席與個別承接者對降載辨識的限定同意",
+      "七籠只標需核驗，兩籠仍選留守；撤回立即停泉並有失去後續辨識的代價",
+      "以照影當下回應交叉核驗偽令，保留搬運者操作權至115章取得"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C010",
+        "before": "痛泉降載，兩名超收者照護",
+        "after": "新自願守墓匠撤印即停，姓名能核回仍留觀察；不補人擴載",
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PAIN-SPRING",
+        "before": "降載留斷續影",
+        "after": "限量辨七處後封泉，第八道求醫未辨且轉口失聯",
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": 49212,
+        "after": 49212,
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      },
+      {
+        "id": "RES-FOOD-DAYS",
+        "before": "D2約五日",
+        "after": "D2未另跨日，無新增糧",
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-CAGE-CHOICE",
+        "before": "未逐一核實",
+        "after": "七處候選中的兩處仍留守，其他也未完成遷移授權",
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      },
+      {
+        "id": "REL-FALSE-ORDER",
+        "before": "收到自斷根繫的假接引話",
+        "after": "用當下翻碗查問及外層轉記證明驗看臺重放，迫對方更正",
+        "evidence": "manuscript/vol_02/114_痛泉的耳朵.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH114-FACT-1",
+      "fact": "傷的同源頻率不能證明身份、訊息真實或遷移同意。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH114-FACT-2",
+      "fact": "只知偽令從驗看臺轉出，尚不知道具體重放者；無回覆也不等於假求援。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F047"
+    ],
+    "added": [],
+    "resolved": [
+      "本次驗看臺偽令已更正"
+    ]
+  },
+  "continuity_risks": [
+    "本結果依前章待確認初稿續接，未合併current_state.json。",
+    "ARC012尚無原生Harness上下文支援；已使用當章開寫包與人工規則覆核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

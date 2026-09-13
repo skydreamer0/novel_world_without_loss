@@ -1,0 +1,89 @@
+{
+  "chapter_id": "CH117",
+  "mode": "DRAFT",
+  "summary": "D4留守異族自行奪刀暴動，盲砸役牌與命種引發絞殺、塌棚，多處傷亡未清。持刀女人與各籠搬架者自定先護藥道、再取秤臺；萬界城只送限定醫護與接應，痛泉未重啟。藥桶道核通後在牧場外臺設救護，傷者尚未跨入城。當地隊伍先穩原有承托、依交割卸除強制牽引，再毀空扣環，使中央牧律首次失去部分連接。高臺仍在，三方舟旗抵近；供養維持61,212人。",
+  "objectives": {
+    "achieved": [
+      "D4由留守者自行暴動，顯示盲砸生命錨的實際死傷",
+      "循已存傷頻與照影提供當地限定救護；痛泉不重開、不接管暴動指揮",
+      "暴動者先穩生命承托、依交割解牽引再毀空扣環，使中央牧律出現真缺口；敵舟壓來"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C001",
+        "before": "右臂廢、左掌傷、神魂劍痕",
+        "after": "無新增戰力，協調照影及當地有限救護",
+        "evidence": "manuscript/vol_02/117_剪角暴動.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PASTURE",
+        "before": "中央牧律尚未破裂",
+        "after": "當地先穩承托、卸強制牽引再毀空環，使部分中央連接失效；藥道實物門核通，救護在牧場外臺",
+        "evidence": "manuscript/vol_02/117_剪角暴動.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": 61212,
+        "after": 61212,
+        "evidence": "manuscript/vol_02/117_剪角暴動.md"
+      },
+      {
+        "id": "RES-FOOD",
+        "before": "D3約四日餘",
+        "after": "D4再扣61,212人日及有限外臺醫護支出，無新增糧",
+        "evidence": "manuscript/vol_02/117_剪角暴動.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-REBELLION",
+        "before": "留守區受報復",
+        "after": "留守者自行奪刀，以當地木板排順序；萬界城只受邀有限接應",
+        "evidence": "manuscript/vol_02/117_剪角暴動.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH117-FACT-1",
+      "fact": "持刀女人與搬架人自行指揮暴動，盲拔命種區傷亡未清。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH117-FACT-2",
+      "fact": "藥道救護者尚未跨入城；痛泉未重開。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F051",
+      "F052"
+    ],
+    "added": [],
+    "resolved": [
+      "藥桶道核通並用於當地救護",
+      "部分空扣環被毀，形成實際牧律缺口"
+    ]
+  },
+  "continuity_risks": [
+    "依前章待確認初稿續接，未合併current_state.json。",
+    "原生Harness不支援ARC012，已用章卡、前三章、圖譜及鐵律人工補核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

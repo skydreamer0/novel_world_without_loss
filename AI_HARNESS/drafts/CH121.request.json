@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH121",
+  "arc_id": "ARC013",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "核實第三鎮原契、袋號、半批四萬八千人日與五名押運者，糧未到不入庫",
+    "三日糧與限額出行並列，新來者自願限時搬運",
+    "原封被剪、轉入混倉，追索具體實物"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "依第120章及逐章已寫初稿續接；規則來源為世界鐵律與第121至130章細綱。原生Harness未支援ARC013，使用回溯開寫包與人工覆核；DRAFT不合併canon。"
+}

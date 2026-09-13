@@ -1,0 +1,88 @@
+{
+  "chapter_id": "CH113",
+  "mode": "DRAFT",
+  "summary": "秦無漏抓住死亡口數已扣、飼育費未扣的矛盾，逼牧場補交分區日帳，取得可與搬運者草圖互核的交割時序。帳上再現洗劍峰與空白名冊同格式座標，只抄存不解釋。他拒絕承接全場定額與新生者役債，牧場報復停發未表態籠區的午糧；普通出口受阻，求醫者尚未救出。議場准備分批接應，未驗與受控糧不入配給。搬運者指出手閂與領班操作牌仍是缺口，尚未答應動手。",
+  "objectives": {
+    "achieved": [
+      "取得分區分類帳與交割時序；座標只記格式不揭真相",
+      "拒絕整場總價與定額、收益綁約；逼對手逐項認帳",
+      "定分批接應與普通糧驗算；D2約五日糧，尚未遷入人口"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C001",
+        "before": "尚無牧場分區日帳",
+        "after": "指出死人仍收飼育費，迫對方補帳；抄座標但不追查",
+        "evidence": "manuscript/vol_02/113_牧場帳.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PASTURE-HANDOVER",
+        "before": "只有搬運者草圖",
+        "after": "取得分區交割時序；補出手閂與領班操作牌限制",
+        "evidence": "manuscript/vol_02/113_牧場帳.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": 49212,
+        "after": 49212,
+        "evidence": "manuscript/vol_02/113_牧場帳.md"
+      },
+      {
+        "id": "RES-FOOD-DAYS",
+        "before": "D2約五日",
+        "after": "同日約五日；帳上糧與飼育田未列實存",
+        "evidence": "manuscript/vol_02/113_牧場帳.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-PASTURE-CONTRACT",
+        "before": "要談總帳",
+        "after": "拒絕定額、收益與新生者役債；對方停一個未表態區午糧報復",
+        "evidence": "manuscript/vol_02/113_牧場帳.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH113-FACT-1",
+      "fact": "分區日帳只為補交驗看頁，不是整本最高押契。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH113-FACT-2",
+      "fact": "牧場轉出座標欄與洗劍峰、空白名冊同格式，僅封存來源頁。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F043",
+      "F046",
+      "F047",
+      "F051"
+    ],
+    "added": [],
+    "resolved": []
+  },
+  "continuity_risks": [
+    "本結果依前章待確認初稿續接，未合併current_state.json。",
+    "ARC012尚無原生Harness上下文支援；已使用當章開寫包與人工規則覆核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

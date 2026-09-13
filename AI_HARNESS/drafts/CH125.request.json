@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH125",
+  "arc_id": "ARC013",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "追回三百袋，隔離六十袋，實得二萬四千人日合格冬麥",
+    "三名押運者實到客居，總供養九萬四千二百一十五，兩人北廊未救",
+    "打退外臺追兵、結清限額勞酬，敵人封第二口，回糧只買數時辰"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "依第120章及逐章已寫初稿續接；規則來源為世界鐵律與第121至130章細綱。原生Harness未支援ARC013，使用回溯開寫包與人工覆核；DRAFT不合併canon。"
+}

@@ -1,0 +1,94 @@
+{
+  "chapter_id": "CH119",
+  "mode": "DRAFT",
+  "summary": "D5供水與安置吃緊，青角族拒絕新族直接接核心林。秦無漏撤回直接林網草圖、調人搬水，與各族議定分族客居及共同森林外緣，根席與受影響族席各保否決，只試幾頂棚。新來的鱗膜族人汀衣自願提供脫落舊膜，與外緣根及其生活標記接觸，局部回聚已有水汽；根皮發白後停止、封樣，未成器官。供水到刻線即停擴，其他棚仍靠人工送水；兩道外界側口要求接最後一批人。",
+  "objectives": {
+    "achieved": [
+      "D5面對79212口供水與住地壓力；青角族核心林拒開，先試共同外緣",
+      "分族客居與共同外緣以受影響族席雙否決，根段、水份、停止界線實際可用",
+      "鱗膜異族與母根出現局部未命名凝水反應，來源為既有水汽，伴耗用及相斥；不宣告器官成熟"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "CHAR-TINGYI-DRAFT",
+        "before": "頸側薄鱗的新來者，未具名",
+        "after": "自報汀衣，需濕布照護，自願提供一片自然脫落舊鱗膜；族名未定",
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-FOREST",
+        "before": "核心林不開，新來者缺水",
+        "after": "共同外緣幾棚試供，根席及受影響族席可否決，到水量刻線即停擴",
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      },
+      {
+        "id": "LOC-CONDENSATION",
+        "before": "未觀察回聚",
+        "after": "既有根、水汽、舊鱗膜與生活標記局部回聚，根皮發白後停止封樣",
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": 79212,
+        "after": 79212,
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      },
+      {
+        "id": "RES-WATER",
+        "before": "人工搬水排隊",
+        "after": "調一隊整倉人力搬水，試用量照實扣帳；其他棚仍靠水車",
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-FOREST-GOVERNANCE",
+        "before": "直接接核心林草圖尚待議",
+        "after": "秦無漏撤回草圖，分族客居與共管外緣保留拒絕、撤回和替代供水",
+        "evidence": "manuscript/vol_02/119_妖林邊界.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH119-FACT-1",
+      "fact": "汀衣只同意試脫落材料，沒有進行人體試驗。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH119-FACT-2",
+      "fact": "回聚水滴來源是既有水汽，界圖沒有新物質、新泉或新生座標。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F020",
+      "F031"
+    ],
+    "added": [
+      "F053"
+    ],
+    "resolved": []
+  },
+  "continuity_risks": [
+    "依前章待確認初稿續接，未合併current_state.json。",
+    "原生Harness不支援ARC012，已用章卡、前三章、圖譜及鐵律人工補核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

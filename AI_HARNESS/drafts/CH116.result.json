@@ -1,0 +1,121 @@
+{
+  "chapter_id": "CH116",
+  "mode": "DRAFT",
+  "summary": "秦無漏沿當班已開交割門接觸木行界力、核對生活標記，先護承托、再卸舊錨並解清役契牽引。首籠轉移後，方折守踏板、棘蘿以限定支根護門，搬運者利用連架退架前的窗口分批接出12,000人。合格普通糧90,000人日入帳，供養增至61,212人，糧約四日餘。候驗泊位退出，痛泉未重開；留守區遭報復剪角減糧，新來者指出藥桶道，下一步核路與限量救護。",
+  "objectives": {
+    "achieved": [
+      "沿既有已開交割子門，完成法則接觸、生活標記、先護承托後卸舊錨及解牽引，首籠成功",
+      "D3同班分批累計接入12000名客居者與90000人日合格普通糧；供養61212人，受控糧不列",
+      "有具體戰術勝利與空籠回報，但留守區遭報復；列救護、通道、供水限制，不能迫其先入籍"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C001",
+        "before": "右臂廢用、神魂劍痕、左掌木刺傷",
+        "after": "右臂仍廢，神魂劍痕因連續截取加劇，左手顫抖；無借城主戰",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      },
+      {
+        "id": "C011",
+        "before": "限定支根接應",
+        "after": "一段支根裂皮後收回，母根核心林未開",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      },
+      {
+        "id": "C009",
+        "before": "已備限定接應隊伍",
+        "after": "守踏板、斷鉤索、護傷者，未追出範圍",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PASTURE-HANDOVER",
+        "before": "當班門權尚未使用",
+        "after": "以既有開門、法則接觸、生活標記、先護承托後卸錨解牽引分批截取；後續重閘封閉",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      },
+      {
+        "id": "LOC-WANJIE-SETTLEMENT",
+        "before": "預留空地與限量水份",
+        "after": "12,000人及授權屋基、部分飼育田落地，指定空地安置，人工搬水",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      },
+      {
+        "id": "LOC-PAIN-SPRING",
+        "before": "封泉",
+        "after": "仍封泉；未辨停糧區求醫者仍無救出確認",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": {
+          "formal": 42164,
+          "guest_and_pending": 7048,
+          "supported": 49212
+        },
+        "after": {
+          "formal": 42164,
+          "guest_and_pending": 19048,
+          "supported": 61212
+        },
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      },
+      {
+        "id": "RES-FOOD",
+        "before": "D3原人口約四日糧",
+        "after": "實到合格普通糧90,000人日；按61,212口約四日有餘，隔離糧與未來收成不列",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-PASTURE-RETALIATION",
+        "before": "留守受減糧威脅",
+        "after": "空籠相鄰區受報復補剪角、減糧；新藥桶道待查，逐人救護不綁入籍",
+        "evidence": "manuscript/vol_02/116_第一座空籠.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH116-FACT-1",
+      "fact": "12,000新增客居已包含搬運者與普通踏板撤出者，不另加人口。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH116-FACT-2",
+      "fact": "當班連架已入槽使封門前須退架，僅提供短窗口；空扣環未毀，中央牧律尚未因暴動破裂。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F051"
+    ],
+    "added": [
+      "F052"
+    ],
+    "resolved": [
+      "F051本班交割窗口已用於首批救援，後續門權仍受限"
+    ]
+  },
+  "continuity_risks": [
+    "本結果依前章待確認初稿續接，未合併current_state.json。",
+    "ARC012尚無原生Harness上下文支援；已使用當章開寫包與人工規則覆核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

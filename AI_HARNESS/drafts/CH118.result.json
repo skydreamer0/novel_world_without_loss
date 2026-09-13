@@ -1,0 +1,102 @@
+{
+  "chapter_id": "CH118",
+  "mode": "DRAFT",
+  "summary": "三方爭奪人口、樣本與無損能力，秦無漏協調當地搬架印、劍田城役與限定支根守外臺；撤印及期限屆至使防線真實後退。他以舊日帳、當日改押令與現場移架互證，令已付定金的雙環旗獵舟強行靠泊，與補天封道衝突。當地隊伍趁分兵奪槽開既有門，D4累計再接18,000名活人與90,000人日普通糧，供養79,212。敵人已調整封控，兩處由當地人留守的側口尚待明日再核；城內供水吃緊。",
+  "objectives": {
+    "achieved": [
+      "三方各取人口、無損能力或法則樣本；防線由限定可撤授權構成，撤回實際造成缺口",
+      "以分區日帳與當日改押令形成可驗的利益衝突，原收貨舟強行靠泊與補天封道相撞，不能靠公開簽名命令敵人",
+      "D4第二批含當地待轉傷者累計18000人、90000人日普通糧入城；供養79212；對手記住時序"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C009",
+        "before": "肩無本輪新傷",
+        "after": "以實木板補承力缺口，肩遭石屑砸傷",
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      },
+      {
+        "id": "C001",
+        "before": "左掌與神魂傷",
+        "after": "連續接觸截取後疼痛與出血加劇，右臂仍廢",
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-HANDOVER",
+        "before": "暴動者控制局部門",
+        "after": "趁三方衝突奪槽開既有門；兩處側口由當地人自願留守",
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": {
+          "formal": 42164,
+          "guest_and_pending": 19048,
+          "supported": 61212
+        },
+        "after": {
+          "formal": 42164,
+          "guest_and_pending": 37048,
+          "supported": 79212
+        },
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      },
+      {
+        "id": "RES-FOOD",
+        "before": "D4舊糧",
+        "after": "實到90,000人日普通糧，按79,212口約四日前後",
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-THREE-PARTIES",
+        "before": "三方合壓外臺",
+        "after": "日帳、改押令與現場互證引出收貨方強行靠泊；補天院隨即調整封控",
+        "evidence": "manuscript/vol_02/118_三方獵場.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH118-FACT-1",
+      "fact": "18,000新增活人包含從牧場外臺轉入者，遺體不納供養。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH118-FACT-2",
+      "fact": "撤印或期限屆至使防線缺口與退位實際發生，火燒空棚，未新增城內死亡。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F045",
+      "F051"
+    ],
+    "added": [],
+    "resolved": [
+      "D4第二批有限接應完成"
+    ]
+  },
+  "continuity_risks": [
+    "依前章待確認初稿續接，未合併current_state.json。",
+    "原生Harness不支援ARC012，已用章卡、前三章、圖譜及鐵律人工補核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

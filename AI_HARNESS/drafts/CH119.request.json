@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH119",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "D5面對79212口供水與住地壓力；青角族核心林拒開，先試共同外緣",
+    "分族客居與共同外緣以受影響族席雙否決，根段、水份、停止界線實際可用",
+    "鱗膜異族與母根出現局部未命名凝水反應，來源為既有水汽，伴耗用及相斥；不宣告器官成熟"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "依上一章初稿續接，當章開寫包另行組裝；僅以已確認鐵律與111至120章細綱為規則來源。ARC012尚無原生Harness支援，採回溯包與人工覆核；DRAFT不合併canon。"
+}

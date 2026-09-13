@@ -1,0 +1,87 @@
+{
+  "chapter_id": "CH112",
+  "mode": "DRAFT",
+  "summary": "紙鳶沿運貨報價線接通受監看的照影，秦無漏投出萬界城天空。一籠沉默後，看守殺死一名異族示威；秦無漏保留當值印並向驗損口追帳，使握鞭者退出驗看。後續改以牆後傳話收集離開、反抗、留守三種答案，不記人名或遷移印。搬運者畫出承托架先入槽、再卸生命錨扣環的順序，尚無實際操作權。牧場只肯出售，要求天亮談總帳。D2晨供養仍49,212人，糧約五日；死者屬外界未接入者。",
+  "objectives": {
+    "achieved": [
+      "建立受監聽時可用的照影信路",
+      "讓籠區提出離開、反抗與留守三種答案",
+      "以具體交割扣環呈現中央牧律的限制；冷酷、爽文節奏"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "C011",
+        "before": "辨認剪角舊制",
+        "after": "見看守殺人，枝角嫩芽折斷；主持牆後族語傳話",
+        "evidence": "manuscript/vol_02/112_沒有天空的族群.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PASTURE-SIGNAL",
+        "before": "半段座標、運貨口未查",
+        "after": "由紙鳶舊商號接公開報價照影；牆後傳話仍可能受監聽",
+        "evidence": "manuscript/vol_02/112_沒有天空的族群.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": 49212,
+        "after": 49212,
+        "evidence": "manuscript/vol_02/112_沒有天空的族群.md"
+      },
+      {
+        "id": "RES-FOOD-DAYS",
+        "before": "D1約六日",
+        "after": "D2晨約五日；沒有新增物資",
+        "evidence": "manuscript/vol_02/112_沒有天空的族群.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-PASTURE-WATCH",
+        "before": "看守藉求援控制對話",
+        "after": "以當值印及驗損記錄迫使握鞭者退出驗看，未消除牧場控制",
+        "evidence": "manuscript/vol_02/112_沒有天空的族群.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH112-FACT-1",
+      "fact": "一名未具名異族遭看守鞭柄殺害，死於外界，未入城。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH112-FACT-2",
+      "fact": "搬運者畫出承托架先入槽再卸生命錨扣環，操作權尚未取得。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F047"
+    ],
+    "added": [
+      "F051"
+    ],
+    "resolved": []
+  },
+  "continuity_risks": [
+    "本結果依前章待確認初稿續接，未合併current_state.json。",
+    "ARC012尚無原生Harness上下文支援；已使用當章開寫包與人工規則覆核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}

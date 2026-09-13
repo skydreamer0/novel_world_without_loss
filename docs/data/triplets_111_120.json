@@ -3,8 +3,19 @@
     "novel": "無漏",
     "vol": 2,
     "chapters_range": "111-120",
-    "total_chapters": 1,
-    "schema_version": "1.0"
+    "total_chapters": 10,
+    "schema_version": "1.0",
+    "draft_chapters": [
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ]
   },
   "chapters": [
     {
@@ -52,6 +63,339 @@
           "target": "第111章供養",
           "relation": "維持人口、消耗一日糧",
           "context": "第110章落穩翌晨，實際供養49,212人，普通糧餘約六日；未接入新籠區"
+        }
+      ]
+    },
+    {
+      "chapter": 112,
+      "title": "沒有天空的族群",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "紙鳶",
+          "target": "運貨報價照影",
+          "relation": "以舊商號接通",
+          "context": "公開受監看，牆後傳話只減少露臉，無絕對保密"
+        },
+        {
+          "source": "秦無漏",
+          "target": "看守驗損責任",
+          "relation": "留當值印追帳",
+          "context": "一名外界異族先遭鞭柄毆殺，未救回；以帳方壓力讓握鞭者退出驗看"
+        },
+        {
+          "source": "搬運者",
+          "target": "交割承托架",
+          "relation": "提供草圖",
+          "context": "先入槽保命再卸扣環；仍缺實際操作權"
+        },
+        {
+          "source": "萬界城",
+          "target": "D2晨供養",
+          "relation": "維持49212口",
+          "context": "普通糧約五日，未接新人口"
+        }
+      ]
+    },
+    {
+      "chapter": 113,
+      "title": "牧場帳",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "牧場分區日帳",
+          "relation": "以死人飼育費矛盾迫交",
+          "context": "取得部分驗看日帳與時序，最高押契仍封"
+        },
+        {
+          "source": "牧場帳座標欄",
+          "target": "洗劍峰與空白名冊座標",
+          "relation": "同格式",
+          "context": "只抄來源頁，未證實同批人口或解釋真相"
+        },
+        {
+          "source": "秦無漏",
+          "target": "牧場總契",
+          "relation": "拒絕承接",
+          "context": "不接積欠定額、新增收益及未出生者役債"
+        },
+        {
+          "source": "牧場",
+          "target": "未表態籠區",
+          "relation": "停午糧報復",
+          "context": "求醫者普通出口仍被堵，未接入"
+        },
+        {
+          "source": "搬運者",
+          "target": "手閂與領班牌",
+          "relation": "補足圖中限制",
+          "context": "有時序但未持牌，未答應動手"
+        }
+      ]
+    },
+    {
+      "chapter": 114,
+      "title": "痛泉的耳朵",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "痛泉",
+          "target": "七處候選求援",
+          "relation": "降載辨傷",
+          "context": "個別同意後辨同源頻率，不證明身份或訊息真實"
+        },
+        {
+          "source": "守墓匠",
+          "target": "痛泉",
+          "relation": "撤印即停",
+          "context": "右額發涼停止，留觀察；不加人擴載，第八道求醫未辨"
+        },
+        {
+          "source": "七處候選",
+          "target": "兩處留守",
+          "relation": "初步去留回覆",
+          "context": "其餘五處也未完成遷移授權"
+        },
+        {
+          "source": "秦無漏",
+          "target": "驗看臺偽令",
+          "relation": "交叉核驗並迫更正",
+          "context": "翻碗查問與重放、轉記互核，未判定具體重放人"
+        },
+        {
+          "source": "停糧區",
+          "target": "第八道求醫訊號",
+          "relation": "轉口失聯",
+          "context": "改循舊照影追問，不記成拒救"
+        }
+      ]
+    },
+    {
+      "chapter": 115,
+      "title": "誰代表一族",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "牧場指定族代表",
+          "target": "代押木牌與當值糧帳",
+          "relation": "被查明",
+          "context": "不是全族推舉，總印遭拒"
+        },
+        {
+          "source": "秦無漏",
+          "target": "各籠小群",
+          "relation": "建立可撤回覆",
+          "context": "照影匯總不傳臉名，標記、法則接觸及門權另核"
+        },
+        {
+          "source": "牧場示懲",
+          "target": "帶頭異族",
+          "relation": "絞殺",
+          "context": "搬運者到扣環前人已死，通訊無法替代現場控制；外界死亡"
+        },
+        {
+          "source": "三個原留守籠區",
+          "target": "去留答案",
+          "relation": "要求重答",
+          "context": "一處屬114七處，另兩處一直用普通照影"
+        },
+        {
+          "source": "搬運者",
+          "target": "當班真操作牌",
+          "relation": "取得並願配合",
+          "context": "頂移屍推架班取得；需本人留現場扳閂，只有本班權限"
+        }
+      ]
+    },
+    {
+      "chapter": 116,
+      "title": "第一座空籠",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "第一批已授權籠區",
+          "relation": "選擇性截取",
+          "context": "木行界力接觸、生活標記、既開子門、先承托再解錨及役契牽引"
+        },
+        {
+          "source": "方折與棘蘿",
+          "target": "交割踏板",
+          "relation": "限定接應防衛",
+          "context": "方折守門斷索，棘蘿支根限範圍且受傷收回；秦無漏不借城主戰"
+        },
+        {
+          "source": "搬運者",
+          "target": "同班連架交割道",
+          "relation": "現場操作",
+          "context": "以真牌逐片卸錨，退架與重閘留短窗口；中央牧律未破"
+        },
+        {
+          "source": "萬界城",
+          "target": "第一批12000名異族",
+          "relation": "客居接入",
+          "context": "含搬運者及踏板撤離者；正式42164、客居候審19048、供養61212"
+        },
+        {
+          "source": "萬界城",
+          "target": "90000人日普通糧",
+          "relation": "核驗入帳",
+          "context": "受控庫地未截、角根糧隔離、飼育田無即時收成；約四日餘"
+        },
+        {
+          "source": "牧場",
+          "target": "空籠相鄰留守區",
+          "relation": "報復剪角減糧",
+          "context": "責任未消除，藥桶道待驗，仍可提出逐人救護請求"
+        }
+      ]
+    },
+    {
+      "chapter": 117,
+      "title": "剪角暴動",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "留守異族",
+          "target": "剪角暴動",
+          "relation": "自主發動",
+          "context": "奪角刀、排當地指揮；盲拔命種區塌棚絞殺，傷亡未清"
+        },
+        {
+          "source": "萬界城",
+          "target": "牧場外臺",
+          "relation": "限定救護",
+          "context": "藥桶道先核通及實際控門，護醫在外臺，未新增入城人口"
+        },
+        {
+          "source": "暴動搬架者",
+          "target": "中央牧律",
+          "relation": "斷部分連接",
+          "context": "先護原承托、按交割卸強制牽引，再毀空扣環"
+        },
+        {
+          "source": "痛泉",
+          "target": "第117章通訊",
+          "relation": "維持封用",
+          "context": "只用已存傷頻與當下照影核訊，不加人擴載"
+        }
+      ]
+    },
+    {
+      "chapter": 118,
+      "title": "三方獵場",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "秦無漏",
+          "target": "改押利益衝突",
+          "relation": "利用真實帳與現場",
+          "context": "原收貨方付定金卻見貨被改押補天樣本艙，強行靠泊，引出實際衝突"
+        },
+        {
+          "source": "可撤限定防線",
+          "target": "外臺掩護",
+          "relation": "承受撤回缺口",
+          "context": "搬架印撤回及城役期限到皆生缺口，備板、退位僅局部補足"
+        },
+        {
+          "source": "萬界城",
+          "target": "D4第二批18000人",
+          "relation": "接入客居",
+          "context": "含外臺待轉傷者；供養79212，正式42164，客居候審37048"
+        },
+        {
+          "source": "萬界城",
+          "target": "第二批90000人日糧",
+          "relation": "核驗入庫",
+          "context": "受控與角根疑糧不列，按新口數約四日前後"
+        },
+        {
+          "source": "補天院",
+          "target": "交割時序與泊位",
+          "relation": "調整封控",
+          "context": "經實際交戰學會分位封道，不能重用同一衝突手法"
+        }
+      ]
+    },
+    {
+      "chapter": 119,
+      "title": "妖林邊界",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "棘蘿",
+          "target": "核心母根林",
+          "relation": "拒絕直接接入",
+          "context": "保護既有生活及根承載，同意有限外緣試供"
+        },
+        {
+          "source": "各族與青角根席",
+          "target": "共同森林外緣",
+          "relation": "保留雙否決與停止",
+          "context": "分族客居、共同水路，受影響族席各保否決，僅幾棚試供"
+        },
+        {
+          "source": "汀衣",
+          "target": "脫落舊鱗膜",
+          "relation": "自願提供單片試驗",
+          "context": "本人只許材料試用，不進行人體試驗"
+        },
+        {
+          "source": "舊鱗膜與外緣根",
+          "target": "已有水汽",
+          "relation": "局部回聚",
+          "context": "接觸生活標記後聚一滴水，根皮發白停止封樣，非新物質或成熟器官"
+        },
+        {
+          "source": "萬界城",
+          "target": "供水不足",
+          "relation": "人工補位",
+          "context": "調整整倉人力搬水，根段到刻線停擴，普通棚不失配給"
+        }
+      ]
+    },
+    {
+      "chapter": 120,
+      "title": "第一次大遷移",
+      "status": "draft",
+      "triplets": [
+        {
+          "source": "萬界城",
+          "target": "D5最後15000人",
+          "relation": "分批接入客居",
+          "context": "只沿已開、實控及解牽引側門；實到去重，累計牧場45000人"
+        },
+        {
+          "source": "萬界城",
+          "target": "第120章人口",
+          "relation": "結算供養94212",
+          "context": "正式42164，客居候審52048；外界遺體不納活人數"
+        },
+        {
+          "source": "萬界城",
+          "target": "最後50000人日糧",
+          "relation": "核驗入庫",
+          "context": "三批230000人日，D5扣帳後約三日；受控及藥穀不充數"
+        },
+        {
+          "source": "牧場與補天院",
+          "target": "後續大交割窗口",
+          "relation": "改時序封死",
+          "context": "先退未入槽的架，兩大側口最後關閉，仍需續核細路"
+        },
+        {
+          "source": "持刀女人",
+          "target": "另棚妹妹與細路",
+          "relation": "自願留守",
+          "context": "只承諾自己能護的路，不替全族或秦無漏守門"
+        },
+        {
+          "source": "徵調告示",
+          "target": "折劍第三鎮押留冬麥",
+          "relation": "出現相符批號",
+          "context": "源自第103章被扣半批，實物及押運者仍待查，不提前加庫"
         }
       ]
     }

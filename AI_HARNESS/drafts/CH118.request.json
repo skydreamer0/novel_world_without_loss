@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH118",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "三方各取人口、無損能力或法則樣本；防線由限定可撤授權構成，撤回實際造成缺口",
+    "以分區日帳與當日改押令形成可驗的利益衝突，原收貨舟強行靠泊與補天封道相撞，不能靠公開簽名命令敵人",
+    "D4第二批含當地待轉傷者累計18000人、90000人日普通糧入城；供養79212；對手記住時序"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "依上一章初稿續接，當章開寫包另行組裝；僅以已確認鐵律與111至120章細綱為規則來源。ARC012尚無原生Harness支援，採回溯包與人工覆核；DRAFT不合併canon。"
+}

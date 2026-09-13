@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH120",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "D5既開交割口分批最後接入15000人及50000人日合格普通糧；總供養94212",
+    "正式42164、客居候審52048，糧約三日，林地與名冊超載；不得把救人綁正式入籍",
+    "敵人封住已知時序，保留有限撤離救護；以具體糧水與追索危機收束牧場章群，不宣告整場解放"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "依上一章初稿續接，當章開寫包另行組裝；僅以已確認鐵律與111至120章細綱為規則來源。ARC012尚無原生Harness支援，採回溯包與人工覆核；DRAFT不合併canon。"
+}

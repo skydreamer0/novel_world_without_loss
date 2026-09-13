@@ -1,0 +1,30 @@
+{
+  "chapter_id": "CH116",
+  "arc_id": "ARC012",
+  "mode": "DRAFT",
+  "viewpoint": "C001",
+  "target_words": {
+    "min": 2800,
+    "max": 3800
+  },
+  "max_truth_level": 2,
+  "required_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ],
+  "include_recent_chapters": 3,
+  "objectives": [
+    "沿既有已開交割子門，完成法則接觸、生活標記、先護承托後卸舊錨及解牽引，首籠成功",
+    "D3同班分批累計接入12000名客居者與90000人日合格普通糧；供養61212人，受控糧不列",
+    "有具體戰術勝利與空籠回報，但留守區遭報復；列救護、通道、供水限制，不能迫其先入籍"
+  ],
+  "prohibitions": [
+    "右臂不得恢復，秦無漏不得借城主戰",
+    "通訊與意願不能替代實際交割門和生命錨控制",
+    "痛泉不得加人擴載",
+    "不得解釋陌生座標的上層真相"
+  ],
+  "output_language": "zh-Hant",
+  "notes": "第111章修訂正文為續寫基線；既有Harness僅封裝ARC006，若ARC012不可用，以已驗鐵律、111至120章細綱及當章開寫包人工覆核補足。結果保持DRAFT，不合併current_state.json。"
+}

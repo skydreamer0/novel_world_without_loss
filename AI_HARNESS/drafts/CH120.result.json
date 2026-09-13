@@ -1,0 +1,105 @@
+{
+  "chapter_id": "CH120",
+  "mode": "DRAFT",
+  "summary": "D5牧場先停推架、分離後續貨，昨日連架窗口失效。秦無漏只沿當地仍守住的既開側門完成接觸、標記、護承托與解牽引，累計接入最後15,000人及50,000人日合格普通糧。總供養94,212，正式42,164、客居候審52,048，約三日糧；正式名冊塞車，先依實到記錄發臨時配給。側門關閉、敵方續封外岔，林地停擴。徵調告示出現與第103章冬麥相符的押留批號，尚待查實物與押運者。",
+  "objectives": {
+    "achieved": [
+      "D5既開交割口分批最後接入15000人及50000人日合格普通糧；總供養94212",
+      "正式42164、客居候審52048，糧約三日，林地與名冊超載；不得把救人綁正式入籍",
+      "敵人封住已知時序，保留有限撤離救護；以具體糧水與追索危機收束牧場章群，不宣告整場解放"
+    ],
+    "unmet": []
+  },
+  "state_delta": {
+    "characters": [
+      {
+        "id": "CHAR-KNIFE-WOMAN-DRAFT",
+        "before": "當地暴動組織者",
+        "after": "妹妹仍在另棚，選擇留守可護的細路，不代表全族也不臣屬萬界城",
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC-PASTURE-GATES",
+        "before": "兩大側口仍受當地控制",
+        "after": "最後已進口批次撤離後關閉，敵人停推架、續封外岔；整場未解放",
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      },
+      {
+        "id": "LOC-WANJIE-SETTLEMENT",
+        "before": "79,212人口下安置吃緊",
+        "after": "94,212人，母根停擴、普通棚與水罐續供，正式名冊積壓，按實到先發臨時配給",
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      }
+    ],
+    "resources": [
+      {
+        "id": "RES-POPULATION",
+        "before": {
+          "formal": 42164,
+          "guest_and_pending": 37048,
+          "supported": 79212
+        },
+        "after": {
+          "formal": 42164,
+          "guest_and_pending": 52048,
+          "supported": 94212
+        },
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      },
+      {
+        "id": "RES-FOOD",
+        "before": "D5扣去當日人日後的庫存",
+        "after": "末批50,000人日合格普通糧入庫；三批共230,000，按94,212口約三日",
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "REL-PURSUIT",
+        "before": "三方知道萬界城破圍手法",
+        "after": "異族法則與近十萬人口追加追索，保留僅限已驗可撤的細路接應",
+        "evidence": "manuscript/vol_02/120_第一次大遷移.md"
+      }
+    ],
+    "technology": [],
+    "truth_reveals": []
+  },
+  "new_facts": [
+    {
+      "id": "CH120-FACT-1",
+      "fact": "最後15,000活人已去重，總計45,000名牧場客居者；外界死亡與運回遺體不計供養。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    },
+    {
+      "id": "CH120-FACT-2",
+      "fact": "徵調告示只有與103章冬麥相符的押留批號，原舟、押運者與實物重量皆待核。",
+      "status": "candidate",
+      "suggested_authority": "docs/08_連續性與待決事項.md（初稿候選，待確認）"
+    }
+  ],
+  "foreshadows": {
+    "triggered": [
+      "F045",
+      "F052",
+      "F053"
+    ],
+    "added": [
+      "F054"
+    ],
+    "resolved": [
+      "本章群45,000名客居異族分批遷移完成；未解放整場"
+    ]
+  },
+  "continuity_risks": [
+    "依前章待確認初稿續接，未合併current_state.json。",
+    "原生Harness不支援ARC012，已用章卡、前三章、圖譜及鐵律人工補核。"
+  ],
+  "next_modules": [
+    "MOD-RULE-AIRWOMB",
+    "MOD-RULE-AUTHORIZATION",
+    "MOD-CHAR-REMNANTCORE"
+  ]
+}
