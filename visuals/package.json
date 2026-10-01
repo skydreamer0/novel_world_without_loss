@@ -6,8 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "build": "node tools/build.js",
-    "check": "node tools/build.js --check",
-    "test": "node tools/build.js --check && node --test tests/*.test.js"
+    "check": "node tools/build.js --check && node tools/check_review.js",
+    "test": "npm run check && node --test tests/*.test.js"
   },
   "keywords": [
     "visual-library",

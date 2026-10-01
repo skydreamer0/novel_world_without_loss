@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "record_id": "chapter_020_first_realm_bone-r1",
+  "revision": 1,
+  "kind": "legacy_import",
+  "scene_id": "chapter_020_first_realm_bone",
+  "request": {
+    "source": {
+      "path": "visuals/production/batch_2026_09_14/prompts.json",
+      "sha256": "9393933041baff7e253401f64aff005c784842c6494d743a455b159d832edd95"
+    },
+    "entry": "n=20 (initial request; not the exact edit prompt)",
+    "exact_edit_prompt": null
+  },
+  "edit": {
+    "parent_record_id": null,
+    "parent_asset": null,
+    "parent_evidence": {
+      "path": "visuals/production/batch_2026_09_14/result_20.json",
+      "sha256": "2310b8391d6bb83521d0ea71233af56a460f1abf570337fc166cc0323a2ccd70"
+    },
+    "revision_evidence": {
+      "path": "visuals/production/batch_2026_09_14/result_20_revision.json",
+      "sha256": "369754d2a2ed1ba6477c55b1d5df200f0f5429ea853d8cb66ec75a97c4b479af"
+    }
+  },
+  "dependencies": [
+    {
+      "role": "manuscript",
+      "path": "manuscript/vol_01/020_第一根骨.md",
+      "sha256": "03d003e606574d5cea6d2900d467ba539800b44fd2d7fa450269c15dcf6830fe"
+    },
+    {
+      "role": "scene",
+      "path": "visuals/scenes/chapter_020_first_realm_bone/scene.json",
+      "sha256": "64601f4cc30545fcada88a101b4897a8c1aa87757d5e13cfede7f64a67bbef57"
+    },
+    {
+      "role": "character_profile",
+      "path": "visuals/characters/qin_woulou/profile.json",
+      "sha256": "36ff29b4c4902572b984fda17ffc94b130f0d9eb52d4f668e3944682e006adec"
+    },
+    {
+      "role": "character_version",
+      "path": "visuals/characters/qin_woulou/versions/qin_woulou-core-v2.json",
+      "sha256": "5053e2e878ead4b9e39d98efefe2e5c9dd12e7fc1196ece90cebbe30ef5e403e"
+    },
+    {
+      "role": "identity_reference",
+      "path": "visuals/characters/qin_woulou/images/qin_woulou_v2_three_quarter.png",
+      "sha256": "8dd3f79be51d0ab4264494da9e7ea0da3882b0532ffd5e7d1edf82e873240252"
+    },
+    {
+      "role": "style_reference",
+      "path": "visuals/scenes/chapter_050_city_defense/chapter_050_seven_breaths_v2.png",
+      "sha256": "52b57ef9beb9757c38cd6f357adfb65cf41832a72d45e78e4969c3d9586c07b3"
+    },
+    {
+      "role": "legacy_delivery",
+      "path": "visuals/production/batch_2026_09_14/delivery.json",
+      "sha256": "996368ffa9338b4d89b9002fd72456ce52bb7d5aa6178c04d59d10a1a20c3b6d"
+    },
+    {
+      "role": "legacy_review_notes",
+      "path": "visuals/production/batch_2026_09_14/README.md",
+      "sha256": "f25e7d8f4ecf56c53c902e22d3a72fb3ff7ccdfa176e33614ccddb6bc61ab64b"
+    }
+  ],
+  "outputs": {
+    "master": {
+      "path": "visuals/scenes/chapter_020_first_realm_bone/chapter_020_first_realm_bone_v1.png",
+      "sha256": "07bc8b361e3aa69d75a78bf465f624a8428c4e45a8fa9b6649da06e3fb55dda4"
+    },
+    "display": {
+      "path": "visuals/scenes/chapter_020_first_realm_bone/chapter_020_first_realm_bone_v1_reader.webp",
+      "sha256": "3bb3802343e0988542a0ea55bccb7a243f0d60fc088fa18f47a8e7bf927da650"
+    }
+  },
+  "stages": {
+    "generated": "legacy_evidence",
+    "narrative_review": {
+      "decision": "unknown"
+    },
+    "integrated": "legacy_evidence",
+    "reader_acceptance": {
+      "decision": "unknown"
+    }
+  },
+  "notes": [
+    "Imported from master 60094438db57bd19b7f0adaf6a151a3b5c45bde8 without generating or editing images. Hashes bind the current committed bytes.",
+    "The batch records a rock-root correction and final output mapping, but does not preserve the exact edit prompt, original draft bytes/hash, or attributable human approval. Null means unknown, not approved.",
+    "The original draft location is historical evidence in result_20.json, not a readable repository asset. Provider model/seed/telemetry are unknown and omitted.",
+    "The one identity reference plus one style reference is the recorded CH020 input set, not a universal reference-count rule.",
+    "Whole-file hashes are conservative: any change to a dependency requires review. Current manuscript hash includes the existing figure; the pre-insertion hash remains in delivery.json.",
+    "Generated and integrated are supported by existing delivery evidence. Narrative and reader acceptance remain unknown; technical validation cannot grant human approval."
+  ]
+}

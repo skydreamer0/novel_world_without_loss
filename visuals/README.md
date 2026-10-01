@@ -62,7 +62,8 @@ scenes/chapter_NNN_short_slug/
 ## 使用
 
 ```bash
-npm test             # 檢查角色設定、版本、圖片與雜湊
+npm run check        # 檢查已提交目錄與 CH020 版本紀錄（不寫檔）
+npm test             # 執行上述檢查與資料／版本紀錄回歸測試
 npm run build        # 更新 Reader 使用的視覺目錄
 ```
 

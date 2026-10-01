@@ -67,3 +67,17 @@
 「已生成」「已通過敘事複核」「已接入正文」「已完成閱讀驗收」分開記錄。現有測試能檢查資料、引用與雜湊，不能判斷手臂畫反、人物過度潔淨或能力提前出現。
 
 接入後檢查：圖片路徑與載入、章節中的出現時機、亮暗主題的辨識度、手機完整比例、無圖閱讀、朗讀／批註／進度。未實作的互動明列待辦，不用測試通過替代人工看圖。
+
+### CH020 最小版本紀錄試行
+
+`production/reviews/chapter_020_first_realm_bone-r1.json` 將第二批既有資料匯入一筆版本紀錄；沒有重新生圖、改寫正文或替任何人補核准。初始 request、實際 identity／style refs、角色版本、目前正文與場景卡、母版／展示檔均綁定 SHA-256。批次的修訂原因與初稿位置只保留為歷史證據；找不到的精確 edit prompt、初稿檔案／hash、核准者與 provider telemetry 明記 unknown／null 或省略，不推測填入。
+
+沿用上述四階段：`generated`、`narrative_review`、`integrated`、`reader_acceptance`。CH020 的生成與接入有舊交付證據；敘事複核與閱讀驗收的可歸屬人工決定維持 `unknown`。技術結果 `technical_validation`、即時計算的 `freshness` 與人工 `decision` 分開：改正文、request 或 refs 會得到 `needs_review`，不覆寫舊決定，也不能繼續套用。輸出 hash、場景所選展示檔或正文接入不符會拒絕通過。
+
+在 `visuals/` 執行 `npm run check`，同時核對已提交的 Reader 目錄與這一筆紀錄；`npm test` 再跑回歸測試。檢查不寫檔、不呼叫生圖服務。GitHub Pages 在同一 checkout 通過測試、寫作資料與正文衛生檢查後才上傳該份 artifact，沒有先驗一份再重建另一份。
+
+相容範圍是明確固定的：`tools/check_review.js` 的 `PILOT_PATH` 只選 CH020 r1，`LEGACY_SNAPSHOT` 只允許此次原始 snapshot 保留 unknown 決定；仍必須逐檔符合 hash。這不是 approved，也不把其他既有資產一律改成必填新欄位。測試中的合成核准僅是 fixture，不是正式核准。
+
+後續改圖新增 r2（保留 r1），記錄已知的 `edit.parent_record_id` 與 `parent_asset`，再以 PR 明確更新 `PILOT_PATH` 與對應測試；不自動掃描或挑選「最新」紀錄，也不要為新稿擴大舊 snapshot 的例外。request、edit、dependencies、outputs 等欄位的 canonical JSON 形成 `snapshot_sha256`；兩項人工核准均須保留 reviewer、reviewed_at、可追溯 evidence（檔案＋hash），並綁定該 snapshot。更新輸出或依賴後，舊核准即不適用。依賴採整檔 hash，細小或同批其他條目的變更也會保守要求複核。
+
+這一版不判斷畫面是否好看、傷手是否正確或插入時機是否適當；也沒有新增手機、朗讀、批註或進度的人工驗收。批次接入的原子性、漫畫尺寸及第16–21頁節奏留待各自決策，不納入此試行。

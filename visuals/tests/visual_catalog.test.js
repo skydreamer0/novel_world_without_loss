@@ -156,3 +156,43 @@ test('scene and world files remain valid after simplification', () => {
     assert.doesNotThrow(() => JSON.parse(fs.readFileSync(path.join(VISUALS_ROOT, 'world', filename), 'utf8')));
   }
 });
+
+test('check rejects missing and stale projections without writing them', (t) => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'wwl-projection-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const output = path.join(root, 'generated/visual_catalog.browser.js');
+  assert.throws(() => buildVisualCatalog(root, { check: true }), /Missing generated/);
+  assert.equal(fs.existsSync(output), false);
+  buildVisualCatalog(root);
+  const original = fs.readFileSync(output);
+  assert.doesNotThrow(() => buildVisualCatalog(root, { check: true }));
+  assert.deepEqual(fs.readFileSync(output), original);
+  fs.appendFileSync(output, '// stale\n');
+  assert.throws(() => buildVisualCatalog(root, { check: true }), /Stale generated/);
+  assert.match(fs.readFileSync(output, 'utf8'), /\/\/ stale\n$/);
+  buildVisualCatalog(root);
+  fs.mkdirSync(path.join(root, 'characters/new_person'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'characters/new_person/profile.json'), JSON.stringify(testCharacter('new_person')));
+  assert.throws(() => buildVisualCatalog(root, { check: true }), /Stale generated/);
+  buildVisualCatalog(root);
+  assert.doesNotThrow(() => buildVisualCatalog(root, { check: true }));
+});
+
+test('the --check CLI exits nonzero for missing or stale committed output', (t) => {
+  const { spawnSync } = require('node:child_process');
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'wwl-check-cli-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  fs.mkdirSync(path.join(root, 'tools'));
+  for (const filename of ['build.js', 'visual_catalog.js']) {
+    fs.copyFileSync(path.join(VISUALS_ROOT, 'tools', filename), path.join(root, 'tools', filename));
+  }
+  const run = (...args) => spawnSync(process.execPath, [path.join(root, 'tools/build.js'), ...args], { encoding: 'utf8' });
+  assert.equal(run('--check').status, 1);
+  assert.equal(fs.existsSync(path.join(root, 'generated')), false);
+  assert.equal(run().status, 0);
+  assert.equal(run('--check').status, 0);
+  fs.appendFileSync(path.join(root, 'generated/visual_catalog.browser.js'), '// drift');
+  const result = run('--check');
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Stale generated/);
+});
